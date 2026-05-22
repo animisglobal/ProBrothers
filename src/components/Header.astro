@@ -1,0 +1,48 @@
+---
+// Header / navigation — shared across all pages.
+---
+<!-- ===== Header / Nav ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#home" class="brand" aria-label="ProBrothers home">
+      <img src="/assets/img/logo.png" alt="ProBrothers" class="brand__logo" width="201" height="75" />
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="has-sub">
+          <a href="#services">Services</a>
+          <ul class="submenu">
+            <li><a href="#services">Trim</a></li>
+            <li><a href="#services">Cabinets</a></li>
+            <li><a href="#services">Remodeling</a></li>
+            <li><a href="#services">Additions</a></li>
+            <li><a href="#services">Construction Services</a></li>
+            <li><a href="#services">Windows &amp; Doors</a></li>
+          </ul>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="has-sub">
+          <a href="#">Locations</a>
+          <ul class="submenu submenu--cols">
+            <li><a href="#">Media</a></li>
+            <li><a href="#">West Chester</a></li>
+            <li><a href="#">Philadelphia</a></li>
+            <li><a href="#">Rehoboth, DE</a></li>
+            <li><a href="#">Allentown</a></li>
+            <li><a href="#">Newtown Square</a></li>
+          </ul>
+        </li>
+        <li><a href="#reviews">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contact" class="btn btn--accent header__cta">Get a Quote</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

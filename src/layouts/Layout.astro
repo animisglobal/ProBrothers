@@ -1,0 +1,108 @@
+---
+import Topbar from '../components/Topbar.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Per-page metadata. Defaults reproduce the original index.html exactly.
+const {
+  title = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
+  description = "ProBrothers is a full-service residential and commercial construction and remodeling company with over 15 years of experience. Trim, cabinets, remodeling, additions, windows & doors in Media, PA.",
+  canonical = 'https://prob.nurotech.co.in/',
+  ogTitle = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
+  ogDescription = 'Full-service residential & commercial construction and remodeling. Trim, cabinets, additions, windows & doors in Media, PA. Free quote within one business day.',
+  ogUrl = 'https://prob.nurotech.co.in/',
+  ogImage = 'https://prob.nurotech.co.in/assets/img/hero-trim.webp',
+  twitterTitle = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
+  twitterDescription = 'Full-service residential & commercial construction and remodeling in Media, PA. Free quote within one business day.',
+  twitterImage = 'https://prob.nurotech.co.in/assets/img/hero-trim.webp',
+  preloadHero = true,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#25282A" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/assets/img/favicon.png" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ProBrothers" />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:url" content={ogUrl} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={twitterTitle} />
+  <meta name="twitter:description" content={twitterDescription} />
+  <meta name="twitter:image" content={twitterImage} />
+
+  <!-- LocalBusiness structured data (rich results + local SEO) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "ProBrothers",
+    "image": "https://prob.nurotech.co.in/assets/img/hero-trim.webp",
+    "url": "https://prob.nurotech.co.in/",
+    "telephone": "+1-484-745-4097",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7 Blackhorse Ln",
+      "addressLocality": "Media",
+      "addressRegion": "PA",
+      "postalCode": "19063",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown"],
+    "description": "Full-service residential and commercial construction and remodeling company with over 15 years of experience. Trim, cabinets, remodeling, additions, windows & doors.",
+    "openingHours": "Mo-Sa 08:00-18:00"
+  })} />
+
+  <!-- Preconnect not needed (all assets self-hosted) -->
+  <!-- Preload the LCP hero image so the browser fetches it immediately, before CSS/JS parse -->
+  {preloadHero && (
+    <link rel="preload" as="image" href="/assets/img/hero-trim.webp"
+          imagesrcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+  )}
+  <link rel="preload" href="/assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- @font-face inlined to remove a render-blocking request + a network hop -->
+  <style>
+    @font-face{
+      font-family:'Raleway';font-style:normal;font-weight:300 900;font-display:swap;
+      src:url('/assets/fonts/raleway-latin.woff2') format('woff2');
+      unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Page preloader ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__logo">
+      <span class="preloader__mark">PB</span>
+      <span class="preloader__bar"><i></i></span>
+    </div>
+  </div>
+
+  <!-- ===== Scroll progress bar ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <Topbar />
+  <Header />
+
+  <slot />
+
+  <Footer />
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

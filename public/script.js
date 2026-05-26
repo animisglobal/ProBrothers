@@ -347,6 +347,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0 }).observe(hero);
   })();
 
+  /* ---------- Contact form validation & submit ---------- */
+  (function contactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    const success = document.getElementById('formSuccess');
+
+    function validate(field) {
+      const group = field.closest('.contact-form__group');
+      if (!group) return true;
+      const err = group.querySelector('.contact-form__error');
+      const wrap = group.querySelector('.contact-form__input-wrap');
+      const input = wrap ? wrap.querySelector('input,textarea') : null;
+      if (!input) return true;
+
+      let msg = '';
+      if (input.required && !input.value.trim()) {
+        msg = 'This field is required.';
+      } else if (input.type === 'email' && input.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+        msg = 'Please enter a valid email address.';
+      }
+
+      if (msg) {
+        input.classList.add('invalid');
+        if (err) { err.textContent = msg; err.classList.add('show'); }
+        return false;
+      } else {
+        input.classList.remove('invalid');
+        if (err) { err.textContent = ''; err.classList.remove('show'); }
+        return true;
+      }
+    }
+
+    // live validation on blur
+    form.querySelectorAll('input,textarea').forEach(input => {
+      input.addEventListener('blur', () => validate(input));
+      input.addEventListener('input', () => {
+        if (input.classList.contains('invalid')) validate(input);
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fields = [...form.querySelectorAll('input[required],textarea[required]')];
+      const allValid = fields.every(f => validate(f));
+      if (!allValid) {
+        const firstInvalid = form.querySelector('.invalid');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+      // Simulate submit (replace with real endpoint as needed)
+      const btn = form.querySelector('.contact-form__submit');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      setTimeout(() => {
+        form.reset();
+        btn.disabled = false;
+        btn.textContent = 'Submit';
+        if (success) { success.removeAttribute('hidden'); success.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+        // hide success after 8s
+        setTimeout(() => { if (success) success.setAttribute('hidden', ''); }, 8000);
+      }, 900);
+    });
+  })();
+
   /* ---------- Before / After wiper ---------- */
   (function beforeAfter() {
     const frame = document.getElementById('baFrame');

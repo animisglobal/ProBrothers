@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://prob.nurotech.co.in/contact/",
+      "name": "Contact ProBrothers",
+      "url": "https://prob.nurotech.co.in/contact/",
+      "description": "Contact ProBrothers for a free quote on construction and remodeling services in Media, PA. Call (484) 745-4097 or email info@probrothers.com.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://prob.nurotech.co.in/" },
+      "breadcrumb": { "@id": "https://prob.nurotech.co.in/contact/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/contact/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://prob.nurotech.co.in/contact/" }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://prob.nurotech.co.in/#localbusiness",
+      "name": "ProBrothers",
+      "url": "https://prob.nurotech.co.in/",
+      "telephone": "+1-484-745-4097",
+      "email": "info@probrothers.com",
+      "image": "https://prob.nurotech.co.in/assets/img/hero-trim.webp",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 Blackhorse Ln",
+        "addressLocality": "Media",
+        "addressRegion": "PA",
+        "postalCode": "19063",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": ["Media","West Chester","Philadelphia","Newtown Square","Allentown"]
+    }
+  ]
+};
+---
+<Layout
+  title="Contact ProBrothers | Media, PA Contractor — (484) 745-4097"
+  description="Contact ProBrothers for a free estimate on construction and remodeling in Media, PA. Call (484) 745-4097, email info@probrothers.com, or fill out our contact form."
+  canonical="https://prob.nurotech.co.in/contact/"
+  ogTitle="Contact ProBrothers | Media, PA General Contractor — (484) 745-4097"
+  ogDescription="Reach out to ProBrothers for a free quote on trim, cabinets, remodeling, additions, windows & doors in Media, PA. We respond within one business day."
+  ogUrl="https://prob.nurotech.co.in/contact/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-trim.webp"
+  twitterTitle="Contact ProBrothers | Media, PA General Contractor"
+  twitterDescription="Reach out for a free quote on construction and remodeling in Media, PA. Call (484) 745-4097 or fill out our contact form."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-trim.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-trim.webp"
+          imagesrcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(contactSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="contact-banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-trim.webp"
+         srcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Contact Us</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="contact-banner-heading">Contact Us</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Media, PA General &amp; Home Contractor</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Contact Main ===== -->
+  <section class="section contact-main" id="contact-main" aria-label="Contact Information and Form">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: contact info -->
+        <div class="contact-info reveal" data-reveal="left">
+          <span class="section__kicker">Get In Touch</span>
+          <h2 class="section__title">Contact Us</h2>
+
+          <!-- Info cards -->
+          <div class="contact-cards">
+            <article class="contact-card" aria-label="Our address">
+              <div class="contact-card__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <h3>Address</h3>
+                <address>
+                  <a href="https://www.google.com/maps/search/7+Blackhorse+Ln+Media+PA+19063" target="_blank" rel="noopener noreferrer">
+                    7 Blackhorse Ln<br />Media, PA 19063
+                  </a>
+                </address>
+              </div>
+            </article>
+
+            <article class="contact-card" aria-label="Phone number">
+              <div class="contact-card__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 5.89 5.89l1.27-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <h3>Phone</h3>
+                <p><a href="tel:4847454097">(484) 745-4097</a></p>
+              </div>
+            </article>
+
+            <article class="contact-card" aria-label="Email address">
+              <div class="contact-card__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <h3>Email</h3>
+                <p><a href="mailto:info@probrothers.com">info@probrothers.com</a></p>
+              </div>
+            </article>
+
+            <article class="contact-card" aria-label="Business hours">
+              <div class="contact-card__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="contact-card__body">
+                <h3>Hours</h3>
+                <p>Monday &ndash; Friday: 09.00 &ndash; 17.00</p>
+                <p>Saturday: 09.00 &ndash; 14.00</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="contact-form-wrap reveal" data-reveal="right">
+          <div class="contact-form-box">
+            <h2 class="contact-form-box__heading">Drop Us a Line</h2>
+            <p class="contact-form-box__sub">Tell us about your project and we'll get back to you within one business day.</p>
+
+            <form class="contact-form" id="contactForm" action="#" method="post" novalidate aria-label="Contact form">
+              <!-- Name row -->
+              <div class="contact-form__row">
+                <div class="contact-form__group">
+                  <label for="firstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                  <div class="contact-form__input-wrap">
+                    <input type="text" id="firstName" name="firstName" autocomplete="given-name"
+                           placeholder="First" required aria-required="true" />
+                    <span class="contact-form__line" aria-hidden="true"></span>
+                  </div>
+                  <span class="contact-form__error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="contact-form__group">
+                  <label for="lastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                  <div class="contact-form__input-wrap">
+                    <input type="text" id="lastName" name="lastName" autocomplete="family-name"
+                           placeholder="Last" required aria-required="true" />
+                    <span class="contact-form__line" aria-hidden="true"></span>
+                  </div>
+                  <span class="contact-form__error" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-form__group">
+                <label for="contactEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="email" id="contactEmail" name="email" autocomplete="email"
+                         placeholder="you@example.com" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-form__group">
+                <label for="contactPhone">Phone</label>
+                <div class="contact-form__input-wrap">
+                  <input type="tel" id="contactPhone" name="phone" autocomplete="tel"
+                         placeholder="(555) 000-0000" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="contact-form__group">
+                <label for="contactMessage">Message</label>
+                <div class="contact-form__input-wrap">
+                  <textarea id="contactMessage" name="message" rows="5"
+                            placeholder="Tell us about your project..."></textarea>
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>
+                Submit
+              </button>
+
+              <!-- Success / Error messages -->
+              <div class="contact-form__success" id="formSuccess" role="status" aria-live="polite" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Your quote request has been submitted successfully. We'll get back to you soon!
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Map strip ===== -->
+  <section class="contact-map-strip" aria-label="Our location on the map">
+    <div class="contact-map-strip__inner reveal">
+      <iframe
+        title="ProBrothers location — 7 Blackhorse Ln, Media PA 19063"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.8773878196!2d-75.3869!3d39.9173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6f3c0a0000001%3A0x1!2s7+Blackhorse+Ln%2C+Media%2C+PA+19063!5e0!3m2!1sen!2sus!4v1700000000000"
+        width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===== Why contact strip ===== -->
+  <section class="section why why-contact" id="why-contact" aria-label="Why choose ProBrothers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">Why Choose ProBrothers</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="cta-contact" aria-label="Call to action">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>

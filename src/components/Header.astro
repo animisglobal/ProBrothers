@@ -2,6 +2,7 @@
 const pathname = Astro.url.pathname;
 const isHome = pathname === '/' || pathname === '';
 const isAbout = pathname.startsWith('/about');
+const isContact = pathname.startsWith('/contact');
 ---
 <!-- ===== Header / Nav ===== -->
 <header class="header" id="header">
@@ -38,11 +39,11 @@ const isAbout = pathname.startsWith('/about');
           </ul>
         </li>
         <li><a href="/#reviews">Blog</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/contact/" class={isContact ? 'active' : ''}>Contact</a></li>
       </ul>
     </nav>
 
-    <a href="/#contact" class="btn btn--accent header__cta">Get a Quote</a>
+    <a href="/contact/" class="btn btn--accent header__cta">Get a Quote</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>

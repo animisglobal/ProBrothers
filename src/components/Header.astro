@@ -3,6 +3,7 @@ const pathname = Astro.url.pathname;
 const isHome = pathname === '/' || pathname === '';
 const isAbout = pathname.startsWith('/about');
 const isContact = pathname.startsWith('/contact');
+const isServices = pathname.startsWith('/services');
 ---
 <!-- ===== Header / Nav ===== -->
 <header class="header" id="header">
@@ -16,10 +17,10 @@ const isContact = pathname.startsWith('/contact');
         <li><a href="/" class={isHome ? 'active' : ''}>Home</a></li>
         <li><a href="/about/" class={isAbout ? 'active' : ''}>About</a></li>
         <li class="has-sub">
-          <a href="/#services">Services</a>
+          <a href="/#services" class={isServices ? 'active' : ''}>Services</a>
           <ul class="submenu">
-            <li><a href="/#services">Trim</a></li>
-            <li><a href="/#services">Cabinets</a></li>
+            <li><a href="/services/trim/">Trim</a></li>
+            <li><a href="/services/cabinets/">Cabinets</a></li>
             <li><a href="/#services">Remodeling</a></li>
             <li><a href="/#services">Additions</a></li>
             <li><a href="/#services">Construction Services</a></li>

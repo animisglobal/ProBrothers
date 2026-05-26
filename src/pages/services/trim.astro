@@ -1,0 +1,632 @@
+---
+/**
+ * Source URL: https://probrothers.com/services/trim/
+ *
+ * Errors fixed:
+ *   - None detected in source content.
+ *
+ * SEO additions:
+ *   - Unique <title> optimised to ≤60 chars.
+ *   - Unique meta description ≤160 chars.
+ *   - Canonical pointing to /services/trim/.
+ *   - Open Graph + Twitter Card tags.
+ *   - JSON-LD: Service, BreadcrumbList, FAQPage schemas.
+ *   - BreadcrumbList structured data (HOME / TRIM).
+ *   - Preload for LCP banner image with srcset.
+ *   - Descriptive alt text on all images.
+ *   - Explicit width/height on every <img>.
+ *   - Internal links to related service pages.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/services/trim/",
+      "name": "Trim Work & Molding Installation",
+      "description": "Expert trim carpentry services including baseboards, crown molding, wainscoting, coffered ceilings, window casings, and custom woodwork for residential and commercial properties in Media, PA.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown"],
+      "url": "https://prob.nurotech.co.in/services/trim/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/services/trim/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Trim", "item": "https://prob.nurotech.co.in/services/trim/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prob.nurotech.co.in/services/trim/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of trim services does ProBrothers offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProBrothers specializes in custom trim work as part of expert carpentry and woodworking solutions. Our range of services include installing baseboards, crown molding, window and door casings, and other decorative or functional trim elements for both residential and commercial properties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of materials does ProBrothers use for trim work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProBrothers works with a variety of materials, including hardwoods (like oak and maple), softwoods (like pine), MDF (medium-density fiberboard), and even PVC or composite materials for exterior trim. We recommend options based on your budget, style, and durability needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ProBrothers work with existing designs or architectural plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our expertise in custom solutions helps us adapt to existing designs or architectural plans. Whether you provide detailed blueprints or a rough idea, we'll work with you to achieve the desired outcome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a typical trim installation project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The timeline for a trim installation depends on the project's size and complexity. Small interior projects, like installing baseboards in a single room, may take a day or two, while larger or custom exterior trim jobs could span several days or weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are ProBrothers trim services available for commercial properties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with our background in construction and remodeling, we are equipped to handle trim work for commercial spaces, such as offices, retail stores, or restaurants, in addition to residential projects."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Trim Work & Molding Installation Experts | Media, PA"
+  description="Expert trim carpentry in Media, PA. Crown molding, baseboards, wainscoting, coffered ceilings & custom woodwork for homes and businesses. Free quote."
+  canonical="https://prob.nurotech.co.in/services/trim/"
+  ogTitle="Trim Work & Molding Installation Experts in Media, PA | ProBrothers"
+  ogDescription="ProBrothers delivers precision trim carpentry—crown molding, wainscoting, coffered ceilings & custom woodwork—for residential and commercial properties in Media, PA."
+  ogUrl="https://prob.nurotech.co.in/services/trim/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-trim.webp"
+  twitterTitle="Trim Work & Molding Installation Experts in Media, PA"
+  twitterDescription="Expert trim carpentry in Media, PA — crown molding, wainscoting, coffered ceilings & custom woodwork. Free quote from ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-trim.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-trim.webp"
+          imagesrcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-trim.webp"
+         srcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Trim</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">TRIM</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Expert Trim Work &amp; Molding Installation in Media, PA</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Service Overview ===== -->
+  <section class="section svc-overview" id="service-overview" aria-label="Service Overview">
+    <div class="container">
+      <div class="svc-overview__grid">
+        <div class="svc-overview__content reveal" data-reveal="left">
+          <span class="section__kicker">SERVICE OVERVIEW</span>
+          <h2 class="section__title">
+            Trim Work &amp; Molding Installation
+            <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+              <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+              <circle cx="8" cy="12" r="3" style="--len:20"/>
+              <circle cx="152" cy="13" r="3" style="--len:20"/>
+            </svg>
+          </h2>
+          <p class="svc-overview__para">If you're aiming to elevate the beauty and character of a new or existing home or business, investing in trim work in 2026 is the ideal solution. Elegant trim details like shiplap, crown molding, chair rail molding, wainscoting, coffered ceilings, doorways, archways, window casings, decorative wall trim, columns, and pillars may seem like small changes, but they create a significant impact on the overall aesthetic. Not only do these enhancements beautify your space, but they also increase the property's value.</p>
+          <p class="svc-overview__para">Take, for instance, the fireplace mantel, often the focal point of a living room. Updating or replacing an old mantel with help of custom woodwork can dramatically transform the room's ambiance. Whether it's a simple refresh with a new design or a complete overhaul with custom woodwork, the results are stunning and will bring warmth and style to your home for years to come.</p>
+          <p class="svc-overview__para">Our success is rooted in the meticulous attention to detail we bring to every project, along with a process that ensures a seamless experience for every client. Our skilled trim carpenters and crown molding installers carefully select products that are perfectly suited to your home or business, while our experienced carpenters uphold a tradition of exceptional craftsmanship. Meanwhile, our painting team is incredibly thorough, ensuring the final finish not only meets but exceeds your expectations.</p>
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>Request a Quote</a>
+        </div>
+        <div class="svc-overview__media reveal" data-reveal="right">
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/hero-trim.webp"
+                 srcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+                 sizes="(max-width:900px) 100vw, 50vw"
+                 alt="Beautifully crafted trim for enhanced interior design"
+                 loading="lazy" width="750" height="500" />
+          </figure>
+          <figure class="svc-overview__figure svc-overview__figure--offset">
+            <img src="/assets/img/proj-gold.webp"
+                 alt="Elegant trim details for refined interior spaces"
+                 loading="lazy" width="750" height="500" />
+            <figcaption>Gold Beams</figcaption>
+          </figure>
+          <figure class="svc-overview__figure svc-overview__figure--offset2">
+            <img src="/assets/img/proj-mantle.webp"
+                 alt="Custom stair trim and woodwork by ProBrothers"
+                 loading="lazy" width="750" height="500" />
+            <figcaption>Stair Trim</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Get Trim Work ===== -->
+  <section class="section svc-why-trim" id="why-trim" aria-label="Why Should You Get Trim Work">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE BENEFITS</span>
+        <h2 class="section__title">
+          WHY SHOULD YOU GET TRIM WORK?
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-why-trim__grid">
+        <div class="svc-why-trim__text reveal">
+          <p>Trim serves as the finishing touch that enhances architectural details and adds a polished, cohesive look to any space. Elegant trim details like shiplap, crown molding, chair rails, wainscoting, coffered ceilings, doorways, archways, window casings, columns, and pillars may seem like small changes, but they create a significant impact on the overall aesthetic. These enhancements not only beautify your space but also increase the property's value. For example, updating or replacing an old fireplace mantel, often the focal point of a living room, can dramatically transform the room's ambiance, bringing warmth and style to your home for years to come.</p>
+          <p>At ProBrothers, we understand the importance of these details and the transformative power they hold in 2026. Our success is rooted in the meticulous attention to detail we bring to every project with our exceptional carpentry services. From the initial design phase to the final installation, we ensure that every aspect of your trim work is executed with precision and care. Whether you're looking to refresh a room with new decorative trim or completely overhaul your space with crown molding or custom woodwork, our team is committed to delivering results that exceed your expectations.</p>
+        </div>
+
+        <!-- Testimonial -->
+        <blockquote class="svc-testimonial reveal" data-reveal="right">
+          <div class="review__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;We had them update the baseboards and add wainscoting to our hallway. It totally modernized the space. The crew was quiet, clean, and got it done exactly on the schedule they promised.&rdquo;</p>
+          <footer>David Harris</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Types of Trim ===== -->
+  <section class="section svc-types" id="types-of-trim" aria-label="Types of Trim and Installation Process" style="background:var(--gray-2)">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">OUR EXPERTISE</span>
+        <h2 class="section__title">
+          TYPES OF TRIM AND OUR SUPERIOR INSTALLATION PROCESS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-types__grid">
+        <div class="svc-types__text reveal">
+          <p>Trim comes in various forms, each serving a unique purpose and contributing to the overall design of your home. Baseboards, for example, run along the bottom of your walls, hiding the joint between the wall and the floor while adding a decorative element. Crown molding is installed where the wall meets the ceiling, creating an elegant transition that can make a room feel taller and more sophisticated. Door and window casings frame these openings, adding definition and a finished look. Additional elements like shiplap, chair rails, and wainscoting can further enhance the character and style of your space, bringing a luxurious touch to any home renovation in 2026.</p>
+          <p>When it comes to installation, ProBrothers stands out from the competition. Our skilled designers carefully select products that are perfectly suited to your home or business, ensuring that each piece of trim carpentry complements your space's overall design. Our experienced carpenters uphold a tradition of exceptional craftsmanship, taking the time to measure and cut each piece with meticulous care for a perfect fit. Unlike other companies that might rush through the installation, we prioritize quality, paying attention to every detail from precise mitered corners to seamless joints.</p>
+          <p>Furthermore, our painting team is incredibly thorough, ensuring that the final finish not only meets but exceeds your expectations. We specialize in handling complex trim designs, such as layered crown molding, custom baseboards, or intricate coffered ceilings, which require advanced expertise. When you choose ProBrothers, you're not just investing in trim work; you're choosing a superior trim carpentry services company that renovates the beauty and value of your home or business, creating a space that you'll love for years to come.</p>
+        </div>
+        <div class="svc-types__cards">
+          <article class="value-card reveal">
+            <div class="value-card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="value-card__content">
+              <h3>Baseboards &amp; Crown Molding</h3>
+              <p>Precision-cut and seamlessly installed for a polished, finished look in any room.</p>
+            </div>
+          </article>
+          <article class="value-card reveal" style="--d:.1s">
+            <div class="value-card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <div class="value-card__content">
+              <h3>Wainscoting &amp; Shiplap</h3>
+              <p>Classic wainscoting and on-trend shiplap installed with expert craftsmanship.</p>
+            </div>
+          </article>
+          <article class="value-card reveal" style="--d:.2s">
+            <div class="value-card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+              </svg>
+            </div>
+            <div class="value-card__content">
+              <h3>Coffered Ceilings &amp; Custom Work</h3>
+              <p>Intricate coffered ceiling panels and custom architectural woodwork.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us ===== -->
+  <section class="section why why-about" id="why-choose-us" aria-label="Why Choose ProBrothers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HAVE QUESTIONS?</span>
+        <h2 class="section__title">
+          FREQUENTLY ASKED QUESTIONS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <dl class="faq-list">
+        <div class="faq-item reveal">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What types of trim services does ProBrothers offer?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>ProBrothers specializes in custom trim work as part of expert carpentry and woodworking solutions. Our range of services include installing baseboards, crown molding, window and door casings, and other decorative or functional trim elements for both residential and commercial properties.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.07s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What types of materials does ProBrothers use for trim work?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>ProBrothers works with a variety of materials, including hardwoods (like oak and maple), softwoods (like pine), MDF (medium-density fiberboard), and even PVC or composite materials for exterior trim. We recommend options based on your budget, style, and durability needs.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.14s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Can ProBrothers work with existing designs or architectural plans?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Yes, our expertise in custom solutions helps us adapt to existing designs or architectural plans. Whether you provide detailed blueprints or a rough idea, we'll work with you to achieve the desired outcome.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.21s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              How long does a typical trim installation project take?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>The timeline for a trim installation depends on the project's size and complexity. Small interior projects, like installing baseboards in a single room, may take a day or two, while larger or custom exterior trim jobs could span several days or weeks.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.28s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Are ProBrothers trim services available for commercial properties?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Yes, with our background in construction and remodeling, we are equipped to handle trim work for commercial spaces, such as offices, retail stores, or restaurants, in addition to residential projects.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-cabinets.webp" alt="Custom kitchen and office cabinets by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Cabinets</h3>
+            <p>Custom kitchen, office, entertainment center, and mudroom cabinetry tailored to your space.</p>
+            <a href="/services/cabinets/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/#services" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/#services" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+/* ===== Service Overview ===== */
+.svc-overview__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.svc-overview__content .section__title { text-align: left; }
+.svc-overview__content .section__title + .blueprint { margin-left: 0; }
+.svc-overview__content .section__kicker { display: block; }
+.svc-overview__para {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.78;
+  margin: 0 0 1.2rem;
+}
+.svc-overview__para:first-of-type { margin-top: 1.4rem; }
+.svc-overview__media { display: flex; flex-direction: column; gap: 1.2rem; }
+.svc-overview__figure {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+.svc-overview__figure img {
+  width: 100%; height: auto; display: block;
+  transition: transform .8s var(--ease);
+}
+.svc-overview__figure:hover img { transform: scale(1.04); }
+.svc-overview__figure figcaption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: .6rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+  color: #fff; font-weight: 800; font-size: .85rem;
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.svc-overview__figure--offset { display: none; }
+.svc-overview__figure--offset2 { display: none; }
+
+/* ===== Why Trim ===== */
+.svc-why-trim__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+.svc-why-trim__text p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.78;
+  margin-bottom: 1.2rem;
+}
+.svc-testimonial {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  border-top: 4px solid var(--accent);
+}
+.svc-testimonial::before {
+  content: "\201C";
+  position: absolute; top: -18px; left: 18px;
+  font-size: 5rem; color: var(--accent);
+  font-family: Georgia, serif; line-height: 1; opacity: .55;
+}
+.svc-testimonial:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.svc-testimonial .review__stars { color: var(--accent); letter-spacing: .15em; margin-bottom: .8rem; }
+.svc-testimonial p { font-size: 1rem; font-style: italic; color: var(--ink); margin-bottom: 1rem; }
+.svc-testimonial footer { font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .04em; }
+
+/* ===== Types of Trim ===== */
+.svc-types__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+.svc-types__text p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.78;
+  margin-bottom: 1.2rem;
+}
+.svc-types__cards { display: flex; flex-direction: column; gap: 1.4rem; }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: .8rem; }
+.faq-item {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border-left: 4px solid var(--accent);
+}
+.faq-item__btn {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 1.3rem 1.6rem;
+  font-family: 'Raleway', system-ui, sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--dark);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  transition: color .2s;
+}
+.faq-item__btn:hover { color: var(--accent); }
+.faq-item__icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: var(--dark);
+  display: grid; place-items: center; font-size: 1.3rem; font-weight: 900;
+  transition: transform .3s var(--ease);
+}
+.faq-item__btn[aria-expanded="true"] .faq-item__icon { transform: rotate(45deg); }
+.faq-item__a {
+  max-height: 0; overflow: hidden;
+  transition: max-height .4s var(--ease), padding .3s;
+  padding: 0 1.6rem;
+}
+.faq-item__a.open {
+  max-height: 400px;
+  padding: 0 1.6rem 1.3rem;
+}
+.faq-item__a p { color: var(--muted); font-size: .95rem; line-height: 1.75; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .svc-overview__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-why-trim__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-types__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+</style>
+
+<script>
+/* FAQ accordion */
+document.querySelectorAll('.faq-item__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item__btn').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.faq-item').querySelector('.faq-item__a').classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.closest('.faq-item').querySelector('.faq-item__a').classList.add('open');
+    }
+  });
+});
+</script>

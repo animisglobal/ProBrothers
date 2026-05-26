@@ -1,29 +1,31 @@
 ---
-// Header / navigation — shared across all pages.
+const pathname = Astro.url.pathname;
+const isHome = pathname === '/' || pathname === '';
+const isAbout = pathname.startsWith('/about');
 ---
 <!-- ===== Header / Nav ===== -->
 <header class="header" id="header">
   <div class="container header__inner">
-    <a href="#home" class="brand" aria-label="ProBrothers home">
+    <a href="/" class="brand" aria-label="ProBrothers home">
       <img src="/assets/img/logo.png" alt="ProBrothers" class="brand__logo" width="201" height="75" />
     </a>
 
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Main navigation">
       <ul class="nav__list">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="/" class={isHome ? 'active' : ''}>Home</a></li>
+        <li><a href="/about/" class={isAbout ? 'active' : ''}>About</a></li>
         <li class="has-sub">
-          <a href="#services">Services</a>
+          <a href="/#services">Services</a>
           <ul class="submenu">
-            <li><a href="#services">Trim</a></li>
-            <li><a href="#services">Cabinets</a></li>
-            <li><a href="#services">Remodeling</a></li>
-            <li><a href="#services">Additions</a></li>
-            <li><a href="#services">Construction Services</a></li>
-            <li><a href="#services">Windows &amp; Doors</a></li>
+            <li><a href="/#services">Trim</a></li>
+            <li><a href="/#services">Cabinets</a></li>
+            <li><a href="/#services">Remodeling</a></li>
+            <li><a href="/#services">Additions</a></li>
+            <li><a href="/#services">Construction Services</a></li>
+            <li><a href="/#services">Windows &amp; Doors</a></li>
           </ul>
         </li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="/#projects">Projects</a></li>
         <li class="has-sub">
           <a href="#">Locations</a>
           <ul class="submenu submenu--cols">
@@ -35,12 +37,12 @@
             <li><a href="#">Newtown Square</a></li>
           </ul>
         </li>
-        <li><a href="#reviews">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/#reviews">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <a href="#contact" class="btn btn--accent header__cta">Get a Quote</a>
+    <a href="/#contact" class="btn btn--accent header__cta">Get a Quote</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>

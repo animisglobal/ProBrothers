@@ -1,36 +1,39 @@
 /* ProBrothers replica — interactions */
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- Hero carousel ---------- */
+  /* ---------- Hero carousel (homepage only) ---------- */
   const slides = [...document.querySelectorAll('.slide')];
   const dotsWrap = document.getElementById('dots');
   let idx = 0, timer;
 
-  slides.forEach((_, i) => {
-    const b = document.createElement('button');
-    b.className = 'dot' + (i === 0 ? ' active' : '');
-    b.setAttribute('aria-label', 'Slide ' + (i + 1));
-    b.addEventListener('click', () => go(i, true));
-    dotsWrap.appendChild(b);
-  });
-  const dots = [...dotsWrap.children];
+  if (slides.length && dotsWrap) {
+    slides.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.className = 'dot' + (i === 0 ? ' active' : '');
+      b.setAttribute('aria-label', 'Slide ' + (i + 1));
+      b.addEventListener('click', () => go(i, true));
+      dotsWrap.appendChild(b);
+    });
+    const dots = [...dotsWrap.children];
 
-  function go(n, manual) {
-    slides[idx].classList.remove('is-active');
-    dots[idx].classList.remove('active');
-    idx = (n + slides.length) % slides.length;
-    slides[idx].classList.add('is-active');
-    dots[idx].classList.add('active');
-    if (manual) restart();
+    function go(n, manual) {
+      slides[idx].classList.remove('is-active');
+      dots[idx].classList.remove('active');
+      idx = (n + slides.length) % slides.length;
+      slides[idx].classList.add('is-active');
+      dots[idx].classList.add('active');
+      if (manual) restart();
+    }
+    function next() { go(idx + 1); }
+    function start() { timer = setInterval(next, 6000); }
+    function restart() { clearInterval(timer); start(); }
+
+    const nextBtn = document.getElementById('nextSlide');
+    const prevBtn = document.getElementById('prevSlide');
+    if (nextBtn) nextBtn.addEventListener('click', () => go(idx + 1, true));
+    if (prevBtn) prevBtn.addEventListener('click', () => go(idx - 1, true));
+    start();
   }
-  function next() { go(idx + 1); }
-  function prev() { go(idx - 1); }
-  function start() { timer = setInterval(next, 6000); }
-  function restart() { clearInterval(timer); start(); }
-
-  document.getElementById('nextSlide').addEventListener('click', () => go(idx + 1, true));
-  document.getElementById('prevSlide').addEventListener('click', () => go(idx - 1, true));
-  start();
 
   /* ---------- Mobile nav ---------- */
   const burger = document.getElementById('hamburger');
@@ -61,10 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const onScroll = () => {
     const y = window.scrollY;
     header.classList.toggle('scrolled', y > 30);
-    toTop.classList.toggle('show', y > 600);
+    if (toTop) toTop.classList.toggle('show', y > 600);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+  if (toTop) {
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
 
   /* ---------- Reveal on scroll ---------- */
   const io = new IntersectionObserver((entries) => {
@@ -98,23 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================= */
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Preloader: hide as soon as the hero image is ready ---------- */
+  /* ---------- Preloader: hide as soon as the LCP image is ready ---------- */
   const preloader = document.getElementById('preloader');
   const hidePreloader = () => preloader && preloader.classList.add('done');
   if (reduce) hidePreloader();
   else {
-    // Reveal the moment the LCP hero image has painted (don't wait for full load),
-    // so the preloader overlay doesn't delay Largest Contentful Paint.
-    const heroImg = document.querySelector('.slide.is-active .slide__bg');
-    if (heroImg && heroImg.complete) {
+    // Support both the hero carousel (homepage) and the page-banner (inner pages)
+    const lcpImg = document.querySelector('.slide.is-active .slide__bg') ||
+                   document.querySelector('.page-banner__bg');
+    if (lcpImg && lcpImg.complete) {
       requestAnimationFrame(hidePreloader);
-    } else if (heroImg) {
-      heroImg.addEventListener('load', () => requestAnimationFrame(hidePreloader), { once: true });
-      heroImg.addEventListener('error', hidePreloader, { once: true });
+    } else if (lcpImg) {
+      lcpImg.addEventListener('load', () => requestAnimationFrame(hidePreloader), { once: true });
+      lcpImg.addEventListener('error', hidePreloader, { once: true });
     } else {
       window.addEventListener('load', hidePreloader);
     }
-    // safety net: never trap the user behind the loader
     setTimeout(hidePreloader, 3000);
   }
 
@@ -239,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const glow = document.createElement('div');
     glow.className = 'glow-cursor';
     document.body.appendChild(glow);
-    const darkSections = () => [...document.querySelectorAll('.hero, .why, .cta, .marquee, .footer')];
+    const darkSections = () => [...document.querySelectorAll('.hero, .page-banner, .why, .cta, .marquee, .footer')];
     let zones = darkSections();
     window.addEventListener('resize', () => { zones = darkSections(); }, { passive: true });
     let gx = 0, gy = 0, raf = false;
@@ -255,6 +260,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
     window.addEventListener('pointerleave', () => glow.classList.remove('show'));
   }
+
+  /* ---------- Page banner particles (about page) ---------- */
+  (function bannerParticles() {
+    const canvas = document.getElementById('bannerParticles');
+    if (!canvas || reduce) return;
+    const ctx = canvas.getContext('2d');
+    const banner = canvas.parentElement;
+    let w, h, parts = [], anim;
+    const COUNT = 36;
+    function size() { w = canvas.width = banner.offsetWidth; h = canvas.height = banner.offsetHeight; }
+    function make() {
+      parts = Array.from({ length: COUNT }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        r: Math.random() * 1.8 + 0.4,
+        vx: (Math.random() - 0.5) * 0.22,
+        vy: -(Math.random() * 0.35 + 0.08),
+        a: Math.random() * 0.45 + 0.1
+      }));
+    }
+    function tick() {
+      ctx.clearRect(0, 0, w, h);
+      parts.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.y < -5) { p.y = h + 5; p.x = Math.random() * w; }
+        if (p.x < -5) p.x = w + 5; if (p.x > w + 5) p.x = -5;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0,145,222,${p.a})`;
+        ctx.fill();
+      });
+      anim = requestAnimationFrame(tick);
+    }
+    size(); make(); tick();
+    window.addEventListener('resize', () => { size(); make(); }, { passive: true });
+    new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting) { if (!anim) tick(); }
+        else { cancelAnimationFrame(anim); anim = null; }
+      });
+    }, { threshold: 0 }).observe(banner);
+  })();
 
   /* ---------- Hero particles (floating gold flecks) ---------- */
   (function particles() {

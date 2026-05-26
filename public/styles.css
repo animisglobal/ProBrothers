@@ -554,4 +554,192 @@ ul{list-style:none}
   .marquee__track{animation:none!important}
   .glow-cursor{display:none}
   .blueprint path,.blueprint line,.blueprint circle{stroke-dashoffset:0!important}
+  .what-we-do__ring{animation:none!important}
+  .page-banner__title,.page-banner__sub,.breadcrumb{animation:none!important;opacity:1!important;transform:none!important}
+}
+
+/* ===========================================================
+   ABOUT PAGE STYLES
+   =========================================================== */
+
+/* ---------- Back-to-top as button ---------- */
+button.to-top{font-size:1.3rem;cursor:pointer;border:none;font-family:inherit}
+
+/* ---------- Page Banner ---------- */
+.page-banner{
+  position:relative;height:clamp(300px,45vh,460px);background:var(--dark);
+  overflow:hidden;display:flex;align-items:center;
+}
+.page-banner__bg{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;z-index:0;
+}
+.page-banner__overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(110deg,rgba(13,15,16,.90) 0%,rgba(13,15,16,.65) 55%,rgba(13,15,16,.45) 100%);
+}
+.page-banner__particles{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.page-banner__inner{position:relative;z-index:3;color:#fff;padding:2rem 0}
+.page-banner__title{
+  font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;text-transform:uppercase;
+  letter-spacing:-.01em;line-height:1.1;margin-top:.6rem;
+  opacity:0;transform:translateY(28px);animation:rise .8s var(--ease) .35s forwards;
+}
+.page-banner__sub{
+  margin-top:.8rem;color:rgba(255,255,255,.7);font-size:1rem;font-weight:500;
+  opacity:0;transform:translateY(20px);animation:rise .8s var(--ease) .55s forwards;
+}
+
+/* Breadcrumb */
+.breadcrumb ol{
+  display:flex;align-items:center;gap:.5rem;list-style:none;
+  font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;
+  color:rgba(255,255,255,.55);
+  opacity:0;transform:translateY(16px);animation:rise .8s var(--ease) .2s forwards;
+}
+.breadcrumb a{color:var(--accent);transition:color .2s}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb span[aria-current]{color:rgba(255,255,255,.9)}
+
+/* Wave at bottom of banner (fills white — section below is white) */
+.page-banner__wave{position:absolute;bottom:-1px;left:0;right:0;z-index:4;line-height:0}
+.page-banner__wave svg{width:100%;height:50px;display:block}
+.page-banner__wave path{fill:var(--white)}
+
+/* ---------- Industry Leaders ---------- */
+.about-leader{background:var(--white)}
+.about-leader__grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-leader__text .section__title{text-align:left}
+.about-leader__text .section__title + .blueprint{margin-left:0}
+.about-leader__para{
+  color:var(--muted);font-size:1rem;line-height:1.78;margin:1.4rem 0 1.8rem;
+}
+.about-leader__list{display:flex;flex-direction:column;gap:.8rem}
+.about-leader__list li{
+  display:flex;align-items:flex-start;gap:.8rem;
+  font-size:.95rem;font-weight:600;color:var(--ink);line-height:1.5;
+}
+.about-leader__list li::before{
+  content:"";flex-shrink:0;width:22px;height:22px;margin-top:1px;
+  border-radius:50%;background:var(--accent);
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;
+}
+
+/* ---------- Value Cards ---------- */
+.about-leader__cards{display:flex;flex-direction:column;gap:1.4rem}
+.value-card{
+  background:var(--gray-2);border-radius:var(--radius);padding:1.5rem;
+  display:flex;gap:1.1rem;align-items:flex-start;
+  border-left:4px solid var(--accent);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .25s;
+  position:relative;overflow:hidden;
+}
+.value-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,rgba(0,145,222,.05),transparent);
+  opacity:0;transition:opacity .35s;pointer-events:none;
+}
+.value-card:hover{transform:translateX(6px);box-shadow:var(--shadow);background:#fff}
+.value-card:hover::after{opacity:1}
+.value-card__ic{
+  flex-shrink:0;width:48px;height:48px;border-radius:12px;
+  background:var(--accent);color:var(--dark);display:grid;place-items:center;
+  transition:transform .3s var(--ease);
+}
+.value-card:hover .value-card__ic{transform:scale(1.1) rotate(-4deg)}
+.value-card__ic svg{width:22px;height:22px}
+.value-card__content h3{
+  font-size:.82rem;font-weight:900;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--dark);margin-bottom:.35rem;
+}
+.value-card__content p{font-size:.88rem;color:var(--muted);line-height:1.65;margin:0}
+
+/* ---------- Why About (reuses .why dark styles) ---------- */
+.why-about{isolation:isolate}
+.why-about::after{
+  content:"";position:absolute;bottom:-80px;left:-80px;width:280px;height:280px;
+  background:radial-gradient(circle,rgba(0,145,222,.14),transparent 70%);pointer-events:none;
+}
+
+/* ---------- What We Can Do ---------- */
+.what-we-do{background:var(--gray-2)}
+.what-we-do__layout{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
+}
+.what-we-do__title{text-align:left}
+.what-we-do__title + .blueprint{margin-left:0}
+.what-we-do__content .section__kicker{display:block;text-align:left}
+.what-we-do__content p{
+  color:var(--muted);font-size:1.05rem;line-height:1.82;margin:1.4rem 0 2rem;
+}
+.what-we-do__image{
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);aspect-ratio:4/3;position:relative;
+}
+.what-we-do__image::after{
+  content:"";position:absolute;inset:0;border-radius:var(--radius);
+  background:linear-gradient(135deg,rgba(0,145,222,.12),transparent 60%);
+  opacity:0;transition:opacity .4s var(--ease);
+}
+.what-we-do__image:hover::after{opacity:1}
+.what-we-do__image img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .8s var(--ease);
+}
+.what-we-do__image:hover img{transform:scale(1.06)}
+
+/* ---------- Team ---------- */
+.team{background:var(--white)}
+.team__grid{
+  display:flex;flex-wrap:wrap;gap:1.8rem;justify-content:center;margin-top:.5rem;
+}
+.team__card{
+  flex:0 0 calc(25% - 1.35rem);background:#fff;border-radius:var(--radius);
+  padding:2rem 1.4rem;text-align:center;box-shadow:var(--shadow-sm);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+  position:relative;isolation:isolate;
+}
+.team__card::before{
+  content:"";position:absolute;inset:0;border-radius:var(--radius);padding:2px;z-index:-1;
+  background:linear-gradient(130deg,var(--accent),transparent 35%,transparent 65%,var(--blue));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  opacity:0;transition:opacity .4s var(--ease);
+}
+.team__card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}
+.team__card:hover::before{opacity:1}
+.team__avatar{
+  width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;font-size:1.25rem;font-weight:900;display:grid;place-items:center;
+  margin:0 auto 1.1rem;letter-spacing:.03em;
+  box-shadow:0 6px 18px rgba(0,145,222,.3);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.team__card:hover .team__avatar{transform:scale(1.1);box-shadow:0 10px 28px rgba(0,145,222,.45)}
+.team__card h3{
+  font-size:.95rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;color:var(--dark);margin-bottom:.35rem;
+}
+.team__card span{
+  font-size:.8rem;font-weight:700;color:var(--accent);
+  text-transform:uppercase;letter-spacing:.08em;
+}
+
+/* ---------- About responsive ---------- */
+@media(max-width:1100px){
+  .team__card{flex:0 0 calc(33.33% - 1.2rem)}
+}
+@media(max-width:900px){
+  .about-leader__grid{grid-template-columns:1fr;gap:2.5rem}
+  .what-we-do__layout{grid-template-columns:1fr;gap:2.5rem}
+  .what-we-do__image{aspect-ratio:16/9}
+}
+@media(max-width:700px){
+  .team__card{flex:0 0 calc(50% - .9rem)}
+}
+@media(max-width:420px){
+  .team__card{flex:0 0 100%}
+  .page-banner{height:clamp(260px,50vh,360px)}
 }

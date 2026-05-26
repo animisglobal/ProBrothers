@@ -692,54 +692,78 @@ button.to-top{font-size:1.3rem;cursor:pointer;border:none;font-family:inherit}
 /* ---------- Team ---------- */
 .team{background:var(--white)}
 .team__grid{
-  display:flex;flex-wrap:wrap;gap:1.8rem;justify-content:center;margin-top:.5rem;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.6rem;
+  margin-top:.5rem;
 }
+/* last row: 3 cards (Marsel, James, Zhena, Marina — only 3 show in last row of 4-col)
+   centre them by making row 2 a 3-col sub-grid via auto-fit */
 .team__card{
-  flex:0 0 calc(25% - 1.35rem);background:#fff;border-radius:var(--radius);
-  padding:2rem 1.4rem;text-align:center;box-shadow:var(--shadow-sm);
+  background:#fff;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-sm);
   transition:transform .4s var(--ease),box-shadow .4s var(--ease);
   position:relative;isolation:isolate;
 }
-.team__card::before{
-  content:"";position:absolute;inset:0;border-radius:var(--radius);padding:2px;z-index:-1;
-  background:linear-gradient(130deg,var(--accent),transparent 35%,transparent 65%,var(--blue));
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;mask-composite:exclude;
-  opacity:0;transition:opacity .4s var(--ease);
+.team__card::after{
+  content:"";position:absolute;inset:0;border-radius:var(--radius);
+  background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 50%);
+  opacity:0;transition:opacity .35s var(--ease);pointer-events:none;z-index:1;
 }
-.team__card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}
-.team__card:hover::before{opacity:1}
-.team__avatar{
-  width:72px;height:72px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
-  color:#fff;font-size:1.25rem;font-weight:900;display:grid;place-items:center;
-  margin:0 auto 1.1rem;letter-spacing:.03em;
-  box-shadow:0 6px 18px rgba(0,145,222,.3);
-  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+.team__card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.team__card:hover::after{opacity:1}
+
+/* photo area */
+.team__photo{
+  width:100%;aspect-ratio:3/2;overflow:hidden;background:var(--gray-2);
+  position:relative;display:block;
 }
-.team__card:hover .team__avatar{transform:scale(1.1);box-shadow:0 10px 28px rgba(0,145,222,.45)}
-.team__card h3{
+.team__photo img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+  transition:transform .7s var(--ease);
+}
+.team__card:hover .team__photo img{transform:scale(1.07)}
+
+/* initials fallback for members without a real photo */
+.team__photo--initials{
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--dark) 0%,#3a4046 100%);
+}
+.team__photo--initials span{
+  font-size:2.2rem;font-weight:900;color:var(--accent);letter-spacing:.06em;
+  user-select:none;
+}
+
+/* name / role bar */
+.team__info{
+  padding:1rem 1.1rem 1.2rem;
+  position:relative;z-index:2;
+}
+.team__info h3{
   font-size:.95rem;font-weight:800;text-transform:uppercase;
-  letter-spacing:.03em;color:var(--dark);margin-bottom:.35rem;
+  letter-spacing:.04em;color:var(--dark);margin-bottom:.25rem;
+  transition:color .25s;
 }
-.team__card span{
-  font-size:.8rem;font-weight:700;color:var(--accent);
-  text-transform:uppercase;letter-spacing:.08em;
+.team__card:hover .team__info h3{color:var(--accent-dark)}
+.team__info span{
+  font-size:.78rem;font-weight:700;color:var(--accent);
+  text-transform:uppercase;letter-spacing:.1em;
 }
 
 /* ---------- About responsive ---------- */
 @media(max-width:1100px){
-  .team__card{flex:0 0 calc(33.33% - 1.2rem)}
+  .team__grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:900px){
   .about-leader__grid{grid-template-columns:1fr;gap:2.5rem}
   .what-we-do__layout{grid-template-columns:1fr;gap:2.5rem}
   .what-we-do__image{aspect-ratio:16/9}
+  .team__grid{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:700px){
-  .team__card{flex:0 0 calc(50% - .9rem)}
-}
-@media(max-width:420px){
-  .team__card{flex:0 0 100%}
+@media(max-width:480px){
+  .team__grid{grid-template-columns:1fr 1fr}
   .page-banner{height:clamp(260px,50vh,360px)}
+}
+@media(max-width:380px){
+  .team__grid{grid-template-columns:1fr}
 }

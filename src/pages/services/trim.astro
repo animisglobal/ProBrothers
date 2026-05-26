@@ -183,22 +183,15 @@ const pageSchema = {
         </div>
         <div class="svc-overview__media reveal" data-reveal="right">
           <figure class="svc-overview__figure">
-            <img src="/assets/img/hero-trim.webp"
-                 srcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
-                 sizes="(max-width:900px) 100vw, 50vw"
+            <img src="/assets/img/services/gold-beams.webp"
                  alt="Beautifully crafted trim for enhanced interior design"
-                 loading="lazy" width="750" height="500" />
-          </figure>
-          <figure class="svc-overview__figure svc-overview__figure--offset">
-            <img src="/assets/img/proj-gold.webp"
-                 alt="Elegant trim details for refined interior spaces"
-                 loading="lazy" width="750" height="500" />
+                 loading="lazy" width="768" height="1024" />
             <figcaption>Gold Beams</figcaption>
           </figure>
-          <figure class="svc-overview__figure svc-overview__figure--offset2">
-            <img src="/assets/img/proj-mantle.webp"
-                 alt="Custom stair trim and woodwork by ProBrothers"
-                 loading="lazy" width="750" height="500" />
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/services/stair-trim.webp"
+                 alt="Elegant trim details for refined interior spaces"
+                 loading="lazy" width="768" height="1024" />
             <figcaption>Stair Trim</figcaption>
           </figure>
         </div>
@@ -435,7 +428,7 @@ const pageSchema = {
       <div class="cards">
         <article class="card reveal">
           <div class="card__media">
-            <img src="/assets/img/svc-cabinets.webp" alt="Custom kitchen and office cabinets by ProBrothers" loading="lazy" width="750" height="500" />
+            <img src="/assets/img/services/two-tone-grey-kitchen-1.webp" alt="Custom kitchen and office cabinets by ProBrothers" loading="lazy" width="1024" height="769" />
           </div>
           <div class="card__body">
             <h3>Cabinets</h3>
@@ -498,28 +491,34 @@ const pageSchema = {
   margin: 0 0 1.2rem;
 }
 .svc-overview__para:first-of-type { margin-top: 1.4rem; }
-.svc-overview__media { display: flex; flex-direction: column; gap: 1.2rem; }
+.svc-overview__media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
 .svc-overview__figure {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   position: relative;
+  aspect-ratio: 3/4;
 }
 .svc-overview__figure img {
-  width: 100%; height: auto; display: block;
+  width: 100%; height: 100%; display: block;
+  object-fit: cover;
   transition: transform .8s var(--ease);
 }
 .svc-overview__figure:hover img { transform: scale(1.04); }
 .svc-overview__figure figcaption {
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: .6rem 1rem;
-  background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
-  color: #fff; font-weight: 800; font-size: .85rem;
+  background: linear-gradient(to top, rgba(0,0,0,.75), transparent);
+  color: #fff; font-weight: 800; font-size: .82rem;
   text-transform: uppercase; letter-spacing: .06em;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
 }
-.svc-overview__figure--offset { display: none; }
-.svc-overview__figure--offset2 { display: none; }
-
+.svc-overview__figure:hover figcaption { opacity: 1; transform: translateY(0); }
 /* ===== Why Trim ===== */
 .svc-why-trim__grid {
   display: grid;
@@ -611,6 +610,9 @@ const pageSchema = {
   .svc-overview__grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .svc-why-trim__grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .svc-types__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 480px) {
+  .svc-overview__media { grid-template-columns: 1fr; }
 }
 </style>
 

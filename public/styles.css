@@ -3,10 +3,10 @@
    Brand palette pulled from probrothers.com
    =========================================================== */
 :root{
-  --accent:#F4BC16;      /* gold/yellow */
-  --accent-dark:#d9a505;
-  --gold-text:#8a6800;   /* AA-contrast gold for text on light backgrounds (5.17:1) */
-  --blue:#0091DE;        /* secondary blue */
+  --accent:#0091DE;      /* brand blue */
+  --accent-dark:#0072B0;
+  --gold-text:#005f93;   /* darker blue for text on light backgrounds (AA contrast) */
+  --blue:#0091DE;        /* brand blue */
   --dark:#25282A;        /* near-black */
   --ink:#32373c;
   --gray:#E2E6E7;        /* light gray sections */
@@ -47,7 +47,7 @@ ul{list-style:none}
 }
 .btn--lg{padding:1.05rem 2.2rem;font-size:.9rem}
 .btn--accent{background:var(--accent);color:var(--dark)}
-.btn--accent:hover{background:var(--accent-dark);transform:translateY(-3px);box-shadow:0 14px 28px rgba(244,188,22,.4)}
+.btn--accent:hover{background:var(--accent-dark);transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,145,222,.4)}
 .btn--dark{background:var(--dark);color:#fff}
 .btn--dark:hover{background:#000;transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,.28)}
 .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
@@ -69,10 +69,11 @@ ul{list-style:none}
 .topbar .ic{color:var(--accent)}
 .topbar__social{display:flex;gap:.5rem}
 .soc{
-  width:26px;height:26px;display:grid;place-items:center;font-size:.62rem;font-weight:700;
+  width:28px;height:28px;display:grid;place-items:center;
   border:1px solid rgba(255,255,255,.25);border-radius:50%;color:#cfd4d6;transition:.25s var(--ease);
 }
-.soc:hover{background:var(--accent);color:var(--dark);border-color:var(--accent);transform:translateY(-2px)}
+.soc svg{width:14px;height:14px;display:block}
+.soc:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-2px)}
 
 /* ---------- Header ---------- */
 .header{
@@ -80,10 +81,10 @@ ul{list-style:none}
   box-shadow:0 2px 0 rgba(0,0,0,.04);transition:box-shadow .3s,padding .3s;
 }
 .header.scrolled{box-shadow:var(--shadow-sm)}
-.header__inner{display:flex;align-items:center;gap:1.5rem;height:84px;transition:height .3s}
-.header.scrolled .header__inner{height:70px}
-.brand__logo{height:46px;width:auto;transition:height .3s}
-.header.scrolled .brand__logo{height:40px}
+.header__inner{display:flex;align-items:center;gap:1.5rem;height:96px;transition:height .3s}
+.header.scrolled .header__inner{height:78px}
+.brand__logo{height:68px;width:auto;transition:height .3s}
+.header.scrolled .brand__logo{height:54px}
 
 .nav{margin-left:auto}
 .nav__list{display:flex;gap:.4rem;align-items:center}
@@ -143,15 +144,16 @@ ul{list-style:none}
 .slide.is-active .slide__bg{animation:kenburns 9s ease-out both}
 @keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1.01)}}
 
-.slide__content{max-width:680px;color:#fff}
+.slide__content{max-width:680px;color:#fff;padding:5rem 0}
 .slide__eyebrow{
   display:inline-block;color:var(--accent);font-weight:700;letter-spacing:.22em;
   text-transform:uppercase;font-size:.78rem;margin-bottom:1rem;
   opacity:0;transform:translateY(20px);
 }
 .slide__title{
-  font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;line-height:1.05;
+  font-size:clamp(2.2rem,5.6vw,4.4rem);font-weight:900;line-height:1.15;
   text-transform:uppercase;letter-spacing:-.01em;margin-bottom:1.1rem;
+  padding-bottom:.15em;
   opacity:0;transform:translateY(28px);
 }
 .slide__text{
@@ -247,13 +249,14 @@ ul{list-style:none}
 .why{background:var(--dark);position:relative;overflow:hidden}
 .why::before{
   content:"";position:absolute;top:-120px;right:-120px;width:360px;height:360px;
-  background:radial-gradient(circle,rgba(244,188,22,.18),transparent 70%);
+  background:radial-gradient(circle,rgba(0,145,222,.18),transparent 70%);
 }
 .why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem;position:relative}
 .why__item{text-align:center;color:#dfe3e5}
 .why__num{font-size:4rem;font-weight:900;color:var(--accent);line-height:1}
 .why__num::after{content:"+";font-size:2.4rem}
-.why__ic{font-size:3.2rem;color:var(--accent);line-height:1;margin-bottom:.6rem}
+.why__ic{font-size:3.2rem;color:var(--accent);line-height:1;margin-bottom:.6rem;display:inline-flex;align-items:center;justify-content:center}
+.why__ic svg{width:64px;height:64px;display:block}
 .why__item h3{color:#fff;font-size:1.25rem;font-weight:800;text-transform:uppercase;margin:.9rem 0 .6rem}
 .why__item p{color:#aeb4b7;font-size:.95rem}
 
@@ -279,7 +282,7 @@ ul{list-style:none}
 }
 .cta::after{
   content:"";position:absolute;left:-100px;bottom:-100px;width:300px;height:300px;
-  background:radial-gradient(circle,rgba(244,188,22,.2),transparent 70%);
+  background:radial-gradient(circle,rgba(0,145,222,.2),transparent 70%);
 }
 .cta__inner{position:relative;max-width:680px;margin:0 auto}
 .cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-transform:uppercase;margin-bottom:.8rem}
@@ -297,7 +300,8 @@ ul{list-style:none}
 .footer__col ul a{transition:.2s}
 .footer__col ul a:hover{color:var(--accent);padding-left:4px}
 .footer__social{display:flex;gap:.6rem}
-.soc--lg{width:36px;height:36px;font-size:.72rem}
+.soc--lg{width:38px;height:38px}
+.soc--lg svg{width:18px;height:18px}
 .footer__bar{border-top:1px solid rgba(255,255,255,.08);padding:1.2rem 0;font-size:.8rem}
 .footer__bar .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
 
@@ -376,7 +380,7 @@ ul{list-style:none}
 .scroll-progress{
   position:fixed;top:0;left:0;height:4px;width:0;z-index:100;
   background:linear-gradient(90deg,var(--accent),var(--accent-dark));
-  box-shadow:0 0 12px rgba(244,188,22,.6);
+  box-shadow:0 0 12px rgba(0,145,222,.6);
   transition:width .1s linear;
 }
 
@@ -467,7 +471,7 @@ ul{list-style:none}
 .glow-cursor{
   position:fixed;top:0;left:0;width:420px;height:420px;border-radius:50%;
   margin:-210px 0 0 -210px;pointer-events:none;z-index:40;opacity:0;
-  background:radial-gradient(circle,rgba(244,188,22,.18),rgba(244,188,22,.06) 40%,transparent 70%);
+  background:radial-gradient(circle,rgba(0,145,222,.18),rgba(0,145,222,.06) 40%,transparent 70%);
   transition:opacity .35s var(--ease);will-change:transform;
 }
 .glow-cursor.show{opacity:1}

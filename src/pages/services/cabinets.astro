@@ -476,6 +476,71 @@ const pageSchema = {
     </div>
   </section>
 
+  <!-- ===== Service Contact Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Custom Cabinets Quote">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Request a Custom Cabinets Quote</h2>
+          <p class="contact-form-box__sub">Tell us about your cabinetry project and we'll get back to you within one business day.</p>
+
+          <form class="contact-form" id="cabinetsForm" action="#" method="post" novalidate aria-label="Cabinets quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="cabFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="cabFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="cabLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="cabLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="cabEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="cabEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="cabPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="cabPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="cabMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="cabMessage" name="message" rows="5" placeholder="Tell us about your cabinet project..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Contact CTA ===== -->
   <section class="cta" id="contact" aria-label="Contact us">
     <div class="container cta__inner reveal">

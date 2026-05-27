@@ -33,15 +33,48 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nextBtn) nextBtn.addEventListener('click', () => go(idx + 1, true));
     if (prevBtn) prevBtn.addEventListener('click', () => go(idx - 1, true));
     start();
+
+    /* ---- Touch / swipe support (mobile) ---- */
+    const heroEl = document.querySelector('.hero');
+    if (heroEl) {
+      let sx = 0, sy = 0, dx = 0, dy = 0, tracking = false;
+      const THRESHOLD = 40;
+      heroEl.addEventListener('touchstart', (e) => {
+        if (e.touches.length !== 1) return;
+        tracking = true;
+        sx = e.touches[0].clientX;
+        sy = e.touches[0].clientY;
+        dx = dy = 0;
+      }, { passive: true });
+      heroEl.addEventListener('touchmove', (e) => {
+        if (!tracking) return;
+        dx = e.touches[0].clientX - sx;
+        dy = e.touches[0].clientY - sy;
+      }, { passive: true });
+      heroEl.addEventListener('touchend', () => {
+        if (!tracking) return;
+        tracking = false;
+        if (Math.abs(dx) > THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0) go(idx + 1, true); else go(idx - 1, true);
+        }
+      });
+    }
   }
 
   /* ---------- Mobile nav ---------- */
   const burger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
+  const navClose = document.getElementById('navClose');
   burger.addEventListener('click', () => {
     burger.classList.toggle('open');
     nav.classList.toggle('open');
   });
+  if (navClose) {
+    navClose.addEventListener('click', () => {
+      burger.classList.remove('open');
+      nav.classList.remove('open');
+    });
+  }
   // submenu toggles + close menu on link tap (mobile)
   nav.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', (e) => {
@@ -348,10 +381,10 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   /* ---------- Contact form validation & submit ---------- */
-  (function contactForm() {
-    const form = document.getElementById('contactForm');
+  document.querySelectorAll('.contact-form').forEach(initContactForm);
+  function initContactForm(form) {
     if (!form) return;
-    const success = document.getElementById('formSuccess');
+    const success = form.querySelector('.contact-form__success');
 
     function validate(field) {
       const group = field.closest('.contact-form__group');
@@ -409,6 +442,89 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { if (success) success.setAttribute('hidden', ''); }, 8000);
       }, 900);
     });
+  }
+
+  /* ---------- Reviews slider ---------- */
+  (function reviewsSlider() {
+    const slider = document.getElementById('reviewsSlider');
+    if (!slider) return;
+    const track = document.getElementById('reviewsTrack');
+    const items = [...track.children];
+    const prev = document.getElementById('reviewsPrev');
+    const next = document.getElementById('reviewsNext');
+    const dotsWrap = document.getElementById('reviewsDots');
+    if (!items.length) return;
+
+    let perView = 3;
+    let index = 0;
+    let auto;
+
+    function computePerView() {
+      const w = window.innerWidth;
+      if (w <= 700) perView = 1;
+      else if (w <= 1024) perView = 2;
+      else perView = 3;
+    }
+    function maxIndex() { return Math.max(0, items.length - perView); }
+    function update() {
+      const itemWidth = items[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      track.style.transform = `translateX(-${index * (itemWidth + gap)}px)`;
+      [...dotsWrap.children].forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      const count = maxIndex() + 1;
+      for (let i = 0; i < count; i++) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'reviews-slider__dot' + (i === 0 ? ' active' : '');
+        b.setAttribute('aria-label', 'Go to testimonial group ' + (i + 1));
+        b.addEventListener('click', () => { index = i; update(); restart(); });
+        dotsWrap.appendChild(b);
+      }
+    }
+    function go(n) {
+      const m = maxIndex();
+      if (n < 0) index = m;
+      else if (n > m) index = 0;
+      else index = n;
+      update();
+    }
+    function start() { auto = setInterval(() => go(index + 1), 7000); }
+    function restart() { clearInterval(auto); start(); }
+
+    function resize() {
+      computePerView();
+      if (index > maxIndex()) index = maxIndex();
+      buildDots();
+      update();
+    }
+
+    prev.addEventListener('click', () => { go(index - 1); restart(); });
+    next.addEventListener('click', () => { go(index + 1); restart(); });
+
+    /* swipe */
+    let sx = 0, dx = 0, tracking = false;
+    track.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1) return;
+      tracking = true; sx = e.touches[0].clientX; dx = 0;
+    }, { passive: true });
+    track.addEventListener('touchmove', (e) => {
+      if (tracking) dx = e.touches[0].clientX - sx;
+    }, { passive: true });
+    track.addEventListener('touchend', () => {
+      if (!tracking) return;
+      tracking = false;
+      if (Math.abs(dx) > 40) {
+        if (dx < 0) go(index + 1); else go(index - 1);
+        restart();
+      }
+    });
+
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+    start();
   })();
 
   /* ---------- Before / After wiper ---------- */

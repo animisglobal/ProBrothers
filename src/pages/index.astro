@@ -8,19 +8,17 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero__slides">
       <div class="slide is-active">
         <!-- Real <img> so it is the LCP element and is discoverable by the preload scanner -->
-        <img class="slide__bg" src="/assets/img/hero-trim.webp"
-             srcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
-             sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+        <img class="slide__bg" src="/assets/img/services/stair-trim.webp"
+             sizes="100vw" alt="" fetchpriority="high" width="1600" height="1067" />
         <div class="container slide__content">
           <span class="slide__eyebrow">Craftsmanship You Can Trust</span>
-          <h1 class="slide__title">Precision Trim<br>Work</h1>
+          <h1 class="slide__title">Precision Trim Work</h1>
           <p class="slide__text">Enhance your home's look with our detailed trim work, adding a touch of sophistication to every room.</p>
           <a href="#services" class="btn btn--accent btn--lg">Explore</a>
         </div>
       </div>
       <div class="slide">
-        <img class="slide__bg" src="/assets/img/hero-cabinets.webp"
-             srcset="/assets/img/hero-cabinets-sm.webp 800w, /assets/img/hero-cabinets.webp 1600w"
+        <img class="slide__bg" src="/assets/img/services/two-tone-grey-kitchen-1.webp"
              sizes="100vw" alt="" loading="lazy" width="1600" height="1067" />
         <div class="container slide__content">
           <span class="slide__eyebrow">Built Around Your Space</span>
@@ -77,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="section__head reveal">
         <span class="section__kicker">What We Do</span>
         <h2 class="section__title">Our Services</h2>
-        <p class="section__lead">ProBrothers is a full-service residential and commercial construction and remodeling company with <strong>over 15 years of experience</strong>. We bring precision, premium materials, and clear communication to every project.</p>
+        <p class="section__lead">ProBrothers is a full-service residential and commercial construction and remodeling company with <strong>over 15 years of experience</strong>. From precision trim carpentry and custom cabinetry to complete interior remodels, seamless home additions, new construction, and high-performance window and door installations, we handle every detail in-house. Our skilled craftsmen combine premium materials, careful planning, and daily client communication to deliver projects that stay on schedule and on budget. Whether you're refreshing a single room or transforming an entire property, we bring the same level of precision, professionalism, and pride to every job we take on.</p>
       </div>
 
       <div class="cards">
@@ -119,25 +117,26 @@ import Layout from '../layouts/Layout.astro';
       <div class="section__head reveal">
         <span class="section__kicker">Our Work</span>
         <h2 class="section__title">Recent Projects</h2>
+        <p class="section__lead">Take a look at some of our recent transformations. Each project showcases our commitment to detail, craftsmanship, and the quality of materials we use across trim, cabinetry, custom carpentry, and windows &amp; doors throughout the Media, PA region.</p>
       </div>
 
       <div class="gallery">
-        <figure class="tile reveal" data-tilt>
+        <a href="/services/trim/" class="tile reveal" data-tilt aria-label="View Dark Blue Office project">
           <img src="/assets/img/proj-office.webp" alt="Dark Blue Office" loading="lazy" width="750" height="500" />
           <figcaption><span>Dark Blue Office</span><em>Trim &amp; Cabinets</em></figcaption>
-        </figure>
-        <figure class="tile reveal" data-tilt style="--d:.08s">
+        </a>
+        <a href="/services/trim/" class="tile reveal" data-tilt style="--d:.08s" aria-label="View Gold Beams project">
           <img src="/assets/img/proj-gold.webp" alt="Gold Beams" loading="lazy" width="750" height="500" />
           <figcaption><span>Gold Beams</span><em>Custom Carpentry</em></figcaption>
-        </figure>
-        <figure class="tile reveal" data-tilt style="--d:.16s">
+        </a>
+        <a href="/services/trim/" class="tile reveal" data-tilt style="--d:.16s" aria-label="View Gray Mantle and Beams project">
           <img src="/assets/img/proj-mantle.webp" alt="Gray Mantle & Beams" loading="lazy" width="750" height="500" />
           <figcaption><span>Gray Mantle &amp; Beams</span><em>Trim Work</em></figcaption>
-        </figure>
-        <figure class="tile reveal" data-tilt style="--d:.24s">
+        </a>
+        <a href="/#services" class="tile reveal" data-tilt style="--d:.24s" aria-label="View Large Bathroom Window project">
           <img src="/assets/img/proj-window.webp" alt="Large Bathroom Window" loading="lazy" width="750" height="500" />
           <figcaption><span>Large Bathroom Window</span><em>Windows &amp; Doors</em></figcaption>
-        </figure>
+        </a>
       </div>
 
       <!-- Before / After wiper -->
@@ -172,16 +171,21 @@ import Layout from '../layouts/Layout.astro';
       <div class="section__head reveal">
         <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
         <h2 class="section__title section__title--light">Why Choose ProBrothers</h2>
+        <p class="section__lead section__lead--light">For over 15 years, homeowners and businesses across Media, PA have trusted ProBrothers for construction and remodeling work done right the first time. We combine quality workmanship, superior knowledge, and competitive pricing, all delivered by a tight-knit team that treats every project like our own.</p>
       </div>
 
       <div class="why__grid">
         <div class="why__item reveal">
-          <div class="why__num" data-count="15">0</div>
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
           <h3>Over 15 Years Experience</h3>
           <p>Quality workmanship at competitive pricing, backed by a decade and a half of hands-on expertise.</p>
         </div>
         <div class="why__item reveal" style="--d:.12s">
-          <div class="why__ic">&#9874;</div>
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v6l8 5 8-5V7l-8-5z"/><path d="M4 7l8 5 8-5"/><path d="M12 12v10"/></svg>
+          </div>
           <h3>Best Materials</h3>
           <p>We source premium materials and the right resources for smooth, durable, beautiful results.</p>
         </div>
@@ -204,22 +208,44 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="section__title">Client Reviews</h2>
       </div>
 
-      <div class="cards">
-        <blockquote class="review reveal">
-          <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"The craftsmanship was outstanding. Every detail of our remodel was handled with care, and the trim work transformed the whole space."</p>
-          <footer>— Sarah &amp; Mike Jenkins</footer>
-        </blockquote>
-        <blockquote class="review reveal" style="--d:.1s">
-          <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Communication was excellent from start to finish. They showed up when they said they would and kept me informed every single day."</p>
-          <footer>— Dan Miller</footer>
-        </blockquote>
-        <blockquote class="review reveal" style="--d:.2s">
-          <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Incredible attention to detail. The custom cabinets fit perfectly and the finish is flawless. Highly recommend ProBrothers."</p>
-          <footer>— Andriy Koval</footer>
-        </blockquote>
+      <div class="reviews-slider reveal" id="reviewsSlider">
+        <div class="reviews-slider__viewport">
+          <div class="reviews-slider__track" id="reviewsTrack">
+            <blockquote class="review">
+              <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"Daniil and his team did an outstanding job on our home remodel. From the very beginning, they were professional, communicative, and attentive to every detail. The craftsmanship is exceptional and the entire project came in on schedule."</p>
+              <footer>— Sarah Patel</footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"ProBrothers transformed our outdated kitchen into a stunning, functional space. Their attention to detail and commitment to using premium materials really shows. We get compliments from everyone who visits."</p>
+              <footer>— Michael Johnson</footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"We hired ProBrothers for an addition to our home and could not be happier. They were responsive, easy to work with, and the final result blends seamlessly with our existing structure. Truly skilled craftsmen."</p>
+              <footer>— Jennifer Reilly</footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"The custom cabinetry ProBrothers built for our office is beautiful. Every door, drawer, and inset is perfectly aligned. You can really see the difference when craftsmen care about their work."</p>
+              <footer>— David Harris</footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"From the initial consultation through the final walkthrough, ProBrothers was a pleasure to work with. Their crown molding and wainscoting installation completely changed the feel of our home."</p>
+              <footer>— Emily Carter</footer>
+            </blockquote>
+            <blockquote class="review">
+              <div class="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"Honest, reliable, and incredibly talented. ProBrothers replaced all of our windows and installed new interior doors. The work is meticulous and they cleaned up every day before leaving."</p>
+              <footer>— Robert Nguyen</footer>
+            </blockquote>
+          </div>
+        </div>
+        <button class="reviews-slider__arrow reviews-slider__arrow--prev" id="reviewsPrev" aria-label="Previous testimonial" type="button">&#8249;</button>
+        <button class="reviews-slider__arrow reviews-slider__arrow--next" id="reviewsNext" aria-label="Next testimonial" type="button">&#8250;</button>
+        <div class="reviews-slider__dots" id="reviewsDots" aria-hidden="true"></div>
       </div>
     </div>
   </section>

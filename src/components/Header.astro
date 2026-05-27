@@ -13,6 +13,9 @@ const isServices = pathname.startsWith('/services');
     </a>
 
     <nav class="nav" id="nav" aria-label="Main navigation">
+      <button class="nav__close" id="navClose" aria-label="Close menu" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
       <ul class="nav__list">
         <li><a href="/" class={isHome ? 'active' : ''}>Home</a></li>
         <li><a href="/about/" class={isAbout ? 'active' : ''}>About</a></li>

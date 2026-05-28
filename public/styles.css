@@ -468,7 +468,8 @@ ul{list-style:none}
   display:inline-block;opacity:0;transform:translateY(.7em) rotateX(-40deg);
   transform-origin:bottom;will-change:transform,opacity;
 }
-.char--space{width:.32em}
+.char--space{display:inline-block;width:.32em}
+.slide__title .word{display:inline-block;white-space:nowrap}
 .hero.split-ready .slide.is-active .slide__title .char{
   animation:char-in .55s var(--ease) forwards;
   animation-delay:calc(.35s + var(--ci) * .03s);

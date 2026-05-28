@@ -237,17 +237,27 @@ document.addEventListener('DOMContentLoaded', () => {
     titles.forEach(title => {
       const text = title.textContent;
       title.textContent = '';
+      const words = text.split(' ');
       let i = 0;
-      [...text].forEach(ch => {
-        if (ch === ' ') {
-          title.appendChild(Object.assign(document.createElement('span'),
-            { className: 'char char--space' }));
-        } else {
+      words.forEach((word, wIdx) => {
+        const wordEl = document.createElement('span');
+        wordEl.className = 'word';
+        [...word].forEach(ch => {
+          if (ch === ' ') {
+            wordEl.appendChild(Object.assign(document.createElement('span'),
+              { className: 'char char--space' }));
+            return;
+          }
           const s = document.createElement('span');
           s.className = 'char';
           s.textContent = ch;
           s.style.setProperty('--ci', i++);
-          title.appendChild(s);
+          wordEl.appendChild(s);
+        });
+        title.appendChild(wordEl);
+        if (wIdx < words.length - 1) {
+          title.appendChild(Object.assign(document.createElement('span'),
+            { className: 'char char--space' }));
         }
       });
     });

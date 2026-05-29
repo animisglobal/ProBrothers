@@ -1,0 +1,198 @@
+---
+/**
+ * Source URL: https://probrothers.com/trim/
+ * Verbatim project descriptions preserved. Lightbox gallery added.
+ */
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://prob.nurotech.co.in/projects/trim/",
+      "name": "Trim Work Projects",
+      "description": "ProBrothers' latest trim work projects — black beams, retirement home commercial trim, stair paneling, ceiling trim and coffered ceilings.",
+      "url": "https://prob.nurotech.co.in/projects/trim/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://prob.nurotech.co.in/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "Trim", "item": "https://prob.nurotech.co.in/projects/trim/" }
+      ]
+    }
+  ]
+};
+
+const projects = [
+  {
+    id: 'black-beams',
+    title: 'Black Beams',
+    body: "This was an incredible project in both size and style. Due to the size of the home and technicalities, this was a commercial project, even though it was for a private client. Our task was to make and install massive black beams with a very complex shape. We started with building the beams in parts that we would be able to transfer to the site, and install. After the completion of the shop work, we transferred the beams to the site. They were installed using a scissor lift due to the high ceilings. After beams were installed, we went over with touch up to ensure the highest quality.",
+    images: [
+      { src: '/assets/img/proj-mantle.webp', alt: 'Massive black beams installed in a high-ceiling home' },
+      { src: '/assets/img/services/gold-beams.webp', alt: 'Custom black beam shopwork prior to installation' },
+      { src: '/assets/img/proj-gold.webp', alt: 'Finished black beams adding architectural drama to the room' }
+    ]
+  },
+  {
+    id: 'retirement-home',
+    title: 'Retirement Home',
+    body: "This was a commercial project for a luxury retirement home. This was a new construction building that already had drawings for what they wanted. We built the beams to spec and size, and finished them with the stain the designer chose. After transporting them to the location, we installed them with a team of three. After installation they were checked by our team that the highest quality was attained.",
+    images: [
+      { src: '/assets/img/services/gold-beams.webp', alt: 'Stained beams crafted to designer spec for retirement home' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'Commercial trim installation in luxury retirement home' }
+    ]
+  },
+  {
+    id: 'delaware-project',
+    title: 'Delaware Project',
+    body: '',
+    images: [
+      { src: '/assets/img/services/stair-trim.webp', alt: 'Delaware trim project — crown molding and stair work' },
+      { src: '/assets/img/proj-gold.webp', alt: 'Delaware trim project — interior detailing' }
+    ]
+  },
+  {
+    id: 'stairs',
+    title: 'Stairs',
+    body: "This was a complex trim job that we did for a client building a new home in Delaware. We were contacted about a client wanting trim paneling in a curving staircase leading to the basement. Since this was not your usual straight walls, special trim was needed so that it would be able to mold to the shape. After ordering the right amount of materials, we got to work. Using lasers and levels we installed the trim as straight as possible, also maintaining precision at all of the connections. After installation, trim was inspected, any holes filled, and then painted.",
+    images: [
+      { src: '/assets/img/services/stair-trim.webp', alt: 'Curving staircase with custom trim paneling' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'Detail of trim molded to curved staircase walls' }
+    ]
+  },
+  {
+    id: 'white-stairs',
+    title: 'White Stairs',
+    body: "A client came to use wanting to add some detail for his basement space. Our job was to install trim on a wall following a staircase. After discussing design and style ideas, we took measurements of what was needed and then ordered the needed trim. The trim was later installed with quality and precision as our main goals. After installation the trim was painted for an amazing result.",
+    images: [
+      { src: '/assets/img/services/stair-trim.webp', alt: 'White trim installed along basement staircase wall' },
+      { src: '/assets/img/proj-window.webp', alt: 'Finished and painted white stair trim detail' }
+    ]
+  },
+  {
+    id: 'white-ceiling-trim',
+    title: 'White Ceiling Trim',
+    body: "A client wanted to transform their room into something elegant, so we were contacted to install ceiling trim. This was a simple project, yet the quality and craftsmanship made something simple look stunning. The trim was installed in squares with precise joints. Then it was later finished with paint. Even though simple, this trim made the room more elegant.",
+    images: [
+      { src: '/assets/img/proj-mantle.webp', alt: 'White ceiling trim installed in squares with precise joints' },
+      { src: '/assets/img/proj-gold.webp', alt: 'Elegant painted ceiling trim detail' }
+    ]
+  },
+  {
+    id: 'white-coffered-ceiling',
+    title: 'White Coffered Ceiling',
+    body: "This project was done for a client building a new house in Delaware. The client worked with a designer that chose the style, design, and color. The drawings were taken to the shop that built the beams. After transportation, the installation process began. Using scaffolding, we installed attachment points on the ceiling. The beams were also cut to exact size on site, ensuring a precise fit and installation. After the installation process ended, a quality inspection followed to make sure the client got exactly what she wanted.",
+    images: [
+      { src: '/assets/img/proj-gold.webp', alt: 'White coffered ceiling beams installed in new Delaware home' },
+      { src: '/assets/img/services/gold-beams.webp', alt: 'Coffered ceiling beams cut to exact size on site' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'Finished white coffered ceiling detail' }
+    ]
+  }
+];
+---
+<Layout
+  title="Custom Trim Solutions | Our Latest 2025 Trim Work Projects"
+  description="Browse ProBrothers' latest trim work projects — black beams, coffered ceilings, custom stair paneling and more across Pennsylvania and Delaware."
+  canonical="https://prob.nurotech.co.in/projects/trim/"
+  ogTitle="Custom Trim Solutions | Our Latest 2025 Trim Work Projects"
+  ogDescription="Black beams, retirement home commercial trim, curved-stair paneling, ceiling trim and coffered ceilings — ProBrothers' latest trim portfolio."
+  ogUrl="https://prob.nurotech.co.in/projects/trim/"
+  ogImage="https://prob.nurotech.co.in/assets/img/proj-mantle.webp"
+  twitterTitle="Custom Trim Solutions | Latest Trim Work Projects"
+  twitterDescription="See ProBrothers' latest trim work — beams, coffered ceilings, custom stair paneling, and more."
+  twitterImage="https://prob.nurotech.co.in/assets/img/proj-mantle.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-trim.webp"
+          imagesrcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-trim.webp"
+         srcset="/assets/img/hero-trim-sm.webp 800w, /assets/img/hero-trim.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/projects/">Projects</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Trim</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">TRIM</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Trim Work Projects in Media, PA &amp; Beyond</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  {projects.map((p, i) => (
+    <section class="section proj-section" id={p.id} aria-labelledby={`${p.id}-heading`} style={i % 2 === 1 ? 'background:var(--gray-2)' : ''}>
+      <div class="container">
+        <div class="proj-section__head reveal">
+          <span class="proj-section__sub">PROJECT {String(i + 1).padStart(2, '0')}</span>
+          <h2 class="proj-section__title" id={`${p.id}-heading`}>{p.title}</h2>
+        </div>
+        {p.body && (
+          <div class="proj-section__about reveal">
+            <h3>About This Project</h3>
+            <p>{p.body}</p>
+          </div>
+        )}
+        <div class="gallery reveal">
+          {p.images.map(img => (
+            <button type="button" class="gallery__item" data-gallery={p.id} data-full={img.src} data-caption={img.alt} aria-label={`Enlarge image: ${img.alt}`}>
+              <img src={img.src} alt={img.alt} loading="lazy" width="800" height="600" />
+              <span class="gallery__zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <span class="gallery__cap">{img.alt}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>

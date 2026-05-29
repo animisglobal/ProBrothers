@@ -578,3 +578,124 @@ document.addEventListener('DOMContentLoaded', () => {
     setFrameWidth(); setPct(50);
   })();
 });
+
+/* ============================================================
+   Lightbox — fluid, modern image enlargement for project pages
+   ============================================================ */
+(function lightbox(){
+  if (!document.querySelector('.gallery__item, .proj-feature__media[data-lightbox]')) return;
+
+  // Build lightbox DOM once
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', 'Image viewer');
+  lb.innerHTML = `
+    <div class="lightbox__counter" aria-live="polite"></div>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close image viewer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="lightbox__stage">
+      <button class="lightbox__btn lightbox__nav lightbox__prev" type="button" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="lightbox__img" alt="" />
+      <button class="lightbox__btn lightbox__nav lightbox__next" type="button" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="lightbox__caption" aria-live="polite"></div>
+  `;
+  document.body.appendChild(lb);
+
+  const imgEl = lb.querySelector('.lightbox__img');
+  const capEl = lb.querySelector('.lightbox__caption');
+  const cntEl = lb.querySelector('.lightbox__counter');
+  const btnClose = lb.querySelector('.lightbox__close');
+  const btnPrev = lb.querySelector('.lightbox__prev');
+  const btnNext = lb.querySelector('.lightbox__next');
+
+  let group = [];
+  let idx = 0;
+  let lastFocused = null;
+
+  function buildGroup(trigger){
+    const g = trigger.getAttribute('data-gallery');
+    if (g) {
+      group = Array.from(document.querySelectorAll(`[data-gallery="${g}"]`));
+    } else {
+      group = [trigger];
+    }
+    idx = group.indexOf(trigger);
+  }
+
+  function show(i){
+    if (i < 0) i = group.length - 1;
+    if (i >= group.length) i = 0;
+    idx = i;
+    const trigger = group[idx];
+    const src = trigger.getAttribute('data-full') || trigger.querySelector('img')?.src;
+    const cap = trigger.getAttribute('data-caption') || trigger.querySelector('img')?.alt || '';
+    imgEl.classList.remove('ready');
+    capEl.classList.remove('ready');
+    const tmp = new Image();
+    tmp.onload = () => {
+      imgEl.src = src;
+      imgEl.alt = cap;
+      requestAnimationFrame(() => {
+        imgEl.classList.add('ready');
+        capEl.classList.add('ready');
+      });
+    };
+    tmp.src = src;
+    capEl.textContent = cap;
+    cntEl.textContent = group.length > 1 ? `${idx + 1} / ${group.length}` : '';
+    btnPrev.style.display = group.length > 1 ? '' : 'none';
+    btnNext.style.display = group.length > 1 ? '' : 'none';
+  }
+
+  function open(trigger){
+    lastFocused = document.activeElement;
+    buildGroup(trigger);
+    document.body.classList.add('modal-open');
+    lb.classList.add('open');
+    show(idx);
+    btnClose.focus();
+  }
+
+  function close(){
+    lb.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    setTimeout(() => { imgEl.src = ''; imgEl.classList.remove('ready'); }, 400);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.gallery__item, .proj-feature__media[data-lightbox]');
+    if (trigger) { e.preventDefault(); open(trigger); }
+  });
+
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', () => show(idx - 1));
+  btnNext.addEventListener('click', () => show(idx + 1));
+  imgEl.addEventListener('click', close);
+  lb.addEventListener('click', (e) => { if (e.target === lb || e.target.classList.contains('lightbox__stage')) close(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft' && group.length > 1) show(idx - 1);
+    if (e.key === 'ArrowRight' && group.length > 1) show(idx + 1);
+  });
+
+  // Basic swipe for touch
+  let touchX = null;
+  lb.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', (e) => {
+    if (touchX === null || group.length < 2) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+})();

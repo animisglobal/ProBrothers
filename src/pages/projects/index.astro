@@ -1,0 +1,167 @@
+---
+/**
+ * Source URL: https://probrothers.com/our-projects/
+ * Verbatim text preserved; SEO + JSON-LD added; lightbox-ready gallery framework.
+ */
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://prob.nurotech.co.in/projects/",
+      "name": "Our Projects",
+      "description": "Discover ProBrothers' construction, remodeling, cabinetry, and trim projects across Pennsylvania and Delaware.",
+      "url": "https://prob.nurotech.co.in/projects/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/projects/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://prob.nurotech.co.in/projects/" }
+      ]
+    }
+  ]
+};
+
+const allProjects = [
+  "Bathroom Restoration", "Black Beams", "Black Window", "BlackHorse House",
+  "Blue Library", "Brown Beams", "Curved Stair Wall Trim", "Dark Blue Office",
+  "Doors", "Fireplace", "Gold Beams", "Gray Mantle, Beams",
+  "Large Bathroom Window", "Light Blue Cabinets", "Two-Tone Kitchen Restoration",
+  "Wallpaper", "White Bathroom Vanities and Closets", "White Ceiling",
+  "White Coffered Ceiling", "White Trim on Stair Wall", "Window Casing"
+];
+---
+<Layout
+  title="Discover Our Construction, Remodeling, Cabinetry, Trim Projects"
+  description="Explore ProBrothers' portfolio of trim, cabinets, remodeling, and windows & doors projects across Media, PA and the Southeastern Philadelphia area."
+  canonical="https://prob.nurotech.co.in/projects/"
+  ogTitle="Our Projects | ProBrothers — Trim, Cabinets, Remodeling, Windows & Doors"
+  ogDescription="A portfolio of expertly crafted trim, stunning custom cabinets, comprehensive remodels, and professional window & door installations."
+  ogUrl="https://prob.nurotech.co.in/projects/"
+  ogImage="https://prob.nurotech.co.in/assets/img/proj-office.webp"
+  twitterTitle="Our Projects | ProBrothers"
+  twitterDescription="A portfolio of expertly crafted trim, custom cabinets, remodels, and window & door installations by ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/proj-office.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1067" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Our Projects</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">OUR PROJECTS</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; A Portfolio of Craftsmanship Across Media, PA</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Project Categories ===== -->
+  <section class="section proj-section" id="project-categories" aria-label="Project Categories">
+    <div class="container">
+      <div class="proj-section__head reveal">
+        <span class="proj-section__sub">EXPLORE BY CATEGORY</span>
+        <h2 class="proj-section__title">PROJECT CATEGORIES</h2>
+      </div>
+
+      <div class="proj-cats">
+        <a class="proj-cat reveal" href="/projects/trim/">
+          <img src="/assets/img/proj-gold.webp" alt="Expertly crafted trim work" loading="lazy" width="800" height="1000" />
+          <div class="proj-cat__body">
+            <span class="proj-cat__kicker">TRIM</span>
+            <h3 class="proj-cat__title">Expertly Crafted Trim Work</h3>
+            <span class="proj-cat__cta">View Projects <span aria-hidden="true">&#8594;</span></span>
+          </div>
+        </a>
+        <a class="proj-cat reveal" style="--d:.08s" href="/projects/cabinets/">
+          <img src="/assets/img/proj-office.webp" alt="Stunning custom cabinets" loading="lazy" width="800" height="1000" />
+          <div class="proj-cat__body">
+            <span class="proj-cat__kicker">CABINETS</span>
+            <h3 class="proj-cat__title">Stunning Custom Cabinets</h3>
+            <span class="proj-cat__cta">View Projects <span aria-hidden="true">&#8594;</span></span>
+          </div>
+        </a>
+        <a class="proj-cat reveal" style="--d:.16s" href="/projects/remodeling/">
+          <img src="/assets/img/proj-mantle.webp" alt="Comprehensive remodeling expertise" loading="lazy" width="800" height="1000" />
+          <div class="proj-cat__body">
+            <span class="proj-cat__kicker">REMODELING</span>
+            <h3 class="proj-cat__title">Comprehensive Remodeling Expertise</h3>
+            <span class="proj-cat__cta">View Projects <span aria-hidden="true">&#8594;</span></span>
+          </div>
+        </a>
+        <a class="proj-cat reveal" style="--d:.24s" href="/projects/windows-doors/">
+          <img src="/assets/img/proj-window.webp" alt="Professional windows and doors" loading="lazy" width="800" height="1000" />
+          <div class="proj-cat__body">
+            <span class="proj-cat__kicker">WINDOWS &amp; DOORS</span>
+            <h3 class="proj-cat__title">Professional Windows &amp; Doors</h3>
+            <span class="proj-cat__cta">View Projects <span aria-hidden="true">&#8594;</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== All Projects List ===== -->
+  <section class="section proj-section" id="all-projects" style="background:var(--gray-2)" aria-label="All Projects">
+    <div class="container">
+      <div class="proj-section__head reveal">
+        <span class="proj-section__sub">THE FULL PORTFOLIO</span>
+        <h2 class="proj-section__title">ALL PROJECTS</h2>
+      </div>
+      <ul class="proj-list reveal">
+        {allProjects.map(p => <li>{p}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>

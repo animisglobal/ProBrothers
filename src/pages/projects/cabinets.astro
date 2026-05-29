@@ -1,0 +1,224 @@
+---
+/**
+ * Source URL: https://probrothers.com/cabinets/
+ * Verbatim project descriptions preserved. Lightbox gallery added.
+ */
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://prob.nurotech.co.in/projects/cabinets/",
+      "name": "Custom Cabinet Projects",
+      "description": "ProBrothers' latest custom cabinet projects — bathroom vanities, home offices, libraries, mudrooms, two-tone kitchens, and full bathroom restorations.",
+      "url": "https://prob.nurotech.co.in/projects/cabinets/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://prob.nurotech.co.in/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "Cabinets", "item": "https://prob.nurotech.co.in/projects/cabinets/" }
+      ]
+    }
+  ]
+};
+
+const projects = [
+  {
+    id: 'wallpaper',
+    title: 'Wallpaper',
+    body: "For this project, we built two custom vanities for a residential customer. The client desiring elegant bathrooms turned to our company for making her ideas come to life. Working with a designer we got the ideas on paper, built the cabinets, and finished them with premium quality paint. We finished it off with some under cabinet lighting making for an incredible finished product.",
+    images: [
+      { src: '/assets/img/services/light-blue-leather-handle.webp', alt: 'Custom bathroom vanity with wallpaper accent — view one' },
+      { src: '/assets/img/services/leather-handler-1.webp', alt: 'Custom bathroom vanity with under-cabinet lighting — view two' }
+    ]
+  },
+  {
+    id: 'dark-blue-office',
+    title: 'Dark Blue Office',
+    body: "This is an incredible custom home office for a high-end customer. The customer wanted to transform his home office into a place to be proud of, a room that makes you want to go to work. After some ideas we got the cabinet layout that the client agreed upon. With a corner desk for a computer monitor and space to write, large cabinets for storing lots of files and small drawers for the small things like pens and notebooks, this was exactly what the customer needed to improve his workspace. We then finished the cabinets with a premium finish going with a luxury blue that really suited the atmosphere. The gold handles finished the project off, complimenting the finished room.",
+    images: [
+      { src: '/assets/img/proj-office.webp', alt: 'Luxury blue home office with gold handles — main view' },
+      { src: '/assets/img/services/blue-cabinets.webp', alt: 'Dark blue office cabinets with corner desk' },
+      { src: '/assets/img/services/blue-cabinets-5.webp', alt: 'Dark blue office storage detail with gold pulls' },
+      { src: '/assets/img/services/leather-handler-1.webp', alt: 'Office cabinet drawer detail' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'Premium finish on home office cabinetry' },
+      { src: '/assets/img/proj-gold.webp', alt: 'Gold handle detail on dark blue office cabinet' },
+      { src: '/assets/img/proj-window.webp', alt: 'Home office window flanked by custom cabinetry' },
+      { src: '/assets/img/services/blue-cabinets.webp', alt: 'Finished dark blue office workspace overview' }
+    ]
+  },
+  {
+    id: 'blue-library',
+    title: 'Blue Library',
+    body: "For this project, we had a book-loving client come to use wanting to transform a spare room into a home library. The idea was to have a large floor to ceiling bookshelf that spanned from wall to wall. The other side of the room was to have a closet for storing personal items, and to finish it off, beams on the ceiling to really make the room pop. The cabinets were custom made and finished, then installed at the site. To make it easier for the client to reach the higher levels of the bookcase, we built a sliding ladder that would help reach those hard to reach books. One of the customers' ideas was for the whole room to match and look continuous. For this we decided that a paneled wall would really make this room feel finished, so we panel the wall and put trim that made everything come together. To finish off the project we installed beams on the ceiling that were really the cherry on top.",
+    images: [
+      { src: '/assets/img/services/blue-cabinets.webp', alt: 'Blue home library with floor-to-ceiling bookshelves' },
+      { src: '/assets/img/services/blue-cabinets-5.webp', alt: 'Sliding ladder for high library shelves' },
+      { src: '/assets/img/proj-office.webp', alt: 'Paneled wall and ceiling beams in blue library' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'Library closet for personal items' },
+      { src: '/assets/img/proj-gold.webp', alt: 'Finished library with continuous design detailing' }
+    ]
+  },
+  {
+    id: 'light-blue-cabinets',
+    title: 'Light Blue Cabinets',
+    body: "Even though simple, this project is a great example of how some simple cabinets can transform an empty room into something more. The client wanted some cabinets that surrounded a window so that one of the spare rooms didn't look as empty. After going over the design he wanted, and getting the correct measurements, the shop built the cabinets. They were then finished with the color the client chose. After transporting them to the location, they were installed. Necessary components were cut and scribed to get a precise fit. After cabinets were put in, the doors and handles were installed resulting in a great look.",
+    images: [
+      { src: '/assets/img/services/light-blue-leather-handle.webp', alt: 'Light blue mudroom cabinets with leather strap handles' },
+      { src: '/assets/img/services/leather-handler-1.webp', alt: 'Leather handle detail on light blue cabinet' },
+      { src: '/assets/img/proj-window.webp', alt: 'Light blue cabinets surrounding window in spare room' },
+      { src: '/assets/img/services/blue-cabinets.webp', alt: 'Finished light blue cabinetry installation' }
+    ]
+  },
+  {
+    id: 'two-tone-kitchen',
+    title: 'Two-Tone Kitchen',
+    body: "Even though simple, this project is a great example of how some simple cabinets can transform an empty room into something more. The client wanted some cabinets that surrounded a window so that one of the spare rooms didn't look as empty. After going over the design he wanted, and getting the correct measurements, the shop built the cabinets. They were then finished with the color the client chose. After transporting them to the location, they were installed. Necessary components were cut and scribed to get a precise fit. After cabinets were put in, the doors and handles were installed resulting in a great look.",
+    images: [
+      { src: '/assets/img/services/two-tone-grey-kitchen-1.webp', alt: 'Two-tone grey kitchen with custom cabinetry — main view' },
+      { src: '/assets/img/services/two-tone-grey-kitchen-2.webp', alt: 'Two-tone grey kitchen cabinets with optimal storage' },
+      { src: '/assets/img/svc-cabinets.webp', alt: 'Two-tone kitchen design detail' }
+    ]
+  },
+  {
+    id: 'fireplace',
+    title: 'Fireplace',
+    body: "This Fireplace was part of a large commercial project. This one was located in a lounge area in a luxury retirement home. We were given drawings by the designer from which we started. Our job was to build the shelves that were part of the fireplace. We used solid wood with a beautiful stained finish. Although a simple project, this was a beautiful addition to the area.",
+    images: [
+      { src: '/assets/img/services/fireplace.webp', alt: 'Custom fireplace shelving in luxury retirement home lounge' },
+      { src: '/assets/img/services/fireplace-1.webp', alt: 'Solid wood stained fireplace shelves detail' }
+    ]
+  },
+  {
+    id: 'white-bathroom-vanities-closets',
+    title: 'White Bathroom Vanities and Closets',
+    body: "For this project, a client wanted to transform their bathroom into an elegant space, with specialized spots for makeup. After working with a designer, we were able to get drawings of the vanities and closets the client wanted. After getting the cabinets built by the shop, we transported them to the location and began installation. Quality was ensured through the whole building process ensuring in an amazing finished product",
+    images: [
+      { src: '/assets/img/services/light-blue-leather-handle.webp', alt: 'White bathroom vanity with makeup station — view one' },
+      { src: '/assets/img/services/leather-handler-1.webp', alt: 'White bathroom vanity detail — view two' },
+      { src: '/assets/img/proj-window.webp', alt: 'White bathroom closet — view three' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'White bathroom vanity finished installation — view four' },
+      { src: '/assets/img/proj-gold.webp', alt: 'White bathroom storage detail — view five' },
+      { src: '/assets/img/services/blue-cabinets.webp', alt: 'White bathroom closet built-ins — view six' },
+      { src: '/assets/img/services/blue-cabinets-5.webp', alt: 'White bathroom vanity drawers — view seven' },
+      { src: '/assets/img/proj-office.webp', alt: 'White bathroom vanity room overview — view eight' }
+    ]
+  },
+  {
+    id: 'bathroom-restoration',
+    title: 'Bathroom Restoration',
+    body: "This project was part of a house restoration. The bathroom was part of what the client wanted to change. The first step of any renovation process is the demolition, so we got rid of the old tile, toilet, sinks, and vanity. After the client chose what style she wanted, we got to work. We got a custom vanity with the paint the client chose. We did the tiling, installed a new toilet and sink, and repainted all of the walls. After some work we went from an old and uninteresting room, to a stylish bathroom that came from the ideas of the client.",
+    images: [
+      { src: '/assets/img/services/light-blue-leather-handle.webp', alt: 'Bathroom restoration — demolition phase' },
+      { src: '/assets/img/services/leather-handler-1.webp', alt: 'Bathroom restoration — new custom vanity install' },
+      { src: '/assets/img/proj-mantle.webp', alt: 'Bathroom restoration — finished stylish bathroom' }
+    ]
+  }
+];
+---
+<Layout
+  title="Custom Cabinets Projects | Our Latest 2025 Cabinetry Projects"
+  description="See ProBrothers' latest custom cabinet projects — bathroom vanities, home offices, libraries, mudrooms, two-tone kitchens and full bathroom restorations."
+  canonical="https://prob.nurotech.co.in/projects/cabinets/"
+  ogTitle="Custom Cabinets Projects | Our Latest 2025 Cabinetry Projects"
+  ogDescription="Bathroom vanities, dark blue offices, blue libraries, mudrooms, two-tone kitchens, fireplaces, white vanities and full bathroom restorations."
+  ogUrl="https://prob.nurotech.co.in/projects/cabinets/"
+  ogImage="https://prob.nurotech.co.in/assets/img/proj-office.webp"
+  twitterTitle="Custom Cabinets Projects | Latest Cabinetry Portfolio"
+  twitterDescription="ProBrothers' latest custom cabinet projects — offices, libraries, vanities, kitchens and more."
+  twitterImage="https://prob.nurotech.co.in/assets/img/proj-office.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-cabinets.webp"
+          imagesrcset="/assets/img/hero-cabinets-sm.webp 800w, /assets/img/hero-cabinets.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-cabinets.webp"
+         srcset="/assets/img/hero-cabinets-sm.webp 800w, /assets/img/hero-cabinets.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1067" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/projects/">Projects</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Cabinets</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">CABINETS</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Custom Cabinet Projects in Media, PA &amp; Beyond</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  {projects.map((p, i) => (
+    <section class="section proj-section" id={p.id} aria-labelledby={`${p.id}-heading`} style={i % 2 === 1 ? 'background:var(--gray-2)' : ''}>
+      <div class="container">
+        <div class="proj-section__head reveal">
+          <span class="proj-section__sub">PROJECT {String(i + 1).padStart(2, '0')}</span>
+          <h2 class="proj-section__title" id={`${p.id}-heading`}>{p.title}</h2>
+        </div>
+        {p.body && (
+          <div class="proj-section__about reveal">
+            <h3>About This Project</h3>
+            <p>{p.body}</p>
+          </div>
+        )}
+        <div class="gallery reveal">
+          {p.images.map(img => (
+            <button type="button" class="gallery__item" data-gallery={p.id} data-full={img.src} data-caption={img.alt} aria-label={`Enlarge image: ${img.alt}`}>
+              <img src={img.src} alt={img.alt} loading="lazy" width="800" height="600" />
+              <span class="gallery__zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <span class="gallery__cap">{img.alt}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -4,6 +4,7 @@ const isHome = pathname === '/' || pathname === '';
 const isAbout = pathname.startsWith('/about');
 const isContact = pathname.startsWith('/contact');
 const isServices = pathname.startsWith('/services');
+const isProjects = pathname.startsWith('/projects');
 ---
 <!-- ===== Header / Nav ===== -->
 <header class="header" id="header">
@@ -30,7 +31,15 @@ const isServices = pathname.startsWith('/services');
             <li><a href="/services/windows-and-doors/">Windows &amp; Doors</a></li>
           </ul>
         </li>
-        <li><a href="/#projects">Projects</a></li>
+        <li class="has-sub">
+          <a href="/projects/" class={isProjects ? 'active' : ''}>Projects</a>
+          <ul class="submenu">
+            <li><a href="/projects/trim/">Trim</a></li>
+            <li><a href="/projects/cabinets/">Cabinets</a></li>
+            <li><a href="/projects/remodeling/">Remodeling</a></li>
+            <li><a href="/projects/windows-doors/">Windows &amp; Doors</a></li>
+          </ul>
+        </li>
         <li class="has-sub">
           <a href="#">Locations</a>
           <ul class="submenu submenu--cols">

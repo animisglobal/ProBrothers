@@ -1,0 +1,686 @@
+---
+/**
+ * Source URL: https://probrothers.com/services/windows-and-doors/
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/services/windows-and-doors/",
+      "name": "Windows & Doors Installation",
+      "description": "Energy-efficient windows and doors installation in Media, PA, Springfield, Swarthmore, Broomall, Upper Darby and across Delaware County by ProBrothers.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": ["Media", "Springfield", "Swarthmore", "Broomall", "Upper Darby", "Delaware County"],
+      "url": "https://prob.nurotech.co.in/services/windows-and-doors/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/services/windows-and-doors/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Windows & Doors", "item": "https://prob.nurotech.co.in/services/windows-and-doors/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prob.nurotech.co.in/services/windows-and-doors/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to install new windows and doors in Media, PA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most standard installations take 1–3 days depending on the number of units and complexity. Custom or large-scale projects may take longer, but we always provide a clear timeline upfront." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the benefits of replacing my windows and doors in Delaware County?",
+          "acceptedAnswer": { "@type": "Answer", "text": "New windows and doors improve energy efficiency, reduce drafts, enhance security, and boost curb appeal. They can also increase property value in areas like Media, Springfield, and Swarthmore." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you install windows and doors in historic homes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes! We specialize in creating custom solutions for historic and older homes in Delaware County that preserve their character while meeting modern performance standards." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer energy-efficient options for Pennsylvania's climate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We install double- and triple-pane windows with Low-E glass and insulated frames designed to handle Pennsylvania's hot summers and cold winters." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas do you serve besides Media, PA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We proudly serve homeowners in Springfield, Swarthmore, Broomall, Upper Darby, and across Delaware County." }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Windows & Doors Installation in Media, PA | ProBrothers"
+  description="Energy-efficient windows & doors installation in Media, PA, Springfield, Swarthmore, Broomall, Upper Darby & Delaware County. Free quote from ProBrothers."
+  canonical="https://prob.nurotech.co.in/services/windows-and-doors/"
+  ogTitle="Windows & Doors Installation in Media, PA | ProBrothers"
+  ogDescription="Beautiful, energy-efficient windows & doors for your home or business in Media, PA and across Delaware County."
+  ogUrl="https://prob.nurotech.co.in/services/windows-and-doors/"
+  ogImage="https://prob.nurotech.co.in/assets/img/svc-windows.webp"
+  twitterTitle="Windows & Doors Installation in Media, PA"
+  twitterDescription="Energy-efficient windows & doors installation in Media, PA. Free quote from ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/svc-windows.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/svc-windows.webp" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/svc-windows.webp"
+         alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Windows &amp; Doors</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">WINDOWS &amp; DOORS</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Beautiful, Energy-Efficient Windows &amp; Doors in Media, PA</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Service Overview ===== -->
+  <section class="section svc-overview" id="service-overview" aria-label="Service Overview">
+    <div class="container">
+      <div class="svc-overview__grid">
+        <div class="svc-overview__content reveal" data-reveal="left">
+          <span class="section__kicker">SERVICE OVERVIEW</span>
+          <h2 class="section__title">
+            Beautiful, Energy-Efficient Windows &amp; Doors for Your Home or Business
+            <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+              <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+              <circle cx="8" cy="12" r="3" style="--len:20"/>
+              <circle cx="152" cy="13" r="3" style="--len:20"/>
+            </svg>
+          </h2>
+          <p class="svc-overview__para">When it comes to improving your home's comfort, style, and efficiency, few upgrades make as big an impact as new windows and doors. At ProBrothers, we've been helping homeowners in Media, Pennsylvania &mdash; as well as Springfield, Swarthmore, Broomall, Upper Darby, and the greater Delaware County area &mdash; transform their spaces with high-quality windows and doors installation service for over 15 years.</p>
+          <p class="svc-overview__para">Whether you're looking to brighten up a room with bigger windows, replace a worn-out front door, or upgrade to energy-efficient solutions, our skilled team is here to make it happen &mdash; on time, on budget, and with craftsmanship you can trust.</p>
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>Request a Quote</a>
+        </div>
+        <div class="svc-overview__media reveal" data-reveal="right">
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/svc-windows.webp"
+                 alt="Large Bathroom Window installation"
+                 loading="lazy" width="768" height="1024" />
+            <figcaption>Large Bathroom Window</figcaption>
+          </figure>
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/proj-window.webp"
+                 alt="Black Windows installation by ProBrothers"
+                 loading="lazy" width="768" height="1024" />
+            <figcaption>Black Windows</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Our Services ===== -->
+  <section class="section svc-types" id="our-services" aria-label="Our Windows and Doors Services" style="background:var(--gray-2)">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">OUR EXPERTISE</span>
+        <h2 class="section__title">
+          OUR WINDOWS &amp; DOORS SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <p class="svc-section-intro reveal">We provide a wide range of windows and doors installation service including various styles and materials to fit your vision and needs, including:</p>
+      <div class="svc-feature-grid">
+        <article class="value-card reveal">
+          <div class="value-card__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 12h18M12 3v18"/>
+            </svg>
+          </div>
+          <div class="value-card__content">
+            <h3>Energy-Efficient Windows</h3>
+            <p>Double- or triple-pane glass, Low-E coatings, and modern framing options help keep your home comfortable year-round while reducing energy bills &mdash; perfect for the varied seasons in Media, Springfield, and surrounding Pennsylvania towns.</p>
+          </div>
+        </article>
+        <article class="value-card reveal" style="--d:.1s">
+          <div class="value-card__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18"/>
+            </svg>
+          </div>
+          <div class="value-card__content">
+            <h3>Sliding, French &amp; Patio Doors</h3>
+            <p>Bring in more light and create a seamless indoor-outdoor flow with stylish, functional doors that make a statement in Swarthmore, Broomall, Upper Darby, and beyond.</p>
+          </div>
+        </article>
+        <article class="value-card reveal" style="--d:.2s">
+          <div class="value-card__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="5" y="3" width="14" height="18" rx="1"/><circle cx="15" cy="12" r="1"/>
+            </svg>
+          </div>
+          <div class="value-card__content">
+            <h3>Durable Entry Doors</h3>
+            <p>From classic wood to modern steel or fiberglass, our entry doors combine beauty, strength, and security &mdash; ideal for both historic and contemporary homes in Delaware County.</p>
+          </div>
+        </article>
+        <article class="value-card reveal" style="--d:.3s">
+          <div class="value-card__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+            </svg>
+          </div>
+          <div class="value-card__content">
+            <h3>Custom Designs</h3>
+            <p>Have a unique opening or a historic home? We create made-to-measure solutions that fit perfectly and preserve your property's charm across Media and neighboring communities.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Homeowners Choose ===== -->
+  <section class="section svc-why-trim" id="why-homeowners" aria-label="Why Homeowners Choose ProBrothers">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE PROBROTHERS DIFFERENCE</span>
+        <h2 class="section__title">
+          WHY HOMEOWNERS IN DELAWARE COUNTY CHOOSE PROBROTHERS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-why-trim__grid">
+        <ul class="svc-bullets reveal">
+          <li><strong>Local Expertise</strong> &mdash; We know the homes, architecture, and weather patterns in Media, Springfield, and the entire Delaware County area.</li>
+          <li><strong>15+ Years of Experience</strong> &mdash; We've been providing windows and doors installation service for 15+years and has installed hundreds of windows and doors with precision and care.</li>
+          <li><strong>Quality Craftsmanship</strong> &mdash; Our attention to detail ensures a flawless fit and finish every time.</li>
+          <li><strong>Energy Savings</strong> &mdash; Properly installed windows and doors help reduce drafts and lower heating and cooling costs.</li>
+          <li><strong>Friendly, Reliable Service</strong> &mdash; We treat your home like our own &mdash; keeping it clean, respecting your time, and communicating clearly throughout the process.</li>
+        </ul>
+
+        <!-- Testimonial -->
+        <blockquote class="svc-testimonial reveal" data-reveal="right">
+          <div class="review__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;We replaced 12 original windows on our older home. ProBrothers helped us find options that preserved the historic look of the house but gave us modern energy efficiency. The install crew was incredibly careful around our landscaping and hauled away all the old heavy glass without leaving a single piece of debris.&rdquo;</p>
+          <footer>Jin Woo Lee</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Our Process ===== -->
+  <section class="section svc-types" id="our-process" aria-label="Our Simple Stress-Free Process" style="background:var(--gray-2)">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HOW WE WORK</span>
+        <h2 class="section__title">
+          OUR SIMPLE, STRESS-FREE PROCESS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-process-grid">
+        <article class="svc-process-step reveal">
+          <span class="svc-process-step__num">01</span>
+          <h3>Free Consultation</h3>
+          <p>We listen to your ideas, inspect your space, and recommend the best options for your home in Media, PA or nearby towns.</p>
+        </article>
+        <article class="svc-process-step reveal" style="--d:.1s">
+          <span class="svc-process-step__num">02</span>
+          <h3>Custom Selection</h3>
+          <p>Choose from a variety of materials, finishes, and designs to match your home in Springfield, Swarthmore, or Broomall.</p>
+        </article>
+        <article class="svc-process-step reveal" style="--d:.2s">
+          <span class="svc-process-step__num">03</span>
+          <h3>Professional Installation</h3>
+          <p>Our experienced crew installs everything with precision and care.</p>
+        </article>
+        <article class="svc-process-step reveal" style="--d:.3s">
+          <span class="svc-process-step__num">04</span>
+          <h3>Final Walk-Through</h3>
+          <p>We make sure you're 100% happy before we consider the job done.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== See the Difference ===== -->
+  <section class="section svc-overview" id="see-difference" aria-label="See the Difference">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">RESULTS YOU CAN SEE</span>
+        <h2 class="section__title">
+          SEE THE DIFFERENCE FOR YOURSELF
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-prose reveal">
+        <p>Explore our Windows &amp; Doors projects to see transformations we've completed in Media, Springfield, Upper Darby, and throughout Delaware County. You'll see the attention to detail and craftsmanship that sets us apart.</p>
+        <p>Upgrade your home's comfort, style, and value with ProBrothers' Windows &amp; Doors services in Media, Springfield, Swarthmore, Broomall, Upper Darby, and across Delaware County, Pennsylvania.</p>
+        <p>Call us today at (484) 745-4097 or fill out our online form to request your free, no-obligation quote.</p>
+        <div class="svc-prose__action">
+          <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us Stats ===== -->
+  <section class="section why why-about" id="why-choose-us" aria-label="Why Choose ProBrothers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HAVE QUESTIONS?</span>
+        <h2 class="section__title">
+          FREQUENTLY ASKED QUESTIONS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <dl class="faq-list">
+        <div class="faq-item reveal">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              How long does it take to install new windows and doors in Media, PA?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>Most standard installations take 1&ndash;3 days depending on the number of units and complexity. Custom or large-scale projects may take longer, but we always provide a clear timeline upfront.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.07s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What are the benefits of replacing my windows and doors in Delaware County?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>New windows and doors improve energy efficiency, reduce drafts, enhance security, and boost curb appeal. They can also increase property value in areas like Media, Springfield, and Swarthmore.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.14s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Can you install windows and doors in historic homes?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>Yes! We specialize in creating custom solutions for historic and older homes in Delaware County that preserve their character while meeting modern performance standards.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.21s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Do you offer energy-efficient options for Pennsylvania's climate?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>Absolutely. We install double- and triple-pane windows with Low-E glass and insulated frames designed to handle Pennsylvania's hot summers and cold winters.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.28s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Which areas do you serve besides Media, PA?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>We proudly serve homeowners in Springfield, Swarthmore, Broomall, Upper Darby, and across Delaware County.</p></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-remodel.webp" alt="Custom home additions by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/hero-trim.webp" alt="Trim and molding services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Trim</h3>
+            <p>Custom trim work, crown molding, wainscoting and decorative woodwork.</p>
+            <a href="/services/trim/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service Contact Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Windows and Doors Quote">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Contact Us</h2>
+          <p class="contact-form-box__sub">Tell us about your windows and doors project and we'll get back to you within one business day.</p>
+
+          <form class="contact-form" id="windowsForm" action="#" method="post" novalidate aria-label="Windows and doors quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="wFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="wFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="wLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="wLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="wEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="wEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="wPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="wPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="wMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="wMessage" name="message" rows="5" placeholder="Tell us about your windows or doors project..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.svc-overview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.svc-overview__content .section__title { text-align: left; }
+.svc-overview__content .section__title + .blueprint { margin-left: 0; }
+.svc-overview__content .section__kicker { display: block; }
+.svc-overview__para { color: var(--muted); font-size: 1rem; line-height: 1.78; margin: 0 0 1.2rem; }
+.svc-overview__para:first-of-type { margin-top: 1.4rem; }
+.svc-overview__media { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.svc-overview__figure { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); position: relative; aspect-ratio: 3/4; }
+.svc-overview__figure img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .8s var(--ease); }
+.svc-overview__figure:hover img { transform: scale(1.04); }
+.svc-overview__figure figcaption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: .6rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,.75), transparent);
+  color: #fff; font-weight: 800; font-size: .82rem;
+  text-transform: uppercase; letter-spacing: .06em;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+.svc-overview__figure:hover figcaption { opacity: 1; transform: translateY(0); }
+
+.svc-section-intro { text-align: center; max-width: 800px; margin: 1.6rem auto 2rem; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.svc-feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+
+.svc-why-trim__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin-top: 2rem; }
+.svc-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.svc-bullets li {
+  background: #fff; padding: 1.1rem 1.3rem; border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  color: var(--muted); font-size: 1rem; line-height: 1.7;
+  border-left: 4px solid var(--accent);
+}
+.svc-bullets li strong { color: var(--dark); }
+
+.svc-testimonial {
+  background: #fff; border-radius: var(--radius); padding: 2rem;
+  box-shadow: var(--shadow-sm); position: relative;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  border-top: 4px solid var(--accent);
+}
+.svc-testimonial::before {
+  content: "\201C"; position: absolute; top: -18px; left: 18px;
+  font-size: 5rem; color: var(--accent);
+  font-family: Georgia, serif; line-height: 1; opacity: .55;
+}
+.svc-testimonial:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.svc-testimonial .review__stars { color: var(--accent); letter-spacing: .15em; margin-bottom: .8rem; }
+.svc-testimonial p { font-size: 1rem; font-style: italic; color: var(--ink); margin-bottom: 1rem; }
+.svc-testimonial footer { font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .04em; }
+
+.svc-process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; margin-top: 2rem; }
+.svc-process-step {
+  background: #fff; border-radius: var(--radius); padding: 1.8rem 1.4rem;
+  box-shadow: var(--shadow-sm); position: relative;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  border-top: 4px solid var(--accent);
+}
+.svc-process-step:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.svc-process-step__num {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem; font-weight: 900; color: var(--accent);
+  display: block; line-height: 1; margin-bottom: .6rem;
+}
+.svc-process-step h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: .5rem; color: var(--dark); }
+.svc-process-step p { color: var(--muted); font-size: .92rem; line-height: 1.7; }
+
+.svc-prose { max-width: 900px; margin: 2rem auto 0; text-align: center; }
+.svc-prose p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.2rem; }
+.svc-prose__action { margin-top: 1.5rem; }
+
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: .8rem; }
+.faq-item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; border-left: 4px solid var(--accent); }
+.faq-item__btn {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 1.3rem 1.6rem;
+  font-family: 'Raleway', system-ui, sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--dark);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  transition: color .2s;
+}
+.faq-item__btn:hover { color: var(--accent); }
+.faq-item__icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: grid; place-items: center; font-size: 1.3rem; font-weight: 900;
+  transition: transform .3s var(--ease);
+}
+.faq-item__btn[aria-expanded="true"] .faq-item__icon { transform: rotate(45deg); }
+.faq-item__a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease), padding .3s; padding: 0 1.6rem; }
+.faq-item__a.open { max-height: 400px; padding: 0 1.6rem 1.3rem; }
+.faq-item__a p { color: var(--muted); font-size: .95rem; line-height: 1.75; }
+
+@media (max-width: 900px) {
+  .svc-overview__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-why-trim__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-feature-grid { grid-template-columns: 1fr; }
+  .svc-process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .svc-overview__media { grid-template-columns: 1fr; }
+  .svc-process-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+document.querySelectorAll('.faq-item__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item__btn').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.faq-item').querySelector('.faq-item__a').classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.closest('.faq-item').querySelector('.faq-item__a').classList.add('open');
+    }
+  });
+});
+</script>

@@ -1,0 +1,509 @@
+---
+/**
+ * Source URL: https://probrothers.com/services/construction-services/
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/services/construction-services/",
+      "name": "Residential & Commercial Construction Services",
+      "description": "Residential and commercial construction services in Media, PA including new construction, home renovation, and custom home building by ProBrothers.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown"],
+      "url": "https://prob.nurotech.co.in/services/construction-services/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/services/construction-services/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Construction Services", "item": "https://prob.nurotech.co.in/services/construction-services/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prob.nurotech.co.in/services/construction-services/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What home renovation and construction services does ProBrothers offer in Pennsylvania?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers provides a wide range of home renovation and construction services in Pennsylvania. These include trim work, custom cabinetry, remodeling, additions, and new construction. We serve both residential and commercial clients, delivering top-notch craftsmanship and exceptional construction service tailored to each project's unique needs." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the average timeline for a home renovation or construction project with ProBrothers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The timeline for a home renovation or construction project with ProBrothers depends on the project's scope and complexity. Generally a new construction can take several months, however we are recognized for the efficient and timely execution, ensuring projects stay on schedule while maintaining high standards of quality." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does ProBrothers handle the design and planning of a construction project?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers manages the design and planning phase by offering personalized consultation and custom estimates. We collaborate closely with clients to understand their vision and needs, crafting a detailed plan that aligns with both the client's preferences and budget." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ProBrothers supply materials for their construction projects?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, ProBrothers supplies materials for construction projects. We work with trusted, reputable suppliers to source high-quality materials, ensuring every project meets their rigorous standards for excellence and durability." }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes ProBrothers a leading construction company in Pennsylvania?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers stands out as a leading construction company in Pennsylvania, with our dedication to quality, customer satisfaction, and comprehensive service. With over 15 years of experience, we've earned a reputation for reliability and excellence in the local construction industry." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ProBrothers handle both residential and commercial construction projects?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, ProBrothers is equipped to handle both residential and commercial construction projects. Whether it's a home renovation or a commercial build, we apply our extensive expertise to meet the specific requirements of each client, delivering outstanding results every time." }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Construction Services in Media, PA | ProBrothers"
+  description="Residential & commercial construction services in Media, PA. New construction, home building & renovation by one of the top construction contractors in Pennsylvania."
+  canonical="https://prob.nurotech.co.in/services/construction-services/"
+  ogTitle="Construction Services in Media, PA | ProBrothers"
+  ogDescription="Residential & commercial construction services in Media, PA. New construction & home renovation by ProBrothers."
+  ogUrl="https://prob.nurotech.co.in/services/construction-services/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="Construction Services in Media, PA"
+  twitterDescription="Residential & commercial construction services in Media, PA. Free quote from ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Construction Services</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">CONSTRUCTION SERVICES</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Quality Residential &amp; Commercial Construction in Media, PA</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Project Narrative ===== -->
+  <section class="section svc-overview" id="project-narrative" aria-label="Project Narrative">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">A PROJECT STORY</span>
+        <h2 class="section__title">
+          From Ruin to Remarkable: The Inspiring Journey of Unique Homes
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <div class="svc-narrative reveal">
+        <h3>A Vision Brought to Life</h3>
+        <p>What once stood as a neglected and dilapidated structure is now an architectural masterpiece. This home's transformation is a testament to our expertise in custom home construction, showcasing our vision, quality craftsmanship, and an unwavering commitment to the best residential construction services. From the moment we laid eyes on this property, we saw more than just a run-down house&mdash;we saw an opportunity to create something truly extraordinary through our home renovation and residential construction skills.</p>
+
+        <h3>Sourcing the Best Materials</h3>
+        <p>Every great project starts with the right foundation, and for us, that meant handpicking only the finest sustainable building materials. As experienced construction contractors, we search extensively for high-quality, sustainable resources that would not only enhance the aesthetics but also ensure durability and longevity. From premium slate shingles to sleek, modern finishes, every element was carefully curated to bring the vision to life, reflecting our dedication to quality craftsmanship.</p>
+
+        <h3>Overcoming Challenges</h3>
+        <p>A project of this scale was not without its obstacles. Even though we are the best construction company of Media, Pennsylvania, we faced structural instability, unexpected design constraints, and sourcing delays. However, through meticulous planning, expert collaboration, and sheer determination, we navigated these challenges with precision. Our team of home builders worked tirelessly to reinforce the foundation, re-imagine layouts, and integrate cutting-edge solutions&mdash;all while maintaining the integrity of the original vision.</p>
+
+        <h3>The Transformation Process</h3>
+        <p>The journey from concept to completion was nothing short of remarkable. Walls were restructured, spaces were optimized, and natural light was brought in through strategically placed windows. We blended modern architecture with the home's natural surroundings, creating a seamless harmony between the indoors and outdoors. The result? A stunning, contemporary retreat that exudes warmth, character, and sophistication, showcasing our expertise in architectural design and home transformation.</p>
+
+        <h3>Delivered on Time, Beyond Expectations</h3>
+        <p>Despite the complexities of the project, we remained committed to our timeline and that's how we are one of the top home builders of pennsylvania in 2026. With a well-coordinated team, efficient project management, and an eye for detail, we delivered a home that surpassed all expectations&mdash;on time and without compromise. Today, this once-forgotten house stands as a breathtaking sanctuary, proving that with passion and perseverance, any space can be re-imagined.</p>
+
+        <h3>Experience the Transformation</h3>
+        <p>This home is more than just a project&mdash;it's a symbol of dedication, creativity, and transformation. Explore the journey through our gallery and witness the stunning before-and-after moments of this home construction. If you're inspired by this story and looking for construction contractors near west chester, glen mills, or any other part of Pennsylvania, we'd love to bring your dream home to life with our top tier residential and commercial construction service.</p>
+
+        <p class="svc-narrative__cta"><strong>Let's build something extraordinary together.</strong></p>
+
+        <div class="svc-narrative__action">
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonial ===== -->
+  <section class="section svc-testimonial-only" id="construction-testimonial" aria-label="Client Testimonial" style="background:var(--gray-2)">
+    <div class="container">
+      <blockquote class="svc-testimonial svc-testimonial--center reveal">
+        <div class="review__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;We use ProBrothers for various commercial maintenance and structural upgrades at our office building. It's hard to find commercial contractors who show up exactly when they say they will and do the job right the first time without cutting corners. They are our go-to team for anything construction-related.&rdquo;</p>
+        <footer>Natalia Boyko</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us Stats ===== -->
+  <section class="section why why-about" id="why-choose-us" aria-label="Why Choose ProBrothers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HAVE QUESTIONS?</span>
+        <h2 class="section__title">
+          FREQUENTLY ASKED QUESTIONS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <dl class="faq-list">
+        <div class="faq-item reveal">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What home renovation and construction services does ProBrothers offer in Pennsylvania?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>ProBrothers provides a wide range of home renovation and construction services in Pennsylvania. These include trim work, custom cabinetry, remodeling, additions, and new construction. We serve both residential and commercial clients, delivering top-notch craftsmanship and exceptional construction service tailored to each project's unique needs.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.07s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What is the average timeline for a home renovation or construction project with ProBrothers?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>The timeline for a home renovation or construction project with ProBrothers depends on the project's scope and complexity. Generally a new construction can take several months, however we are recognized for the efficient and timely execution, ensuring projects stay on schedule while maintaining high standards of quality.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.14s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              How does ProBrothers handle the design and planning of a construction project?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>ProBrothers manages the design and planning phase by offering personalized consultation and custom estimates. We collaborate closely with clients to understand their vision and needs, crafting a detailed plan that aligns with both the client's preferences and budget.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.21s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Does ProBrothers supply materials for their construction projects?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>Yes, ProBrothers supplies materials for construction projects. We work with trusted, reputable suppliers to source high-quality materials, ensuring every project meets their rigorous standards for excellence and durability.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.28s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What makes ProBrothers a leading construction company in Pennsylvania?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>ProBrothers stands out as a leading construction company in Pennsylvania, with our dedication to quality, customer satisfaction, and comprehensive service. With over 15 years of experience, we've earned a reputation for reliability and excellence in the local construction industry.</p></dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.35s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Can ProBrothers handle both residential and commercial construction projects?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a"><p>Yes, ProBrothers is equipped to handle both residential and commercial construction projects. Whether it's a home renovation or a commercial build, we apply our extensive expertise to meet the specific requirements of each client, delivering outstanding results every time.</p></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-remodel.webp" alt="Custom home additions by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service Contact Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Construction Quote">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Contact Us</h2>
+          <p class="contact-form-box__sub">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+
+          <form class="contact-form" id="constructionForm" action="#" method="post" novalidate aria-label="Construction quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="cFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="cFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="cLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="cLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="cPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="cPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="cEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="cEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="cMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="cMessage" name="message" rows="5" placeholder="Tell us about your construction project..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.svc-narrative { max-width: 920px; margin: 2rem auto 0; }
+.svc-narrative h3 {
+  font-size: 1.35rem; font-weight: 800; color: var(--dark);
+  margin: 1.6rem 0 .8rem;
+  position: relative; padding-left: 1rem;
+  border-left: 4px solid var(--accent);
+}
+.svc-narrative p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.1rem; }
+.svc-narrative__cta { text-align: center; color: var(--dark) !important; font-size: 1.1rem !important; margin: 2rem 0 1.4rem; }
+.svc-narrative__action { text-align: center; margin-top: 1rem; }
+
+.svc-testimonial {
+  background: #fff; border-radius: var(--radius); padding: 2rem;
+  box-shadow: var(--shadow-sm); position: relative;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  border-top: 4px solid var(--accent);
+}
+.svc-testimonial::before {
+  content: "\201C"; position: absolute; top: -18px; left: 18px;
+  font-size: 5rem; color: var(--accent);
+  font-family: Georgia, serif; line-height: 1; opacity: .55;
+}
+.svc-testimonial:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.svc-testimonial .review__stars { color: var(--accent); letter-spacing: .15em; margin-bottom: .8rem; }
+.svc-testimonial p { font-size: 1rem; font-style: italic; color: var(--ink); margin-bottom: 1rem; }
+.svc-testimonial footer { font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .04em; }
+.svc-testimonial--center { max-width: 720px; margin: 0 auto; text-align: center; }
+.svc-testimonial--center::before { left: 50%; transform: translateX(-50%); }
+
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: .8rem; }
+.faq-item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; border-left: 4px solid var(--accent); }
+.faq-item__btn {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 1.3rem 1.6rem;
+  font-family: 'Raleway', system-ui, sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--dark);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  transition: color .2s;
+}
+.faq-item__btn:hover { color: var(--accent); }
+.faq-item__icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: grid; place-items: center; font-size: 1.3rem; font-weight: 900;
+  transition: transform .3s var(--ease);
+}
+.faq-item__btn[aria-expanded="true"] .faq-item__icon { transform: rotate(45deg); }
+.faq-item__a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease), padding .3s; padding: 0 1.6rem; }
+.faq-item__a.open { max-height: 500px; padding: 0 1.6rem 1.3rem; }
+.faq-item__a p { color: var(--muted); font-size: .95rem; line-height: 1.75; }
+</style>
+
+<script>
+document.querySelectorAll('.faq-item__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item__btn').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.faq-item').querySelector('.faq-item__a').classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.closest('.faq-item').querySelector('.faq-item__a').classList.add('open');
+    }
+  });
+});
+</script>

@@ -1,0 +1,561 @@
+---
+/**
+ * Source URL: https://probrothers.com/services/remodeling/
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/services/remodeling/",
+      "name": "Home Remodeling Services",
+      "description": "Full-service home remodeling in Media, PA. Kitchen, bathroom, basement and whole-home renovations from one of the top residential remodeling contractors in Pennsylvania.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown"],
+      "url": "https://prob.nurotech.co.in/services/remodeling/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/services/remodeling/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Remodeling", "item": "https://prob.nurotech.co.in/services/remodeling/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prob.nurotech.co.in/services/remodeling/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Your Remodeling Service Really Make My Home Stand Out in the Neighborhood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. At ProBrothers, we don't just remodel homes—we transform them into the envy of the block with bold, custom designs and top-notch craftsmanship. Picture stunning kitchens, spa-inspired bathrooms, and seamless layouts, all crafted with over 15 years of expertise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of remodeling services does ProBrothers offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProBrothers provides a wide range of remodeling services for both residential and commercial properties. Our offerings include kitchen and bathroom renovations, basement finishing, whole-home remodels, and custom carpentry solutions such as trim work and cabinetry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Your Remodeling Service help Boost My Home's Value Before I Sell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely, ProBrothers crafts high-ROI remodels, from modern kitchens to open-plan living, that appraisers and buyers love. Our expert renovations in Pennsylvania turn your home into a hot commodity fast."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a remodeling project cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Costs are tailored to each project, factoring in materials, labor, and any additional services like design or permits. ProBrothers offers competitive pricing and provides a transparent, custom quote after the initial consultation, ensuring you understand the investment upfront with no hidden fees."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Home Remodeling Contractor in Media, PA | ProBrothers"
+  description="ProBrothers delivers expert kitchen, bathroom, basement & whole-home remodeling in Media, PA. Trusted residential remodeling contractor. Free quote."
+  canonical="https://prob.nurotech.co.in/services/remodeling/"
+  ogTitle="Home Remodeling Contractor in Media, PA | ProBrothers"
+  ogDescription="Kitchen, bathroom, basement & whole-home remodeling in Media, PA by ProBrothers — the trusted residential remodeling contractor."
+  ogUrl="https://prob.nurotech.co.in/services/remodeling/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="Home Remodeling Contractor in Media, PA"
+  twitterDescription="Kitchen, bathroom, basement & whole-home remodeling in Media, PA. Free quote from ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Remodeling</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">REMODELING</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Expert Home Remodeling Contractor in Media, PA</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Service Overview ===== -->
+  <section class="section svc-overview" id="service-overview" aria-label="Service Overview">
+    <div class="container">
+      <div class="svc-overview__grid">
+        <div class="svc-overview__content reveal" data-reveal="left">
+          <span class="section__kicker">SERVICE OVERVIEW</span>
+          <h2 class="section__title">
+            Home Remodeling Services
+            <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+              <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+              <circle cx="8" cy="12" r="3" style="--len:20"/>
+              <circle cx="152" cy="13" r="3" style="--len:20"/>
+            </svg>
+          </h2>
+          <p class="svc-overview__para">At ProBrothers, we believe that your home should evolve with you, and home remodeling and repair in 2026 is the perfect way to achieve that dream without the hassle of moving. Whether you're looking to expand your space or simply enhance its functionality, we as the best home remodeling contractor in media, pennsylvania are here to guide you through every detail of your home renovation.</p>
+          <p class="svc-overview__para">Our expertise spans a wide range of remodeling projects, from designing and building kitchens, bathrooms, and family rooms to creating stunning home additions and basement finishing. We're committed to uncovering the full potential of your home, working closely with you and local authorities to explore all the possibilities&mdash;whether that means building up, expanding out, or transforming an existing space.</p>
+          <p class="svc-overview__para">The opportunities for remodeling your home are virtually limitless. Some popular options include complete kitchen remoldeling, adding a home office remodeling for the modern work from home lifestyle, studio, gym, or recreation area remodeling. Maybe you dream of a sunroom addition, a guest bedroom addition, or a separate space for adult children or in-laws. Whatever your needs, ProBrothers is dedicated to making your home exactly what you need it to be at every stage of life.</p>
+          <p class="svc-overview__para">Our team of skilled home remodelers, craftsmen and construction managers will handle your project from start to finish, ensuring a smooth and stress-free remodeling experience. With weekly project meetings, we keep you informed and involved every step of the way. As the best residential remodeling contractor of 2026, we don't just remodel homes; we make your dreams a reality.</p>
+          <p class="svc-overview__para">For homeowners in Media, PA, looking for reliable home remodeling services, several companies offer a range of interior and exterior remodeling solutions and Pro Brothers is the best amoung them.</p>
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>Request a Quote</a>
+        </div>
+        <div class="svc-overview__media reveal" data-reveal="right">
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/proj-window.webp"
+                 alt="Expert remodeling and windows installation service for beautiful transformations"
+                 loading="lazy" width="768" height="1024" />
+            <figcaption>Black Windows</figcaption>
+          </figure>
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/svc-remodel.webp"
+                 alt="Expert remodeling services for beautiful home transformations"
+                 loading="lazy" width="768" height="1024" />
+            <figcaption>BlackHorse House</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Understanding Remodeling ===== -->
+  <section class="section svc-why-trim" id="understanding-remodeling" aria-label="Understanding Remodeling">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE BASICS</span>
+        <h2 class="section__title">
+          UNDERSTANDING REMODELING
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-why-trim__grid">
+        <div class="svc-why-trim__text reveal">
+          <p>Remodeling is the key to transforming your current home into the space of your dreams without the hassle of moving. At its core, remodeling allows you to enhance the functionality, style, and comfort of your home to better suit your evolving needs. Whether you're looking to expand your living area, modernize your kitchen with a fresh kitchen remodeling project, or create a more inviting family room, our home remodeling services provides the opportunity to reimagine your space. The possibilities are virtually limitless, from adding a home office, gym, or recreation area to building a guest bedroom, sunroom, or even a separate suite for in-laws. Whether you dream of expanding outward, building upward, or transforming existing rooms, remodeling can make your vision a reality.</p>
+        </div>
+
+        <!-- Testimonial -->
+        <blockquote class="svc-testimonial reveal" data-reveal="right">
+          <div class="review__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;We hired them for a full basement remodel. What stood out most was their communication. We received daily updates on what was happening, and there were no surprise costs at the end. The finished entertainment space is exactly what we envisioned.&rdquo;</p>
+          <footer>Jessica Thorne</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose ProBrothers ===== -->
+  <section class="section svc-types" id="why-probrothers" aria-label="Why Choose ProBrothers" style="background:var(--gray-2)">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE PROBROTHERS DIFFERENCE</span>
+        <h2 class="section__title">
+          WHY CHOOSE PROBROTHERS FOR YOUR REMODELING PROJECT?
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-prose reveal">
+        <p>When it comes to remodeling, experience and expertise matter. At ProBrothers, we have been into commercial remodeling, residential remodeling, kitchen remodeling, and basement remodeling for many years, bringing countless clients' visions to life. Our extensive experience means we know how to handle every aspect of a remodeling project, from design to execution, ensuring that the process is as smooth and stress-free as possible. We understand that remodeling is a significant investment, and we're here to guide you through every decision, helping you make choices that will enhance both the beauty and functionality of your home. Our skilled craftsmen and construction managers take pride in their work, ensuring that every detail is handled with care and precision. We keep you informed and involved throughout the project, with regular meetings to ensure everything is on track and aligned with your vision.</p>
+        <p>At ProBrothers, we don't just remodel homes&mdash;we rethink and help you create the home of your dreams, tailored to your needs and lifestyle. Whether you're in a historic stone colonial near Glen Mills, PA or a mid-century ranch near Kennet Square, PA, we tailor each remodel around how you live today. With our expertise, dedication, and personalized approach, you can trust that your home is in capable hands, ready to become the space you've always wanted through tailored renovations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us Stats ===== -->
+  <section class="section why why-about" id="why-choose-us" aria-label="Why Choose ProBrothers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HAVE QUESTIONS?</span>
+        <h2 class="section__title">
+          FREQUENTLY ASKED QUESTIONS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <dl class="faq-list">
+        <div class="faq-item reveal">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Can Your Remodeling Service Really Make My Home Stand Out in the Neighborhood?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Absolutely. At ProBrothers, we don't just remodel homes&mdash;we transform them into the envy of the block with bold, custom designs and top-notch craftsmanship. Picture stunning kitchens, spa-inspired bathrooms, and seamless layouts, all crafted with over 15 years of expertise.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.07s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What types of remodeling services does ProBrothers offer?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>ProBrothers provides a wide range of remodeling services for both residential and commercial properties. Our offerings include kitchen and bathroom renovations, basement finishing, whole-home remodels, and custom carpentry solutions such as trim work and cabinetry.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.14s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Can Your Remodeling Service help Boost My Home's Value Before I Sell?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Absolutely, ProBrothers crafts high-ROI remodels, from modern kitchens to open-plan living, that appraisers and buyers love. Our expert renovations in Pennsylvania turn your home into a hot commodity fast.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.21s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              How much does a remodeling project cost?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Costs are tailored to each project, factoring in materials, labor, and any additional services like design or permits. ProBrothers offers competitive pricing and provides a transparent, custom quote after the initial consultation, ensuring you understand the investment upfront with no hidden fees.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/services/two-tone-grey-kitchen-1.webp" alt="Custom cabinets by ProBrothers" loading="lazy" width="1024" height="769" />
+          </div>
+          <div class="card__body">
+            <h3>Cabinets</h3>
+            <p>Custom kitchen, office, entertainment center, and mudroom cabinetry tailored to your space.</p>
+            <a href="/services/cabinets/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-trim.webp" alt="Trim and molding services" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service Contact Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Remodeling Quote">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Contact Us</h2>
+          <p class="contact-form-box__sub">We will contact you within two business days.</p>
+
+          <form class="contact-form" id="remodelForm" action="#" method="post" novalidate aria-label="Remodeling quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="remodelFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="remodelFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="remodelLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="remodelLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="remodelEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="remodelEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="remodelPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="remodelPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="remodelMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="remodelMessage" name="message" rows="5" placeholder="Tell us about your remodeling project..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.svc-overview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.svc-overview__content .section__title { text-align: left; }
+.svc-overview__content .section__title + .blueprint { margin-left: 0; }
+.svc-overview__content .section__kicker { display: block; }
+.svc-overview__para { color: var(--muted); font-size: 1rem; line-height: 1.78; margin: 0 0 1.2rem; }
+.svc-overview__para:first-of-type { margin-top: 1.4rem; }
+.svc-overview__media { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.svc-overview__figure { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); position: relative; aspect-ratio: 3/4; }
+.svc-overview__figure img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .8s var(--ease); }
+.svc-overview__figure:hover img { transform: scale(1.04); }
+.svc-overview__figure figcaption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: .6rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,.75), transparent);
+  color: #fff; font-weight: 800; font-size: .82rem;
+  text-transform: uppercase; letter-spacing: .06em;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+.svc-overview__figure:hover figcaption { opacity: 1; transform: translateY(0); }
+
+.svc-why-trim__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin-top: 2rem; }
+.svc-why-trim__text p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.2rem; }
+.svc-testimonial {
+  background: #fff; border-radius: var(--radius); padding: 2rem;
+  box-shadow: var(--shadow-sm); position: relative;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  border-top: 4px solid var(--accent);
+}
+.svc-testimonial::before {
+  content: "\201C"; position: absolute; top: -18px; left: 18px;
+  font-size: 5rem; color: var(--accent);
+  font-family: Georgia, serif; line-height: 1; opacity: .55;
+}
+.svc-testimonial:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.svc-testimonial .review__stars { color: var(--accent); letter-spacing: .15em; margin-bottom: .8rem; }
+.svc-testimonial p { font-size: 1rem; font-style: italic; color: var(--ink); margin-bottom: 1rem; }
+.svc-testimonial footer { font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .04em; }
+
+.svc-types__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 2rem; }
+.svc-types__text p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.2rem; }
+.svc-types__cards { display: flex; flex-direction: column; gap: 1.4rem; }
+.svc-prose { max-width: 980px; margin: 2rem auto 0; }
+.svc-prose p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.2rem; text-align: center; }
+
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: .8rem; }
+.faq-item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; border-left: 4px solid var(--accent); }
+.faq-item__btn {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 1.3rem 1.6rem;
+  font-family: 'Raleway', system-ui, sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--dark);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  transition: color .2s;
+}
+.faq-item__btn:hover { color: var(--accent); }
+.faq-item__icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: grid; place-items: center; font-size: 1.3rem; font-weight: 900;
+  transition: transform .3s var(--ease);
+}
+.faq-item__btn[aria-expanded="true"] .faq-item__icon { transform: rotate(45deg); }
+.faq-item__a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease), padding .3s; padding: 0 1.6rem; }
+.faq-item__a.open { max-height: 400px; padding: 0 1.6rem 1.3rem; }
+.faq-item__a p { color: var(--muted); font-size: .95rem; line-height: 1.75; }
+
+@media (max-width: 900px) {
+  .svc-overview__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-why-trim__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-types__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 480px) {
+  .svc-overview__media { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+document.querySelectorAll('.faq-item__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item__btn').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.faq-item').querySelector('.faq-item__a').classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.closest('.faq-item').querySelector('.faq-item__a').classList.add('open');
+    }
+  });
+});
+</script>

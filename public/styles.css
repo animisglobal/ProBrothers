@@ -46,7 +46,7 @@ ul{list-style:none}
   position:relative;overflow:hidden;
 }
 .btn--lg{padding:1.05rem 2.2rem;font-size:.9rem}
-.btn--accent{background:var(--accent);color:var(--dark)}
+.btn--accent{background:var(--accent);color:#fff}
 .btn--accent:hover{background:var(--accent-dark);transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,145,222,.4)}
 .btn--dark{background:var(--dark);color:#fff}
 .btn--dark:hover{background:#000;transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,.28)}
@@ -61,7 +61,7 @@ ul{list-style:none}
 .btn:hover::after{left:140%}
 
 /* ---------- Topbar ---------- */
-.topbar{background:var(--dark);color:#cfd4d6;font-size:.82rem}
+.topbar{background:var(--gray-2);color:var(--muted);font-size:.82rem;border-bottom:1px solid rgba(0,0,0,.06)}
 .topbar__inner{display:flex;justify-content:space-between;align-items:center;height:42px}
 .topbar__contact{display:flex;gap:1.6rem}
 .topbar__item{display:inline-flex;align-items:center;gap:.4rem;transition:color .2s}
@@ -70,7 +70,7 @@ ul{list-style:none}
 .topbar__social{display:flex;gap:.5rem}
 .soc{
   width:28px;height:28px;display:grid;place-items:center;
-  border:1px solid rgba(255,255,255,.25);border-radius:50%;color:#cfd4d6;transition:.25s var(--ease);
+  border:1px solid rgba(0,0,0,.18);border-radius:50%;color:var(--muted);transition:.25s var(--ease);
 }
 .soc svg{width:14px;height:14px;display:block}
 .soc:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-2px)}
@@ -81,8 +81,8 @@ ul{list-style:none}
   box-shadow:0 2px 0 rgba(0,0,0,.04);transition:box-shadow .3s,padding .3s;
 }
 .header.scrolled{box-shadow:var(--shadow-sm)}
-.header__inner{display:flex;align-items:center;gap:1.5rem;height:96px;transition:height .3s}
-.header.scrolled .header__inner{height:78px}
+.header__inner{display:flex;align-items:center;gap:1.5rem;height:124px;transition:height .3s}
+.header.scrolled .header__inner{height:94px}
 .brand__logo{height:68px;width:auto;transition:height .3s}
 .header.scrolled .brand__logo{height:54px}
 
@@ -174,7 +174,7 @@ ul{list-style:none}
   background:rgba(0,0,0,.2);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;
   display:grid;place-items:center;backdrop-filter:blur(4px);transition:.3s var(--ease);
 }
-.hero__arrow:hover{background:var(--accent);border-color:var(--accent);color:var(--dark)}
+.hero__arrow:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 .hero__arrow--prev{left:2%}
 .hero__arrow--next{right:2%}
 
@@ -291,25 +291,25 @@ ul{list-style:none}
 .cta__actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
 /* ---------- Footer ---------- */
-.footer{background:#16181a;color:#aab0b3;font-size:.92rem}
+.footer{background:var(--gray-2);color:var(--muted);font-size:.92rem;border-top:1px solid rgba(0,0,0,.06)}
 .footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;padding:3.5rem 0 2.5rem}
 .footer__logo{height:42px;width:auto;margin-bottom:1rem;filter:brightness(0) invert(1)}
 .footer__brand p{margin-bottom:.8rem;max-width:320px}
 .footer__contact a{color:var(--accent);font-weight:700}
-.footer__col h4{color:#fff;text-transform:uppercase;font-size:.85rem;letter-spacing:.1em;margin-bottom:1rem}
+.footer__col h4{color:var(--dark);text-transform:uppercase;font-size:.85rem;letter-spacing:.1em;margin-bottom:1rem}
 .footer__col ul li{margin-bottom:.55rem}
 .footer__col ul a{transition:.2s}
 .footer__col ul a:hover{color:var(--accent);padding-left:4px}
 .footer__social{display:flex;gap:.6rem}
 .soc--lg{width:38px;height:38px}
 .soc--lg svg{width:18px;height:18px}
-.footer__bar{border-top:1px solid rgba(255,255,255,.08);padding:1.2rem 0;font-size:.8rem}
+.footer__bar{border-top:1px solid rgba(0,0,0,.1);padding:1.2rem 0;font-size:.8rem}
 .footer__bar .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
 
 /* ---------- Back to top ---------- */
 .to-top{
   position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;
-  background:var(--accent);color:var(--dark);display:grid;place-items:center;font-size:1.3rem;
+  background:var(--accent);color:#fff;display:grid;place-items:center;font-size:1.3rem;
   box-shadow:var(--shadow-sm);opacity:0;visibility:hidden;transform:translateY(15px);
   transition:.35s var(--ease);z-index:50;
 }
@@ -542,7 +542,7 @@ ul{list-style:none}
 .ba__line{position:absolute;inset:0}
 .ba__grip{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--dark);
+  width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;
   display:grid;place-items:center;font-size:1.2rem;font-weight:700;
   box-shadow:0 4px 14px rgba(0,0,0,.35);
 }
@@ -653,7 +653,7 @@ button.to-top{font-size:1.3rem;cursor:pointer;border:none;font-family:inherit}
 .value-card:hover::after{opacity:1}
 .value-card__ic{
   flex-shrink:0;width:48px;height:48px;border-radius:12px;
-  background:var(--accent);color:var(--dark);display:grid;place-items:center;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
   transition:transform .3s var(--ease);
 }
 .value-card:hover .value-card__ic{transform:scale(1.1) rotate(-4deg)}
@@ -815,7 +815,7 @@ button.to-top{font-size:1.3rem;cursor:pointer;border:none;font-family:inherit}
 
 .contact-card__ic{
   flex-shrink:0;width:48px;height:48px;border-radius:12px;
-  background:var(--accent);color:var(--dark);display:grid;place-items:center;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
   transition:transform .3s var(--ease);
 }
 .contact-card:hover .contact-card__ic{transform:scale(1.1) rotate(-4deg)}
@@ -984,7 +984,7 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
   filter:none;
 }
 .footer__contact a{color:var(--accent);font-weight:700;display:inline-block}
-.footer__contact a:hover{color:#fff}
+.footer__contact a:hover{color:var(--accent-dark)}
 
 /* ---------- Reviews slider ---------- */
 .reviews-slider{position:relative;max-width:1100px;margin:0 auto}
@@ -1008,7 +1008,7 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .reviews-slider__arrow{
   position:absolute;top:50%;transform:translateY(-50%);
   width:46px;height:46px;border-radius:50%;border:0;
-  background:var(--accent);color:var(--dark);font-size:1.6rem;line-height:1;
+  background:var(--accent);color:#fff;font-size:1.6rem;line-height:1;
   cursor:pointer;display:grid;place-items:center;
   box-shadow:var(--shadow-sm);transition:.25s var(--ease);z-index:3;
 }
@@ -1060,3 +1060,65 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 @media(max-width:560px){
   .svc-contact-form__wrap .contact-form-box{padding:1.6rem}
 }
+
+/* ===========================================================
+   QA FIX-UPS (latest round)
+   =========================================================== */
+
+/* ---------- Home "Why Choose ProBrothers" — light, minimal look ----------
+   Scoped to the home section only (inner pages keep their dark .why-about /
+   .why-contact treatments with white headings + count-up numbers). */
+.why:not(.why-about):not(.why-contact){background:var(--gray-2)}
+.why:not(.why-about):not(.why-contact)::before{display:none}
+.why:not(.why-about):not(.why-contact) .why__divider path{fill:var(--gray-2)}
+.why:not(.why-about):not(.why-contact) .section__kicker--light{color:var(--gold-text)}
+.why:not(.why-about):not(.why-contact) .section__title--light{color:var(--dark)}
+.why:not(.why-about):not(.why-contact) .section__lead--light{color:var(--muted)}
+.why:not(.why-about):not(.why-contact) .why__item{color:var(--ink)}
+.why:not(.why-about):not(.why-contact) .why__item h3{color:var(--dark)}
+.why:not(.why-about):not(.why-contact) .why__item p{color:var(--muted)}
+
+/* ---------- Inner pages: connect page-banner directly to the marquee ----------
+   Drop the white transition wave so there is no gap between the page title
+   section and the running service slider that follows it. */
+.page-banner:has(+ .marquee) .page-banner__wave{display:none}
+
+/* ---------- Team member popup (About page) ---------- */
+.team__card[data-bio]{cursor:pointer}
+.team__card[data-bio]:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+.team-modal{
+  position:fixed;inset:0;z-index:120;display:grid;place-items:center;
+  padding:1.5rem;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s var(--ease);
+}
+.team-modal.open{opacity:1;visibility:visible}
+.team-modal__overlay{position:absolute;inset:0;background:rgba(13,15,16,.6);backdrop-filter:blur(3px)}
+.team-modal__dialog{
+  position:relative;z-index:1;background:#fff;border-radius:var(--radius);
+  width:min(560px,100%);max-height:90vh;overflow:auto;box-shadow:var(--shadow);
+  border-top:5px solid var(--accent);
+  transform:translateY(18px) scale(.98);transition:transform .35s var(--ease);
+}
+.team-modal.open .team-modal__dialog{transform:none}
+.team-modal__close{
+  position:absolute;top:.8rem;right:.8rem;z-index:2;width:40px;height:40px;border:0;
+  border-radius:50%;background:var(--gray-2);color:var(--dark);font-size:1.6rem;line-height:1;
+  cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s;
+}
+.team-modal__close:hover{background:var(--accent);color:#fff;transform:rotate(90deg)}
+.team-modal__photo{width:100%;aspect-ratio:3/2;overflow:hidden;background:var(--gray-2)}
+.team-modal__photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.team-modal__photo--initials{
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--dark) 0%,#3a4046 100%);
+}
+.team-modal__photo--initials span{font-size:3rem;font-weight:900;color:var(--accent);letter-spacing:.06em}
+.team-modal__body{padding:1.6rem 1.8rem 2rem}
+.team-modal__name{font-size:1.4rem;font-weight:900;text-transform:uppercase;color:var(--dark);margin-bottom:.25rem}
+.team-modal__role{
+  display:inline-block;font-size:.78rem;font-weight:700;color:var(--accent);
+  text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;
+}
+.team-modal__bio p{color:var(--muted);font-size:.98rem;line-height:1.75;margin-bottom:.9rem}
+.team-modal__bio p:last-child{margin-bottom:0}
+body.modal-open{overflow:hidden}

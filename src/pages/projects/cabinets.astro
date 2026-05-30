@@ -31,6 +31,13 @@ const projects = [
     id: 'wallpaper',
     title: 'Wallpaper',
     body: "For this project, we built two custom vanities for a residential customer. The client desiring elegant bathrooms turned to our company for making her ideas come to life. Working with a designer we got the ideas on paper, built the cabinets, and finished them with premium quality paint. We finished it off with some under cabinet lighting making for an incredible finished product.",
+    scope: [
+      "Create custom vanities that fit the room style",
+      "Build cabinets, finish them with a quality finish",
+      "Install them with a perfect fit in their position",
+      "Ensure quality maintained throughout the whole building process",
+      "Install under-cabinet lighting, install doors, drawers, and handles chosen by the owner"
+    ],
     images: [
       { src: '/assets/img/projects/Bathroom-Flower-Wallpaper-1-768x1024.webp', alt: 'Bathroom Flower Wallpaper 1' },
       { src: '/assets/img/projects/BathroomFlower-Wallpaper-768x1024.webp', alt: 'Bathroom(Flower Wallpaper)' }
@@ -40,6 +47,17 @@ const projects = [
     id: 'dark-blue-office',
     title: 'Dark Blue Office',
     body: "This is an incredible custom home office for a high-end customer. The customer wanted to transform his home office into a place to be proud of, a room that makes you want to go to work. After some ideas we got the cabinet layout that the client agreed upon. With a corner desk for a computer monitor and space to write, large cabinets for storing lots of files and small drawers for the small things like pens and notebooks, this was exactly what the customer needed to improve his workspace. We then finished the cabinets with a premium finish going with a luxury blue that really suited the atmosphere. The gold handles finished the project off, complimenting the finished room.",
+    scope: [
+      "Get room dimensions and plan layout with client",
+      "After getting all the details about placement, layout, and design, start with building the cabinets",
+      "After cabinets are finished, sand, prime, and finish them all while maintaining quality",
+      "Transport cabinets to location, paying great attention to not damage any of the finished pieces",
+      "Upon arrival, prepare the room for installation, removing any old pieces of furniture, old trimwork, and any other details",
+      "Cabinets get transported into the room and installed",
+      "Every cabinet is further measured and cut to get the most precise fit",
+      "After installation, doors, drawers, shelves, and handles are installed",
+      "After finishing the project, quality inspection is done with touch-up where needed"
+    ],
     images: [
       { src: '/assets/img/projects/Blue-Cabinets-1-768x1024.webp', alt: 'Blue Cabinets 1' },
       { src: '/assets/img/projects/Blue-Caboinets-768x1024.webp', alt: 'Blue Cabinets' },
@@ -193,6 +211,14 @@ const projects = [
           <div class="proj-section__about reveal">
             <h3>About This Project</h3>
             <p>{p.body}</p>
+          </div>
+        )}
+        {p.scope && (
+          <div class="proj-section__scope reveal">
+            <h3>Scope of Work</h3>
+            <ul>
+              {p.scope.map(item => (<li>{item}</li>))}
+            </ul>
           </div>
         )}
         <div class="gallery reveal">

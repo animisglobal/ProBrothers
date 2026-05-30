@@ -1,0 +1,518 @@
+---
+/**
+ * Source URL  : https://probrothers.com/construction-company-in-allentown-pa/
+ * Canonical   : https://prob.nurotech.co.in/locations/allentown/
+ * Errors fixed: None detected — text preserved 100% verbatim.
+ * SEO added   : unique <title>, meta description, canonical, OG/Twitter tags,
+ *               JSON-LD Service + BreadcrumbList + FAQPage, preload LCP image.
+ * Note        : Source page meta title was not exposed in rendered HTML;
+ *               title "Commercial & Home Construction Company Near Allentown, PA"
+ *               confirmed from tab/document title via WebFetch.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/locations/allentown/#service",
+      "name": "ProBrothers Construction Company in Allentown, PA",
+      "description": "ProBrothers brings a design-first approach to home renovation in Allentown, PA — custom kitchen cabinets, trim carpentry, home additions, and residential construction.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": { "@type": "City", "name": "Allentown", "addressRegion": "PA", "addressCountry": "US" },
+      "url": "https://prob.nurotech.co.in/locations/allentown/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/locations/allentown/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",          "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations",     "item": "https://prob.nurotech.co.in/locations/" },
+        { "@type": "ListItem", "position": 3, "name": "Allentown, PA", "item": "https://prob.nurotech.co.in/locations/allentown/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prob.nurotech.co.in/locations/allentown/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why should I choose a \"home renovation company\" over a general handyman?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A specialized home renovation company like ProBrothers understands structural integrity and long-term value. We ensure your whole house renovations meet local Allentown codes and increase your property's resale value." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the benefit of a custom basement remodel?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If you're looking for basement remodelers near me, remember that a basement remodel is the most cost-effective way to add square footage. We turn dark storage areas into bright, functional living spaces." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle small carpentry services?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. While we handle luxury home renovations, we also provide focused carpentry services like wall paneling installation or replacing a single door frame." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ProBrothers an \"affordable home renovation\" option?",
+          "acceptedAnswer": { "@type": "Answer", "text": "'Affordable' doesn't mean cheap materials; it means doing the job right the first time so you don't pay for repairs later. We are the best construction company for those who prioritize quality." }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Commercial & Home Construction Company Near Allentown, PA"
+  description="ProBrothers — Allentown, PA's design-first construction company. Custom kitchen cabinets, architectural trim, home additions & residential construction. Free quote."
+  canonical="https://prob.nurotech.co.in/locations/allentown/"
+  ogTitle="Construction Company in Allentown, PA | ProBrothers"
+  ogDescription="ProBrothers — bringing a design-first approach to home renovation in Allentown, PA. Custom cabinets, trim & additions. Call (484) 745-4097."
+  ogUrl="https://prob.nurotech.co.in/locations/allentown/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="Construction Company in Allentown, PA | ProBrothers"
+  twitterDescription="Design-first home renovation in Allentown, PA. Custom cabinets, trim & additions. Free quote from ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/locations/">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Allentown, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Bringing Your Vision to Life with ProBrothers Construction Company in Allentown, PA</h1>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Design-First Approach ===== -->
+  <section class="section loc-intro" id="intro" aria-label="The ProBrothers Design-First Approach">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">ALLENTOWN, PENNSYLVANIA</span>
+        <h2 class="section__title">
+          The ProBrothers Design-First Approach
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-intro__body reveal">
+        <p>Most homeowners in Allentown, Pennsylvania reach a point where their house no longer fits their lifestyle. Maybe the kitchen feels cramped, or you're missing that dedicated 'drop zone' for muddy boots.</p>
+        <p>At ProBrothers Construction Company, we don't just 'do jobs'&mdash;we solve space and style problems. Based in nearby Media, we've expanded our footprint to Allentown because we know the local architecture and what it takes to modernize a Pennsylvania home while keeping its soul intact.</p>
+        <p>We've found that the best home renovation services start with a conversation about how you actually live. Are you a chef who needs premium kitchen cabinets with specific reach? Or a busy family needing mudroom storage cabinets to hide the chaos?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Core Services ===== -->
+  <section class="section loc-services" id="services" aria-label="Construction and Remodeling Services in Allentown, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHAT WE OFFER</span>
+        <h2 class="section__title">
+          Our Services in Allentown, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <!-- Service 1: Kitchens & Storage -->
+      <article class="loc-svc reveal" id="kitchens-storage">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-cabinets.webp" alt="Custom kitchen cabinets and storage in Allentown, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>1. The Heart of the Home: Kitchens &amp; Storage</h3>
+          <p>Your kitchen is your command center. We specialize in luxury kitchen cabinets and custom kitchen cabinetry that outlasts big-box store alternatives.</p>
+          <ul class="loc-svc__list">
+            <li><strong>Smart Storage:</strong> We integrate kitchen storage cabinets that utilize every inch of your layout.</li>
+            <li><strong>Office &amp; Utility:</strong> Beyond the kitchen, we provide office storage solutions and office cabinets for the modern work-from-home professional.</li>
+          </ul>
+          <a href="/services/cabinets/" class="btn btn--accent" data-magnetic>EXPLORE CABINETS</a>
+        </div>
+      </article>
+
+      <!-- Service 2: Trim -->
+      <article class="loc-svc loc-svc--flip reveal" id="architectural-trim">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Architectural trim carpentry in Allentown, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>2. The Art of the Finish: Architectural Trim</h3>
+          <p>We aren't just any ordinary construction company. If you want your home to look 'high-end,' it's all in the trim. Our trim carpenter team handles the delicate details that define a room's character:</p>
+          <ul class="loc-svc__list">
+            <li>Expert crown molding installers for that classic Lehigh Valley look.</li>
+            <li>Wall paneling installation and decorative wall trim to add texture to flat walls.</li>
+            <li>Chair rail molding and precision door frame installation.</li>
+          </ul>
+          <a href="/services/trim/" class="btn btn--accent" data-magnetic>EXPLORE TRIM SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 3: Additions & New Builds -->
+      <article class="loc-svc reveal" id="additions-new-builds">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Home additions and new builds in Allentown, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>3. Structural Growth: Additions &amp; New Builds</h3>
+          <p>As custom home builders, we help you grow without moving. If you're searching for home addition contractors near me, we offer:</p>
+          <ul class="loc-svc__list">
+            <li>Second-story addition projects for growing families.</li>
+            <li>Seamless custom home addition designs that look like they were always there.</li>
+            <li>Full residential construction services for ground-up custom home building.</li>
+          </ul>
+          <a href="/services/additions/" class="btn btn--accent" data-magnetic>EXPLORE ADDITIONS</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Allentown Homeowner Q&A: Getting Started">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">GETTING STARTED</span>
+        <h2 class="section__title">
+          Allentown Homeowner Q&amp;A: Getting Started
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="faq__list reveal" role="list">
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-1">
+            Why should I choose a &ldquo;home renovation company&rdquo; over a general handyman?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-1" hidden>
+            <p>A specialized home renovation company like ProBrothers understands structural integrity and long-term value. We ensure your whole house renovations meet local Allentown codes and increase your property's resale value.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-2">
+            What is the benefit of a custom basement remodel?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-2" hidden>
+            <p>If you're looking for basement remodelers near me, remember that a basement remodel is the most cost-effective way to add square footage. We turn dark storage areas into bright, functional living spaces.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-3">
+            Do you handle small carpentry services?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-3" hidden>
+            <p>Yes. While we handle luxury home renovations, we also provide focused carpentry services like wall paneling installation or replacing a single door frame.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-4">
+            Is ProBrothers an &ldquo;affordable home renovation&rdquo; option?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-4" hidden>
+            <p>We focus on value. 'Affordable' doesn't mean cheap materials; it means doing the job right the first time so you don't pay for repairs later. We are the best construction company for those who prioritize quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quote Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" style="background:var(--gray-2)" aria-label="Request a Construction Quote in Allentown">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">LET'S TALK</span>
+        <h2 class="section__title">We believe in clear timelines and honest pricing. If you're ready to discuss your home remodeling and repair needs, let's talk.</h2>
+      </div>
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h3 class="contact-form-box__heading">Get a FREE Quote!</h3>
+          <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
+          <form class="contact-form" id="allentownQuoteForm" action="#" method="post" novalidate aria-label="Allentown, PA construction quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="alFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="alFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="alLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="alLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="alPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="alPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="alEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="alEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="alMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="alMessage" name="message" rows="5" placeholder="Tell us about your project in Allentown, PA..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank You! Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+            <p class="contact-form__privacy">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Stats ===== -->
+  <section class="section why why-about" id="why-stats" aria-label="ProBrothers by the numbers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-cabinets.webp" alt="Custom cabinetry services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Cabinets</h3>
+            <p>Luxury custom-built cabinetry for kitchens, mudrooms, and home offices.</p>
+            <a href="/services/cabinets/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-trim.webp" alt="Trim carpentry services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Trim</h3>
+            <p>Expert crown molding, wall paneling & decorative trim carpentry.</p>
+            <a href="/services/trim/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Construction services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Construction Services</h3>
+            <p>Full residential construction — additions, new builds & whole-home renovations.</p>
+            <a href="/services/construction-services/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact ProBrothers in Allentown, PA">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project in Allentown, PA?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>CONTACT US</a>
+        <a href="/services/" class="btn btn--ghost btn--lg" data-magnetic>EXPLORE OUR SERVICES</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.loc-intro__body p { max-width: 860px; margin: 0 auto 1rem; font-size: 1.05rem; line-height: 1.8; color: var(--muted); text-align: center; }
+
+.loc-svc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 3rem 0; border-bottom: 1px solid var(--gray);
+}
+.loc-svc:last-child { border-bottom: none; }
+.loc-svc--flip .loc-svc__media { order: 2; }
+.loc-svc--flip .loc-svc__body  { order: 1; }
+.loc-svc__media img {
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%; height: 340px; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.loc-svc__media:hover img { transform: scale(1.03); }
+.loc-svc__body h3 {
+  font-size: 1.15rem; font-weight: 900; color: var(--dark);
+  margin-bottom: 1rem; line-height: 1.35;
+  padding-bottom: .6rem; border-bottom: 3px solid var(--accent);
+}
+.loc-svc__body p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: .97rem; }
+.loc-svc__list { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.2rem; }
+.loc-svc__list li { color: var(--muted); font-size: .95rem; line-height: 1.7; padding-left: 1rem; border-left: 3px solid var(--accent); }
+.loc-svc__list li strong { color: var(--dark); }
+.loc-svc__body .btn { margin-top: .4rem; }
+
+.faq__list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: .6rem; }
+.faq__item { border: 1px solid var(--gray); border-radius: var(--radius); overflow: hidden; }
+.faq__q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem 1.4rem; background: #fff; border: none; cursor: pointer;
+  font-size: .97rem; font-weight: 700; color: var(--dark); text-align: left;
+  transition: background .2s;
+}
+.faq__q:hover { background: var(--gray-2); }
+.faq__q[aria-expanded="true"] { background: var(--gray-2); }
+.faq__chevron { width: 18px; height: 18px; stroke: var(--accent); flex-shrink: 0; transition: transform .3s; }
+.faq__q[aria-expanded="true"] .faq__chevron { transform: rotate(180deg); }
+.faq__a { padding: 0 1.4rem 1.1rem; background: var(--gray-2); }
+.faq__a p { color: var(--muted); line-height: 1.75; font-size: .95rem; margin: 0; }
+
+.contact-form-box__heading { font-size: 1.5rem; font-weight: 900; color: var(--dark); margin-bottom: .5rem; }
+.contact-form__privacy { font-size: .8rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+
+@media(max-width:768px){
+  .loc-svc { grid-template-columns: 1fr; gap: 1.6rem; }
+  .loc-svc--flip .loc-svc__media { order: 0; }
+  .loc-svc--flip .loc-svc__body  { order: 0; }
+  .loc-svc__media img { height: 240px; }
+}
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('.faq__q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq__q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        const a = document.getElementById(b.getAttribute('aria-controls'));
+        if (a) a.hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        const ans = document.getElementById(btn.getAttribute('aria-controls'));
+        if (ans) ans.hidden = false;
+      }
+    });
+  });
+})();
+</script>

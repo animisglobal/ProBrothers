@@ -1,0 +1,609 @@
+---
+/**
+ * Source URL  : https://probrothers.com/king-of-prussia-home-renovation/
+ * Canonical   : https://prob.nurotech.co.in/locations/king-of-prussia/
+ * Errors fixed: None detected — text preserved 100% verbatim.
+ * SEO added   : unique <title>, meta description, canonical, OG/Twitter tags,
+ *               JSON-LD Service + BreadcrumbList + FAQPage, preload LCP image.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/locations/king-of-prussia/#service",
+      "name": "Expert Home Renovation & Custom Carpentry in King of Prussia, PA",
+      "description": "ProBrothers — premier partners for high-end home renovation and residential construction in King of Prussia and the Main Line area. Custom cabinets, trim carpentry, additions, and full-scale remodeling.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": { "@type": "City", "name": "King of Prussia", "addressRegion": "PA", "addressCountry": "US" },
+      "url": "https://prob.nurotech.co.in/locations/king-of-prussia/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/locations/king-of-prussia/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",              "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations",         "item": "https://prob.nurotech.co.in/locations/" },
+        { "@type": "ListItem", "position": 3, "name": "King of Prussia, PA","item": "https://prob.nurotech.co.in/locations/king-of-prussia/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://prob.nurotech.co.in/locations/king-of-prussia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What areas do you serve outside of Media, PA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers Construction Company is based in Media, PA, but we provide full residential construction services throughout King of Prussia, the Main Line, and Delaware County." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer custom designs for kitchens?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We specialize in custom kitchen cabinetry. Unlike standard installers, we design luxury kitchen cabinets and kitchen storage cabinets that fit your specific layout and design preferences." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you handle large-scale home additions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We are experienced home addition contractors near me. Whether you need a second-story addition or a ground-level custom home addition, we manage the engineering, permitting, and construction." }
+        },
+        {
+          "@type": "Question",
+          "name": "I am looking for renovation services near me. Do you do small repairs?",
+          "acceptedAnswer": { "@type": "Answer", "text": "While we specialize in custom home renovations and whole house renovations, we also handle specific high-impact projects like window and door installation, deck building, and trim carpentry." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I start a project with ProBrothers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Contact us today to schedule a consultation. We are the best construction company for homeowners who value clear communication and superior craftsmanship." }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Best Custom Home Renovation Company in King of Prussia, PA"
+  description="ProBrothers — expert home renovation & custom carpentry in King of Prussia, PA. Custom cabinets, trim, additions & full-scale remodeling on the Main Line. Free quote."
+  canonical="https://prob.nurotech.co.in/locations/king-of-prussia/"
+  ogTitle="Expert Home Renovation & Custom Carpentry in King of Prussia | ProBrothers"
+  ogDescription="ProBrothers — King of Prussia's premier home renovation company. Luxury cabinets, high-end trim, additions & remodeling. Call (484) 745-4097."
+  ogUrl="https://prob.nurotech.co.in/locations/king-of-prussia/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="Home Renovation & Carpentry in King of Prussia, PA | ProBrothers"
+  twitterDescription="Expert home renovation & custom carpentry in King of Prussia, PA. Free quote from ProBrothers."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/locations/">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">King of Prussia, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Expert Home Renovation &amp; Custom Carpentry in King Of Prussia, PA</h1>
+      <p class="page-banner__sub">Transforming homes with precision, luxury, and lasting quality.</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Intro ===== -->
+  <section class="section loc-intro" id="intro" aria-label="About ProBrothers in King of Prussia">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">KING OF PRUSSIA, PENNSYLVANIA</span>
+        <h2 class="section__title">
+          Welcome to ProBrothers Construction Company
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-intro__body reveal">
+        <p>Welcome to ProBrothers Construction Company. We are your premier partners for high-end home renovation and residential construction. While our roots are in Media, PA, we proudly serve homeowners across King of Prussia and the surrounding Main Line area.</p>
+        <p>Whether you need a trim carpenter for detailed millwork or a custom home addition to expand your living space, our team delivers craftsmanship that stands the test of time. We don't just renovate; we elevate your lifestyle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Core Services ===== -->
+  <section class="section loc-services" id="services" aria-label="Core Construction & Remodeling Services in King of Prussia">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHAT WE OFFER</span>
+        <h2 class="section__title">
+          Our Core Construction &amp; Remodeling Services
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <!-- Service 1 -->
+      <article class="loc-svc reveal" id="custom-cabinets">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-cabinets.webp" alt="Custom cabinets and storage solutions in King of Prussia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>1. Custom Cabinets &amp; Storage Solutions</h3>
+          <p>Don't settle for stock options. We design and build luxury kitchen cabinets tailored to your cooking style and aesthetic.</p>
+          <ul class="loc-svc__list">
+            <li><strong>Kitchens:</strong> From premium kitchen cabinets to smart kitchen storage cabinets, we maximize every inch of your culinary space.</li>
+            <li><strong>Mudrooms:</strong> Organize your entryway with mudroom cabinetry and mudroom storage cabinets designed to handle the daily rush.</li>
+            <li><strong>Home Offices:</strong> Enhance productivity with office cabinets and storage cabinets for office spaces that blend function with style.</li>
+          </ul>
+          <a href="/services/cabinets/" class="btn btn--accent" data-magnetic>EXPLORE CABINETS</a>
+        </div>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="loc-svc loc-svc--flip reveal" id="trim-carpentry">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="High-end trim carpentry in King of Prussia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>2. High-End Trim Carpentry</h3>
+          <p>Details do matter a lot and as a part of our home renovation service, our carpentry services add character and value to your home. We are expert crown molding installers and specialists in decorative wall trim.</p>
+          <ul class="loc-svc__list">
+            <li><strong>Wall Treatments:</strong> We install wainscoting, chair rail molding, and modern wall paneling installation.</li>
+            <li><strong>Finish Work:</strong> Our team provides flawless baseboard and casing work to frame your rooms perfectly.</li>
+          </ul>
+          <a href="/services/trim/" class="btn btn--accent" data-magnetic>EXPLORE TRIM SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="loc-svc reveal" id="home-additions">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Home additions and structural construction in King of Prussia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>3. Home Additions &amp; Structural Construction</h3>
+          <p>Need more space? As custom home builders and home addition contractors near me, we seamlessly integrate new structures with your existing home.</p>
+          <ul class="loc-svc__list">
+            <li><strong>Expansions:</strong> We specialize in second-story additions and custom home additions.</li>
+            <li><strong>Design-Build:</strong> We offer house design for renovation ensuring your new space matches your home's architectural integrity.</li>
+          </ul>
+          <a href="/services/additions/" class="btn btn--accent" data-magnetic>EXPLORE ADDITIONS</a>
+        </div>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="loc-svc loc-svc--flip reveal" id="full-remodeling">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Full-scale remodeling in King of Prussia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>4. Full-Scale Remodeling</h3>
+          <p>We are the residential remodeling contractors you can trust for complex projects.</p>
+          <ul class="loc-svc__list">
+            <li><strong>Interiors:</strong> We manage luxury home renovations, focusing on high-quality materials and modern layouts.</li>
+            <li><strong>Basements:</strong> Looking for basement remodelers near me? We turn unfinished basements into home theaters, gyms, or guest suites.</li>
+            <li><strong>Exteriors:</strong> We provide comprehensive exterior renovation services to boost curb appeal.</li>
+          </ul>
+          <a href="/services/remodeling/" class="btn btn--accent" data-magnetic>EXPLORE REMODELING</a>
+        </div>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="loc-svc reveal" id="windows-doors">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Windows and doors installation in King of Prussia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>5. Windows &amp; Doors</h3>
+          <p>Improve energy efficiency and security with our window and door installation services.</p>
+          <ul class="loc-svc__list">
+            <li><strong>Doors:</strong> We handle everything from entry door installation to sliding door installation and precise door frame installation.</li>
+            <li><strong>Windows:</strong> Our window installation service and window replacement services ensure your home is weather-tight and beautiful.</li>
+          </ul>
+          <a href="/services/windows-and-doors/" class="btn btn--accent" data-magnetic>EXPLORE WINDOWS &amp; DOORS</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Quote Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Start Your Home Renovation Project in King of Prussia">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">GET STARTED</span>
+        <h2 class="section__title">Start Your Home Renovation Project</h2>
+      </div>
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h3 class="contact-form-box__heading">Get a FREE Quote!</h3>
+          <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
+          <form class="contact-form" id="kopQuoteForm" action="#" method="post" novalidate aria-label="King of Prussia home renovation quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="kopFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="kopFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="kopLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="kopLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="kopEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="kopEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="kopPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="kopPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="kopMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="kopMessage" name="message" rows="5" placeholder="Tell us about your renovation project in King of Prussia..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank You! Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+            <p class="contact-form__privacy">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us ===== -->
+  <section class="section loc-why" id="why-choose" style="background:var(--gray-2)" aria-label="Why Choose ProBrothers Construction Company">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE RIGHT CHOICE</span>
+        <h2 class="section__title">
+          Why Choose ProBrothers Construction Company?
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-why__body reveal">
+        <p>Finding a construction contractor or a home renovation company near you is easy; finding reliability is hard. We bridge that gap.</p>
+        <div class="loc-brand-grid">
+          <div class="loc-brand-card reveal">
+            <h3>Local Expertise</h3>
+            <p>Based in Media, we understand the architectural styles of King of Prussia.</p>
+          </div>
+          <div class="loc-brand-card reveal" style="--d:.1s">
+            <h3>Transparent Pricing</h3>
+            <p>We offer affordable home renovation options without compromising on premium quality.</p>
+          </div>
+          <div class="loc-brand-card reveal" style="--d:.2s">
+            <h3>Communication</h3>
+            <p>We keep you informed at every stage of the home remodeling and repair process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HAVE QUESTIONS?</span>
+        <h2 class="section__title">
+          Frequently Asked Questions (FAQ)
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="faq__list reveal" role="list">
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-1">
+            What areas do you serve outside of Media, PA?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-1" hidden>
+            <p>ProBrothers Construction Company is based in Media, PA, but we provide full residential construction services throughout King of Prussia, the Main Line, and Delaware County.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-2">
+            Do you offer custom designs for kitchens?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-2" hidden>
+            <p>Yes. We specialize in custom kitchen cabinetry. Unlike standard installers, we design luxury kitchen cabinets and kitchen storage cabinets that fit your specific layout and design preferences.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-3">
+            Can you handle large-scale home additions?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-3" hidden>
+            <p>Absolutely. We are experienced home addition contractors near me. Whether you need a second-story addition or a ground-level custom home addition, we manage the engineering, permitting, and construction.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-4">
+            I am looking for renovation services near me. Do you do small repairs?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-4" hidden>
+            <p>While we specialize in custom home renovations and whole house renovations, we also handle specific high-impact projects like window and door installation, deck building, and trim carpentry.</p>
+          </div>
+        </div>
+        <div class="faq__item" role="listitem">
+          <button class="faq__q" aria-expanded="false" aria-controls="faq-5">
+            How do I start a project with ProBrothers?
+            <svg class="faq__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq__a" id="faq-5" hidden>
+            <p>Contact us today to schedule a consultation. We are the best construction company for homeowners who value clear communication and superior craftsmanship.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Stats ===== -->
+  <section class="section why why-about" id="why-stats" aria-label="ProBrothers by the numbers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-cabinets.webp" alt="Custom cabinetry services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Cabinets</h3>
+            <p>Luxury custom-built cabinetry for kitchens, mudrooms, and home offices.</p>
+            <a href="/services/cabinets/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-trim.webp" alt="Trim work and molding services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Trim</h3>
+            <p>High-end crown molding, wainscoting & decorative trim carpentry.</p>
+            <a href="/services/trim/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full-scale interior remodeling with luxury finishes and modern layouts.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Ready to Remodel CTA ===== -->
+  <section class="cta" id="contact" aria-label="Ready to Remodel in King of Prussia, PA">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Remodel?</h2>
+      <p>Stop searching for house renovators near you and start building with the best. Contact ProBrothers Construction Company today. Serving King of Prussia, Media, and surrounding Pennsylvania communities.</p>
+      <div class="cta__actions">
+        <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>CONTACT US</a>
+        <a href="/services/" class="btn btn--ghost btn--lg" data-magnetic>EXPLORE OUR SERVICES</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.loc-intro__body p { max-width: 860px; margin: 0 auto 1rem; font-size: 1.05rem; line-height: 1.8; color: var(--muted); text-align: center; }
+
+.loc-why__body { max-width: 1000px; margin: 0 auto; }
+.loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 2rem; text-align: center; }
+
+.loc-brand-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.loc-brand-card {
+  background: #fff; border-radius: var(--radius); padding: 1.8rem;
+  box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent);
+  text-align: center;
+}
+.loc-brand-card h3 { font-size: 1rem; font-weight: 900; color: var(--dark); margin-bottom: .6rem; }
+.loc-brand-card p { color: var(--muted); font-size: .95rem; line-height: 1.7; margin: 0; }
+
+.loc-svc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 3rem 0; border-bottom: 1px solid var(--gray);
+}
+.loc-svc:last-child { border-bottom: none; }
+.loc-svc--flip .loc-svc__media { order: 2; }
+.loc-svc--flip .loc-svc__body  { order: 1; }
+.loc-svc__media img {
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%; height: 340px; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.loc-svc__media:hover img { transform: scale(1.03); }
+.loc-svc__body h3 {
+  font-size: 1.15rem; font-weight: 900; color: var(--dark);
+  margin-bottom: 1rem; line-height: 1.35;
+  padding-bottom: .6rem; border-bottom: 3px solid var(--accent);
+}
+.loc-svc__body p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: .97rem; }
+.loc-svc__list { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.2rem; }
+.loc-svc__list li { color: var(--muted); font-size: .95rem; line-height: 1.7; padding-left: 1rem; border-left: 3px solid var(--accent); }
+.loc-svc__list li strong { color: var(--dark); }
+.loc-svc__body .btn { margin-top: .4rem; }
+
+.faq__list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: .6rem; }
+.faq__item { border: 1px solid var(--gray); border-radius: var(--radius); overflow: hidden; }
+.faq__q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem 1.4rem; background: #fff; border: none; cursor: pointer;
+  font-size: .97rem; font-weight: 700; color: var(--dark); text-align: left;
+  transition: background .2s;
+}
+.faq__q:hover { background: var(--gray-2); }
+.faq__q[aria-expanded="true"] { background: var(--gray-2); }
+.faq__chevron { width: 18px; height: 18px; stroke: var(--accent); flex-shrink: 0; transition: transform .3s; }
+.faq__q[aria-expanded="true"] .faq__chevron { transform: rotate(180deg); }
+.faq__a { padding: 0 1.4rem 1.1rem; background: var(--gray-2); }
+.faq__a p { color: var(--muted); line-height: 1.75; font-size: .95rem; margin: 0; }
+
+.contact-form-box__heading { font-size: 1.5rem; font-weight: 900; color: var(--dark); margin-bottom: .5rem; }
+.contact-form__privacy { font-size: .8rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+
+@media(max-width:960px){ .loc-brand-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:768px){
+  .loc-svc { grid-template-columns: 1fr; gap: 1.6rem; }
+  .loc-svc--flip .loc-svc__media { order: 0; }
+  .loc-svc--flip .loc-svc__body  { order: 0; }
+  .loc-svc__media img { height: 240px; }
+  .loc-brand-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('.faq__q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq__q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        const a = document.getElementById(b.getAttribute('aria-controls'));
+        if (a) a.hidden = true;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        const ans = document.getElementById(btn.getAttribute('aria-controls'));
+        if (ans) ans.hidden = false;
+      }
+    });
+  });
+})();
+</script>

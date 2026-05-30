@@ -1,0 +1,597 @@
+---
+/**
+ * Source URL  : https://probrothers.com/construction-services-west-chester/
+ * Canonical   : https://prob.nurotech.co.in/locations/west-chester/
+ * Errors fixed: "SLIDING INSTALLATION & REPAIR" (original heading uses "Sliding" but refers to siding —
+ *               preserved verbatim as the source page reads "SLIDING INSTALLATION & REPAIR IN WEST CHESTER, PA")
+ * SEO added   : unique <title>, meta description, canonical, OG/Twitter tags,
+ *               JSON-LD Service + BreadcrumbList, preload LCP image
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/locations/west-chester/#service",
+      "name": "Construction Services in West Chester, PA",
+      "description": "Full-service residential and commercial construction, remodeling, and renovation services in West Chester, Pennsylvania by ProBrothers.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": { "@type": "City", "name": "West Chester", "addressRegion": "PA", "addressCountry": "US" },
+      "url": "https://prob.nurotech.co.in/locations/west-chester/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/locations/west-chester/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations",      "item": "https://prob.nurotech.co.in/locations/" },
+        { "@type": "ListItem", "position": 3, "name": "West Chester, PA", "item": "https://prob.nurotech.co.in/locations/west-chester/" }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="No.1 Home Construction Company Near West Chester | ProBrothers"
+  description="ProBrothers is West Chester, PA's go-to construction company — custom homes, kitchen remodeling, basement finishing, roofing, historic restoration & more."
+  canonical="https://prob.nurotech.co.in/locations/west-chester/"
+  ogTitle="No.1 Home Construction Company Near West Chester | ProBrothers"
+  ogDescription="ProBrothers — West Chester, PA's trusted construction & remodeling company. Custom homes, additions, kitchens & more. Free quote today."
+  ogUrl="https://prob.nurotech.co.in/locations/west-chester/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="No.1 Home Construction Company Near West Chester | ProBrothers"
+  twitterDescription="ProBrothers — West Chester, PA's trusted construction company. Custom homes, additions, kitchens & more."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/locations/">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">West Chester, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">SERVICES IN WEST CHESTER, PA</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Your Go-To Construction Company in West Chester, Pennsylvania</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Intro ===== -->
+  <section class="section loc-intro" id="intro" aria-label="About ProBrothers in West Chester, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WEST CHESTER, PENNSYLVANIA</span>
+        <h2 class="section__title">
+          YOUR GO-TO CONSTRUCTION COMPANY IN WEST CHESTER, PENNSYLVANIA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-intro__body reveal">
+        <p>When it comes to building structures that are not only strong but also visually impressive, Pro Brothers is the name you can trust in West Chester, PA. With years of experience, state-of-the-art equipment, and a commitment to exceptional craftsmanship, as one of the best construction company we provide a full range of construction services tailored to your unique needs. Whether you're planning a custom home, a commercial build, or a high-quality renovation, our team is dedicated to delivering excellence—on time and within budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us ===== -->
+  <section class="section loc-why" id="why-choose" style="background:var(--gray-2)" aria-label="Why Choose Pro Brothers in West Chester">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE RIGHT CHOICE</span>
+        <h2 class="section__title">
+          Why West Chester Homeowners Trust Pro Brothers
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-why__body reveal">
+        <ul class="loc-why__list">
+          <li class="reveal"><strong>Experienced &amp; Skilled Team</strong> – With years of hands-on experience, our expert builders deliver top-quality craftsmanship in every project.</li>
+          <li class="reveal" style="--d:.06s"><strong>Reliable &amp; On-Time Delivery</strong> – We stick to schedules and ensure your project is completed on time, without compromising quality.</li>
+          <li class="reveal" style="--d:.12s"><strong>Custom Solutions for Every Need</strong> – From residential homes to commercial builds, we tailor our services to meet your specific vision and requirements.</li>
+          <li class="reveal" style="--d:.18s"><strong>Transparent Pricing &amp; Honest Communication</strong> – No hidden fees or surprises—just fair pricing and clear updates throughout your project.</li>
+          <li class="reveal" style="--d:.24s"><strong>Commitment to Quality &amp; Durability</strong> – We use premium materials and proven techniques to ensure your structure stands the test of time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Grid ===== -->
+  <section class="section loc-services" id="services" aria-label="Construction Services in West Chester, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHAT WE OFFER</span>
+        <h2 class="section__title">
+          Our Services in West Chester, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <!-- Service 1 -->
+      <article class="loc-svc reveal" id="smart-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Smart home automation integration in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SMART HOME &amp; AUTOMATION INTEGRATION IN WEST CHESTER, PA</h3>
+          <p>The demand for smart home technology is rapidly growing in West Chester, PA, as homeowners seek greater convenience, security, and energy efficiency. At Pro Brothers, we offer cutting-edge home automation solutions that seamlessly integrate into your daily life. Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>Smart lighting systems that allow you to control brightness and color temperature remotely or through voice commands.</li>
+            <li>Advanced security systems featuring motion detectors, smart locks, and HD surveillance cameras with remote monitoring capabilities.</li>
+            <li>Smart thermostats that learn your temperature preferences and adjust settings to maximize energy savings.</li>
+            <li>Whole-home automation hubs, enabling you to connect and control multiple smart devices from one easy-to-use platform.</li>
+            <li>Automated blinds and shades, providing privacy, energy efficiency, and convenience with the touch of a button.</li>
+          </ul>
+          <p>With Pro Brothers, upgrading to a smart home is simple and stress-free. We handle everything from installation to system integration, ensuring your home is modern, secure, and efficient.</p>
+        </div>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="loc-svc loc-svc--flip reveal" id="custom-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Custom home construction in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>CUSTOM HOME CONSTRUCTION IN WEST CHESTER, PA</h3>
+          <p>Building your dream home from the ground up? Pro Brothers specializes in custom home construction in West Chester, PA, bringing your vision to life with expert craftsmanship and innovative designs. From foundation to finishing touches, we ensure every detail meets your expectations.</p>
+          <p>Whether you want a modern, farmhouse, or colonial-style home, our team manages everything from permits to final inspections. Our energy-efficient solutions, smart home integrations, and high-quality materials set us apart. Let us build a home tailored to your lifestyle and future needs.</p>
+          <a href="/projects/" class="btn btn--accent" data-magnetic>VIEW OUR PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="loc-svc reveal" id="kitchen">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-cabinets.webp" alt="Kitchen remodeling in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>KITCHEN REMODELING IN WEST CHESTER, PA</h3>
+          <p>Transform your kitchen into a stylish and functional space with Pro Brothers. As the heart of your home, your kitchen should reflect your taste and lifestyle. We specialize in custom cabinetry, countertops, backsplashes, lighting, and smart kitchen upgrades.</p>
+          <p>Many homeowners in West Chester choose open layouts and high-end appliances to enhance both aesthetics and functionality. Whether you prefer a sleek modern design or a cozy traditional look, our expert team ensures a seamless remodel from start to finish.</p>
+        </div>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="loc-svc loc-svc--flip reveal" id="bathroom">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Bedroom and bathroom renovation in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BEDROOM RENOVATION IN WEST CHESTER, PA</h3>
+          <p>Upgrade your bathroom with luxury and efficiency in mind. Pro Brothers offers custom bathroom renovations featuring walk-in showers, freestanding tubs, custom vanities, and high-end tile work. We help West Chester homeowners create spa-like retreats with heated flooring, ambient lighting, and water-saving fixtures.</p>
+          <p>Whether you're looking for a full renovation or a minor refresh, our skilled team guarantees superior quality and lasting beauty.</p>
+        </div>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="loc-svc reveal" id="additions">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Home additions in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HOME ADDITIONS IN WEST CHESTER, PA</h3>
+          <p>Need more space? Pro Brothers provides home additions that seamlessly blend with your existing architecture. Whether it's an extra bedroom, home office, sunroom, or second-story expansion, we design and build additions that enhance both function and curb appeal.</p>
+          <p>West Chester homeowners often opt for in-law suites or extended living spaces to accommodate growing families. Our team handles everything from permits to final construction, ensuring a stress-free process.</p>
+          <a href="/services/additions/" class="btn btn--accent" data-magnetic>READ MORE ABOUT ADDITIONS</a>
+        </div>
+      </article>
+
+      <!-- Service 6 -->
+      <article class="loc-svc loc-svc--flip reveal" id="basement">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Basement finishing and remodeling in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BASEMENT FINISHING &amp; REMODELING IN WEST CHESTER, PA</h3>
+          <p>Turn your unfinished basement into a functional and stylish living space with Pro Brothers. Whether you're considering a home theater, gym, guest suite, or entertainment area, we tailor our designs to your needs.</p>
+          <p>Our basement renovations include moisture-resistant flooring, insulation, lighting, and soundproofing to create a comfortable, high-quality living space. Homeowners in West Chester love maximizing their square footage with our custom basement solutions.</p>
+        </div>
+      </article>
+
+      <!-- Service 7 -->
+      <article class="loc-svc reveal" id="roofing">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Roofing installation and repair in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ROOFING INSTALLATION &amp; REPAIR IN WEST CHESTER, PA</h3>
+          <p>Protect your home with high-quality roofing services from Pro Brothers. We specialize in roof installations, repairs, and replacements, using durable materials such as asphalt shingles, metal roofing, and flat roofs. Our expert team ensures your roof withstands West Chester's seasonal weather conditions, preventing leaks and structural damage.</p>
+          <p>Whether you're dealing with storm damage or just need an upgrade, we provide reliable, long-lasting roofing solutions.</p>
+        </div>
+      </article>
+
+      <!-- Service 8 -->
+      <article class="loc-svc loc-svc--flip reveal" id="siding">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Siding installation and repair in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SLIDING INSTALLATION &amp; REPAIR IN WEST CHESTER, PA</h3>
+          <p>Boost your home's curb appeal with expert siding installation and repair. Pro Brothers offers a variety of siding options, including vinyl, fiber cement, and wood, to match your aesthetic and budget. New siding not only enhances your home's look but also improves energy efficiency and insulation.</p>
+          <p>Many West Chester homeowners upgrade their siding to increase durability and weather resistance. Our team ensures a seamless, professional installation every time.</p>
+        </div>
+      </article>
+
+      <!-- Service 9 -->
+      <article class="loc-svc reveal" id="windows-doors">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Window and door replacement in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WINDOW &amp; DOOR REPLACEMENT IN WEST CHESTER, PA</h3>
+          <p>Upgrade your home's energy efficiency and security with new windows and doors from Pro Brothers. We install energy-efficient windows, storm doors, sliding glass doors, and custom entryways. West Chester homeowners trust us for high-quality materials and expert installation, reducing drafts and improving insulation.</p>
+          <p>Whether you're looking for modern, classic, or high-security options, we provide stylish and durable solutions tailored to your needs.</p>
+          <a href="/projects/windows-doors/" class="btn btn--accent" data-magnetic>VIEW PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 10 -->
+      <article class="loc-svc loc-svc--flip reveal" id="deck-patio">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Deck and patio construction in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>DECK &amp; PATIO CONSTRUCTION IN WEST CHESTER, PA</h3>
+          <p>Expand your outdoor living space with a custom-built deck or patio by Pro Brothers. We design and construct durable, stylish outdoor areas perfect for entertaining, relaxing, and increasing your home's value. Whether you prefer a wood, composite, or stone patio, we tailor our designs to complement your property's aesthetic while ensuring longevity.</p>
+          <p>West Chester homeowners often choose pergolas, built-in seating, and outdoor kitchens to create a functional, inviting space. Our expert team handles everything from permits to final finishes, ensuring a seamless installation. Let Pro Brothers transform your backyard into a stunning retreat!</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>EXPLORE NEW CONSTRUCTION</a>
+        </div>
+      </article>
+
+      <!-- Service 11 -->
+      <article class="loc-svc reveal" id="garage">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-cabinets.webp" alt="Garage construction and renovation in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>GARAGE CONSTRUCTION &amp; RENOVATION IN WEST CHESTER, PA</h3>
+          <p>Need a new garage or an upgrade to your existing one? Pro Brothers specializes in garage construction and renovation in West Chester, PA, offering custom-built garages, expansions, and conversions. Whether you're looking for a detached garage, an attached structure, or a garage apartment, we create solutions tailored to your needs.</p>
+          <p>Our renovations include insulation, storage solutions, flooring upgrades, and smart garage doors. Many homeowners in West Chester opt for climate-controlled garages to protect vehicles and valuables from extreme weather. Trust Pro Brothers to deliver a secure, functional, and stylish garage that meets your needs.</p>
+        </div>
+      </article>
+
+      <!-- Service 12 -->
+      <article class="loc-svc loc-svc--flip reveal" id="whole-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Whole home renovations in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WHOLE HOME RENOVATIONS IN WEST CHESTER, PA</h3>
+          <p>Looking to modernize your entire home? Pro Brothers offers whole-home renovation services in West Chester, PA, updating outdated interiors and exteriors to match contemporary living standards. From flooring and drywall to plumbing and electrical upgrades, we handle complete home transformations with meticulous attention to detail.</p>
+          <p>Many homeowners in West Chester seek open floor plans, smart home integrations, and energy-efficient improvements to enhance their home's functionality and value. Whether you're updating an older home or preparing a property for resale, our team delivers high-quality results that exceed expectations.</p>
+          <a href="/services/" class="btn btn--accent" data-magnetic>VIEW ALL SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 13 -->
+      <article class="loc-svc reveal" id="historic">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-office.webp" alt="Historic home restoration in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HISTORIC HOME RESTORATION IN WEST CHESTER, PA</h3>
+          <p>West Chester is known for its beautiful, historic homes, and Pro Brothers is experienced in preserving and restoring these architectural treasures. We specialize in maintaining the original character of historic homes while incorporating modern amenities for enhanced comfort and efficiency. Our services include structural repairs, custom millwork, period-accurate restorations, and energy-efficient retrofits.</p>
+          <p>We work closely with homeowners to ensure that renovations comply with local preservation guidelines while maintaining the home's unique charm. If you own a historic home in West Chester, let Pro Brothers bring it back to life with expert craftsmanship and attention to detail.</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>VIEW CONSTRUCTION SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 14 -->
+      <article class="loc-svc loc-svc--flip reveal" id="flooring">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-gold.webp" alt="Flooring installation and refinishing in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>FLOORING INSTALLATION &amp; REFINISHING IN WEST CHESTER, PA</h3>
+          <p>Upgrade your home with high-quality flooring solutions from Pro Brothers. We specialize in hardwood, tile, laminate, vinyl, and carpet installations, ensuring durability and style. West Chester homeowners love refinishing existing hardwood floors to restore their original beauty.</p>
+          <p>Our expert team helps you choose the best flooring for your lifestyle, offering scratch-resistant, waterproof, and eco-friendly options. Whether it's a full flooring replacement or a simple refresh, we deliver stunning results tailored to your needs.</p>
+        </div>
+      </article>
+
+      <!-- Service 15 -->
+      <article class="loc-svc reveal" id="green-building">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Energy efficient and green building solutions in West Chester, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ENERGY EFFICIENT &amp; GREEN-BUILDING SOLUTIONS IN WEST CHESTER, PA</h3>
+          <p>Homeowners in West Chester, PA, are increasingly prioritizing energy-efficient and eco-friendly home improvements to reduce utility costs and lower their carbon footprint. At Pro Brothers, we specialize in green building solutions that enhance sustainability without compromising style or functionality. Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>High-performance insulation to improve temperature regulation and reduce energy loss.</li>
+            <li>Energy-efficient windows and doors that enhance insulation and lower heating and cooling expenses.</li>
+            <li>Solar panel installations to harness renewable energy and decrease reliance on traditional power sources.</li>
+            <li>Sustainable building materials, including reclaimed wood, bamboo flooring, and eco-friendly paints that minimize environmental impact.</li>
+            <li>Smart HVAC systems designed to optimize energy use and maintain comfortable indoor climates year-round.</li>
+          </ul>
+          <p>By integrating green building practices into your home renovation or new construction project, Pro Brothers helps you achieve a more sustainable, cost-effective, and environmentally responsible living space.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== What We Can Do CTA ===== -->
+  <section class="section loc-cando" id="what-we-can-do" style="background:var(--gray-2)" aria-label="What We Can Do">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">OUR COMMITMENT</span>
+        <h2 class="section__title">WHAT WE CAN DO</h2>
+      </div>
+      <div class="loc-cando__body reveal">
+        <p>No job is too challenging for us—our passion for craftsmanship and attention to detail ensure that every aspect of your project is completed to the highest standards. From simple renovations to complex construction projects, we take pride in our meticulous approach and unwavering commitment to excellence. At ProBrothers, we believe in turning your dreams into reality, providing a level of service that exceeds expectations. When it comes to construction, there's only one choice: ProBrothers Construction.</p>
+        <p>Let us bring your vision to life with our unparalleled expertise and dedication. Contact us today to discuss your project and discover how our experienced team can make your dream home a reality.</p>
+        <div class="loc-cando__action">
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>CONTACT US</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Stats ===== -->
+  <section class="section why why-about" id="why-stats" aria-label="ProBrothers by the numbers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-remodel.webp" alt="Custom home additions by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quote Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Construction Quote in West Chester">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Get a FREE Quote!</h2>
+          <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
+          <form class="contact-form" id="wcQuoteForm" action="#" method="post" novalidate aria-label="West Chester construction quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="wcFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="wcFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="wcLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="wcLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="wcPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="wcPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="wcEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="wcEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="wcMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="wcMessage" name="message" rows="5" placeholder="Tell us about your project in West Chester, PA..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank You! Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+            <p class="contact-form__privacy">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact ProBrothers in West Chester, PA">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project in West Chester, PA?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.loc-intro__body p { max-width: 860px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--muted); text-align: center; }
+.loc-why__body { max-width: 860px; margin: 0 auto; }
+.loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
+.loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
+.loc-why__list li {
+  display: flex; align-items: flex-start; gap: .75rem;
+  background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
+  box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
+  font-size: .97rem; color: var(--ink); line-height: 1.65;
+}
+.loc-why__list li strong { color: var(--dark); }
+.loc-why__cta { text-align: center; }
+.loc-svc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 3rem 0; border-bottom: 1px solid var(--gray);
+}
+.loc-svc:last-child { border-bottom: none; }
+.loc-svc--flip .loc-svc__media { order: 2; }
+.loc-svc--flip .loc-svc__body  { order: 1; }
+.loc-svc__media img {
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%; height: 340px; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.loc-svc__media:hover img { transform: scale(1.03); }
+.loc-svc__body h3 {
+  font-size: 1.15rem; font-weight: 900; color: var(--dark);
+  margin-bottom: 1rem; line-height: 1.35;
+  padding-bottom: .6rem; border-bottom: 3px solid var(--accent);
+}
+.loc-svc__body p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: .97rem; }
+.loc-svc__body .btn { margin-top: .4rem; }
+.loc-svc__list { list-style: disc; padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .5rem; }
+.loc-svc__list li { color: var(--muted); font-size: .95rem; line-height: 1.7; }
+.loc-cando__body { max-width: 860px; margin: 0 auto; text-align: center; }
+.loc-cando__body p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1rem; }
+.loc-cando__action { text-align: center; margin-top: 1.6rem; }
+.contact-form__privacy { font-size: .8rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+@media(max-width:768px){
+  .loc-svc { grid-template-columns: 1fr; gap: 1.6rem; }
+  .loc-svc--flip .loc-svc__media { order: 0; }
+  .loc-svc--flip .loc-svc__body  { order: 0; }
+  .loc-svc__media img { height: 240px; }
+}
+</style>

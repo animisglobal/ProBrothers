@@ -1,0 +1,675 @@
+---
+/**
+ * Source URL  : https://probrothers.com/best-construction-company-in-philadelphia/
+ * Canonical   : https://prob.nurotech.co.in/locations/philadelphia/
+ * Errors fixed: "SLIDING INSTALLATION & REPAIR IN PHILADELPHIA, PA" heading preserved verbatim
+ *               (source uses "Sliding" for the siding section — flagged, not changed)
+ *               "LETS BUILD SOMETHING ICONIC" (missing apostrophe) — preserved verbatim
+ * SEO added   : unique <title>, meta description, canonical, OG/Twitter tags,
+ *               JSON-LD Service + BreadcrumbList, preload LCP image
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/locations/philadelphia/#service",
+      "name": "Home Remodeling & Construction in Philadelphia, PA",
+      "description": "Trusted residential construction, remodeling, custom home builds, and renovations in Philadelphia, Pennsylvania by ProBrothers.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": { "@type": "City", "name": "Philadelphia", "addressRegion": "PA", "addressCountry": "US" },
+      "url": "https://prob.nurotech.co.in/locations/philadelphia/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/locations/philadelphia/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",             "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations",        "item": "https://prob.nurotech.co.in/locations/" },
+        { "@type": "ListItem", "position": 3, "name": "Philadelphia, PA", "item": "https://prob.nurotech.co.in/locations/philadelphia/" }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Home Remodeling & Construction in Philadelphia, PA | ProBrothers"
+  description="ProBrothers is Philadelphia's trusted residential construction company — custom builds, kitchen & bath remodeling, historic restoration, roofing & more."
+  canonical="https://prob.nurotech.co.in/locations/philadelphia/"
+  ogTitle="Home Remodeling & Construction in Philadelphia, PA | ProBrothers"
+  ogDescription="ProBrothers — Philadelphia's trusted construction & remodeling company. Custom homes, additions, kitchens, historic restoration & more. Free quote today."
+  ogUrl="https://prob.nurotech.co.in/locations/philadelphia/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="Home Remodeling & Construction in Philadelphia, PA | ProBrothers"
+  twitterDescription="ProBrothers — Philadelphia's trusted construction company. Custom homes, remodeling, historic restoration & more."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/locations/">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Philadelphia, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">HOME REMODELING &amp; CONSTRUCTION IN PHILADELPHIA, PA</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Built to Impress: Your Trusted Residential Construction Company in Philadelphia, PA</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Intro ===== -->
+  <section class="section loc-intro" id="intro" aria-label="About ProBrothers in Philadelphia, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">PHILADELPHIA, PENNSYLVANIA</span>
+        <h2 class="section__title">
+          Built to Impress: Your Trusted Residential Construction Company in Philadelphia, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-intro__body reveal">
+        <p>In a city where every brick has history, your home should too. As Philadelphia's trusted residential construction company, Pro Brothers brings craftsmanship, character, and cutting-edge design to every neighborhood from Chestnut Hill to Fishtown, Rittenhouse to Roxborough.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us ===== -->
+  <section class="section loc-why" id="why-choose" style="background:var(--gray-2)" aria-label="Why Philadelphia Homeowners Choose Pro Brothers">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHY PHILLY HOMEOWNERS TRUST US</span>
+        <h2 class="section__title">
+          Why Philadelphia Homeowners Choose Pro Brothers
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-why__body reveal">
+        <div class="loc-why__reason reveal">
+          <h3>A Crew That Builds Like Locals – Because We Are</h3>
+          <p>We know Philly homes inside and out — from 1920s rowhouse renovations, permit navigation, and Philadelphia building codes to the unique architectural character of every neighborhood.</p>
+        </div>
+        <div class="loc-why__reason reveal" style="--d:.08s">
+          <h3>Full-Service Construction, All Under One Roof</h3>
+          <p>One call, one team, one seamless project from start to finish. Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>Custom home design and new builds</li>
+            <li>Kitchen and bathroom remodeling</li>
+            <li>Home additions, basements, and garages</li>
+            <li>Roofing, siding, and window replacements</li>
+            <li>Smart home integrations and energy-efficient upgrades</li>
+          </ul>
+        </div>
+        <div class="loc-why__reason reveal" style="--d:.16s">
+          <h3>Recent Project Highlight</h3>
+          <p>We recently completed a whole-home renovation in Manayunk, transforming a narrow hillside property into an open-concept home with smart lighting and reclaimed-wood finishes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Grid ===== -->
+  <section class="section loc-services" id="services" aria-label="Construction Services in Philadelphia, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHAT WE OFFER</span>
+        <h2 class="section__title">
+          Our Services in Philadelphia, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <!-- Service 1 -->
+      <article class="loc-svc reveal" id="smart-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Smart home automation for Philadelphia, PA homes by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SMART HOME FOR SMART CITY LIVING</h3>
+          <p>Intelligent lighting, voice controls, energy-efficient climate systems, and home security integration — Pro Brothers brings smart city technology into your Philadelphia home seamlessly and beautifully.</p>
+        </div>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="loc-svc loc-svc--flip reveal" id="custom-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Custom home builds in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>CUSTOM HOME BUILDS</h3>
+          <p>This isn't cookie-cutter suburbia. You've got a vision for a Philadelphia home that reflects you, and we've got the team to bring it to life: blueprint to final walk-through.</p>
+          <a href="/projects/" class="btn btn--accent" data-magnetic>VIEW OUR PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="loc-svc reveal" id="kitchen">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-cabinets.webp" alt="Kitchen remodeling in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>KITCHEN REMODELING IN PHILADELPHIA, PA</h3>
+          <p>Tired of cooking in a kitchen that's stuck in the past? Let's fix that. Our kitchen remodels focus on <em>function meets flair</em>: open layouts, bold backsplashes, durable surfaces, hidden storage, and jaw-dropping lighting.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="loc-svc loc-svc--flip reveal" id="bathroom">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Bathroom renovation in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BATHROOM RENOVATION IN PHILADELPHIA, PA</h3>
+          <p>Your bathroom isn't just a necessity — it can be a sanctuary. We bring spa-level design to your everyday routine, with elegant tilework, frameless glass showers, floating vanities, and luxe soaking tubs.</p>
+          <a href="/projects/remodeling/" class="btn btn--accent" data-magnetic>VIEW REMODELING PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="loc-svc reveal" id="additions">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Home additions in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HOME ADDITIONS IN PHILADELPHIA, PA</h3>
+          <p>When moving isn't an option — build up, out, or both. From in-law suites and sunrooms to full second-story expansions...</p>
+          <p>Our additions don't just add square footage — they add value.</p>
+          <a href="/services/additions/" class="btn btn--accent" data-magnetic>READ MORE ABOUT ADDITIONS</a>
+        </div>
+      </article>
+
+      <!-- Service 6 -->
+      <article class="loc-svc loc-svc--flip reveal" id="basement">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Basement finishing and remodeling in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BASEMENT FINISHING &amp; REMODELING IN PHILADELPHIA, PA</h3>
+          <p>Your basement might be the most underrated space in your home — until we get our hands on it.</p>
+        </div>
+      </article>
+
+      <!-- Service 7 -->
+      <article class="loc-svc reveal" id="roofing">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Roofing installation and repair in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ROOFING INSTALLATION &amp; REPAIR IN PHILADELPHIA, PA</h3>
+          <p>Your roof is your home's first line of defense against the elements. Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>Full roof replacements and installations</li>
+            <li>Leak detection and repair</li>
+            <li>Storm damage restoration</li>
+            <li>Shingle, tile, and metal roof repairs</li>
+            <li>Preventative roof maintenance</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Service 8 -->
+      <article class="loc-svc loc-svc--flip reveal" id="siding">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Siding installation and repair in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SLIDING INSTALLATION &amp; REPAIR IN PHILADELPHIA, PA</h3>
+          <h4>Why Upgrade Your Siding?</h4>
+          <ul class="loc-svc__list">
+            <li>Increased Curb Appeal</li>
+            <li>Energy Efficiency</li>
+            <li>Weather Protection</li>
+          </ul>
+          <p>We offer vinyl, fiber cement, wood, and composite materials for a stunning, long-lasting exterior.</p>
+        </div>
+      </article>
+
+      <!-- Service 9 -->
+      <article class="loc-svc reveal" id="windows-doors">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Window and door replacement in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WINDOW &amp; DOOR REPLACEMENT IN PHILADELPHIA, PA</h3>
+          <p>Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>Energy-efficient window installations (double-pane, triple-pane, Low-E glass)</li>
+            <li>Entry and patio door replacements with modern security features</li>
+            <li>Storm door and impact-resistant window installations</li>
+            <li>Custom-sized window solutions</li>
+          </ul>
+          <a href="/projects/windows-doors/" class="btn btn--accent" data-magnetic>VIEW PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 10 -->
+      <article class="loc-svc loc-svc--flip reveal" id="deck-patio">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Deck and patio construction in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>DECK &amp; PATIO CONSTRUCTION IN PHILADELPHIA, PA</h3>
+          <h4>Why Choose Pro Brothers?</h4>
+          <ul class="loc-svc__list">
+            <li><strong>Custom Designs</strong></li>
+            <li><strong>Quality Materials</strong></li>
+            <li><strong>Functional Additions</strong></li>
+            <li><strong>Expert Craftsmanship</strong></li>
+          </ul>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>EXPLORE NEW CONSTRUCTION</a>
+        </div>
+      </article>
+
+      <!-- Service 11 -->
+      <article class="loc-svc reveal" id="garage">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-cabinets.webp" alt="Garage construction and renovation in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>GARAGE CONSTRUCTION &amp; RENOVATION IN PHILADELPHIA, PA</h3>
+          <p>A garage is more than just a place to park your car—it can serve as a workshop, extra storage, or even an additional living space. Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>Custom garage builds (attached, detached, single, or multi-car)</li>
+            <li>Garage conversions into home offices, gyms, or rental spaces</li>
+            <li>Structural repairs and renovations</li>
+            <li>Insulated doors and smart security features</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Service 12 -->
+      <article class="loc-svc loc-svc--flip reveal" id="whole-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Whole home renovations in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WHOLE HOME RENOVATIONS IN PHILADELPHIA, PA</h3>
+          <p>A whole-home renovation is the perfect way to modernize, expand, and enhance your living space without moving. Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>Complete interior redesigns</li>
+            <li>Structural modifications (wall removals, open floor plans)</li>
+            <li>Updated kitchens, bathrooms, and living spaces</li>
+            <li>Energy-efficient upgrades</li>
+            <li>High-end custom finishes</li>
+          </ul>
+          <a href="/services/" class="btn btn--accent" data-magnetic>VIEW ALL SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 13 -->
+      <article class="loc-svc reveal" id="historic">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-office.webp" alt="Historic home restoration in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>PRESERVING THE PAST, BUILDING THE FUTURE</h3>
+          <p>From the cobblestone streets of Old City to the colonial charm of Germantown, we respect Philadelphia's history. Our historic home restoration experts preserve architectural integrity while updating homes for modern comfort.</p>
+          <h4>Why Trust Pro Brothers?</h4>
+          <ul class="loc-svc__list">
+            <li>Preservation of Original Features</li>
+            <li>Structural Reinforcement</li>
+            <li>Energy-Efficient Upgrades</li>
+            <li>Custom Solutions</li>
+          </ul>
+          <p>We serve Colonial, Victorian, and Federal-style homes throughout Philadelphia.</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>VIEW CONSTRUCTION SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 14 -->
+      <article class="loc-svc loc-svc--flip reveal" id="flooring">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-gold.webp" alt="Flooring installation and refinishing in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>FLOORING INSTALLATION &amp; REFINISHING IN PHILADELPHIA, PA</h3>
+          <p>Our services include:</p>
+          <ul class="loc-svc__list">
+            <li>New flooring installation (hardwood, laminate, vinyl, tile, carpet)</li>
+            <li>Hardwood floor refinishing</li>
+            <li>Tile and stone flooring</li>
+            <li>Waterproof and pet-friendly flooring</li>
+          </ul>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 15 -->
+      <article class="loc-svc reveal" id="green-building">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Energy efficient and green building solutions in Philadelphia, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ENERGY EFFICIENT &amp; GREEN-BUILDING SOLUTIONS IN PHILADELPHIA, PA</h3>
+          <p>At Pro Brothers, we believe that sustainable construction is the future. Our solutions include:</p>
+          <ul class="loc-svc__list">
+            <li>High-Performance Insulation</li>
+            <li>Energy-Efficient Windows &amp; Doors</li>
+            <li>LED Lighting &amp; Smart Controls</li>
+            <li>Sustainable Materials</li>
+            <li>Smart Home Automation</li>
+            <li>Water-Saving Fixtures</li>
+            <li>Solar Panel Integration</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Brand Promise ===== -->
+  <section class="section loc-brand" id="brand-promise" style="background:var(--gray-2)" aria-label="Why Trust ProBrothers in Philadelphia">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">OUR PROMISE</span>
+        <h2 class="section__title">LETS BUILD SOMETHING ICONIC</h2>
+      </div>
+      <div class="loc-brand__body reveal">
+        <p>Your Philadelphia home deserves more than a quick renovation—it deserves thoughtful craftsmanship and local expertise.</p>
+        <div class="loc-brand__grid">
+          <div class="loc-brand__item reveal">
+            <h3>Local Know-How</h3>
+            <p>We know Philly homes inside and out — from the brick twins of Northeast to South Philly rowhomes and everything in between.</p>
+          </div>
+          <div class="loc-brand__item reveal" style="--d:.08s">
+            <h3>Zero Shortcut Policy</h3>
+            <p>We believe quality comes from doing things the right way — not the fastest way.</p>
+          </div>
+          <div class="loc-brand__item reveal" style="--d:.16s">
+            <h3>Licensed, Insured &amp; Transparent</h3>
+            <p>No smoke, no mirrors. Just honest work, solid estimates, and clear communication.</p>
+          </div>
+          <div class="loc-brand__item reveal" style="--d:.24s">
+            <h3>A Team That Treats You Like Family</h3>
+            <p>You'll know our names, see our progress, and get real updates — not just excuses.</p>
+          </div>
+        </div>
+        <div class="loc-brand__closing reveal">
+          <p>That's why more homeowners trust Pro Brothers for their remodeling and construction service in Philadelphia, PA than anyone else. We show up on time, stay on budget, and build it like it's our own.</p>
+          <p>Serving all Philadelphia neighborhoods, including Fishtown, Manayunk, Chestnut Hill, University City, and surrounding suburbs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Stats ===== -->
+  <section class="section why why-about" id="why-stats" aria-label="ProBrothers by the numbers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-remodel.webp" alt="Custom home additions by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quote Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Construction Quote in Philadelphia">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Get a FREE Quote!</h2>
+          <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
+          <form class="contact-form" id="phillyQuoteForm" action="#" method="post" novalidate aria-label="Philadelphia construction quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="phFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="phFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="phLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="phLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="phPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="phPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="phEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="phEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="phMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="phMessage" name="message" rows="5" placeholder="Tell us about your project in Philadelphia, PA..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank You! Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+            <p class="contact-form__privacy">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact ProBrothers in Philadelphia, PA">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project in Philadelphia, PA?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.loc-intro__body p { max-width: 860px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--muted); text-align: center; }
+.loc-why__body { max-width: 860px; margin: 0 auto; }
+.loc-why__reason { margin-bottom: 1.8rem; }
+.loc-why__reason h3 {
+  font-size: 1.1rem; font-weight: 800; color: var(--dark);
+  margin-bottom: .7rem; padding-left: 1rem; border-left: 4px solid var(--accent);
+}
+.loc-why__reason p { color: var(--muted); line-height: 1.8; margin-bottom: .6rem; font-size: .97rem; }
+.loc-svc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 3rem 0; border-bottom: 1px solid var(--gray);
+}
+.loc-svc:last-child { border-bottom: none; }
+.loc-svc--flip .loc-svc__media { order: 2; }
+.loc-svc--flip .loc-svc__body  { order: 1; }
+.loc-svc__media img {
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%; height: 340px; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.loc-svc__media:hover img { transform: scale(1.03); }
+.loc-svc__body h3 {
+  font-size: 1.15rem; font-weight: 900; color: var(--dark);
+  margin-bottom: 1rem; line-height: 1.35;
+  padding-bottom: .6rem; border-bottom: 3px solid var(--accent);
+}
+.loc-svc__body h4 { font-size: .95rem; font-weight: 800; color: var(--dark); margin: .8rem 0 .5rem; }
+.loc-svc__body p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: .97rem; }
+.loc-svc__body .btn { margin-top: .4rem; }
+.loc-svc__list { list-style: disc; padding-left: 1.4rem; margin: .6rem 0 1rem; display: flex; flex-direction: column; gap: .45rem; }
+.loc-svc__list li { color: var(--muted); font-size: .95rem; line-height: 1.7; }
+
+/* Brand promise */
+.loc-brand__body { max-width: 960px; margin: 0 auto; }
+.loc-brand__body > p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; text-align: center; }
+.loc-brand__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.4rem; margin-bottom: 2rem; }
+.loc-brand__item {
+  background: #fff; border-radius: var(--radius); padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent);
+}
+.loc-brand__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: .5rem; }
+.loc-brand__item p { color: var(--muted); font-size: .93rem; line-height: 1.7; }
+.loc-brand__closing { text-align: center; }
+.loc-brand__closing p { color: var(--muted); font-size: .97rem; line-height: 1.8; margin-bottom: .8rem; }
+
+/* Form */
+.contact-form__privacy { font-size: .8rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+
+@media(max-width:768px){
+  .loc-svc { grid-template-columns: 1fr; gap: 1.6rem; }
+  .loc-svc--flip .loc-svc__media { order: 0; }
+  .loc-svc--flip .loc-svc__body  { order: 0; }
+  .loc-svc__media img { height: 240px; }
+  .loc-brand__grid { grid-template-columns: 1fr; }
+}
+</style>

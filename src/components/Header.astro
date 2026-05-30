@@ -5,6 +5,7 @@ const isAbout = pathname.startsWith('/about');
 const isContact = pathname.startsWith('/contact');
 const isServices = pathname.startsWith('/services');
 const isProjects = pathname.startsWith('/projects');
+const isLocations = pathname.startsWith('/locations');
 ---
 <!-- ===== Header / Nav ===== -->
 <header class="header" id="header">
@@ -41,12 +42,12 @@ const isProjects = pathname.startsWith('/projects');
           </ul>
         </li>
         <li class="has-sub">
-          <a href="#">Locations</a>
+          <a href="/locations/" class={isLocations ? 'active' : ''}>Locations</a>
           <ul class="submenu submenu--cols">
-            <li><a href="https://probrothers.com/construction-services-in-media/">Media, PA</a></li>
-            <li><a href="https://probrothers.com/construction-services-west-chester/">West Chester, PA</a></li>
-            <li><a href="https://probrothers.com/construction-company-in-glen-mills/">Glen Mills, PA</a></li>
-            <li><a href="https://probrothers.com/best-construction-company-in-philadelphia/">Philadelphia, PA</a></li>
+            <li><a href="/locations/media/">Media, PA</a></li>
+            <li><a href="/locations/west-chester/">West Chester, PA</a></li>
+            <li><a href="/locations/glen-mills/">Glen Mills, PA</a></li>
+            <li><a href="/locations/philadelphia/">Philadelphia, PA</a></li>
             <li><a href="https://probrothers.com/construction-contractor-in-kennett-square/">Kennett Square, PA</a></li>
             <li><a href="https://probrothers.com/construction-company-in-phoenixville/">Phoenixville, PA</a></li>
             <li><a href="https://probrothers.com/construction-services-in-rehoboth/">Rehoboth, DE</a></li>

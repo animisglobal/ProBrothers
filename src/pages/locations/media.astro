@@ -1,0 +1,587 @@
+---
+/**
+ * Source URL  : https://probrothers.com/construction-services-in-media/
+ * Canonical   : https://prob.nurotech.co.in/locations/media/
+ * Errors fixed: "CUSTOM HOME CONSTRUCTIONIN" → "CUSTOM HOME CONSTRUCTION IN" (typo, missing space)
+ *               "SLIDING INSTALLATION" → "SLIDING INSTALLATION" (preserved as-is; original says "Sliding"
+ *               but the section is about siding — flagged but text preserved verbatim)
+ * SEO added   : unique <title>, meta description, canonical, OG/Twitter tags,
+ *               JSON-LD Service + BreadcrumbList + LocalBusiness, preload LCP image
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/locations/media/#service",
+      "name": "Construction Services in Media, PA",
+      "description": "Full-service residential and commercial construction, remodeling, and renovation services in Media, Pennsylvania by ProBrothers.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": { "@type": "City", "name": "Media", "addressRegion": "PA", "addressCountry": "US" },
+      "url": "https://prob.nurotech.co.in/locations/media/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/locations/media/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",      "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://prob.nurotech.co.in/locations/" },
+        { "@type": "ListItem", "position": 3, "name": "Media, PA", "item": "https://prob.nurotech.co.in/locations/media/" }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="General Contractor & Remodeler in Media, PA | ProBrothers"
+  description="ProBrothers is Media, PA's trusted construction company — custom homes, kitchen remodeling, additions, roofing, siding & more. 15+ years of expert craftsmanship."
+  canonical="https://prob.nurotech.co.in/locations/media/"
+  ogTitle="General Contractor & Remodeler in Media, PA | ProBrothers"
+  ogDescription="ProBrothers is Media, PA's trusted construction company — custom homes, kitchen remodeling, additions, roofing, siding & more. Free quote today."
+  ogUrl="https://prob.nurotech.co.in/locations/media/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="General Contractor & Remodeler in Media, PA | ProBrothers"
+  twitterDescription="ProBrothers — Media, PA's trusted construction & remodeling company. Custom homes, additions, kitchens & more."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/locations/">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Media, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">SERVICES IN MEDIA, PA</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Your Trusted Construction Company in Media, Pennsylvania</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Intro ===== -->
+  <section class="section loc-intro" id="intro" aria-label="About ProBrothers in Media, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">MEDIA, PENNSYLVANIA</span>
+        <h2 class="section__title">
+          YOUR TRUSTED CONSTRUCTION COMPANY IN MEDIA, PENNSYLVANIA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-intro__body reveal">
+        <p>Pro Brothers is where your dream home and renovation projects become reality. Based in Media, Pennsylvania, we specialize in all aspects of construction, from custom home builds to meticulous renovations and restorations. With over 15 years of experience, our team takes immense pride in delivering high-quality craftsmanship, attention to detail, and customer satisfaction. Whether you're looking to build from the ground up, remodel your kitchen, or give your home a complete facelift, Pro Brothers is the team to trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us ===== -->
+  <section class="section loc-why" id="why-choose" style="background:var(--gray-2)" aria-label="Why Choose Pro Brothers">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE RIGHT CHOICE</span>
+        <h2 class="section__title">
+          Why Choose Pro Brothers for Your Construction Service in Media, PA?
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-why__body reveal">
+        <p>At Pro Brothers, we offer a full range of construction services designed to enhance the beauty, functionality, and value of your home. Our team works closely with you to bring your vision to life, ensuring every project is handled with precision and care. When it comes to construction, choosing the right construction company makes all the difference. Here's why homeowners in Media, PA continue to trust Pro Brothers:</p>
+        <ul class="loc-why__list">
+          <li class="reveal"><strong>Years of Expertise</strong> – With over 15 years in the industry, we have honed our skills to deliver top-notch results that stand the test of time.</li>
+          <li class="reveal" style="--d:.06s"><strong>Exceptional Craftsmanship</strong> – Our team takes great care in every detail, ensuring that each project exceeds your expectations.</li>
+          <li class="reveal" style="--d:.12s"><strong>Comprehensive Services</strong> – From custom home construction to smart home integrations, our construction company offer a wide range of services tailored to your needs.</li>
+          <li class="reveal" style="--d:.18s"><strong>Locally Owned &amp; Operated</strong> – As Media, PA locals, we understand the architecture, weather conditions, and unique needs of homeowners in this area.</li>
+          <li class="reveal" style="--d:.24s"><strong>Customer-Centric Approach</strong> – We believe in transparency, communication, and building long-lasting relationships with our clients.</li>
+        </ul>
+        <div class="loc-why__cta reveal" style="--d:.3s">
+          <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Grid ===== -->
+  <section class="section loc-services" id="services" aria-label="Construction Services in Media, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHAT WE OFFER</span>
+        <h2 class="section__title">
+          Our Services in Media, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <!-- Service 1 -->
+      <article class="loc-svc reveal" id="smart-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Smart home automation integration in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SMART HOME &amp; AUTOMATION INTEGRATION IN MEDIA, PA</h3>
+          <p>Modern technology can make your home smarter, safer, and more energy-efficient. We specialize in smart lighting, home security systems, automated thermostats, voice-controlled appliances, and whole-home integration. Whether you're looking to enhance convenience, security, or energy savings, our smart home solutions bring cutting-edge technology to your living space. Homeowners in Media, Pennsylvania trust Pro Brothers for seamless smart home integration.</p>
+        </div>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="loc-svc loc-svc--flip reveal" id="custom-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Custom home construction in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>CUSTOM HOME CONSTRUCTION IN MEDIA, PA</h3>
+          <p>Building your dream home from the ground up is an exciting journey, and as the No.1 construction company of Media, Pennsylvania we're here to guide you every step of the way. From design and planning to construction and finishing touches, we make sure your home reflects your style and meets your needs. Our expert team works closely with architects and designers to create homes that combine aesthetics with functionality. Whether you want a modern, minimalist home or a classic, timeless estate, we bring your vision to life with superior craftsmanship. We also focus on energy efficiency, high-quality materials, and state-of-the-art construction company techniques to ensure long-term durability. If you're looking for a reliable builder in Media, Pennsylvania, Pro Brothers is your go-to expert.</p>
+          <a href="/projects/" class="btn btn--accent" data-magnetic>VIEW OUR PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="loc-svc reveal" id="kitchen">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-cabinets.webp" alt="Kitchen remodeling in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>KITCHEN REMODELING IN MEDIA, PA</h3>
+          <p>A beautifully remodeled kitchen can transform the heart of your home. Whether you want custom cabinetry, modern fixtures, or an entirely new layout, our team delivers stunning kitchen renovations tailored to your lifestyle. As your go-to construction company we bring functionality and elegance together, ensuring you enjoy every moment spent in your new kitchen. Our kitchen remodeling services include cabinet refinishing, countertop installation, backsplash designs, custom islands, high-end appliances, and space-saving storage solutions. We also incorporate open-concept designs, lighting enhancements, and flooring updates to create a truly breathtaking kitchen. We prioritize durability and sustainability, ensuring your kitchen remains beautiful and efficient for years to come. Homeowners in Media, Pennsylvania trust Pro Brothers for exceptional kitchen transformations.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="loc-svc loc-svc--flip reveal" id="bathroom">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Bedroom and bathroom renovation in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BEDROOM RENOVATION IN MEDIA, PA</h3>
+          <p>A well-designed bathroom should be a sanctuary of comfort and style. Our team specializes in upgrading outdated bathrooms, installing modern fixtures, and adding luxurious features like heated floors and rainfall showers. From spa-like master baths to stylish guest bathrooms, we cater to all your remodeling needs. Our services include custom vanities, tile work, bathtub and shower installations, energy-efficient fixtures, and improved ventilation systems. We ensure that your bathroom renovation meets both aesthetic and practical needs, enhancing your home's value and functionality. Let us help you create the perfect spa-like retreat in your home in Media, Pennsylvania.</p>
+          <a href="/projects/remodeling/" class="btn btn--accent" data-magnetic>VIEW REMODELING PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="loc-svc reveal" id="additions">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Home additions in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HOME ADDITIONS IN MEDIA, PA</h3>
+          <p>Our construction company is not limited to new constructions. Our home addition services seamlessly expand your living area, whether you're adding a bedroom, a sunroom, or an entire second floor. We ensure that your new addition blends perfectly with the existing structure, both aesthetically and functionally. Our expertise covers foundation work, framing, roofing, electrical and plumbing integration, and interior finishing to create a seamless expansion. If you have an older home, we take special care to match the architectural style and maintain historical charm. Pro Brothers is the trusted name for home expansions in Media, Pennsylvania.</p>
+          <a href="/services/additions/" class="btn btn--accent" data-magnetic>READ MORE ABOUT ADDITIONS</a>
+        </div>
+      </article>
+
+      <!-- Service 6 -->
+      <article class="loc-svc loc-svc--flip reveal" id="basement">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Basement finishing and remodeling in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BASEMENT FINISHING &amp; REMODELING IN MEDIA, PA</h3>
+          <p>Your basement has untapped potential—why not turn it into a cozy family room, a home theater, a gym, or even a rental unit? We specialize in basement finishing and remodeling, transforming dull spaces into functional and stylish living areas. Our process includes waterproofing, insulation, flooring, lighting, and custom-built storage solutions. We also offer soundproofing, HVAC system upgrades, and egress window installations to ensure a safe and comfortable living environment. Enhance your home's value and livability with a beautifully finished basement in Media, Pennsylvania.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 7 -->
+      <article class="loc-svc reveal" id="roofing">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Roofing installation and repair in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ROOFING INSTALLATION &amp; REPAIR IN MEDIA, PA</h3>
+          <p>A durable and well-maintained roof is essential for protecting your home from the elements. At Pro Brothers, we provide comprehensive roofing services, including installation, repairs, and full roof replacements. Our team works with high-quality roofing materials, including asphalt shingles, metal roofing, tile, and flat roofing solutions. Whether your roof has suffered storm damage or has reached the end of its lifespan, we offer thorough inspections, leak repairs, and energy-efficient roofing options to enhance your home's durability. Homeowners in Media, Pennsylvania trust Pro Brothers for expert craftsmanship and long-lasting roofing solutions.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 8 -->
+      <article class="loc-svc loc-svc--flip reveal" id="siding">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Siding installation and repair in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SLIDING INSTALLATION &amp; REPAIR IN MEDIA, PA</h3>
+          <p>Your home's siding plays a crucial role in curb appeal and energy efficiency. We specialize in installing and repairing all types of siding, including vinyl, fiber cement, wood, and metal. Our siding services enhance your home's protection from the elements while also improving insulation and reducing energy costs. If your siding is cracked, warped, or outdated, we provide professional replacements and repairs to restore your home's beauty and structural integrity. Homeowners in Media, Pennsylvania rely on Pro Brothers for top-tier siding solutions that last.</p>
+          <a href="/services/" class="btn btn--accent" data-magnetic>VIEW ALL SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 9 -->
+      <article class="loc-svc reveal" id="windows-doors">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Window and door replacement in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WINDOW &amp; DOOR REPLACEMENT IN MEDIA, PA</h3>
+          <p>Replacing outdated windows and doors can boost energy efficiency, enhance security, and improve aesthetics. We offer custom window and door solutions, including energy-efficient windows, sliding doors, French doors, and storm doors. Our expert team ensures a seamless installation process that eliminates drafts, improves insulation, and enhances your home's overall appearance. If you're looking for high-quality window and door replacement services in Media, Pennsylvania, Pro Brothers has you covered.</p>
+          <a href="/projects/windows-doors/" class="btn btn--accent" data-magnetic>VIEW PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 10 -->
+      <article class="loc-svc loc-svc--flip reveal" id="deck-patio">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Deck and patio construction in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>DECK &amp; PATIO CONSTRUCTION IN MEDIA, PA</h3>
+          <p>Looking for patios for your home? our construction company offers deck and patio construction services to help create the perfect area for relaxation and entertainment. Whether you envision a custom wood deck, composite decking, or a stylish stone patio, we bring your outdoor vision to life. Our services include pergolas, outdoor kitchens, fire pits, and built-in seating solutions to enhance your space. Pro Brothers is the trusted name in Media, Pennsylvania for beautifully crafted outdoor living areas.</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>EXPLORE NEW CONSTRUCTION</a>
+        </div>
+      </article>
+
+      <!-- Service 11 -->
+      <article class="loc-svc reveal" id="garage">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-cabinets.webp" alt="Garage renovation and construction in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>GARAGE RENOVATION &amp; CONSTRUCTION COMPANY IN MEDIA, PA</h3>
+          <p>A well-designed garage provides storage, security, and added property value. Whether you need a new garage built from scratch or want to remodel an existing one, we offer expert solutions tailored to your needs. Our construction company offers exceptional garage construction services including custom layouts, insulation, electrical work, and smart storage solutions. We also renovate outdated garages, converting them into workshops, guest suites, or additional living spaces. Homeowners in Media, Pennsylvania turn to Pro Brothers for quality garage construction and renovations.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 12 -->
+      <article class="loc-svc loc-svc--flip reveal" id="whole-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Whole home renovations in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WHOLE HOME RENOVATIONS IN MEDIA, PA</h3>
+          <p>When your home needs a complete transformation, our whole-home renovation services provide a fresh, modern update. From flooring and lighting to walls, ceilings, and fixtures, we handle every aspect of your remodel with precision. Whether you're modernizing an older home or customizing your space to better fit your lifestyle, our team ensures a seamless renovation experience. Pro Brothers is the premier choice for comprehensive home renovations in Media, Pennsylvania.</p>
+          <a href="/services/" class="btn btn--accent" data-magnetic>VIEW ALL SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 13 -->
+      <article class="loc-svc reveal" id="historic">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-office.webp" alt="Historic home restoration in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HISTORIC HOME RESTORATION IN MEDIA, PA</h3>
+          <p>Preserving the charm and character of historic homes requires specialized expertise. Our restoration services honor your home's original architectural details while integrating modern conveniences for comfort and efficiency. We specialize in woodwork refinishing, period-correct materials, structural reinforcements, and energy-efficient upgrades. Whether you own a historic gem that needs careful restoration or a home requiring delicate updates, Pro Brothers is the go-to expert in Media, Pennsylvania.</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>VIEW CONSTRUCTION SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 14 -->
+      <article class="loc-svc loc-svc--flip reveal" id="flooring">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-gold.webp" alt="Flooring installation and refinishing in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>FLOORING INSTALLATION &amp; REFINISHING IN MEDIA, PA</h3>
+          <p>The right flooring enhances your home's style, comfort, and functionality. We install and refinish hardwood, tile, luxury vinyl, laminate, and carpet flooring to suit your needs. Our refinishing services breathe new life into old hardwood floors, restoring their beauty and durability. Whether you're upgrading your floors for aesthetic appeal or better durability, Pro Brothers delivers exceptional flooring solutions in Media, Pennsylvania.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 15 -->
+      <article class="loc-svc reveal" id="green-building">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Energy efficient and green building solutions in Media, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ENERGY EFFICIENT &amp; GREEN-BUILDING SOLUTIONS IN MEDIA, PA</h3>
+          <p>Sustainability is the future of construction, and as the best construction company, we are committed to eco-friendly building solutions. Our energy-efficient home upgrades include solar panel integration, energy-efficient windows and doors, high-performance insulation, and smart home automation. We use sustainable materials like reclaimed wood, low-VOC paints, and eco-friendly flooring options. Whether you're looking to reduce your carbon footprint, lower energy costs, or build an entirely green home, we have the expertise to make it happen. Homeowners in Media, Pennsylvania are increasingly turning to Pro Brothers for sustainable construction solutions that prioritize both the environment and modern efficiency.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== What We Can Do CTA ===== -->
+  <section class="section loc-cando" id="what-we-can-do" style="background:var(--gray-2)" aria-label="What We Can Do">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">OUR COMMITMENT</span>
+        <h2 class="section__title">WHAT WE CAN DO</h2>
+      </div>
+      <div class="loc-cando__body reveal">
+        <p>No job is too challenging for us—our passion for craftsmanship and attention to detail ensure that every aspect of your project is completed to the highest standards. From simple renovations to complex construction projects, we take pride in our meticulous approach and unwavering commitment to excellence. At ProBrothers, we believe in turning your dreams into reality, providing a level of service that exceeds expectations. When it comes to construction, there's only one choice: ProBrothers Construction. Let us bring your vision to life with our unparalleled expertise and dedication. Contact us today to discuss your project and discover how our experienced team can make your dream home a reality.</p>
+        <div class="loc-cando__action">
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>CONTACT US</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Stats ===== -->
+  <section class="section why why-about" id="why-stats" aria-label="ProBrothers by the numbers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-remodel.webp" alt="Custom home additions by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quote Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Construction Quote in Media">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Get a FREE Quote!</h2>
+          <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
+          <form class="contact-form" id="mediaQuoteForm" action="#" method="post" novalidate aria-label="Media, PA construction quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="mFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="mFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="mLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="mLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="mPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="mPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="mEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="mEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="mMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="mMessage" name="message" rows="5" placeholder="Tell us about your project in Media, PA..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank You! Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+            <p class="contact-form__privacy">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact ProBrothers in Media, PA">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project in Media, PA?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+/* Location page intro */
+.loc-intro__body p { max-width: 860px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--muted); text-align: center; }
+
+/* Why list */
+.loc-why__body { max-width: 860px; margin: 0 auto; }
+.loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
+.loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
+.loc-why__list li {
+  display: flex; align-items: flex-start; gap: .75rem;
+  background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
+  box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
+  font-size: .97rem; color: var(--ink); line-height: 1.65;
+}
+.loc-why__list li strong { color: var(--dark); }
+.loc-why__cta { text-align: center; }
+
+/* Service alternating rows */
+.loc-svc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 3rem 0; border-bottom: 1px solid var(--gray);
+}
+.loc-svc:last-child { border-bottom: none; }
+.loc-svc--flip .loc-svc__media { order: 2; }
+.loc-svc--flip .loc-svc__body  { order: 1; }
+.loc-svc__media img {
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%; height: 340px; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.loc-svc__media:hover img { transform: scale(1.03); }
+.loc-svc__body h3 {
+  font-size: 1.15rem; font-weight: 900; color: var(--dark);
+  margin-bottom: 1rem; line-height: 1.35;
+  padding-bottom: .6rem; border-bottom: 3px solid var(--accent);
+}
+.loc-svc__body p { color: var(--muted); line-height: 1.8; margin-bottom: 1.4rem; font-size: .97rem; }
+.loc-svc__body .btn { margin-top: .4rem; }
+
+/* What We Can Do */
+.loc-cando__body { max-width: 860px; margin: 0 auto; text-align: center; }
+.loc-cando__body p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1.8rem; }
+.loc-cando__action { text-align: center; }
+
+/* Contact form privacy note */
+.contact-form__privacy { font-size: .8rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+
+@media(max-width:768px){
+  .loc-svc { grid-template-columns: 1fr; gap: 1.6rem; }
+  .loc-svc--flip .loc-svc__media { order: 0; }
+  .loc-svc--flip .loc-svc__body  { order: 0; }
+  .loc-svc__media img { height: 240px; }
+}
+</style>

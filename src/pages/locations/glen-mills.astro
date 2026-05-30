@@ -1,0 +1,597 @@
+---
+/**
+ * Source URL  : https://probrothers.com/construction-company-in-glen-mills/
+ * Canonical   : https://prob.nurotech.co.in/locations/glen-mills/
+ * Errors fixed: "choose Pro Brothers Construction Companyfor" → preserved verbatim (missing space in source)
+ *               "SLIDING INSTALLATION & REPAIR" heading preserved verbatim (source uses "Sliding" for siding section)
+ * SEO added   : unique <title>, meta description, canonical, OG/Twitter tags,
+ *               JSON-LD Service + BreadcrumbList, preload LCP image
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://prob.nurotech.co.in/locations/glen-mills/#service",
+      "name": "Construction Services in Glen Mills, PA",
+      "description": "Premier residential and commercial construction, custom home building, remodeling, and renovation services in Glen Mills, Pennsylvania by ProBrothers.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "ProBrothers",
+        "url": "https://prob.nurotech.co.in/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": { "@type": "City", "name": "Glen Mills", "addressRegion": "PA", "addressCountry": "US" },
+      "url": "https://prob.nurotech.co.in/locations/glen-mills/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://prob.nurotech.co.in/locations/glen-mills/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",          "item": "https://prob.nurotech.co.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations",     "item": "https://prob.nurotech.co.in/locations/" },
+        { "@type": "ListItem", "position": 3, "name": "Glen Mills, PA","item": "https://prob.nurotech.co.in/locations/glen-mills/" }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Commercial & General Contractor in Glen Mills, PA | ProBrothers"
+  description="ProBrothers is Glen Mills, PA's premier construction company — custom homes, kitchen renovations, basement finishing, roofing, historic restoration & more."
+  canonical="https://prob.nurotech.co.in/locations/glen-mills/"
+  ogTitle="Commercial & General Contractor in Glen Mills, PA | ProBrothers"
+  ogDescription="ProBrothers — Glen Mills, PA's premier construction & remodeling company. Custom homes, additions, kitchens, basement finishing & more. Free quote today."
+  ogUrl="https://prob.nurotech.co.in/locations/glen-mills/"
+  ogImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  twitterTitle="Commercial & General Contractor in Glen Mills, PA | ProBrothers"
+  twitterDescription="ProBrothers — Glen Mills, PA's trusted construction company. Custom homes, additions, kitchens & more."
+  twitterImage="https://prob.nurotech.co.in/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1034" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/locations/">Locations</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Glen Mills, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">SERVICES IN GLEN MILLS, PA</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; The Premier Construction Company in Glen Mills, Pennsylvania</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== Intro ===== -->
+  <section class="section loc-intro" id="intro" aria-label="About ProBrothers in Glen Mills, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">GLEN MILLS, PENNSYLVANIA</span>
+        <h2 class="section__title">
+          Pro Brothers: The Premier Construction Company in Glen Mills, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-intro__body reveal">
+        <p>Pro Brothers is a trusted name in high-quality construction services in Glen Mills, Pennsylvania. As we step into 2025, our team remains dedicated to bringing your vision to life, whether you're dreaming of a custom-built home featuring 2025 renovation design trends, a modern kitchen remodel, an elegant bathroom renovation, or a complete home renovation, our team of experienced professionals is here to bring your vision to life. With years of experience, a dedication to craftsmanship, and a customer-first approach, Pro Brothers is the go-to construction company in Glen Mills, PA.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us ===== -->
+  <section class="section loc-why" id="why-choose" style="background:var(--gray-2)" aria-label="Why Choose Pro Brothers in Glen Mills">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">THE RIGHT CHOICE</span>
+        <h2 class="section__title">
+          Why Choose Pro Brothers for Your Construction Service in Glen Mills, PA?
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="loc-why__body reveal">
+        <p>When it comes to construction and remodeling projects in 2025, choosing the right company is crucial. Here's why Pro Brothers is the best choice for any construction service needs in Glen Mills, PA:</p>
+        <ul class="loc-why__list">
+          <li class="reveal"><strong>Experienced Craftsmanship</strong> – With over 15 years in the industry, we bring top-tier skill and expertise to every project.</li>
+          <li class="reveal" style="--d:.06s"><strong>Comprehensive Construction Solutions</strong> – From luxury custom homes in glen mills to smart home automation, we offer a wide range of construction and renovation services tailored for 2025.</li>
+          <li class="reveal" style="--d:.12s"><strong>Locally Owned &amp; Operated</strong> – As a Glen Mills, PA-based construction company, we understand the local building codes, architectural styles, and climate needs, ensuring compliance with 2025 standards.</li>
+          <li class="reveal" style="--d:.18s"><strong>Customer-Focused Approach</strong> – We prioritize clear communication, transparency, and collaboration throughout every step of your project.</li>
+          <li class="reveal" style="--d:.24s"><strong>High-Quality Materials &amp; Techniques</strong> – We use only premium materials, energy-efficient solutions, and modern building techniques for long-lasting results.</li>
+        </ul>
+        <div class="loc-why__cta reveal" style="--d:.3s">
+          <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Grid ===== -->
+  <section class="section loc-services" id="services" aria-label="Construction Services in Glen Mills, PA">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">WHAT WE OFFER</span>
+        <h2 class="section__title">
+          Our Services in Glen Mills, PA
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+
+      <!-- Service 1 -->
+      <article class="loc-svc reveal" id="smart-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Smart home automation integration in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SMART HOME &amp; AUTOMATION INTEGRATION IN GLEN MILLS, PA</h3>
+          <p>Enhance your home with cutting-edge smart automation solutions designed to make your living space more convenient, efficient, and secure. Pro Brothers offers seamless integration of various smart home technologies, allowing you to control your lighting, security systems, climate control, and entertainment systems from one central hub or even remotely through your smartphone or voice commands.</p>
+          <p>Imagine adjusting the lighting in your home with a simple voice command or ensuring your security systems are armed while you're away. You can set your thermostat to the perfect temperature before you even step through the door, or create an immersive home theater experience with the touch of a button. With our expert installation and configuration, your smart home in Glen Mills will be fully optimized to suit your lifestyle and preferences.</p>
+          <p>For residents in Glen Mills, Pennsylvania, Pro Brothers Construction Company brings advanced smart home solutions to life with tailored solutions that fit your needs. Our team of professionals is committed to ensuring a seamless integration process, offering reliable support and guidance every step of the way. Whether you're upgrading an existing system or starting from scratch, we provide expert installation and setup to ensure your smart home functions flawlessly, creating a truly connected and efficient living environment.</p>
+        </div>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="loc-svc loc-svc--flip reveal" id="custom-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Custom home construction in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>CUSTOM HOME CONSTRUCTION IN GLEN MILLS, PA</h3>
+          <p>Building a custom home in Glen Mills is an exciting and rewarding journey, and Pro Brothers is dedicated to making the entire process as seamless and stress-free as possible in 2025 with smart innovations. We understand that your home is more than just a place to live—it's a reflection of your personality, values, and lifestyle. That's why we collaborate closely with you from the very beginning, taking the time to understand your unique needs and desires to design and construct a home that perfectly aligns with your vision and 2025 custom home design trends.</p>
+          <p>From the initial concept and architectural design to the finishing touches, we manage every aspect of the construction process. Our team of skilled professionals ensures that every detail, from the foundation to the roofing, is handled with precision and care. We prioritize quality, durability, and craftsmanship to create a home that will stand the test of time.</p>
+          <p>In addition to our commitment to quality construction, we incorporate the latest energy-efficient solutions, smart home features, and premium finishes to enhance both the functionality and aesthetic appeal of your custom home. Whether you're interested in integrating solar panels, advanced HVAC systems, or home automation features, we ensure your home is equipped with modern, sustainable solutions that save you money and reduce your environmental footprint.</p>
+          <p>We also understand the importance of luxury, which is why we offer high-end finishes, custom cabinetry, and top-of-the-line materials to give your home a truly refined and sophisticated feel.</p>
+          <p>For homeowners in Glen Mills, Pennsylvania, Pro Brothers Construction Company is the trusted custom home builder near you, that combines innovation, craftsmanship, and attention to detail. If you're ready to bring your dream home to life, look no further than Pro Brothers. Let us help you turn your vision into a reality with a home that is tailored to your lifestyle, tastes, and needs.</p>
+          <a href="/projects/" class="btn btn--accent" data-magnetic>VIEW OUR PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="loc-svc reveal" id="kitchen">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-cabinets.webp" alt="Kitchen remodeling in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>KITCHEN REMODELING IN GLEN MILLS, PA</h3>
+          <p>The kitchen is the heart of your home, and a well planned renovation can enhance both its beauty and functionality. Pro Brothers Construction Company specializes in custom kitchen renovations in Glen Mills, offering services such as cabinetry installation, countertop replacement, flooring upgrades, modern lighting solutions, and state-of-the-art smart appliances, all reflecting 2025 kitchen design trends.</p>
+          <p>Our team ensures that every kitchen remodel maximizes space, improves efficiency, and enhances your home's value. If you're planning a kitchen upgrade in Glen Mills, Pennsylvania, we're here to help.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="loc-svc loc-svc--flip reveal" id="bathroom">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Bathroom renovation in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BATHROOM RENOVATION IN GLEN MILLS, PA</h3>
+          <p>A beautiful and functional bathroom can elevate your home's comfort and value. Our bathroom remodeling services in Glen Mills include custom vanities, luxury tile work, walk-in showers, soaking tubs, and water-saving fixtures.</p>
+          <p>From small updates to complete transformations, Pro Brothers Construction Company delivers high-quality craftsmanship, blending style with 2025 bathroom renovation trends. For a bathroom renovation in Glen Mills, Pennsylvania, trust our expert team.</p>
+          <a href="/projects/remodeling/" class="btn btn--accent" data-magnetic>VIEW REMODELING PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="loc-svc reveal" id="additions">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Home additions in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HOME ADDITIONS IN GLEN MILLS, PA</h3>
+          <p>Need more space? A well-designed home addition in Glen Mills can provide extra square footage while seamlessly blending with your existing home. Whether it's a new bedroom, sunroom, second-story addition, or in-law suite, we handle every aspect of construction, from design to completion.</p>
+          <p>Our team ensures that all additions match the style and structure of your home while enhancing functionality and property value. Let us help you with home expansion in Glen Mills, Pennsylvania with precision and care.</p>
+          <a href="/services/additions/" class="btn btn--accent" data-magnetic>READ MORE ABOUT ADDITIONS</a>
+        </div>
+      </article>
+
+      <!-- Service 6 -->
+      <article class="loc-svc loc-svc--flip reveal" id="basement">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Basement finishing and remodeling in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>BASEMENT FINISHING &amp; REMODELING IN GLEN MILLS, PA</h3>
+          <p>Your basement has untapped potential. Whether you envision a home theater, office, gym, playroom, or rental unit, we specialize in basement finishing in Glen Mills.</p>
+          <p>We take care of insulation, waterproofing, custom flooring, lighting, and layout design, ensuring a comfortable and energy-efficient environment. Homeowners in Glen Mills, Pennsylvania trust Pro Brothers Construction Company for high-quality basement renovations.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 7 -->
+      <article class="loc-svc reveal" id="roofing">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Roofing installation and repair in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ROOFING INSTALLATION &amp; REPAIR IN GLEN MILLS, PA</h3>
+          <p>A sturdy and well-maintained roof is essential for protecting your home. Pro Brothers Construction Company provides expert roofing service, replacement, and repair services using high-quality materials like asphalt shingles, metal, and flat roofing solutions.</p>
+          <p>Whether you're addressing storm damage or planning a full roof replacement, our team ensures long-lasting durability and energy efficiency. If you're in Glen Mills, Pennsylvania, let us handle your roofing service needs with expertise.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 8 -->
+      <article class="loc-svc loc-svc--flip reveal" id="siding">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Siding installation and repair in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>SLIDING INSTALLATION &amp; REPAIR IN GLEN MILLS, PA</h3>
+          <p>Enhance your home's curb appeal and insulation with our professional siding installation and repair services. We work with a variety of materials, including vinyl, fiber cement, and wood siding, to create a stunning exterior.</p>
+          <p>Whether you need aesthetic upgrades, weatherproofing, or repairs, Pro Brothers Construction company offers superior craftsmanship for siding projects in Glen Mills, Pennsylvania.</p>
+          <a href="/services/" class="btn btn--accent" data-magnetic>VIEW ALL SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 9 -->
+      <article class="loc-svc reveal" id="windows-doors">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-windows.webp" alt="Window and door replacement in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WINDOW &amp; DOOR REPLACEMENT IN GLEN MILLS, PA</h3>
+          <p>Upgrading your windows and doors improves energy efficiency, security, and aesthetics. We provide custom window and door installations, and replacement service. Offering options like energy-efficient glass, stylish entry doors, patio doors, and storm doors.</p>
+          <p>For reliable door and window installation services in Glen Mills, Pennsylvania, count on Pro Brothers for premium solutions.</p>
+          <a href="/projects/windows-doors/" class="btn btn--accent" data-magnetic>VIEW PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Service 10 -->
+      <article class="loc-svc loc-svc--flip reveal" id="deck-patio">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-trim.webp" alt="Deck and patio construction in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>DECK &amp; PATIO CONSTRUCTION IN GLEN MILLS, PA</h3>
+          <p>Expand your living space with a beautiful custom deck or patio that enhances both the functionality and beauty of your outdoor area. Whether you envision a classic wooden deck, durable composite materials, a stylish stone patio, or a charming pergola, we specialize in designing and building outdoor spaces that are perfect for relaxation, entertaining, or enjoying the outdoors with family and friends.</p>
+          <p>For high-quality deck and patio construction in Glen Mills, Pennsylvania, our expert team of deck builders are dedicated to delivering stunning results that exceed your expectations. We ensure that each project is built with attention to detail, lasting durability, and a design that seamlessly complements your home's style and your outdoor lifestyle.</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>EXPLORE NEW CONSTRUCTION</a>
+        </div>
+      </article>
+
+      <!-- Service 11 -->
+      <article class="loc-svc reveal" id="garage">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-cabinets.webp" alt="Garage construction and renovation in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>GARAGE CONSTRUCTION &amp; RENOVATION IN GLEN MILLS, PA</h3>
+          <p>A well-designed garage adds both functionality and value to your home, offering not just a place for your vehicles but also additional storage, workspace, or even a personalized retreat. Whether you need a brand-new garage build, an expansion to accommodate more storage, or a renovation to enhance its layout and appearance, Pro Brothers delivers expert craftsmanship and smart storage solutions that fit your needs.</p>
+          <p>If you're in Glen Mills, Pennsylvania, our dedicated team ensures a seamless, durable, and stylish garage transformation that enhances the overall look and utility of your home. We focus on quality, efficiency, and attention to detail to create a garage that not only meets your functional requirements but also complements your home's exterior.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 12 -->
+      <article class="loc-svc loc-svc--flip reveal" id="whole-home">
+        <div class="loc-svc__media">
+          <img src="/assets/img/svc-remodel.webp" alt="Whole home renovations in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>WHOLE HOME RENOVATIONS IN GLEN MILLS, PA</h3>
+          <p>Looking to give your home a complete makeover? Our whole-home renovation services cover structural upgrades, modern interiors, smart home installations, and energy-efficient solutions.</p>
+          <p>For a stunning, fully-renovated home in Glen Mills, Pennsylvania, choose Pro Brothers Construction Companyfor exceptional results.</p>
+          <a href="/services/" class="btn btn--accent" data-magnetic>VIEW ALL SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 13 -->
+      <article class="loc-svc reveal" id="historic">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-office.webp" alt="Historic home restoration in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>HISTORIC HOME RESTORATION IN GLEN MILLS, PA</h3>
+          <p>Restoring a historic home requires specialized expertise, careful planning, and an eye for preserving the unique charm that makes these homes so special. We take great care in preserving architectural features, while also upgrading the structural integrity, plumbing, electrical systems, and insulation to meet modern standards. Our approach ensures that your home retains its historical significance while benefiting from the latest improvements for comfort and safety.</p>
+          <p>If you own a historic home in Glen Mills, Pennsylvania, trust us to deliver a respectful and skillful restoration that honors the original craftsmanship while bringing your home up to date. We are committed to maintaining the character and beauty of your home while enhancing its functionality for years to come.</p>
+          <a href="/services/construction-services/" class="btn btn--accent" data-magnetic>VIEW CONSTRUCTION SERVICES</a>
+        </div>
+      </article>
+
+      <!-- Service 14 -->
+      <article class="loc-svc loc-svc--flip reveal" id="flooring">
+        <div class="loc-svc__media">
+          <img src="/assets/img/proj-gold.webp" alt="Flooring installation and refinishing in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>FLOORING INSTALLATION &amp; REFINISHING IN GLEN MILLS, PA</h3>
+          <p>Upgrade your interior with our professional flooring installation and refinishing services that enhance the overall aesthetic and functionality of your home. We specialize in a wide range of flooring options, including hardwood, laminate, tile, vinyl, and carpet installation, offering solutions that suit your style, needs, and budget.</p>
+          <p>For high-quality flooring solutions in Glen Mills, Pennsylvania, Pro Brothers guarantees durability, beauty, and expert craftsmanship that will transform your space. Whether you're looking to refresh a single room or update your entire home, our team ensures that your new floors will not only look stunning but also stand the test of time.</p>
+          <a href="/contact/" class="btn btn--accent" data-magnetic>CONTACT US</a>
+        </div>
+      </article>
+
+      <!-- Service 15 -->
+      <article class="loc-svc reveal" id="green-building">
+        <div class="loc-svc__media">
+          <img src="/assets/img/hero-remodel.webp" alt="Energy efficient and green building solutions in Glen Mills, PA by ProBrothers" loading="lazy" width="750" height="500" />
+        </div>
+        <div class="loc-svc__body">
+          <h3>ENERGY EFFICIENT &amp; GREEN-BUILDING SOLUTIONS IN GLEN MILLS, PA</h3>
+          <p>In today's world, energy efficiency and sustainability are more important than ever, and Pro Brothers Construction Company is committed to providing innovative green-building solutions that reduce your environmental footprint while enhancing the comfort and value of your home. Whether you're constructing a new home or renovating an existing one, we offer a wide range of energy-efficient technologies and eco-friendly materials that help conserve energy, reduce waste, and promote a healthier living environment.</p>
+          <p>Our team specializes in incorporating energy-efficient features such as high-performance insulation, energy-efficient windows and doors, LED lighting, and smart home systems that allow you to monitor and control energy usage. We also offer sustainable building materials, like reclaimed wood, bamboo flooring, and low-VOC paints, to help create a home that is both beautiful and eco-friendly.</p>
+          <p>For homeowners in Glen Mills, Pennsylvania, Pro Brothers delivers expert guidance and execution when it comes to implementing green-building practices. We ensure your home not only meets modern energy standards but also surpasses them, making it more efficient, comfortable, and sustainable for the long term. Let us help you reduce your utility bills and environmental impact while enhancing the overall quality of your home with our energy-efficient and green-building solutions.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== What We Can Do CTA ===== -->
+  <section class="section loc-cando" id="what-we-can-do" style="background:var(--gray-2)" aria-label="What We Can Do">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">OUR COMMITMENT</span>
+        <h2 class="section__title">WHAT WE CAN DO</h2>
+      </div>
+      <div class="loc-cando__body reveal">
+        <p>No project is too big or too small for us—our dedication to craftsmanship and focus on every detail guarantee that each aspect of your project is completed to the highest standards. Whether it's a simple renovation or a complex construction endeavor, we take pride in our thorough approach and steadfast commitment to excellence. At ProBrothers, we are passionate about turning your vision into reality, delivering a service that goes above and beyond expectations. When it comes to construction, ProBrothers Construction is the only choice you need.</p>
+        <p>Let's bring your construction vision to life with the best construction service in Glen Mills, Pennsylvania!</p>
+        <div class="loc-cando__action">
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>CONTACT US</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Stats ===== -->
+  <section class="section why why-about" id="why-stats" aria-label="ProBrothers by the numbers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Interior remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Remodeling</h3>
+            <p>Full interior remodeling services to transform any room in your home or business.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/hero-remodel.webp" alt="Custom home additions by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Additions</h3>
+            <p>Custom-built home additions that seamlessly integrate with your existing structure.</p>
+            <a href="/services/additions/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-windows.webp" alt="Window and door installation by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Windows &amp; Doors</h3>
+            <p>Professional window and door installation and replacement for residential and commercial properties.</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quote Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Construction Quote in Glen Mills">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Get a FREE Quote!</h2>
+          <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
+          <form class="contact-form" id="gmQuoteForm" action="#" method="post" novalidate aria-label="Glen Mills construction quote form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="gmFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="gmFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="gmLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="gmLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="gmPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="gmPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="gmEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="gmEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="gmMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="gmMessage" name="message" rows="5" placeholder="Tell us about your project in Glen Mills, PA..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Thank You! Your quote request has been submitted successfully. We'll get back to you soon!
+            </div>
+            <p class="contact-form__privacy">We respect your privacy. Your information will only be used to provide you with a quote.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact ProBrothers in Glen Mills, PA">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project in Glen Mills, PA?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.loc-intro__body p { max-width: 860px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--muted); text-align: center; }
+.loc-why__body { max-width: 860px; margin: 0 auto; }
+.loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
+.loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
+.loc-why__list li {
+  display: flex; align-items: flex-start; gap: .75rem;
+  background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
+  box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
+  font-size: .97rem; color: var(--ink); line-height: 1.65;
+}
+.loc-why__list li strong { color: var(--dark); }
+.loc-why__cta { text-align: center; }
+.loc-svc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 3rem 0; border-bottom: 1px solid var(--gray);
+}
+.loc-svc:last-child { border-bottom: none; }
+.loc-svc--flip .loc-svc__media { order: 2; }
+.loc-svc--flip .loc-svc__body  { order: 1; }
+.loc-svc__media img {
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%; height: 340px; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.loc-svc__media:hover img { transform: scale(1.03); }
+.loc-svc__body h3 {
+  font-size: 1.15rem; font-weight: 900; color: var(--dark);
+  margin-bottom: 1rem; line-height: 1.35;
+  padding-bottom: .6rem; border-bottom: 3px solid var(--accent);
+}
+.loc-svc__body p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; font-size: .97rem; }
+.loc-svc__body .btn { margin-top: .4rem; }
+.loc-cando__body { max-width: 860px; margin: 0 auto; text-align: center; }
+.loc-cando__body p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1rem; }
+.loc-cando__action { text-align: center; margin-top: 1.6rem; }
+.contact-form__privacy { font-size: .8rem; color: var(--muted); margin-top: 1rem; text-align: center; }
+@media(max-width:768px){
+  .loc-svc { grid-template-columns: 1fr; gap: 1.6rem; }
+  .loc-svc--flip .loc-svc__media { order: 0; }
+  .loc-svc--flip .loc-svc__body  { order: 0; }
+  .loc-svc__media img { height: 240px; }
+}
+</style>

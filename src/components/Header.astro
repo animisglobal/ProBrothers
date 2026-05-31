@@ -6,6 +6,7 @@ const isContact = pathname.startsWith('/contact');
 const isServices = pathname.startsWith('/services');
 const isProjects = pathname.startsWith('/projects');
 const isLocations = pathname.startsWith('/locations');
+const isBlog = pathname.startsWith('/blog');
 ---
 <!-- ===== Header / Nav ===== -->
 <header class="header" id="header">
@@ -61,7 +62,7 @@ const isLocations = pathname.startsWith('/locations');
             <li><a href="/locations/allentown/">Allentown, PA</a></li>
           </ul>
         </li>
-        <li><a href="/#reviews">Blog</a></li>
+        <li><a href="/blog/" class={isBlog ? 'active' : ''}>Blog</a></li>
         <li><a href="/contact/" class={isContact ? 'active' : ''}>Contact</a></li>
       </ul>
     </nav>

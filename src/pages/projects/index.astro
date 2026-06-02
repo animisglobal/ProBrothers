@@ -38,7 +38,7 @@ const allProjects = [
   { name: "Doors",                             img: "/assets/img/projects/New-Door-and-Trim-768x1024.webp",                     href: "https://probrothers.com/projects/doors/" },
   { name: "Fireplace",                         img: "/assets/img/projects/Fireplace-768x1024.webp",                             href: "https://probrothers.com/projects/fireplace/" },
   { name: "Gold Beams",                        img: "/assets/img/projects/Gold-Beams-768x1024.webp",                            href: "https://probrothers.com/projects/gold-beams/" },
-  { name: "Gray Mantle, Beams",                img: "/assets/img/projects/Brown-Beams-768x1024.webp",                           href: "https://probrothers.com/projects/gray-mantle-beams/" },
+  { name: "Gray Mantle, Beams",                img: "/assets/img/proj-mantle.webp",                                            href: "https://probrothers.com/projects/gray-mantle-beams/" },
   { name: "Large Bathroom Window",             img: "/assets/img/projects/Large-Bathroom-Window-1024x768.webp",                 href: "https://probrothers.com/projects/large-bathroom-window/" },
   { name: "Light Blue Cabinets",               img: "/assets/img/projects/Blue-Caboinets-768x1024.webp",                       href: "https://probrothers.com/projects/light-blue-cabinets/" },
   { name: "Two-Tone Kitchen Restoration",      img: "/assets/img/projects/Two-Tone-Grey-Kitchen-1024x769.webp",                 href: "https://probrothers.com/projects/two-tone-kitchen-restoration/" },
@@ -114,8 +114,7 @@ const allProjects = [
   <section class="section proj-section" id="project-categories" aria-label="Project Categories">
     <div class="container">
       <div class="proj-section__head reveal">
-        <span class="proj-section__sub">EXPLORE BY CATEGORY</span>
-        <h2 class="proj-section__title">PROJECT CATEGORIES</h2>
+        <h2 class="proj-section__title">Project Categories</h2>
       </div>
 
       <div class="proj-cats">
@@ -158,9 +157,8 @@ const allProjects = [
   <!-- ===== All Projects List ===== -->
   <section class="section proj-section" id="all-projects" style="background:var(--gray-2)" aria-label="All Projects">
     <div class="container">
-      <div class="proj-section__head reveal">
-        <span class="proj-section__sub">THE FULL PORTFOLIO</span>
-        <h2 class="proj-section__title">ALL PROJECTS</h2>
+      <div class="proj-section__head reveal" style="padding-top:2.5rem">
+        <h2 class="proj-section__title">All Projects</h2>
       </div>
       <ul class="proj-grid">
         {allProjects.map((p, i) => (

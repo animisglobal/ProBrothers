@@ -1068,9 +1068,9 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 /* ---------- Home "Why Choose ProBrothers" — light, minimal look ----------
    Scoped to the home section only (inner pages keep their dark .why-about /
    .why-contact treatments with white headings + count-up numbers). */
-.why:not(.why-about):not(.why-contact){background:var(--gray-2)}
+.why:not(.why-about):not(.why-contact){background:#fff}
 .why:not(.why-about):not(.why-contact)::before{display:none}
-.why:not(.why-about):not(.why-contact) .why__divider path{fill:var(--gray-2)}
+.why:not(.why-about):not(.why-contact) .why__divider path{fill:#fff}
 .why:not(.why-about):not(.why-contact) .section__kicker--light{color:var(--gold-text)}
 .why:not(.why-about):not(.why-contact) .section__title--light{color:var(--dark)}
 .why:not(.why-about):not(.why-contact) .section__lead--light{color:var(--muted)}
@@ -1126,7 +1126,7 @@ body.modal-open{overflow:hidden}
 /* ===== Project Gallery & Lightbox ===== */
 .proj-section{padding:5rem 0}
 .proj-section + .proj-section{padding-top:0}
-.proj-section__head{margin-bottom:2.2rem}
+.proj-section__head{margin-bottom:2.2rem;padding-top:1.5rem}
 .proj-section__title{
   font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;
   letter-spacing:.04em;color:var(--dark);margin-bottom:.6rem;position:relative;display:inline-block;

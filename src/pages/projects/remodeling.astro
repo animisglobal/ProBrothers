@@ -26,9 +26,15 @@ const pageSchema = {
   ]
 };
 
-const blackhorseImages = [
-  { src: '/assets/img/projects/Remodeling-BlackHorse-House-1024x768.webp', alt: 'Expert remodeling services for beautiful home transformations' },
-  { src: '/assets/img/projects/Remodeling-BlackHorse-House-1024x768.webp', alt: 'Expert remodeling services for beautiful home transformations' }
+const projects = [
+  {
+    id: 'blackhorse-house',
+    title: 'Blackhorse House',
+    body: "This was a remodeling project that we had in Media Pa. The house had a garage, a sunroom that was used as a salon, living area, and an unfinished basement. Starting with the interior, everything was demolished, from old flooring, to drywall. Two walls were removed to create a more open plan, with the kitchen doubling in size, and connecting with the living room. The basement went from being an unlivable concrete room, to an amazing relax area with a bedroom and full bathroom. Everything was then repainted, retiled, and new flooring was installed. The Exterior got massive upgrades too. The side entrance door was moved to the center with new windows on the sides. A new concrete walkway was poured, with floating shelves and lights. We then reroofed the roof, installed board and batten on the gables, and a porch was built in the backyard. We started with a beat up house that no one would want to go near, to an incredible finished product, with a simple, modern, and very attractive look.",
+    images: [
+      { src: '/assets/img/projects/Remodeling-BlackHorse-House-1024x768.webp', alt: 'Expert remodeling services for beautiful home transformations' }
+    ]
+  }
 ];
 ---
 <Layout
@@ -93,39 +99,33 @@ const blackhorseImages = [
     </div>
   </div>
 
-  <!-- ===== Blackhorse House ===== -->
-  <section class="section proj-section" id="blackhorse-house" aria-labelledby="bh-heading">
-    <div class="container">
-      <div class="proj-section__head reveal">
-        <span class="proj-section__sub">PROJECT 01</span>
-        <h2 class="proj-section__title" id="bh-heading">Blackhorse House</h2>
-      </div>
-
-      <div class="proj-feature reveal">
-        <button type="button" class="proj-feature__media" data-lightbox data-gallery="blackhorse" data-full="/assets/img/projects/Remodeling-BlackHorse-House-1024x768.webp" data-caption="Expert remodeling services for beautiful home transformations" aria-label="Enlarge Blackhorse House image">
-          <img src="/assets/img/projects/Remodeling-BlackHorse-House-1024x768.webp" alt="Expert remodeling services for beautiful home transformations" loading="eager" fetchpriority="high" width="1024" height="768" />
-        </button>
-        <div class="proj-feature__body">
-          <div class="proj-section__about" style="margin:0">
+  {projects.map((p, i) => (
+    <section class="section proj-section" id={p.id} aria-labelledby={`${p.id}-heading`} style={i % 2 === 1 ? 'background:var(--gray-2)' : ''}>
+      <div class="container">
+        <div class="proj-section__head reveal">
+          <span class="proj-section__sub">PROJECT {String(i + 1).padStart(2, '0')}</span>
+          <h2 class="proj-section__title" id={`${p.id}-heading`}>{p.title}</h2>
+        </div>
+        {p.body && (
+          <div class="proj-section__about reveal">
             <h3>About This Project</h3>
-            <p>This was a remodeling project that we had in Media Pa. The house had a garage, a sunroom that was used as a salon, living area, and an unfinished basement. Starting with the interior, everything was demolished, from old flooring, to drywall. Two walls were removed to create a more open plan, with the kitchen doubling in size, and connecting with the living room. The basement went from being an unlivable concrete room, to an amazing relax area with a bedroom and full bathroom. Everything was then repainted, retiled, and new flooring was installed. The Exterior got massive upgrades too. The side entrance door was moved to the center with new windows on the sides. A new concrete walkway was poured, with floating shelves and lights. We then reroofed the roof, installed board and batten on the gables, and a porch was built in the backyard. We started with a beat up house that no one would want to go near, to an incredible finished product, with a simple, modern, and very attractive look.</p>
+            <p>{p.body}</p>
           </div>
+        )}
+        <div class="gallery reveal">
+          {p.images.map(img => (
+            <button type="button" class="gallery__item" data-gallery={p.id} data-full={img.src} data-caption={img.alt} aria-label={`Enlarge image: ${img.alt}`}>
+              <img src={img.src} alt={img.alt} loading="lazy" width="800" height="600" />
+              <span class="gallery__zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <span class="gallery__cap">{img.alt}</span>
+            </button>
+          ))}
         </div>
       </div>
-
-      <div class="gallery gallery--lg reveal">
-        {blackhorseImages.map(img => (
-          <button type="button" class="gallery__item" data-gallery="blackhorse" data-full={img.src} data-caption={img.alt} aria-label={`Enlarge image: ${img.alt}`}>
-            <img src={img.src} alt={img.alt} loading="lazy" width="800" height="600" />
-            <span class="gallery__zoom" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </span>
-            <span class="gallery__cap">{img.alt}</span>
-          </button>
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
+  ))}
 
   <!-- ===== Contact CTA ===== -->
   <section class="cta" id="contact" aria-label="Contact us">

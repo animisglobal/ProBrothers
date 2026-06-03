@@ -304,7 +304,7 @@ const pageSchema = {
 
         <!-- ===== Main Posts Feed ===== -->
         <main class="blog-posts" aria-label="Blog post list">
-          {posts.slice(0, 6).map((post, i) => (
+          {posts.slice(0, 10).map((post, i) => (
             <article class={`blog-post reveal${i > 0 ? ` style="--d:${(i * 0.07).toFixed(2)}s"` : ''}`} style={i > 0 ? `--d:${(i * 0.07).toFixed(2)}s` : undefined}>
               <a href={`/blog/${post.slug}/`} class="blog-post__media" tabindex="-1" aria-hidden="true">
                 <img
@@ -341,7 +341,6 @@ const pageSchema = {
           <nav class="blog-pagination" aria-label="Blog pagination">
             <span class="blog-pagination__page blog-pagination__page--active" aria-current="page" aria-label="Page 1">1</span>
             <a href="/blog/page/2/" class="blog-pagination__page" aria-label="Page 2">2</a>
-            <a href="/blog/page/3/" class="blog-pagination__page" aria-label="Page 3">3</a>
             <a href="/blog/page/2/" class="blog-pagination__next" aria-label="Next page">
               Next <span aria-hidden="true">&#8594;</span>
             </a>

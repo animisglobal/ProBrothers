@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
-Sitemap: https://probrothers.com/sitemap-index.xml
+Disallow: /

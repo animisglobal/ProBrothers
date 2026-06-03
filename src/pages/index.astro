@@ -1,7 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout>
+<Layout
+  title="ProBrothers — General Contractor & Home Remodeling | Media, PA"
+  description="ProBrothers is Media, PA's trusted general contractor — trim, cabinets, remodeling, additions & windows. 15+ years of expert craftsmanship. Free quote."
+  canonical="https://probrothers.com/"
+  ogTitle="ProBrothers — General Contractor & Home Remodeling | Media, PA"
+  ogDescription="Full-service contractor in Media, PA. Trim, cabinets, remodeling, additions & windows. 15+ years experience. Free quote within one business day."
+  ogUrl="https://probrothers.com/"
+  ogImage="https://probrothers.com/assets/img/hero-trim.webp"
+  twitterTitle="ProBrothers — General Contractor & Home Remodeling | Media, PA"
+  twitterDescription="Full-service contractor in Media, PA. Trim, cabinets, remodeling, additions & windows. 15+ years. Free quote."
+  twitterImage="https://probrothers.com/assets/img/hero-trim.webp"
+>
+  <h1 class="sr-only">ProBrothers — General Contractor &amp; Home Remodeling in Media, PA</h1>
   <!-- ===== Hero carousel ===== -->
   <section class="hero" id="home">
     <canvas class="hero__particles" id="heroParticles" aria-hidden="true"></canvas>
@@ -12,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
              sizes="100vw" alt="Expert precision trim work for detailed finishes" fetchpriority="high" width="1600" height="1034" />
         <div class="container slide__content">
           <span class="slide__eyebrow">Interior Renovation</span>
-          <h1 class="slide__title">Precision Trim&nbsp;Work</h1>
+          <p class="slide__title">Precision Trim&nbsp;Work</p>
           <p class="slide__text">Enhance your home's look with our detailed trim work, adding a touch of sophistication to every room.</p>
           <a href="#services" class="btn btn--accent btn--lg">Explore</a>
         </div>
@@ -22,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
              sizes="100vw" alt="Custom cabinets for stylish storage solutions" loading="lazy" width="1600" height="1067" />
         <div class="container slide__content">
           <span class="slide__eyebrow">Tiling and Painting</span>
-          <h1 class="slide__title">Custom Cabinets</h1>
+          <p class="slide__title">Custom Cabinets</p>
           <p class="slide__text">We craft bespoke cabinets that perfectly fit your style and maximize your space.</p>
           <a href="#services" class="btn btn--accent btn--lg">Explore</a>
         </div>
@@ -32,7 +44,7 @@ import Layout from '../layouts/Layout.astro';
              sizes="100vw" alt="Full-service home remodeling from start to finish" loading="lazy" width="1600" height="1067" />
         <div class="container slide__content">
           <span class="slide__eyebrow">Household Repairs</span>
-          <h1 class="slide__title">Full Remodeling Services</h1>
+          <p class="slide__title">Full Remodeling Services</p>
           <p class="slide__text">From start to finish, we handle all aspects of your remodel, turning your vision into reality.</p>
           <a href="#services" class="btn btn--accent btn--lg">Explore</a>
         </div>

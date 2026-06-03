@@ -6,15 +6,15 @@ import Footer from '../components/Footer.astro';
 // Per-page metadata. Defaults reproduce the original index.html exactly.
 const {
   title = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
-  description = "ProBrothers is a full-service residential and commercial construction and remodeling company with over 15 years of experience. Trim, cabinets, remodeling, additions, windows & doors in Media, PA.",
-  canonical = 'https://prob.nurotech.co.in/',
+  description = "ProBrothers — full-service residential & commercial contractor in Media, PA. 15+ years of trim, cabinetry, remodeling, additions & window work.",
+  canonical = 'https://probrothers.com/',
   ogTitle = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
   ogDescription = 'Full-service residential & commercial construction and remodeling. Trim, cabinets, additions, windows & doors in Media, PA. Free quote within one business day.',
-  ogUrl = 'https://prob.nurotech.co.in/',
-  ogImage = 'https://prob.nurotech.co.in/assets/img/hero-trim.webp',
+  ogUrl = 'https://probrothers.com/',
+  ogImage = 'https://probrothers.com/assets/img/hero-trim.webp',
   twitterTitle = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
   twitterDescription = 'Full-service residential & commercial construction and remodeling in Media, PA. Free quote within one business day.',
-  twitterImage = 'https://prob.nurotech.co.in/assets/img/hero-trim.webp',
+  twitterImage = 'https://probrothers.com/assets/img/hero-trim.webp',
   preloadHero = true,
 } = Astro.props;
 ---
@@ -28,6 +28,7 @@ const {
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
   <link rel="icon" href="/assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
@@ -40,14 +41,15 @@ const {
   <meta name="twitter:title" content={twitterTitle} />
   <meta name="twitter:description" content={twitterDescription} />
   <meta name="twitter:image" content={twitterImage} />
+  <meta name="twitter:site" content="@probrothers" />
 
   <!-- LocalBusiness structured data (rich results + local SEO) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
     "name": "ProBrothers",
-    "image": "https://prob.nurotech.co.in/assets/img/hero-trim.webp",
-    "url": "https://prob.nurotech.co.in/",
+    "image": "https://probrothers.com/assets/img/hero-trim.webp",
+    "url": "https://probrothers.com/",
     "telephone": "+1-484-745-4097",
     "priceRange": "$$",
     "address": {
@@ -58,7 +60,7 @@ const {
       "postalCode": "19063",
       "addressCountry": "US"
     },
-    "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown"],
+    "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown", "Marple", "King of Prussia", "Nether Providence", "Springfield", "Malvern", "Greenville", "Glen Mills", "Kennett Square", "Newtown", "Phoenixville"],
     "description": "Full-service residential and commercial construction and remodeling company with over 15 years of experience. Trim, cabinets, remodeling, additions, windows & doors.",
     "openingHours": "Mo-Sa 08:00-18:00"
   })} />

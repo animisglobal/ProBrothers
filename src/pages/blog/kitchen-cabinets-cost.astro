@@ -42,7 +42,6 @@ const mostViewed = [
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
 
-const tags = ['Build', 'Design', 'Renovate'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -141,8 +140,8 @@ const pageSchema = {
           <li><span aria-current="page">Kitchen Cabinets Cost</span></li>
         </ol>
       </nav>
-      <h1 class="page-banner__title" id="banner-heading">Kitchen Cabinets Cost in Media, PA</h1>
-      <p class="page-banner__sub">2026 Complete Pricing Guide &mdash; ProBrothers</p>
+      <h1 class="page-banner__title" id="banner-heading">Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)</h1>
+      <p class="page-banner__sub">ProBrothers</p>
     </div>
     <div class="page-banner__wave" aria-hidden="true">
       <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
@@ -178,9 +177,9 @@ const pageSchema = {
           <!-- Featured image -->
           <div class="post-hero reveal">
             <img
-              src="/assets/img/services/two-tone-grey-kitchen-1.webp"
+              src="/assets/img/blog/Add-a-heading.png"
               alt="Kitchen Cabinets Cost in Media, PA"
-              width="1024" height="769"
+              width="1200" height="628"
               fetchpriority="high"
               loading="eager"
               class="post-hero__img"
@@ -200,7 +199,16 @@ const pageSchema = {
           <!-- Post body -->
           <div class="post-body" itemprop="articleBody">
 
-            <!-- Introduction -->
+  
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+          <!-- Introduction -->
             <div class="post-body__intro reveal">
               <p>If you're planning a kitchen remodel in Media, PA, one of the first questions on your mind is probably: <strong>how much do kitchen cabinets actually cost?</strong> It's a fair question — cabinets are the single biggest line item in most kitchen renovations, and prices can vary wildly depending on the type, material, and contractor you choose.</p>
               <p>Whether you're a Media, PA homeowner, a Delaware County resident ready to upgrade, or just doing early research, this guide gives you a complete, honest breakdown of what to expect in 2026 — from budget stock cabinets to fully custom built-ins.</p>
@@ -492,16 +500,6 @@ const pageSchema = {
                     <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          <!-- Tags -->
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (
-                <li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>
               ))}
             </ul>
           </div>

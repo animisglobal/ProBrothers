@@ -37,7 +37,6 @@ const mostViewed = [
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
 
-const tags = ['Build', 'Design'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -158,9 +157,9 @@ const pageSchema = {
           <meta itemprop="author" content="ProBrothers" />
 
           <div class="post-hero reveal">
-            <img src="/assets/img/svc-cabinets.webp"
+            <img src="/assets/img/blog/Wood-for-cabinets.png"
                  alt="Selecting Natural Cabinet Surfaces for a Sustainable Look in 2026"
-                 width="750" height="500" fetchpriority="high" loading="eager"
+                 width="1200" height="628" fetchpriority="high" loading="eager"
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2024-12-23" class="post-hero__date" itemprop="datePublished">December 23, 2024</time>
@@ -172,6 +171,16 @@ const pageSchema = {
           </div>
 
           <div class="post-body" itemprop="articleBody">
+
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+
 
             <div class="post-body__intro reveal">
               <p>When it comes to cabinetry, one of the most important decisions you'll make in 2026 is choosing the right finish and wood for cabinets. Whether you're designing a kitchen, bathroom, mudroom, or home office, the materials you select will not only determine the durability and functionality of your cabinets but also set the tone for the entire space's aesthetic.</p>
@@ -302,14 +311,6 @@ const pageSchema = {
                     <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (
-                <li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>
               ))}
             </ul>
           </div>

@@ -17,7 +17,6 @@ const mostViewed = [
   { title: 'Enhance Your Living Space with Energy-Efficient Window Designs in 2026', slug: 'energy-efficient-window-designs-2026', views: 435 },
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
-const tags = ['Build', 'Design', 'Renovate'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -79,8 +78,8 @@ const pageSchema = {
           <li><span aria-current="page">Top General Contractors in Pennsylvania</span></li>
         </ol>
       </nav>
-      <h1 class="page-banner__title" id="banner-heading">Top General Contractors in Pennsylvania</h1>
-      <p class="page-banner__sub">What to Look for Before You Hire in 2026 &mdash; ProBrothers</p>
+      <h1 class="page-banner__title" id="banner-heading">Top General Contractors in Pennsylvania &amp; What to Look for Before You Hire in 2026</h1>
+      <p class="page-banner__sub">ProBrothers</p>
     </div>
     <div class="page-banner__wave" aria-hidden="true">
       <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false"><path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" /></svg>
@@ -102,7 +101,7 @@ const pageSchema = {
           <meta itemprop="author" content="ProBrothers" />
 
           <div class="post-hero reveal">
-            <img src="/assets/img/hero-cabinets.webp" srcset="/assets/img/hero-cabinets-sm.webp 800w, /assets/img/hero-cabinets.webp 1600w" sizes="(max-width:1024px) 100vw, 780px" alt="Top General Contractors in Pennsylvania" width="1600" height="1067" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
+            <img src="/assets/img/blog/Untitled-design-5-1024x768.png" alt="Top General Contractors in Pennsylvania" width="1024" height="768" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-08-22" class="post-hero__date">August 22, 2025</time>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
@@ -114,6 +113,16 @@ const pageSchema = {
           </div>
 
           <div class="post-body" itemprop="articleBody">
+
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+
 
             <div class="post-body__intro reveal">
               <p>You've been dreaming about a complete house renovation for months — or building a new home for years. Maybe it's a kitchen with premium custom cabinets and a layout that finally works for your family. Maybe it's a second-story addition or mudroom cabinetry that solves years of clutter. Finding the right general contractor is the decision that determines whether your vision becomes reality — or becomes a cautionary story. In 2026, when budgets are tight and good contractors book out months ahead, knowing who to call and what to look for matters more than ever.</p>
@@ -219,12 +228,6 @@ const pageSchema = {
                   </a>
                 </li>
               ))}
-            </ul>
-          </div>
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (<li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>))}
             </ul>
           </div>
           <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">

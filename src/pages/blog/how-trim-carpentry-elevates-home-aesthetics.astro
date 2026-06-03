@@ -37,7 +37,6 @@ const mostViewed = [
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
 
-const tags = ['Design', 'Renovate'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -158,9 +157,9 @@ const pageSchema = {
           <meta itemprop="author" content="ProBrothers" />
 
           <div class="post-hero reveal">
-            <img src="/assets/img/hero-trim.webp"
+            <img src="/assets/img/blog/Black-Beams-1-1024x766.webp"
                  alt="The Art of Trim Carpentry: Elevating Your Home's Aesthetics in 2026"
-                 width="1600" height="1034" fetchpriority="high" loading="eager"
+                 width="1024" height="766" fetchpriority="high" loading="eager"
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-03-07" class="post-hero__date" itemprop="datePublished">March 7, 2025</time>
@@ -174,6 +173,16 @@ const pageSchema = {
           </div>
 
           <div class="post-body" itemprop="articleBody">
+
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+
 
             <div class="post-body__section reveal">
               <h2>What Is Trim Carpentry?</h2>
@@ -315,14 +324,6 @@ const pageSchema = {
                     <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (
-                <li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>
               ))}
             </ul>
           </div>

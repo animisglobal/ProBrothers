@@ -17,7 +17,6 @@ const mostViewed = [
   { title: 'Enhance Your Living Space with Energy-Efficient Window Designs in 2026', slug: 'energy-efficient-window-designs-2026', views: 435 },
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
-const tags = ['Build', 'Design', 'Renovate'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -79,8 +78,8 @@ const pageSchema = {
           <li><span aria-current="page">Comprehensive Construction Services</span></li>
         </ol>
       </nav>
-      <h1 class="page-banner__title" id="banner-heading">Comprehensive Construction Services</h1>
-      <p class="page-banner__sub">Building Your Dream Home with ProBrothers in 2026</p>
+      <h1 class="page-banner__title" id="banner-heading">Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026</h1>
+      <p class="page-banner__sub">ProBrothers</p>
     </div>
     <div class="page-banner__wave" aria-hidden="true">
       <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false"><path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" /></svg>
@@ -102,7 +101,7 @@ const pageSchema = {
           <meta itemprop="author" content="ProBrothers" />
 
           <div class="post-hero reveal">
-            <img src="/assets/img/svc-cabinets.webp" alt="Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026" width="750" height="500" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
+            <img src="/assets/img/blog/architect-1080589_1280-1024x682.jpg" alt="Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026" width="1024" height="682" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-04-07" class="post-hero__date">April 7, 2025</time>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
@@ -119,6 +118,16 @@ const pageSchema = {
           </div>
 
           <div class="post-body" itemprop="articleBody">
+
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+
 
             <div class="post-body__intro reveal">
               <p>Construction is more than just assembling materials; it's about creating a home that reflects your lifestyle, values, and vision. ProBrothers offers top-tier residential construction services tailored to meet your specific needs — whether you're undertaking a complete renovation, planning a home addition, or building a custom home from the ground up.</p>
@@ -257,12 +266,6 @@ const pageSchema = {
                   </a>
                 </li>
               ))}
-            </ul>
-          </div>
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (<li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>))}
             </ul>
           </div>
           <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">

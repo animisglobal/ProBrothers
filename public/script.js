@@ -699,3 +699,31 @@ document.addEventListener('DOMContentLoaded', () => {
     touchX = null;
   });
 })();
+
+/* ===================================================
+   Blog Post — Table of Contents (auto-generated)
+   Scans .post-body for h2/h3, builds #tocList
+   =================================================== */
+(function buildTOC() {
+  const tocList = document.getElementById('tocList');
+  const postBody = document.querySelector('.post-body');
+  if (!tocList || !postBody) return;
+
+  const headings = postBody.querySelectorAll('h2, h3');
+  if (!headings.length) { tocList.closest('.post-toc').style.display = 'none'; return; }
+
+  headings.forEach(function(h, i) {
+    // Ensure heading has an id for anchor linking
+    if (!h.id) {
+      h.id = 'toc-' + i + '-' + h.textContent.trim().toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.classList.add('toc-h3');
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.trim();
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+}());

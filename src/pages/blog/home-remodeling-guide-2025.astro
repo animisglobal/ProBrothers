@@ -38,7 +38,6 @@ const mostViewed = [
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
 
-const tags = ['Build', 'Design', 'Renovate'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -152,9 +151,9 @@ const pageSchema = {
 
           <div class="post-hero reveal">
             <img
-              src="/assets/img/hero-remodel.webp"
+              src="/assets/img/blog/image-5.png"
               alt="Transforming Your Home: The Ultimate Guide to Remodeling in 2026"
-              width="1600" height="1067"
+              width="1200" height="628"
               fetchpriority="high"
               loading="eager"
               class="post-hero__img"
@@ -174,6 +173,16 @@ const pageSchema = {
           </div>
 
           <div class="post-body" itemprop="articleBody">
+
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+
 
             <div class="post-body__section reveal">
               <h2>Why Remodeling Matters</h2>
@@ -309,14 +318,6 @@ const pageSchema = {
                     <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (
-                <li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>
               ))}
             </ul>
           </div>

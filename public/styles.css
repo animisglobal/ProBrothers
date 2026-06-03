@@ -1368,3 +1368,37 @@ body.modal-open{overflow:hidden}
   .lightbox,.lightbox__img{transition:none}
   .gallery__item img,.proj-cat img,.proj-feature__media img,.proj-card__thumb img{transition:none}
 }
+
+/* ===== Blog Post Table of Contents ===== */
+.post-toc{
+  background:#f8f9fa;border-radius:var(--radius);border-left:4px solid var(--accent);
+  padding:1.4rem 1.6rem;margin-bottom:2rem;
+}
+.post-toc__title{
+  font-size:.9rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--dark);margin:0 0 .9rem;
+}
+.post-toc__nav{margin:0}
+.post-toc__list{
+  list-style:none;padding:0;margin:0;counter-reset:toc-counter;
+  display:flex;flex-direction:column;gap:.3rem;
+}
+.post-toc__list li{counter-increment:toc-counter}
+.post-toc__list a{
+  display:flex;align-items:baseline;gap:.5rem;
+  color:var(--dark);font-size:.88rem;font-weight:600;line-height:1.45;
+  text-decoration:none;transition:color .2s;
+  padding:.15rem 0;
+}
+.post-toc__list a::before{
+  content:counter(toc-counter) ".";
+  color:var(--accent);font-weight:800;font-size:.78rem;
+  min-width:1.4rem;flex-shrink:0;
+}
+.post-toc__list a:hover{color:var(--accent)}
+.post-toc__list .toc-h3 a{
+  padding-left:1.4rem;font-size:.83rem;font-weight:500;color:var(--muted);
+}
+.post-toc__list .toc-h3{counter-increment:none}
+.post-toc__list .toc-h3 a::before{display:none}
+.post-toc__empty{display:none}

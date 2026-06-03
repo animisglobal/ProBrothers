@@ -37,7 +37,6 @@ const mostViewed = [
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
 
-const tags = ['Build', 'Design'];
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -158,9 +157,9 @@ const pageSchema = {
           <meta itemprop="author" content="ProBrothers" />
 
           <div class="post-hero reveal">
-            <img src="/assets/img/svc-cabinets.webp"
+            <img src="/assets/img/blog/Cabinets-Features.png"
                  alt="Innovative Storage and Cabinet Options to Elevate Your Home in 2026"
-                 width="750" height="500" fetchpriority="high" loading="eager"
+                 width="1200" height="628" fetchpriority="high" loading="eager"
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2024-12-17" class="post-hero__date" itemprop="datePublished">December 17, 2024</time>
@@ -172,6 +171,16 @@ const pageSchema = {
           </div>
 
           <div class="post-body" itemprop="articleBody">
+
+          <!-- Table of Contents -->
+          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+            <h3 class="post-toc__title">Table of Contents</h3>
+            <nav class="post-toc__nav" aria-label="Article sections">
+              <ol class="post-toc__list" id="tocList"></ol>
+            </nav>
+          </div>
+
+
 
             <div class="post-body__intro reveal">
               <p>When designing or renovating a kitchen, bathroom, or any other space that requires cabinetry in 2026, the types of cabinet features you choose can dramatically impact both the functionality and aesthetic of the room. Whether you're a homeowner embarking on a renovation or a contractor advising clients, understanding the different options—such as sliding drawers, open cabinets, and shelves—will help you make informed decisions tailored to 2026. Plus, it's important to consider how these features will fit within your budget. So, let's explore the various cabinet features you can choose from and discuss the costs associated with each.</p>
@@ -326,14 +335,6 @@ const pageSchema = {
                     <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div class="post-sidebar__widget reveal" style="--d:.1s">
-            <h3 class="post-sidebar__title">Tags</h3>
-            <ul class="post-sidebar__tags" role="list" aria-label="Post tags">
-              {tags.map(tag => (
-                <li><a href={`/blog/?tag=${tag.toLowerCase()}`} class="post-sidebar__tag">{tag}</a></li>
               ))}
             </ul>
           </div>

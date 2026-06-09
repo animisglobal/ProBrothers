@@ -147,7 +147,7 @@ ul{list-style:none}
 
 .slide__content{max-width:680px;color:#fff;padding:5rem 0}
 .slide__eyebrow{
-  display:inline-block;color:var(--accent);font-weight:700;letter-spacing:.22em;
+  display:inline-block;color:#fff;font-weight:700;letter-spacing:.22em;
   text-transform:uppercase;font-size:.78rem;margin-bottom:1rem;
   opacity:0;transform:translateY(20px);
 }
@@ -191,10 +191,10 @@ ul{list-style:none}
 @keyframes bob{50%{transform:translateY(6px)}}
 
 /* ---------- Quote strip ---------- */
-.quote-strip{background:var(--accent);color:var(--dark)}
+.quote-strip{background:var(--accent);color:#fff}
 .quote-strip__inner{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;padding:2.4rem 0}
-.quote-strip h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;text-transform:uppercase}
-.quote-strip p{flex:1;min-width:220px;font-weight:500}
+.quote-strip h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;color:#fff}
+.quote-strip p{flex:1;min-width:220px;font-weight:500;color:#fff}
 
 /* ---------- Sections ---------- */
 .section{padding:clamp(4rem,8vw,7rem) 0}
@@ -1044,8 +1044,7 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 }
 
 /* ---------- Contact page: separate Why-choose from CTA bg ---------- */
-.why-contact{background:#1a1d20}
-.contact-main + .why-contact .why__divider path{fill:#1a1d20}
+.contact-main + .why-contact .why__divider path{fill:#fff}
 .cta{background:linear-gradient(120deg,var(--accent-dark),var(--accent))}
 .cta p{color:rgba(255,255,255,.92)}
 .cta .btn--accent{background:#fff;color:var(--dark)}
@@ -1066,18 +1065,25 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
    QA FIX-UPS (latest round)
    =========================================================== */
 
-/* ---------- Home "Why Choose ProBrothers" — light, minimal look ----------
-   Scoped to the home section only (inner pages keep their dark .why-about /
-   .why-contact treatments with white headings + count-up numbers). */
-.why:not(.why-about):not(.why-contact){background:#fff}
-.why:not(.why-about):not(.why-contact)::before{display:none}
-.why:not(.why-about):not(.why-contact) .why__divider path{fill:#fff}
-.why:not(.why-about):not(.why-contact) .section__kicker--light{color:var(--gold-text)}
-.why:not(.why-about):not(.why-contact) .section__title--light{color:var(--dark)}
-.why:not(.why-about):not(.why-contact) .section__lead--light{color:var(--muted)}
-.why:not(.why-about):not(.why-contact) .why__item{color:var(--ink)}
-.why:not(.why-about):not(.why-contact) .why__item h3{color:var(--dark)}
-.why:not(.why-about):not(.why-contact) .why__item p{color:var(--muted)}
+/* ---------- "Why Choose ProBrothers" — light, minimal look (ALL pages) ----------
+   Applies to every .why instance: home, About (.why-about), Services pages,
+   Contact (.why-contact) and the location-page stat blocks. Dark grey replaced
+   with white for a clean, minimal look. Headings/kickers/numbers re-coloured for
+   contrast on the light background; count-up stat numbers stay brand blue. */
+.why{background:#fff}
+.why::before,.why::after{display:none}
+.why .why__divider path{fill:#fff}
+.why .section__kicker--light{color:var(--gold-text)}
+.why .section__title--light{color:var(--dark)}
+.why .section__lead--light{color:var(--muted)}
+.why .why__item{color:var(--ink)}
+.why .why__item h3{color:var(--dark)}
+.why .why__item p{color:var(--muted)}
+.why .why__num{color:var(--accent)}
+
+/* ---------- Home "Our Services" — wider lead so the intro paragraph uses more
+   horizontal space and wraps to fewer lines (default head is capped at 760px). */
+.services .section__head{max-width:1040px}
 
 /* ---------- Inner pages: connect page-banner directly to the marquee ----------
    Drop the white transition wave so there is no gap between the page title
@@ -1378,7 +1384,23 @@ body.modal-open{overflow:hidden}
   font-size:.9rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;
   color:var(--dark);margin:0 0 .9rem;
 }
-.post-toc__nav{margin:0}
+/* Collapse / expand toggle */
+.post-toc__toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;width:100%;
+  background:none;border:0;padding:0;margin:0;cursor:pointer;
+  font:inherit;color:inherit;text-align:left;letter-spacing:inherit;text-transform:inherit;
+}
+.post-toc__toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.post-toc__chevron{flex-shrink:0;color:var(--accent);transition:transform .3s var(--ease)}
+.post-toc.is-collapsed .post-toc__chevron{transform:rotate(-90deg)}
+/* Heading keeps its bottom margin only while the panel is open */
+.post-toc.is-collapsed .post-toc__title{margin-bottom:0}
+.post-toc__nav{
+  margin:0;overflow:hidden;
+  max-height:1500px;opacity:1;
+  transition:max-height .35s var(--ease),opacity .25s var(--ease);
+}
+.post-toc.is-collapsed .post-toc__nav{max-height:0;opacity:0}
 .post-toc__list{
   list-style:none;padding:0;margin:0;counter-reset:toc-counter;
   display:flex;flex-direction:column;gap:.3rem;

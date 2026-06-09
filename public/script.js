@@ -726,4 +726,27 @@ document.addEventListener('DOMContentLoaded', () => {
     li.appendChild(a);
     tocList.appendChild(li);
   });
+
+  /* ---- Collapse / expand toggle (progressive enhancement) ---- */
+  var toc = tocList.closest('.post-toc');
+  var title = toc && toc.querySelector('.post-toc__title');
+  var nav = toc && toc.querySelector('.post-toc__nav');
+  if (toc && title && nav) {
+    // Give the collapsible region an id for aria-controls
+    if (!nav.id) nav.id = 'tocPanel';
+    // Turn the heading into an accessible toggle button
+    var label = title.textContent.trim();
+    title.innerHTML =
+      '<button type="button" class="post-toc__toggle" aria-expanded="true" aria-controls="' + nav.id + '">' +
+        '<span class="post-toc__toggle-label">' + label + '</span>' +
+        '<svg class="post-toc__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" ' +
+          'stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+          '<polyline points="6 9 12 15 18 9"></polyline></svg>' +
+      '</button>';
+    var btn = title.querySelector('.post-toc__toggle');
+    btn.addEventListener('click', function () {
+      var collapsed = toc.classList.toggle('is-collapsed');
+      btn.setAttribute('aria-expanded', String(!collapsed));
+    });
+  }
 }());

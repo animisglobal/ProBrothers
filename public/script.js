@@ -583,7 +583,8 @@ document.addEventListener('DOMContentLoaded', () => {
    Lightbox — fluid, modern image enlargement for project pages
    ============================================================ */
 (function lightbox(){
-  if (!document.querySelector('.gallery__item, .proj-feature__media[data-lightbox]')) return;
+  // Init when static gallery items exist OR when the projects page modal can inject them later.
+  if (!document.querySelector('.gallery__item, .proj-feature__media[data-lightbox], #projectModal')) return;
 
   // Build lightbox DOM once
   const lb = document.createElement('div');

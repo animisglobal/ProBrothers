@@ -1,9 +1,18 @@
 ---
 /**
  * Source URL: https://probrothers.com/our-projects/
- * Verbatim text preserved; SEO + JSON-LD added; lightbox-ready gallery framework.
+ *   + each project's detail page https://probrothers.com/projects/<slug>/
+ * Copy mode: 2 (with enhancements) — content 100% VERBATIM from the original site.
+ * Errors fixed: none (content untouched).
+ * SEO added: CollectionPage + BreadcrumbList JSON-LD, OG/Twitter, canonical, descriptive alts.
+ * Enhancement: per-project accessible MODAL/popup (open on card click; close on overlay / X / Esc)
+ *   showing that project's verbatim title + description and its full image gallery laid out beside
+ *   the copy. Replaces the old out-links to probrothers.com detail pages. Project data (verbatim
+ *   title, paragraphs, images, alt text) lives in src/data/projects.ts. Images inside a modal still
+ *   open in the existing global lightbox for full-screen viewing.
  */
 import Layout from '../../layouts/Layout.astro';
+import { projects } from '../../data/projects';
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -25,30 +34,6 @@ const pageSchema = {
     }
   ]
 };
-
-const allProjects = [
-  { name: "Bathroom Restoration",             img: "/assets/img/projects/Wht-Btr-Grey-Tile-768x1024.webp",                    href: "https://probrothers.com/projects/bathroom-restoration/" },
-  { name: "Black Beams",                       img: "/assets/img/projects/Black-Beams-1-1024x766.webp",                         href: "https://probrothers.com/projects/black-beams/" },
-  { name: "Black Window",                      img: "/assets/img/projects/Black-Windows-3-576x1024.webp",                       href: "https://probrothers.com/projects/black-window/" },
-  { name: "BlackHorse House",                  img: "/assets/img/projects/Remodeling-BlackHorse-House-1024x768.webp",           href: "https://probrothers.com/projects/blackhorse-house/" },
-  { name: "Blue Library",                      img: "/assets/img/projects/Blue-Library-4-768x1024.webp",                        href: "https://probrothers.com/projects/blue-library/" },
-  { name: "Brown Beams",                       img: "/assets/img/projects/Brown-Beams-768x1024.webp",                           href: "https://probrothers.com/projects/brown-beams/" },
-  { name: "Curved Stair Wall Trim",            img: "/assets/img/projects/Stair-Trim-768x1024.webp",                         href: "https://probrothers.com/projects/curved-stair-wall-trim/" },
-  { name: "Dark Blue Office",                  img: "/assets/img/projects/Blue-Cabinets-1-768x1024.webp",                      href: "https://probrothers.com/projects/dark-blue-office/" },
-  { name: "Doors",                             img: "/assets/img/projects/New-Door-and-Trim-768x1024.webp",                     href: "https://probrothers.com/projects/doors/" },
-  { name: "Fireplace",                         img: "/assets/img/projects/Fireplace-1-768x1024.webp",                           href: "https://probrothers.com/projects/fireplace/" },
-  { name: "Gold Beams",                        img: "/assets/img/projects/Gold-Beams-768x1024.webp",                            href: "https://probrothers.com/projects/gold-beams/" },
-  { name: "Gray Mantle, Beams",                img: "/assets/img/projects/Grey-Mantle-1.webp",                                 href: "https://probrothers.com/projects/gray-mantle-beams/" },
-  { name: "Large Bathroom Window",             img: "/assets/img/projects/Large-Bathroom-Window-1024x768.webp",                 href: "https://probrothers.com/projects/large-bathroom-window/" },
-  { name: "Light Blue Cabinets",               img: "/assets/img/projects/Light-Blue-Leather-Handle-768x1024.webp",             href: "https://probrothers.com/projects/light-blue-cabinets/" },
-  { name: "Two-Tone Kitchen Restoration",      img: "/assets/img/projects/Two-Tone-Grey-Kitchen-1024x769.webp",                 href: "https://probrothers.com/projects/two-tone-kitchen-restoration/" },
-  { name: "Wallpaper",                         img: "/assets/img/projects/BathroomFlower-Wallpaper-768x1024.webp",              href: "https://probrothers.com/projects/wallpaper/" },
-  { name: "White Bathroom Vanities and Closets", img: "/assets/img/projects/White-Bathroom-768x1024.webp",                     href: "https://probrothers.com/projects/white-bathroom-vanities-closets/" },
-  { name: "White Ceiling",                     img: "/assets/img/projects/White-Sqr-1-768x1024.webp",                           href: "https://probrothers.com/projects/white-ceiling/" },
-  { name: "White Coffered Ceiling",            img: "/assets/img/projects/White-Coffered-4-472x1024.webp",                      href: "https://probrothers.com/projects/white-coffered-ceiling/" },
-  { name: "White Trim on Stair Wall",          img: "/assets/img/projects/Stair-Wall-Trim-1-768x1024.webp",                     href: "https://probrothers.com/projects/white-trim-on-stair-wall/" },
-  { name: "Window Casing",                     img: "/assets/img/projects/Window-Casing-866x1024.webp",                         href: "https://probrothers.com/projects/window-casing/" },
-];
 ---
 <Layout
   title="Discover Our Construction, Remodeling, Cabinetry, Trim Projects"
@@ -161,11 +146,18 @@ const allProjects = [
         <h2 class="proj-section__title">All Projects</h2>
       </div>
       <ul class="proj-grid">
-        {allProjects.map((p, i) => (
+        {projects.map((p, i) => (
           <li class="reveal" style={`--d:${(i % 4) * 0.07}s`}>
-            <a class="proj-card" href={p.href} target="_blank" rel="noopener noreferrer">
+            <button
+              type="button"
+              class="proj-card"
+              data-project-index={i}
+              aria-haspopup="dialog"
+              aria-controls="projectModal"
+              aria-label={`View project details: ${p.name}`}
+            >
               <div class="proj-card__thumb">
-                <img src={p.img} alt={p.name} loading="lazy" width="768" height="1024" />
+                <img src={p.thumb} alt={p.name} loading="lazy" width="768" height="1024" />
                 <div class="proj-card__overlay" aria-hidden="true"></div>
               </div>
               <div class="proj-card__body">
@@ -177,12 +169,35 @@ const allProjects = [
                   </svg>
                 </span>
               </div>
-            </a>
+            </button>
           </li>
         ))}
       </ul>
     </div>
   </section>
+
+  <!-- ===== Project detail data (verbatim) for the modal ===== -->
+  <script type="application/json" id="projectData" is:inline set:html={JSON.stringify(projects)} />
+
+  <!-- ===== Project Modal / Popup ===== -->
+  <div class="proj-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projModalTitle" hidden>
+    <div class="proj-modal__overlay" data-proj-close></div>
+    <div class="proj-modal__dialog" role="document">
+      <button type="button" class="proj-modal__close" data-proj-close aria-label="Close project details">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="proj-modal__scroll">
+        <header class="proj-modal__head">
+          <span class="proj-modal__kicker">ProBrothers Project</span>
+          <h2 class="proj-modal__title" id="projModalTitle"></h2>
+        </header>
+        <div class="proj-modal__body">
+          <div class="proj-modal__copy" id="projModalCopy"></div>
+          <div class="gallery proj-modal__gallery" id="projModalGallery"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== Contact CTA ===== -->
   <section class="cta" id="contact" aria-label="Contact us">
@@ -196,3 +211,126 @@ const allProjects = [
     </div>
   </section>
 </Layout>
+
+<script>
+/* ---------- Project detail popup (Projects page) ----------
+   Opens on card click, populates verbatim title/description/images from #projectData,
+   closes on overlay click / X / Esc. Images inside reuse .gallery__item + data-gallery
+   so the global lightbox (public/script.js) still opens them full-screen. */
+(function projectPopup() {
+  const modal = document.getElementById('projectModal');
+  const dataEl = document.getElementById('projectData');
+  if (!modal || !dataEl) return;
+
+  let projects = [];
+  try { projects = JSON.parse(dataEl.textContent || '[]'); } catch (e) { return; }
+
+  const titleEl = modal.querySelector('#projModalTitle');
+  const copyEl = modal.querySelector('#projModalCopy');
+  const galleryEl = modal.querySelector('#projModalGallery');
+  const dialog = modal.querySelector('.proj-modal__dialog');
+  const closeEls = modal.querySelectorAll('[data-proj-close]');
+  const cards = document.querySelectorAll('.proj-card[data-project-index]');
+  let lastFocused = null;
+
+  function render(p) {
+    titleEl.textContent = p.title || p.name || '';
+
+    // Verbatim description paragraphs (may be empty for image-only projects)
+    copyEl.innerHTML = '';
+    if (p.description && p.description.length) {
+      const lead = document.createElement('h3');
+      lead.className = 'proj-modal__subtitle';
+      lead.textContent = 'About This Project';
+      copyEl.appendChild(lead);
+      p.description.forEach(function (para) {
+        const text = (para || '').trim();
+        if (!text) return;
+        const el = document.createElement('p');
+        el.textContent = text;
+        copyEl.appendChild(el);
+      });
+      copyEl.hidden = false;
+    } else {
+      // No descriptive copy on the original page — show the gallery only.
+      copyEl.hidden = true;
+    }
+
+    // Gallery — rebuilt as .gallery__item buttons so the global lightbox handles full-screen view.
+    galleryEl.innerHTML = '';
+    const groupId = 'projmodal-' + (p.slug || 'project');
+    (p.images || []).forEach(function (img) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'gallery__item';
+      btn.setAttribute('data-gallery', groupId);
+      btn.setAttribute('data-full', img.src);
+      btn.setAttribute('data-caption', img.alt || '');
+      btn.setAttribute('aria-label', 'Enlarge image: ' + (img.alt || p.name));
+      const im = document.createElement('img');
+      im.src = img.src;
+      im.alt = img.alt || p.name;
+      im.loading = 'lazy';
+      im.width = 768;
+      im.height = 1024;
+      btn.appendChild(im);
+      const zoom = document.createElement('span');
+      zoom.className = 'gallery__zoom';
+      zoom.setAttribute('aria-hidden', 'true');
+      zoom.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>';
+      btn.appendChild(zoom);
+      galleryEl.appendChild(btn);
+    });
+
+    // Single-image projects get a roomier, centred layout.
+    dialog.classList.toggle('proj-modal__dialog--solo', (p.images || []).length === 1);
+    dialog.classList.toggle('proj-modal__dialog--nocopy', !(p.description && p.description.length));
+  }
+
+  function open(card) {
+    const idx = parseInt(card.getAttribute('data-project-index'), 10);
+    const p = projects[idx];
+    if (!p) return;
+    lastFocused = card;
+    render(p);
+    modal.hidden = false;
+    requestAnimationFrame(function () { modal.classList.add('open'); });
+    document.body.classList.add('modal-open');
+    modal.querySelector('.proj-modal__scroll').scrollTop = 0;
+    modal.querySelector('.proj-modal__close').focus();
+  }
+
+  function close() {
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    setTimeout(function () { modal.hidden = true; }, 300);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () { open(card); });
+  });
+  closeEls.forEach(function (el) { el.addEventListener('click', close); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape' || !modal.classList.contains('open')) return;
+    // If the full-screen lightbox is open over the modal, let it handle Esc first.
+    const lb = document.querySelector('.lightbox.open');
+    if (lb) return;
+    close();
+  });
+
+  // Basic focus trap within the dialog.
+  modal.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab' || !modal.classList.contains('open')) return;
+    const focusables = dialog.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
+</script>

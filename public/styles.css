@@ -1130,6 +1130,74 @@ a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .team-modal__bio p:last-child{margin-bottom:0}
 body.modal-open{overflow:hidden}
 
+/* ---------- Project detail popup (Projects page) ---------- */
+.proj-modal{
+  position:fixed;inset:0;z-index:120;display:grid;place-items:center;
+  padding:clamp(1rem,3vw,2rem);
+  opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s var(--ease);
+}
+.proj-modal.open{opacity:1;visibility:visible}
+.proj-modal__overlay{position:absolute;inset:0;background:rgba(13,15,16,.62);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.proj-modal__dialog{
+  position:relative;z-index:1;background:#fff;border-radius:var(--radius);
+  width:min(1080px,100%);max-height:92vh;overflow:hidden;box-shadow:var(--shadow);
+  border-top:5px solid var(--accent);
+  transform:translateY(20px) scale(.985);transition:transform .35s var(--ease);
+  display:flex;flex-direction:column;
+}
+.proj-modal.open .proj-modal__dialog{transform:none}
+.proj-modal__close{
+  position:absolute;top:.75rem;right:.75rem;z-index:3;width:42px;height:42px;border:0;
+  border-radius:50%;background:var(--gray-2);color:var(--dark);
+  cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .25s var(--ease);
+}
+.proj-modal__close svg{width:20px;height:20px}
+.proj-modal__close:hover{background:var(--accent);color:#fff;transform:rotate(90deg)}
+.proj-modal__scroll{overflow:auto;padding:clamp(1.4rem,3vw,2.2rem)}
+.proj-modal__head{margin-bottom:1.4rem;padding-right:2.5rem}
+.proj-modal__kicker{
+  display:inline-block;font-size:.72rem;font-weight:800;color:var(--accent);
+  text-transform:uppercase;letter-spacing:.14em;margin-bottom:.4rem;
+}
+.proj-modal__title{
+  font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;text-transform:uppercase;
+  letter-spacing:.02em;color:var(--dark);line-height:1.1;margin:0;
+}
+.proj-modal__title::after{
+  content:"";display:block;width:60px;height:4px;background:var(--accent);
+  margin-top:.7rem;border-radius:2px;
+}
+.proj-modal__body{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+  gap:clamp(1.4rem,3vw,2.4rem);align-items:start;
+}
+.proj-modal__subtitle{
+  font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--dark);margin:0 0 .7rem;
+}
+.proj-modal__copy p{color:var(--muted);font-size:1rem;line-height:1.8;margin:0 0 1rem}
+.proj-modal__copy p:last-child{margin-bottom:0}
+.proj-modal__gallery{grid-template-columns:repeat(2,1fr);gap:.9rem}
+.proj-modal__gallery .gallery__item{aspect-ratio:auto;cursor:zoom-in}
+.proj-modal__gallery .gallery__item img{aspect-ratio:3/4;height:auto}
+/* Image-only projects: gallery takes the full width */
+.proj-modal__dialog--nocopy .proj-modal__body{grid-template-columns:1fr}
+.proj-modal__dialog--nocopy .proj-modal__gallery{grid-template-columns:repeat(3,1fr)}
+/* Single-image project: centre the lone image at a readable size */
+.proj-modal__dialog--solo .proj-modal__gallery{grid-template-columns:minmax(0,420px);justify-content:center}
+@media (max-width:820px){
+  .proj-modal__body{grid-template-columns:1fr;gap:1.4rem}
+  .proj-modal__gallery{grid-template-columns:repeat(2,1fr)}
+  .proj-modal__dialog--nocopy .proj-modal__gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:480px){
+  .proj-modal__gallery,
+  .proj-modal__dialog--nocopy .proj-modal__gallery{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .proj-modal,.proj-modal__dialog,.proj-modal__close{transition:none}
+}
+
 /* ===== Project Gallery & Lightbox ===== */
 .proj-section{padding:5rem 0}
 .proj-section + .proj-section{padding-top:0}

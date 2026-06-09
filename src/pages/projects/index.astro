@@ -193,7 +193,19 @@ const pageSchema = {
         </header>
         <div class="proj-modal__body">
           <div class="proj-modal__copy" id="projModalCopy"></div>
-          <div class="gallery proj-modal__gallery" id="projModalGallery"></div>
+          <div class="proj-carousel" id="projModalCarousel" aria-roledescription="carousel" aria-label="Project images">
+            <div class="proj-carousel__viewport">
+              <div class="proj-carousel__track" id="projCarouselTrack"></div>
+              <button type="button" class="proj-carousel__nav proj-carousel__prev" id="projCarouselPrev" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button type="button" class="proj-carousel__nav proj-carousel__next" id="projCarouselNext" aria-label="Next image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <span class="proj-carousel__counter" id="projCarouselCounter" aria-live="polite"></span>
+            </div>
+            <div class="proj-carousel__dots" id="projCarouselDots" role="tablist" aria-label="Choose image"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -227,18 +239,48 @@ const pageSchema = {
 
   const titleEl = modal.querySelector('#projModalTitle');
   const copyEl = modal.querySelector('#projModalCopy');
-  const galleryEl = modal.querySelector('#projModalGallery');
   const dialog = modal.querySelector('.proj-modal__dialog');
+  const carousel = modal.querySelector('#projModalCarousel');
+  const track = modal.querySelector('#projCarouselTrack');
+  const counterEl = modal.querySelector('#projCarouselCounter');
+  const dotsEl = modal.querySelector('#projCarouselDots');
+  const prevBtn = modal.querySelector('#projCarouselPrev');
+  const nextBtn = modal.querySelector('#projCarouselNext');
   const closeEls = modal.querySelectorAll('[data-proj-close]');
   const cards = document.querySelectorAll('.proj-card[data-project-index]');
   let lastFocused = null;
+
+  // ----- carousel state -----
+  let slideCount = 0;
+  let curIndex = 0;
+
+  function goTo(i) {
+    if (slideCount === 0) return;
+    if (i < 0) i = slideCount - 1;
+    if (i >= slideCount) i = 0;
+    curIndex = i;
+    track.style.transform = 'translateX(' + (-curIndex * 100) + '%)';
+    counterEl.textContent = (curIndex + 1) + ' / ' + slideCount;
+    Array.prototype.forEach.call(dotsEl.children, function (dot, d) {
+      const active = d === curIndex;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', active ? 'true' : 'false');
+      dot.tabIndex = active ? 0 : -1;
+    });
+    // Slides outside view shouldn't be focus/tab targets.
+    Array.prototype.forEach.call(track.children, function (slide, s) {
+      const item = slide.querySelector('.gallery__item');
+      if (item) item.tabIndex = s === curIndex ? 0 : -1;
+    });
+  }
 
   function render(p) {
     titleEl.textContent = p.title || p.name || '';
 
     // Verbatim description paragraphs (may be empty for image-only projects)
     copyEl.innerHTML = '';
-    if (p.description && p.description.length) {
+    const hasCopy = !!(p.description && p.description.length);
+    if (hasCopy) {
       const lead = document.createElement('h3');
       lead.className = 'proj-modal__subtitle';
       lead.textContent = 'About This Project';
@@ -252,14 +294,22 @@ const pageSchema = {
       });
       copyEl.hidden = false;
     } else {
-      // No descriptive copy on the original page — show the gallery only.
+      // No descriptive copy on the original page — show the carousel only.
       copyEl.hidden = true;
     }
 
-    // Gallery — rebuilt as .gallery__item buttons so the global lightbox handles full-screen view.
-    galleryEl.innerHTML = '';
+    // Carousel — one slide per image. Each image is still a .gallery__item button so the
+    // global lightbox (public/script.js) opens it full-screen with prev/next/counter/caption.
+    track.innerHTML = '';
+    dotsEl.innerHTML = '';
+    const imgs = p.images || [];
+    slideCount = imgs.length;
     const groupId = 'projmodal-' + (p.slug || 'project');
-    (p.images || []).forEach(function (img) {
+
+    imgs.forEach(function (img, i) {
+      const slide = document.createElement('div');
+      slide.className = 'proj-carousel__slide';
+
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'gallery__item';
@@ -270,7 +320,7 @@ const pageSchema = {
       const im = document.createElement('img');
       im.src = img.src;
       im.alt = img.alt || p.name;
-      im.loading = 'lazy';
+      im.loading = i === 0 ? 'eager' : 'lazy';
       im.width = 768;
       im.height = 1024;
       btn.appendChild(im);
@@ -279,13 +329,46 @@ const pageSchema = {
       zoom.setAttribute('aria-hidden', 'true');
       zoom.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>';
       btn.appendChild(zoom);
-      galleryEl.appendChild(btn);
+      slide.appendChild(btn);
+      track.appendChild(slide);
+
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'proj-carousel__dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsEl.appendChild(dot);
     });
 
-    // Single-image projects get a roomier, centred layout.
-    dialog.classList.toggle('proj-modal__dialog--solo', (p.images || []).length === 1);
-    dialog.classList.toggle('proj-modal__dialog--nocopy', !(p.description && p.description.length));
+    // Hide arrows/dots/counter when there is only one image.
+    const multi = slideCount > 1;
+    carousel.classList.toggle('proj-carousel--single', !multi);
+
+    // Layout flags: solo image gets a centred frame; image-only projects drop the text column.
+    dialog.classList.toggle('proj-modal__dialog--solo', slideCount === 1);
+    dialog.classList.toggle('proj-modal__dialog--nocopy', !hasCopy);
+
+    // Reset to first slide (transition-free so it doesn't animate on open).
+    track.style.transition = 'none';
+    goTo(0);
+    // Re-enable the slide transition on the next frame.
+    requestAnimationFrame(function () { track.style.transition = ''; });
   }
+
+  prevBtn.addEventListener('click', function () { goTo(curIndex - 1); });
+  nextBtn.addEventListener('click', function () { goTo(curIndex + 1); });
+
+  // Swipe support on the carousel viewport (ignored while the lightbox is open).
+  let touchX = null;
+  const viewport = modal.querySelector('.proj-carousel__viewport');
+  viewport.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend', function (e) {
+    if (touchX === null || slideCount < 2 || document.querySelector('.lightbox.open')) { touchX = null; return; }
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 45) goTo(curIndex + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
 
   function open(card) {
     const idx = parseInt(card.getAttribute('data-project-index'), 10);
@@ -313,11 +396,12 @@ const pageSchema = {
   closeEls.forEach(function (el) { el.addEventListener('click', close); });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape' || !modal.classList.contains('open')) return;
-    // If the full-screen lightbox is open over the modal, let it handle Esc first.
-    const lb = document.querySelector('.lightbox.open');
-    if (lb) return;
-    close();
+    if (!modal.classList.contains('open')) return;
+    // If the full-screen lightbox is open over the modal, let it handle keys first.
+    if (document.querySelector('.lightbox.open')) return;
+    if (e.key === 'Escape') { close(); return; }
+    if (slideCount > 1 && e.key === 'ArrowLeft') { goTo(curIndex - 1); }
+    if (slideCount > 1 && e.key === 'ArrowRight') { goTo(curIndex + 1); }
   });
 
   // Basic focus trap within the dialog.

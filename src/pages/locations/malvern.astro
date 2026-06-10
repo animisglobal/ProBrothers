@@ -17,7 +17,7 @@ const pageSchema = {
       "@id": "https://probrothers.com/locations/malvern/#service",
       "name": "Residential & Commercial Construction Company in Malvern, PA",
       "description": "Full-service residential and commercial construction, remodeling, custom cabinets, and trimwork in Malvern, Pennsylvania by ProBrothers.",
-      "provider": {
+      "provider": { "@id": "https://probrothers.com/#business",
         "@type": "GeneralContractor",
         "name": "ProBrothers",
         "url": "https://probrothers.com/",
@@ -42,19 +42,57 @@ const pageSchema = {
         { "@type": "ListItem", "position": 2, "name": "Locations",  "item": "https://probrothers.com/locations/" },
         { "@type": "ListItem", "position": 3, "name": "Malvern, PA", "item": "https://probrothers.com/locations/malvern/" }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://probrothers.com/locations/malvern/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer remodeling and construction services in Malvern, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers serves Malvern, PA and the surrounding area with full-service residential and commercial construction, home remodeling, additions, custom cabinetry, and trim carpentry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a free estimate for a project in Malvern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call ProBrothers at (484) 745-4097 or fill out our online contact form. We provide a free, no-obligation quote for Malvern homeowners and typically respond within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of projects does ProBrothers handle in Malvern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From full kitchen and bathroom remodels to home additions, basement finishing, custom cabinets, and architectural trim, our Malvern team manages projects of every size from design through final finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Malvern, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers is a fully licensed and insured general contractor with 15+ years of experience, and every Malvern project is completed to meet local building codes."
+          }
+        }
+      ]
     }
   ]
 };
 ---
 <Layout
-  title="Best Residential & Commercial Construction Company in Malvern, PA"
+  title="Residential & Commercial Contractor in Malvern, PA"
   description="ProBrothers is Malvern's most trusted construction company — custom homes, kitchen remodeling, bathroom renovations, additions, cabinets & trimwork. Free quote."
   canonical="https://probrothers.com/locations/malvern/"
-  ogTitle="Best Residential & Commercial Construction Company in Malvern, PA"
+  ogTitle="Residential & Commercial Contractor in Malvern, PA"
   ogDescription="ProBrothers — Malvern, PA's trusted construction company. Custom homes, remodeling, additions, cabinets & trimwork. Call (484) 745-4097 today."
   ogUrl="https://probrothers.com/locations/malvern/"
   ogImage="https://probrothers.com/assets/img/hero-remodel.webp"
-  twitterTitle="Best Residential & Commercial Construction Company in Malvern, PA"
+  twitterTitle="Residential & Commercial Contractor in Malvern, PA"
   twitterDescription="ProBrothers — Malvern, PA's trusted construction company. Custom homes, remodeling & additions."
   twitterImage="https://probrothers.com/assets/img/hero-remodel.webp"
   preloadHero={false}

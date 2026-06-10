@@ -17,7 +17,7 @@ const pageSchema = {
       "@id": "https://probrothers.com/locations/kennett-square/#service",
       "name": "Home Construction Contractor in Kennett Square, PA",
       "description": "Full-service residential construction, remodeling, custom cabinets, trimwork, and home additions in Kennett Square, Pennsylvania by ProBrothers.",
-      "provider": {
+      "provider": { "@id": "https://probrothers.com/#business",
         "@type": "GeneralContractor",
         "name": "ProBrothers",
         "url": "https://probrothers.com/",
@@ -42,19 +42,57 @@ const pageSchema = {
         { "@type": "ListItem", "position": 2, "name": "Locations",        "item": "https://probrothers.com/locations/" },
         { "@type": "ListItem", "position": 3, "name": "Kennett Square, PA", "item": "https://probrothers.com/locations/kennett-square/" }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://probrothers.com/locations/kennett-square/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer remodeling and construction services in Kennett Square, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers serves Kennett Square, PA and the surrounding area with full-service residential and commercial construction, home remodeling, additions, custom cabinetry, and trim carpentry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a free estimate for a project in Kennett Square?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call ProBrothers at (484) 745-4097 or fill out our online contact form. We provide a free, no-obligation quote for Kennett Square homeowners and typically respond within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of projects does ProBrothers handle in Kennett Square?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From full kitchen and bathroom remodels to home additions, basement finishing, custom cabinets, and architectural trim, our Kennett Square team manages projects of every size from design through final finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Kennett Square, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers is a fully licensed and insured general contractor with 15+ years of experience, and every Kennett Square project is completed to meet local building codes."
+          }
+        }
+      ]
     }
   ]
 };
 ---
 <Layout
-  title="Home Construction Contractor in Kennett Square, PA | ProBrothers"
+  title="Home Construction in Kennett Square, PA | ProBrothers"
   description="ProBrothers is Kennett Square's trusted construction contractor — custom homes, bathroom renos, additions, cabinets, trimwork & more. Free local consultation."
   canonical="https://probrothers.com/locations/kennett-square/"
-  ogTitle="Home Construction Contractor in Kennett Square, PA | ProBrothers"
+  ogTitle="Home Construction in Kennett Square, PA | ProBrothers"
   ogDescription="ProBrothers — Kennett Square, PA's trusted construction contractor. Custom homes, additions, kitchens, cabinets & interior finishing. Free quote today."
   ogUrl="https://probrothers.com/locations/kennett-square/"
   ogImage="https://probrothers.com/assets/img/hero-remodel.webp"
-  twitterTitle="Home Construction Contractor in Kennett Square, PA | ProBrothers"
+  twitterTitle="Home Construction in Kennett Square, PA | ProBrothers"
   twitterDescription="ProBrothers — Kennett Square, PA's trusted construction contractor. Custom homes, additions, cabinets & more."
   twitterImage="https://probrothers.com/assets/img/hero-remodel.webp"
   preloadHero={false}

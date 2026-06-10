@@ -1,0 +1,66 @@
+---
+/**
+ * Custom 404 page. Cloudflare (wrangler.toml not_found_handling = "404-page")
+ * auto-serves /404.html for any unmatched route. Reuses the global Layout +
+ * page-banner design system. Noindex so Google never indexes the error page.
+ */
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Page Not Found (404) | ProBrothers"
+  description="Sorry, the page you're looking for can't be found. Explore ProBrothers' contractor services in Media, PA or get in touch for a free estimate."
+  canonical="https://probrothers.com/404/"
+  ogTitle="Page Not Found (404) | ProBrothers"
+  ogDescription="Sorry, the page you're looking for can't be found. Explore ProBrothers' contractor services in Media, PA."
+  ogUrl="https://probrothers.com/404/"
+  ogImage="https://probrothers.com/assets/img/hero-remodel.webp"
+  twitterTitle="Page Not Found (404) | ProBrothers"
+  twitterDescription="Sorry, the page you're looking for can't be found. Explore ProBrothers' contractor services in Media, PA."
+  twitterImage="https://probrothers.com/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, follow" />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="" fetchpriority="high" width="1600" height="1067" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">404</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Page Not Found</h1>
+      <p class="page-banner__sub">Error 404 &mdash; the page you requested doesn&rsquo;t exist</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== 404 body ===== -->
+  <section class="section legal" aria-label="Page not found">
+    <div class="container container--narrow" style="text-align:center">
+      <article class="legal__body">
+        <p>We couldn&rsquo;t find the page you were looking for. It may have been moved, renamed, or no longer exists. Let&rsquo;s get you back on track.</p>
+        <p style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:2rem">
+          <a class="btn btn--accent" href="/">Back to Home</a>
+          <a class="btn btn--ghost" href="/services/">Our Services</a>
+          <a class="btn btn--ghost" href="/contact/">Contact Us</a>
+        </p>
+        <p style="margin-top:2rem">Or call us directly at <a href="tel:4847454097">(484)&nbsp;745-4097</a> for a free estimate on your project in Media, PA.</p>
+      </article>
+    </div>
+  </section>
+</Layout>

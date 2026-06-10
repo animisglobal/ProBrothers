@@ -50,7 +50,7 @@ const pageSchema = {
       "datePublished": "2025-03-24",
       "dateModified": "2025-03-24",
       "author": { "@type": "Person", "name": "ProBrothers Team" },
-      "publisher": {
+      "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
         "name": "ProBrothers",
         "url": "https://probrothers.com/",
@@ -58,14 +58,14 @@ const pageSchema = {
       },
       "image": {
         "@type": "ImageObject",
-        "url": "https://probrothers.com/assets/img/blog/image-5.png",
+        "url": "https://probrothers.com/assets/img/blog/image-5.webp",
         "width": 1600, "height": 1067
       },
       "description": "A home remodel is more than just a facelift; it's an investment in comfort, efficiency, and style. Explore kitchen, bathroom, addition, basement, and exterior remodeling tips from ProBrothers in Media, PA.",
       "mainEntityOfPage": { "@id": "https://probrothers.com/blog/home-remodeling-guide-2025/" },
       "inLanguage": "en-US",
       "isPartOf": { "@id": "https://probrothers.com/blog/" },
-      "about": { "@type": "Service", "name": "Home Remodeling", "provider": { "@type": "Organization", "name": "ProBrothers" } }
+      "about": { "@type": "Service", "name": "Home Remodeling", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers" } }
     },
     {
       "@type": "BreadcrumbList",
@@ -81,15 +81,15 @@ const pageSchema = {
 ---
 <Layout
   title="The Ultimate Guide to Home Remodeling in 2026 | ProBrothers"
-  description="A home remodel is more than a facelift — it's an investment. Explore kitchen, bathroom, addition, basement, and exterior remodeling tips from ProBrothers in Media, PA."
+  description="A home remodel is more than a facelift — it's an investment. Explore kitchen, bathroom, addition, basement, and exterior remodeling tips."
   canonical="https://probrothers.com/blog/home-remodeling-guide-2025/"
   ogTitle="Transforming Your Home: The Ultimate Guide to Remodeling in 2026"
   ogDescription="From kitchen upgrades to whole-house renovations — ProBrothers covers every remodeling project type, contractor tips, and design ideas for 2026."
   ogUrl="https://probrothers.com/blog/home-remodeling-guide-2025/"
-  ogImage="https://probrothers.com/assets/img/blog/image-5.png"
+  ogImage="https://probrothers.com/assets/img/blog/image-5.webp"
   twitterTitle="The Ultimate Guide to Home Remodeling in 2026 | ProBrothers"
   twitterDescription="Kitchen, bathroom, additions, basement, exterior — a complete home remodeling guide for 2026 from ProBrothers in Media, PA."
-  twitterImage="https://probrothers.com/assets/img/blog/image-5.png"
+  twitterImage="https://probrothers.com/assets/img/blog/image-5.webp"
   preloadHero={false}
 >
   <Fragment slot="head">
@@ -151,7 +151,7 @@ const pageSchema = {
 
           <div class="post-hero reveal">
             <img
-              src="/assets/img/blog/image-5.png"
+              src="/assets/img/blog/image-5.webp"
               alt="Transforming Your Home: The Ultimate Guide to Remodeling in 2026"
               width="1200" height="628"
               fetchpriority="high"

@@ -17,7 +17,7 @@ const pageSchema = {
       "@id": "https://probrothers.com/locations/springfield/#service",
       "name": "Expert Construction Company in Springfield, PA",
       "description": "Full-service residential construction, remodeling, custom cabinets, trimwork, and home additions in Springfield, Pennsylvania by ProBrothers.",
-      "provider": {
+      "provider": { "@id": "https://probrothers.com/#business",
         "@type": "GeneralContractor",
         "name": "ProBrothers",
         "url": "https://probrothers.com/",
@@ -41,6 +41,44 @@ const pageSchema = {
         { "@type": "ListItem", "position": 1, "name": "Home",          "item": "https://probrothers.com/" },
         { "@type": "ListItem", "position": 2, "name": "Locations",     "item": "https://probrothers.com/locations/" },
         { "@type": "ListItem", "position": 3, "name": "Springfield, PA", "item": "https://probrothers.com/locations/springfield/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://probrothers.com/locations/springfield/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer remodeling and construction services in Springfield, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers serves Springfield, PA and the surrounding area with full-service residential and commercial construction, home remodeling, additions, custom cabinetry, and trim carpentry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a free estimate for a project in Springfield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call ProBrothers at (484) 745-4097 or fill out our online contact form. We provide a free, no-obligation quote for Springfield homeowners and typically respond within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of projects does ProBrothers handle in Springfield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From full kitchen and bathroom remodels to home additions, basement finishing, custom cabinets, and architectural trim, our Springfield team manages projects of every size from design through final finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Springfield, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers is a fully licensed and insured general contractor with 15+ years of experience, and every Springfield project is completed to meet local building codes."
+          }
+        }
       ]
     }
   ]

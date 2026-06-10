@@ -1,8 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://probrothers.com/#business",
+      "name": "ProBrothers",
+      "url": "https://probrothers.com/",
+      "logo": "https://probrothers.com/assets/img/logo.png",
+      "image": "https://probrothers.com/assets/img/hero-trim.webp",
+      "telephone": "+1-484-745-4097",
+      "email": "info@probrothers.com",
+      "sameAs": [
+        "https://www.instagram.com/probrothersllc",
+        "https://www.youtube.com/@probrothers2131",
+        "https://www.yelp.com/biz/probrothers-media-2",
+        "https://www.facebook.com/profile.php?id=100080301824582"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Sarah & Mike Jenkins" },
+          "reviewBody": "Finding a reliable contractor is stressful, but going with ProBrothers for our master bathroom remodel was a great call. The craftsmanship on the shower install and the vanity is top-notch. It's rare to find a team that sticks to their timeline so closely. Highly recommend them if you have a bigger renovation project."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Dan Miller" },
+          "reviewBody": "Great experience from start to finish. We had a wall taken down to open up our living space, and they handled everything from the structural side to the finishing drywall and trim. The project stayed on budget and they communicated with us every step of the way."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Andriy Koval" },
+          "reviewBody": "I needed some crown molding and baseboards installed in our living room and dining area to finish up a DIY project. ProBrothers got it done in a couple of days. The joints are completely seamless, and the attention to detail is obvious. It completely elevated the look of the downstairs."
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://probrothers.com/#website",
+      "url": "https://probrothers.com/",
+      "name": "ProBrothers",
+      "description": "Full-service residential & commercial general contractor in Media, PA.",
+      "publisher": { "@id": "https://probrothers.com/#business" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" }
+      ]
+    }
+  ]
+};
 ---
 <Layout
-  title="ProBrothers — General Contractor & Home Remodeling | Media, PA"
+  title="ProBrothers — General Contractor in Media, PA"
   description="ProBrothers is Media, PA's trusted general contractor — trim, cabinets, remodeling, additions & windows. 15+ years of expert craftsmanship. Free quote."
   canonical="https://probrothers.com/"
   ogTitle="ProBrothers — General Contractor & Home Remodeling | Media, PA"
@@ -13,6 +76,9 @@ import Layout from '../layouts/Layout.astro';
   twitterDescription="Full-service contractor in Media, PA. Trim, cabinets, remodeling, additions & windows. 15+ years. Free quote."
   twitterImage="https://probrothers.com/assets/img/hero-trim.webp"
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(homeSchema)} />
+  </Fragment>
   <h1 class="sr-only">ProBrothers — General Contractor &amp; Home Remodeling in Media, PA</h1>
   <!-- ===== Hero carousel ===== -->
   <section class="hero" id="home">

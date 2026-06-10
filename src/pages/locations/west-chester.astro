@@ -18,7 +18,7 @@ const pageSchema = {
       "@id": "https://probrothers.com/locations/west-chester/#service",
       "name": "Construction Services in West Chester, PA",
       "description": "Full-service residential and commercial construction, remodeling, and renovation services in West Chester, Pennsylvania by ProBrothers.",
-      "provider": {
+      "provider": { "@id": "https://probrothers.com/#business",
         "@type": "GeneralContractor",
         "name": "ProBrothers",
         "url": "https://probrothers.com/",
@@ -43,19 +43,57 @@ const pageSchema = {
         { "@type": "ListItem", "position": 2, "name": "Locations",      "item": "https://probrothers.com/locations/" },
         { "@type": "ListItem", "position": 3, "name": "West Chester, PA", "item": "https://probrothers.com/locations/west-chester/" }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://probrothers.com/locations/west-chester/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer remodeling and construction services in West Chester, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers serves West Chester, PA and the surrounding area with full-service residential and commercial construction, home remodeling, additions, custom cabinetry, and trim carpentry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a free estimate for a project in West Chester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call ProBrothers at (484) 745-4097 or fill out our online contact form. We provide a free, no-obligation quote for West Chester homeowners and typically respond within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of projects does ProBrothers handle in West Chester?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From full kitchen and bathroom remodels to home additions, basement finishing, custom cabinets, and architectural trim, our West Chester team manages projects of every size from design through final finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in West Chester, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers is a fully licensed and insured general contractor with 15+ years of experience, and every West Chester project is completed to meet local building codes."
+          }
+        }
+      ]
     }
   ]
 };
 ---
 <Layout
-  title="No.1 Home Construction Company Near West Chester | ProBrothers"
+  title="Home Construction Near West Chester | ProBrothers"
   description="ProBrothers is West Chester, PA's go-to construction company — custom homes, kitchen remodeling, basement finishing, roofing, historic restoration & more."
   canonical="https://probrothers.com/locations/west-chester/"
-  ogTitle="No.1 Home Construction Company Near West Chester | ProBrothers"
+  ogTitle="Home Construction Near West Chester | ProBrothers"
   ogDescription="ProBrothers — West Chester, PA's trusted construction & remodeling company. Custom homes, additions, kitchens & more. Free quote today."
   ogUrl="https://probrothers.com/locations/west-chester/"
   ogImage="https://probrothers.com/assets/img/hero-remodel.webp"
-  twitterTitle="No.1 Home Construction Company Near West Chester | ProBrothers"
+  twitterTitle="Home Construction Near West Chester | ProBrothers"
   twitterDescription="ProBrothers — West Chester, PA's trusted construction company. Custom homes, additions, kitchens & more."
   twitterImage="https://probrothers.com/assets/img/hero-remodel.webp"
   preloadHero={false}

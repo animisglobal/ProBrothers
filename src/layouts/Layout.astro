@@ -47,10 +47,13 @@ const {
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
+    "@id": "https://probrothers.com/#business",
     "name": "ProBrothers",
     "image": "https://probrothers.com/assets/img/hero-trim.webp",
+    "logo": "https://probrothers.com/assets/img/logo.png",
     "url": "https://probrothers.com/",
     "telephone": "+1-484-745-4097",
+    "email": "info@probrothers.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -60,9 +63,26 @@ const {
       "postalCode": "19063",
       "addressCountry": "US"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.917,
+      "longitude": -75.387
+    },
     "areaServed": ["Media", "West Chester", "Philadelphia", "Newtown Square", "Allentown", "Marple", "King of Prussia", "Nether Providence", "Springfield", "Malvern", "Greenville", "Glen Mills", "Kennett Square", "Newtown", "Phoenixville"],
     "description": "Full-service residential and commercial construction and remodeling company with over 15 years of experience. Trim, cabinets, remodeling, additions, windows & doors.",
-    "openingHours": "Mo-Sa 08:00-18:00"
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/probrothersllc",
+      "https://www.youtube.com/@probrothers2131",
+      "https://www.yelp.com/biz/probrothers-media-2",
+      "https://www.facebook.com/profile.php?id=100080301824582"
+    ]
   })} />
 
   <!-- Preconnect not needed (all assets self-hosted) -->

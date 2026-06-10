@@ -83,41 +83,49 @@ import Layout from '../layouts/Layout.astro';
   <!-- ===== Services ===== -->
   <section class="section services" id="services">
     <div class="container">
+      <!--
+        Our Services — content restored 100% verbatim from the original
+        https://probrothers.com/ "OUR SERVICES" section (2026-06-10).
+        Intro paragraph, the three card titles (WINDOWS & DOORS / CABINETS /
+        REMODELING), each card's description and the "VIEW ALL SERVICES" CTA are
+        copied exactly from the source. Card links point to the matching service
+        routes the source used. Card images keep the migrated svc-*.webp art.
+      -->
       <div class="section__head reveal">
         <span class="section__kicker">What We Do</span>
-        <h2 class="section__title">Our Services</h2>
-        <p class="section__lead">ProBrothers is a full-service residential and commercial construction and remodeling company with <strong>over 15 years of experience</strong>. From precision trim carpentry and custom cabinetry to complete interior remodels, seamless home additions, new construction, and high-performance window and door installations, we handle every detail in-house. Our skilled craftsmen combine premium materials, careful planning, and daily client communication to deliver projects that stay on schedule and on budget. Whether you're refreshing a single room or transforming an entire property, we bring the same level of precision, professionalism, and pride to every job we take on.</p>
+        <h2 class="section__title">OUR SERVICES</h2>
+        <p class="section__lead">ProBrothers is a full-service residential and commercial construction and remodeling company dedicated to helping homeowners and businesses enhance and expand their spaces. We specialize in custom trim work, cabinetry, home remodeling, additions, and a wide range of construction services.With over 15 years of experience and a strong commitment to customer satisfaction, you can trust us for your next project. We work on kitchens, living areas, windows, doors, and more&mdash;always focusing on practical design, durable materials, and craftsmanship built to last, not just follow short-term trends. At ProBrothers, we deliver professional, personalized services tailored to meet the unique needs of both residential and commercial clients.</p>
       </div>
 
       <div class="cards">
         <article class="card reveal">
-          <div class="card__media"><img src="/assets/img/svc-windows.webp" alt="Windows & Doors" loading="lazy" width="750" height="500" /></div>
+          <div class="card__media"><a href="/services/windows-and-doors/" tabindex="-1" aria-hidden="true"><img src="/assets/img/svc-windows.webp" alt="WINDOWS &amp; DOORS" loading="lazy" width="750" height="500" /></a></div>
           <div class="card__body">
-            <h3>Windows &amp; Doors</h3>
-            <p>Energy-efficient installs and replacements that boost comfort, security, and curb appeal.</p>
-            <a href="#contact" class="card__link">Learn more <span>&#8594;</span></a>
+            <h3><a href="/services/windows-and-doors/">WINDOWS &amp; DOORS</a></h3>
+            <p>Windows &amp; Doors Installation in Media, PA &amp; Surrounding Areas</p>
+            <a href="/services/windows-and-doors/" class="card__link">Learn more <span>&#8594;</span></a>
           </div>
         </article>
         <article class="card reveal" style="--d:.1s">
-          <div class="card__media"><img src="/assets/img/svc-cabinets.webp" alt="Cabinets" loading="lazy" width="750" height="500" /></div>
+          <div class="card__media"><a href="/services/cabinets/" tabindex="-1" aria-hidden="true"><img src="/assets/img/svc-cabinets.webp" alt="CABINETS" loading="lazy" width="750" height="500" /></a></div>
           <div class="card__body">
-            <h3>Cabinets</h3>
-            <p>Bespoke cabinetry designed and built to fit your style and maximize every inch of space.</p>
-            <a href="#contact" class="card__link">Learn more <span>&#8594;</span></a>
+            <h3><a href="/services/cabinets/">CABINETS</a></h3>
+            <p>Create Stunning, Functional Spaces with Expertly Designed Custom Cabinets</p>
+            <a href="/services/cabinets/" class="card__link">Learn more <span>&#8594;</span></a>
           </div>
         </article>
         <article class="card reveal" style="--d:.2s">
-          <div class="card__media"><img src="/assets/img/svc-remodel.webp" alt="Remodeling" loading="lazy" width="750" height="500" /></div>
+          <div class="card__media"><a href="/services/remodeling/" tabindex="-1" aria-hidden="true"><img src="/assets/img/svc-remodel.webp" alt="REMODELING" loading="lazy" width="750" height="500" /></a></div>
           <div class="card__body">
-            <h3>Remodeling</h3>
-            <p>End-to-end remodels managed start to finish, turning your vision into a finished reality.</p>
-            <a href="#contact" class="card__link">Learn more <span>&#8594;</span></a>
+            <h3><a href="/services/remodeling/">REMODELING</a></h3>
+            <p>Unlock Your Home&rsquo;s Potential with our Comprehensive Remodeling Expertise</p>
+            <a href="/services/remodeling/" class="card__link">Learn more <span>&#8594;</span></a>
           </div>
         </article>
       </div>
 
       <div class="services__cta reveal">
-        <a href="#services" class="btn btn--accent">View All Services</a>
+        <a href="/services/" class="btn btn--accent">VIEW ALL SERVICES</a>
       </div>
     </div>
   </section>

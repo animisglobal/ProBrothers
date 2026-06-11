@@ -1,0 +1,85 @@
+# ProBrothers 301 redirect map — old WP slugs → new Astro slugs
+# Cloudflare static-assets worker honors this file (OLD  NEW  301). First match wins.
+
+# Services (flat → foldered)
+/trim/                        /services/trim/                 301
+/cabinets/                    /services/cabinets/             301
+/remodeling/                  /services/remodeling/           301
+/windows-doors/               /services/windows-and-doors/    301
+
+# Locations
+/construction-services-west-chester/                                      /locations/west-chester/        301
+/construction-services-in-marple/                                         /locations/marple/              301
+/construction-services-in-media/                                          /locations/media/               301
+/construction-services-in-rehoboth/                                       /locations/rehoboth/            301
+/construction-services-in-greenville-de/                                  /locations/greenville/          301
+/construction-company-in-malvern/                                         /locations/malvern/             301
+/construction-company-in-springfield/                                     /locations/springfield/         301
+/construction-company-in-allentown-pa/                                    /locations/allentown/           301
+/construction-company-in-glen-mills/                                      /locations/glen-mills/          301
+/construction-company-in-phoenixville/                                    /locations/phoenixville/        301
+/construction-contractor-in-kennett-square/                               /locations/kennett-square/      301
+/best-construction-company-in-philadelphia/                               /locations/philadelphia/        301
+/king-of-prussia-home-renovation/                                         /locations/king-of-prussia/     301
+/home-remodeling-carpentry-services-in-newtown/                           /locations/newtown/             301
+/home-remodeling-carpentry-services-in-nether-providence-township-pa/     /locations/nether-providence/   301
+
+# Blog (root → /blog/)
+/guide-to-hiring-remodeling-contractors/                              /blog/guide-to-hiring-remodeling-contractors/                              301
+/why-choose-probrothers-for-home-remodeling/                          /blog/why-choose-probrothers-for-home-remodeling/                          301
+/selecting-the-right-windows-for-your-home-a-comprehensive-guide/     /blog/selecting-the-right-windows-for-your-home-a-comprehensive-guide/     301
+/why-renovating-your-home-could-be-a-better-choice-than-buying-new/   /blog/why-renovating-your-home-could-be-a-better-choice-than-buying-new/   301
+/must-have-cabinet-features-for-home/                                 /blog/must-have-cabinet-features-for-home/                                 301
+/choosing-the-right-wood-for-cabinets/                                /blog/choosing-the-right-wood-for-cabinets/                                301
+/how-trim-carpentry-elevates-home-aesthetics/                         /blog/how-trim-carpentry-elevates-home-aesthetics/                         301
+/everything-you-need-to-know-about-custom-built-additions/            /blog/everything-you-need-to-know-about-custom-built-additions/            301
+/custom-construction-services-offered-by-probrothers/                 /blog/custom-construction-services-offered-by-probrothers/                 301
+/top-general-contractors-in-pennsylvania/                             /blog/top-general-contractors-in-pennsylvania/                             301
+/best-remodeling-contractor-in-pennsylvania/                          /blog/best-remodeling-contractor-in-pennsylvania/                          301
+/kitchen-cabinets-cost/                                               /blog/kitchen-cabinets-cost/                                               301
+/home-remodeling-guide-2025/                                          /blog/home-remodeling-guide-2025/                                          301
+/how-to-choose-right-cabinet-styles-for-home/                         /blog/how-to-choose-right-cabinet-styles-for-home/                         301
+
+# Portfolio / projects hub
+/portfolio/        /projects/    301
+/our-projects/     /projects/    301
+
+# Individual project detail pages → category pages
+/projects/curved-stair-wall-trim/          /projects/trim/             301
+/projects/white-trim-on-stair-wall/        /projects/trim/             301
+/projects/white-ceiling/                   /projects/trim/             301
+/projects/gold-beams/                      /projects/trim/             301
+/projects/brown-beams/                     /projects/trim/             301
+/projects/gray-mantle-beams/               /projects/trim/             301
+/projects/black-beams/                     /projects/trim/             301
+/projects/white-coffered-ceiling/          /projects/trim/             301
+/projects/blackhorse-house/                /projects/remodeling/       301
+/projects/blue-library/                    /projects/remodeling/       301
+/projects/dark-blue-office/                /projects/remodeling/       301
+/projects/fireplace/                       /projects/remodeling/       301
+/projects/wallpaper/                       /projects/remodeling/       301
+/projects/bathroom-restoration/            /projects/remodeling/       301
+/projects/two-tone-kitchen-restoration/    /projects/cabinets/         301
+/projects/light-blue-cabinets/             /projects/cabinets/         301
+/projects/white-bathroom-vanities-closets/ /projects/cabinets/         301
+/projects/large-bathroom-window/           /projects/windows-doors/    301
+/projects/black-window/                    /projects/windows-doors/    301
+/projects/doors/                           /projects/windows-doors/    301
+/projects/window-casing/                   /projects/windows-doors/    301
+
+# WP category archives → blog
+/category/build/        /blog/    301
+/category/cabinets/     /blog/    301
+/category/contractors/  /blog/    301
+/category/design/       /blog/    301
+/category/flooring/     /blog/    301
+/category/painting/     /blog/    301
+/category/remodeling/   /blog/    301
+/category/renovation/   /blog/    301
+/category/repairs/      /blog/    301
+/category/tiling/       /blog/    301
+/category/trim/         /blog/    301
+
+# Web stories
+/web-stories/                                     /blog/                          301
+/web-stories/is-100k-enough-to-renovate-a-house/  /blog/kitchen-cabinets-cost/    301

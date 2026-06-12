@@ -495,7 +495,12 @@ const pageSchema = {
           <h2 class="contact-form-box__heading">Contact Us</h2>
           <p class="contact-form-box__sub">Tell us about your windows and doors project and we'll get back to you within one business day.</p>
 
-          <form class="contact-form" id="windowsForm" action="#" method="post" novalidate aria-label="Windows and doors quote form">
+          <form class="contact-form" id="windowsForm" action="https://api.web3forms.com/submit" method="post" novalidate aria-label="Windows and doors quote form">
+            <!-- Web3Forms -->
+            <input type="hidden" name="access_key" value="8456cdb6-db18-45b3-b03d-6ce0cde7ff09" />
+            <input type="hidden" name="subject" value="ProBrothers — Windows and doors quote submission" />
+            <input type="hidden" name="from_name" value="ProBrothers Website" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="contact-form__row">
               <div class="contact-form__group">
                 <label for="wFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>

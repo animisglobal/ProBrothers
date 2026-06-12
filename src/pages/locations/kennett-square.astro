@@ -442,7 +442,12 @@ const pageSchema = {
         <div class="contact-form-box">
           <h2 class="contact-form-box__heading">Get a FREE Quote!</h2>
           <p class="contact-form-box__sub">Fill out the form below and we'll get back to you with a personalized quote.</p>
-          <form class="contact-form" id="kennettQuoteForm" action="#" method="post" novalidate aria-label="Kennett Square, PA construction quote form">
+          <form class="contact-form" id="kennettQuoteForm" action="https://api.web3forms.com/submit" method="post" novalidate aria-label="Kennett Square, PA construction quote form">
+            <!-- Web3Forms -->
+            <input type="hidden" name="access_key" value="8456cdb6-db18-45b3-b03d-6ce0cde7ff09" />
+            <input type="hidden" name="subject" value="ProBrothers — Kennett Square, PA construction quote submission" />
+            <input type="hidden" name="from_name" value="ProBrothers Website" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="contact-form__row">
               <div class="contact-form__group">
                 <label for="ksFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>

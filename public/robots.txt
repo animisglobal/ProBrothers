@@ -1,2 +1,81 @@
+# robots.txt for probrothers.com
+# Strategy: Explicitly allow the top AI crawlers plus traditional search
+# engines (Google, Bing, DuckDuckGo); disallow everything else.
+
+Sitemap: https://probrothers.com/sitemap.xml
+
+# --- Traditional search engines (required for visibility) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# --- AI crawlers (allowed) ---
+
+# OpenAI (ChatGPT / GPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (Gemini / Vertex AI)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Amazon (Alexa / Rufus)
+User-agent: Amazonbot
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
+
+# ByteDance (TikTok / Doubao) — note: does not reliably honor robots.txt
+User-agent: Bytespider
+Allow: /
+
+# --- Block everything else ---
 User-agent: *
 Disallow: /

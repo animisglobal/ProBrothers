@@ -24,6 +24,9 @@ const isBlog = pathname.startsWith('/blog');
         <li><a href="/about/" class={isAbout ? 'active' : ''}>About</a></li>
         <li class="has-sub">
           <a href="/services/" class={isServices ? 'active' : ''}>Services</a>
+          <button class="submenu-toggle" type="button" aria-label="Toggle Services submenu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+          </button>
           <ul class="submenu">
             <li><a href="/services/trim/">Trim</a></li>
             <li><a href="/services/cabinets/">Cabinets</a></li>
@@ -35,6 +38,9 @@ const isBlog = pathname.startsWith('/blog');
         </li>
         <li class="has-sub">
           <a href="/projects/" class={isProjects ? 'active' : ''}>Projects</a>
+          <button class="submenu-toggle" type="button" aria-label="Toggle Projects submenu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+          </button>
           <ul class="submenu">
             <li><a href="/projects/trim/">Trim</a></li>
             <li><a href="/projects/cabinets/">Cabinets</a></li>
@@ -44,6 +50,9 @@ const isBlog = pathname.startsWith('/blog');
         </li>
         <li class="has-sub">
           <a href="/locations/" class={isLocations ? 'active' : ''}>Locations</a>
+          <button class="submenu-toggle" type="button" aria-label="Toggle Locations submenu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+          </button>
           <ul class="submenu submenu--cols">
             <li><a href="/locations/media/">Media, PA</a></li>
             <li><a href="/locations/west-chester/">West Chester, PA</a></li>

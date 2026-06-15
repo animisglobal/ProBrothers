@@ -182,11 +182,11 @@ const pageSchema = {
       </div>
       <div class="loc-why__body reveal">
         <ul class="loc-why__list">
-          <li class="reveal"><strong>Local Expertise</strong> – We're proud to call Phoenixville home. Our knowledge of local building codes, architectural styles, and neighborhood expectations ensures your project is done right the first time.</li>
-          <li class="reveal" style="--d:.06s"><strong>Uncompromising Quality</strong> – The firm uses top-grade materials and proven techniques for superior results.</li>
-          <li class="reveal" style="--d:.12s"><strong>Transparent Communication</strong> – Our team keeps you informed every step of the way. We believe strong relationships are built on honesty and open communication.</li>
-          <li class="reveal" style="--d:.18s"><strong>Client Satisfaction</strong> – We're only satisfied when you are. Our work isn't just about buildings—it's about making your life better.</li>
-          <li class="reveal" style="--d:.24s"><strong>One-Stop Solution</strong> – The company handles design, permits, construction, and finishes in-house.</li>
+          <li class="reveal"><strong>Local Expertise</strong><span class="loc-why__desc">We're proud to call Phoenixville home. Our knowledge of local building codes, architectural styles, and neighborhood expectations ensures your project is done right the first time.</span></li>
+          <li class="reveal" style="--d:.06s"><strong>Uncompromising Quality</strong><span class="loc-why__desc">The firm uses top-grade materials and proven techniques for superior results.</span></li>
+          <li class="reveal" style="--d:.12s"><strong>Transparent Communication</strong><span class="loc-why__desc">Our team keeps you informed every step of the way. We believe strong relationships are built on honesty and open communication.</span></li>
+          <li class="reveal" style="--d:.18s"><strong>Client Satisfaction</strong><span class="loc-why__desc">We're only satisfied when you are. Our work isn't just about buildings—it's about making your life better.</span></li>
+          <li class="reveal" style="--d:.24s"><strong>One-Stop Solution</strong><span class="loc-why__desc">The company handles design, permits, construction, and finishes in-house.</span></li>
         </ul>
         <div class="loc-why__cta reveal" style="--d:.3s">
           <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
@@ -533,12 +533,13 @@ const pageSchema = {
 .loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 
 .loc-svc {

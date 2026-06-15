@@ -543,12 +543,13 @@ const pageSchema = {
 .loc-why__body-close p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 
 .loc-svc {

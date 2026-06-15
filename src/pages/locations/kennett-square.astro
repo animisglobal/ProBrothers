@@ -182,10 +182,10 @@ const pageSchema = {
       </div>
       <div class="loc-why__body reveal">
         <ul class="loc-why__list">
-          <li class="reveal"><strong>Local Insight &amp; Compliance</strong> – We know Kennett's zoning codes, conservation requirements, and historic preservation guidelines inside and out.</li>
-          <li class="reveal" style="--d:.06s"><strong>All-in-One Team</strong> – Services span custom home builds to trim, cabinetry, and basement finishing.</li>
-          <li class="reveal" style="--d:.12s"><strong>Real Local Results</strong> – Portfolio includes a colonial-style restoration off Mill Road.</li>
-          <li class="reveal" style="--d:.18s"><strong>Licensed, Insured &amp; Accountable</strong> – Full licensing, insurance, and transparent estimates.</li>
+          <li class="reveal"><strong>Local Insight &amp; Compliance</strong><span class="loc-why__desc">We know Kennett's zoning codes, conservation requirements, and historic preservation guidelines inside and out.</span></li>
+          <li class="reveal" style="--d:.06s"><strong>All-in-One Team</strong><span class="loc-why__desc">Services span custom home builds to trim, cabinetry, and basement finishing.</span></li>
+          <li class="reveal" style="--d:.12s"><strong>Real Local Results</strong><span class="loc-why__desc">Portfolio includes a colonial-style restoration off Mill Road.</span></li>
+          <li class="reveal" style="--d:.18s"><strong>Licensed, Insured &amp; Accountable</strong><span class="loc-why__desc">Full licensing, insurance, and transparent estimates.</span></li>
         </ul>
         <div class="loc-why__cta reveal" style="--d:.24s">
           <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
@@ -520,12 +520,13 @@ const pageSchema = {
 .loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 
 .loc-svc {

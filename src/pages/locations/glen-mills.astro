@@ -184,11 +184,11 @@ const pageSchema = {
       <div class="loc-why__body reveal">
         <p>When it comes to construction and remodeling projects in 2025, choosing the right company is crucial. Here's why Pro Brothers is the best choice for any construction service needs in Glen Mills, PA:</p>
         <ul class="loc-why__list">
-          <li class="reveal"><strong>Experienced Craftsmanship</strong> – With over 15 years in the industry, we bring top-tier skill and expertise to every project.</li>
-          <li class="reveal" style="--d:.06s"><strong>Comprehensive Construction Solutions</strong> – From luxury custom homes in glen mills to smart home automation, we offer a wide range of construction and renovation services tailored for 2025.</li>
-          <li class="reveal" style="--d:.12s"><strong>Locally Owned &amp; Operated</strong> – As a Glen Mills, PA-based construction company, we understand the local building codes, architectural styles, and climate needs, ensuring compliance with 2025 standards.</li>
-          <li class="reveal" style="--d:.18s"><strong>Customer-Focused Approach</strong> – We prioritize clear communication, transparency, and collaboration throughout every step of your project.</li>
-          <li class="reveal" style="--d:.24s"><strong>High-Quality Materials &amp; Techniques</strong> – We use only premium materials, energy-efficient solutions, and modern building techniques for long-lasting results.</li>
+          <li class="reveal"><strong>Experienced Craftsmanship</strong><span class="loc-why__desc">With over 15 years in the industry, we bring top-tier skill and expertise to every project.</span></li>
+          <li class="reveal" style="--d:.06s"><strong>Comprehensive Construction Solutions</strong><span class="loc-why__desc">From luxury custom homes in glen mills to smart home automation, we offer a wide range of construction and renovation services tailored for 2025.</span></li>
+          <li class="reveal" style="--d:.12s"><strong>Locally Owned &amp; Operated</strong><span class="loc-why__desc">As a Glen Mills, PA-based construction company, we understand the local building codes, architectural styles, and climate needs, ensuring compliance with 2025 standards.</span></li>
+          <li class="reveal" style="--d:.18s"><strong>Customer-Focused Approach</strong><span class="loc-why__desc">We prioritize clear communication, transparency, and collaboration throughout every step of your project.</span></li>
+          <li class="reveal" style="--d:.24s"><strong>High-Quality Materials &amp; Techniques</strong><span class="loc-why__desc">We use only premium materials, energy-efficient solutions, and modern building techniques for long-lasting results.</span></li>
         </ul>
         <div class="loc-why__cta reveal" style="--d:.3s">
           <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
@@ -600,12 +600,13 @@ const pageSchema = {
 .loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 .loc-svc {
   display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;

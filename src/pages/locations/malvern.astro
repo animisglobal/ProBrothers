@@ -184,11 +184,11 @@ const pageSchema = {
       </div>
       <div class="loc-why__body reveal">
         <ul class="loc-why__list">
-          <li class="reveal"><strong>Local Knowledge</strong> – We understand the nuances of building in Chester County from permitting and zoning in East Whiteland Township to working within Malvern Borough's architectural guidelines.</li>
-          <li class="reveal" style="--d:.06s"><strong>Community-Focused</strong> – Many of our clients are repeat homeowners right here in Malvern. We've completed kitchen remodels near Burke Park, window replacements in the Atwater area, and basement finishing for homes near the Great Valley Corporate Center.</li>
-          <li class="reveal" style="--d:.12s"><strong>Full-Service Approach</strong> – From design consultation to final inspection, everything happens under one roof. You won't need to juggle multiple contractors – we handle it all.</li>
-          <li class="reveal" style="--d:.18s"><strong>Transparent Process</strong> – You'll always know your project's progress, costs, and next steps. We believe clear communication builds lasting trust.</li>
-          <li class="reveal" style="--d:.24s"><strong>Guaranteed Quality</strong> – Every project is backed by our satisfaction guarantee. We take pride in every detail—from the framing to the final trim.</li>
+          <li class="reveal"><strong>Local Knowledge</strong><span class="loc-why__desc">We understand the nuances of building in Chester County from permitting and zoning in East Whiteland Township to working within Malvern Borough's architectural guidelines.</span></li>
+          <li class="reveal" style="--d:.06s"><strong>Community-Focused</strong><span class="loc-why__desc">Many of our clients are repeat homeowners right here in Malvern. We've completed kitchen remodels near Burke Park, window replacements in the Atwater area, and basement finishing for homes near the Great Valley Corporate Center.</span></li>
+          <li class="reveal" style="--d:.12s"><strong>Full-Service Approach</strong><span class="loc-why__desc">From design consultation to final inspection, everything happens under one roof. You won't need to juggle multiple contractors – we handle it all.</span></li>
+          <li class="reveal" style="--d:.18s"><strong>Transparent Process</strong><span class="loc-why__desc">You'll always know your project's progress, costs, and next steps. We believe clear communication builds lasting trust.</span></li>
+          <li class="reveal" style="--d:.24s"><strong>Guaranteed Quality</strong><span class="loc-why__desc">Every project is backed by our satisfaction guarantee. We take pride in every detail—from the framing to the final trim.</span></li>
         </ul>
         <div class="loc-why__cta reveal" style="--d:.3s">
           <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
@@ -519,12 +519,13 @@ const pageSchema = {
 .loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 
 .loc-svc {

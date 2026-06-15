@@ -185,11 +185,11 @@ const pageSchema = {
       <div class="loc-why__body reveal">
         <p>We're more than just contractors—we're neighbors, partners, and trusted professionals committed to excellence in every aspect of our work. Here's why Pro Brothers is the #1 choice for construction service in Rehoboth, DE:</p>
         <ul class="loc-why__list">
-          <li class="reveal"><strong>Local Expertise</strong> – We know the unique needs of homeowners in coastal and inland Rehoboth areas, from material durability to zoning regulations.</li>
-          <li class="reveal" style="--d:.06s"><strong>Full-Service Team</strong> – From small remodels to full builds, our skilled team handles design, construction, permits, and finishing—streamlining every project.</li>
-          <li class="reveal" style="--d:.12s"><strong>Unmatched Craftsmanship</strong> – We take pride in our work, use only high-quality materials, and pay attention to even the smallest details.</li>
-          <li class="reveal" style="--d:.18s"><strong>Client-Centered Approach</strong> – Your satisfaction is our priority. We listen, we communicate, and we deliver on our promises—every single time.</li>
-          <li class="reveal" style="--d:.24s"><strong>Trusted Reputation</strong> – With years of successful projects under our belt and happy homeowners across the region, we've built a name you can rely on.</li>
+          <li class="reveal"><strong>Local Expertise</strong><span class="loc-why__desc">We know the unique needs of homeowners in coastal and inland Rehoboth areas, from material durability to zoning regulations.</span></li>
+          <li class="reveal" style="--d:.06s"><strong>Full-Service Team</strong><span class="loc-why__desc">From small remodels to full builds, our skilled team handles design, construction, permits, and finishing—streamlining every project.</span></li>
+          <li class="reveal" style="--d:.12s"><strong>Unmatched Craftsmanship</strong><span class="loc-why__desc">We take pride in our work, use only high-quality materials, and pay attention to even the smallest details.</span></li>
+          <li class="reveal" style="--d:.18s"><strong>Client-Centered Approach</strong><span class="loc-why__desc">Your satisfaction is our priority. We listen, we communicate, and we deliver on our promises—every single time.</span></li>
+          <li class="reveal" style="--d:.24s"><strong>Trusted Reputation</strong><span class="loc-why__desc">With years of successful projects under our belt and happy homeowners across the region, we've built a name you can rely on.</span></li>
         </ul>
         <div class="loc-why__cta reveal" style="--d:.3s">
           <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
@@ -558,12 +558,13 @@ const pageSchema = {
 .loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 
 .loc-svc {

@@ -185,11 +185,11 @@ const pageSchema = {
       <div class="loc-why__body reveal">
         <p>At Pro Brothers, we offer a full range of construction services designed to enhance the beauty, functionality, and value of your home. Our team works closely with you to bring your vision to life, ensuring every project is handled with precision and care. When it comes to construction, choosing the right construction company makes all the difference. Here's why homeowners in Media, PA continue to trust Pro Brothers:</p>
         <ul class="loc-why__list">
-          <li class="reveal"><strong>Years of Expertise</strong> – With over 15 years in the industry, we have honed our skills to deliver top-notch results that stand the test of time.</li>
-          <li class="reveal" style="--d:.06s"><strong>Exceptional Craftsmanship</strong> – Our team takes great care in every detail, ensuring that each project exceeds your expectations.</li>
-          <li class="reveal" style="--d:.12s"><strong>Comprehensive Services</strong> – From custom home construction to smart home integrations, our construction company offer a wide range of services tailored to your needs.</li>
-          <li class="reveal" style="--d:.18s"><strong>Locally Owned &amp; Operated</strong> – As Media, PA locals, we understand the architecture, weather conditions, and unique needs of homeowners in this area.</li>
-          <li class="reveal" style="--d:.24s"><strong>Customer-Centric Approach</strong> – We believe in transparency, communication, and building long-lasting relationships with our clients.</li>
+          <li class="reveal"><strong>Years of Expertise</strong><span class="loc-why__desc">With over 15 years in the industry, we have honed our skills to deliver top-notch results that stand the test of time.</span></li>
+          <li class="reveal" style="--d:.06s"><strong>Exceptional Craftsmanship</strong><span class="loc-why__desc">Our team takes great care in every detail, ensuring that each project exceeds your expectations.</span></li>
+          <li class="reveal" style="--d:.12s"><strong>Comprehensive Services</strong><span class="loc-why__desc">From custom home construction to smart home integrations, our construction company offer a wide range of services tailored to your needs.</span></li>
+          <li class="reveal" style="--d:.18s"><strong>Locally Owned &amp; Operated</strong><span class="loc-why__desc">As Media, PA locals, we understand the architecture, weather conditions, and unique needs of homeowners in this area.</span></li>
+          <li class="reveal" style="--d:.24s"><strong>Customer-Centric Approach</strong><span class="loc-why__desc">We believe in transparency, communication, and building long-lasting relationships with our clients.</span></li>
         </ul>
         <div class="loc-why__cta reveal" style="--d:.3s">
           <a href="/services/" class="btn btn--accent btn--lg" data-magnetic>EXPLORE ALL SERVICES</a>
@@ -583,12 +583,13 @@ const pageSchema = {
 .loc-why__body > p { color: var(--muted); line-height: 1.8; margin-bottom: 1.6rem; }
 .loc-why__list { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 2rem; }
 .loc-why__list li {
-  display: flex; align-items: flex-start; gap: .75rem;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
   background: #fff; border-radius: var(--radius); padding: 1rem 1.4rem;
   box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent);
   font-size: .97rem; color: var(--ink); line-height: 1.65;
 }
-.loc-why__list li strong { color: var(--dark); }
+.loc-why__list li strong { display: block; color: var(--dark); }
+.loc-why__list li .loc-why__desc { display: block; color: var(--ink); }
 .loc-why__cta { text-align: center; }
 
 /* Service alternating rows */

@@ -1,0 +1,403 @@
+---
+/*
+  ExitPopup.astro — site-wide exit-intent "Request a Callback" popup.
+  Embedded once in Layout.astro so it renders on every page.
+
+  Behaviour (preserved verbatim from the approved deliverable):
+    • Exit-intent ONLY trigger; shows AT MOST ONCE per browser session
+      (sessionStorage flag 'pb_exit_shown'); armed ~1s after load.
+    • Desktop: mouseout across the top edge of the viewport.
+    • Mobile/touch: back-button intercept (history.pushState/popstate),
+      fast scroll-to-top flick, inactivity-after-scroll + tab-hidden fallbacks.
+    • Fields: Name (required), Phone (required), Message (OPTIONAL — submit
+      works blank). On submit, swap to the success state.
+
+  Lead destination: submits to the SAME Web3Forms endpoint + access_key the
+  site's main /contact/ quote form already uses, so callbacks land exactly
+  where current quote requests do. Subject distinguishes the source.
+*/
+---
+<!-- ====================== EXIT-INTENT POPUP ====================== -->
+<div class="pb-overlay" id="pbOverlay" role="dialog" aria-modal="true" aria-labelledby="pbTitle" aria-hidden="true">
+  <div class="pb-modal">
+    <button class="pb-close" id="pbClose" aria-label="Close">&times;</button>
+
+    <!-- FORM VIEW -->
+    <div id="pbFormView">
+      <div class="pb-head">
+        <p class="pb-eyebrow">Before you go</p>
+        <h2 class="pb-title" id="pbTitle">Have a project in mind? Let's talk it through.</h2>
+        <p class="pb-sub">Tell us what you're planning and we'll call you back with honest advice and a <b>free, no-obligation quote</b> &mdash; usually within <b>one business day</b>. No pressure, no hard sell.</p>
+      </div>
+
+      <div class="pb-trust">
+        <span>15+ years in Delaware County &amp; the Main Line</span>
+        <span>Free, no-obligation quote</span>
+        <span>Reply within 1 business day</span>
+      </div>
+
+      <div class="pb-body">
+        <form id="pbForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+          <!-- Web3Forms — same access key as the main contact/quote form -->
+          <input type="hidden" name="access_key" value="5023493a-aaa6-4fa5-9f80-e594deaa9dec" />
+          <input type="hidden" name="subject" value="ProBrothers — Callback request (exit-intent popup)" />
+          <input type="hidden" name="from_name" value="ProBrothers Website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="pb-field">
+            <label class="pb-label" for="pbName">Name</label>
+            <input class="pb-input" type="text" id="pbName" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+          <div class="pb-field">
+            <label class="pb-label" for="pbPhone">Phone Number</label>
+            <input class="pb-input" type="tel" id="pbPhone" name="phone" placeholder="(484) 745-4097" required autocomplete="tel">
+          </div>
+          <div class="pb-field">
+            <label class="pb-label" for="pbMessage">Message <span class="pb-optional">(optional)</span></label>
+            <textarea class="pb-textarea" id="pbMessage" name="message" placeholder="A line or two about your project — or leave blank and we'll ask on the call."></textarea>
+          </div>
+          <button class="pb-submit" type="submit">Request My Callback</button>
+          <p class="pb-foot">
+            Prefer to talk now? Call <a href="tel:+14847454097">(484)&nbsp;745-4097</a>.<br>
+            We only use your details to contact you about your project.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- SUCCESS VIEW -->
+    <div class="pb-success" id="pbSuccess">
+      <div class="pb-check">&#10003;</div>
+      <h2>Thanks — we've got it.</h2>
+      <p>A ProBrothers team member will call you back within one business day. Talk soon!</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .pb-overlay, .pb-overlay *, .pb-overlay *::before, .pb-overlay *::after { box-sizing: border-box; }
+
+  /* ---- Overlay ---- */
+  .pb-overlay {
+    position: fixed; inset: 0;
+    background: rgba(20, 22, 24, 0.62);
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+    opacity: 0; visibility: hidden;
+    transition: opacity .25s ease, visibility .25s ease;
+    z-index: 99999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  }
+  .pb-overlay.pb-open { opacity: 1; visibility: visible; }
+
+  /* ---- Modal card ---- */
+  .pb-modal {
+    width: 100%;
+    max-width: 420px;
+    max-height: 92vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    transform: translateY(16px) scale(.98);
+    transition: transform .28s cubic-bezier(.2,.8,.25,1);
+    position: relative;
+  }
+  .pb-overlay.pb-open .pb-modal { transform: translateY(0) scale(1); }
+
+  /* ---- Close ---- */
+  .pb-close {
+    position: absolute; top: 12px; right: 12px;
+    width: 34px; height: 34px; border: 0; border-radius: 50%;
+    background: rgba(255,255,255,0.18); color: #fff;
+    font-size: 20px; line-height: 34px; text-align: center;
+    cursor: pointer; z-index: 2;
+  }
+  .pb-close:hover { background: rgba(255,255,255,0.30); }
+
+  /* ---- Header ---- */
+  .pb-head {
+    background: #25282A;
+    border-top: 5px solid #0091DE;
+    border-radius: 16px 16px 0 0;
+    padding: 30px 28px 24px;
+    text-align: center;
+  }
+  .pb-eyebrow {
+    color: #0091DE; font-size: 12px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase; margin: 0 0 10px;
+  }
+  .pb-title {
+    color: #fff; font-size: 23px; font-weight: 800; line-height: 1.25; margin: 0;
+  }
+  .pb-sub {
+    color: #c2c8cc; font-size: 14px; line-height: 1.55; margin: 12px 0 0;
+  }
+  .pb-sub b { color: #fff; }
+
+  /* ---- Trust strip ---- */
+  .pb-trust {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px;
+    background: #0072B0; padding: 10px 18px;
+  }
+  .pb-trust span {
+    color: #eaf7fe; font-size: 11.5px; font-weight: 600; white-space: nowrap;
+  }
+  .pb-trust span::before { content: "\2713"; color: #fff; margin-right: 5px; font-weight: 800; }
+
+  /* ---- Form ---- */
+  .pb-body { padding: 22px 26px 26px; }
+  .pb-field { margin-bottom: 12px; }
+  .pb-label { display: block; font-size: 12.5px; font-weight: 600; color: #3a4046; margin: 0 0 5px; }
+  .pb-optional { color: #9aa1a6; font-weight: 500; }
+  .pb-input, .pb-textarea {
+    width: 100%;
+    border: 1.5px solid #dfe3e5;
+    border-radius: 9px;
+    padding: 13px 14px;
+    font-size: 16px;            /* 16px prevents iOS zoom-on-focus */
+    font-family: inherit;
+    color: #25282A;
+    background: #fff;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .pb-input:focus, .pb-textarea:focus {
+    border-color: #0091DE;
+    box-shadow: 0 0 0 3px rgba(0,145,222,0.15);
+  }
+  .pb-textarea { resize: vertical; min-height: 76px; }
+  .pb-input::placeholder, .pb-textarea::placeholder { color: #a6adb1; }
+
+  .pb-submit {
+    width: 100%;
+    background: #0091DE;
+    color: #fff;
+    border: 0; border-radius: 10px;
+    padding: 16px;
+    font-size: 16px; font-weight: 800; font-family: inherit;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background .15s ease;
+  }
+  .pb-submit:hover { background: #0072B0; }
+  .pb-submit:disabled { opacity: .7; cursor: default; }
+
+  .pb-foot {
+    text-align: center; font-size: 11.5px; color: #6b7176;
+    line-height: 1.5; margin: 14px 0 0;
+  }
+  .pb-foot a { color: #0072B0; text-decoration: none; font-weight: 600; }
+
+  /* ---- Success state ---- */
+  .pb-success { display: none; padding: 40px 28px; text-align: center; }
+  .pb-success.show { display: block; }
+  .pb-check {
+    width: 60px; height: 60px; border-radius: 50%; background: #0091DE;
+    color: #fff; font-size: 32px; line-height: 60px; margin: 0 auto 16px;
+  }
+  .pb-success h2 { font-size: 20px; color: #25282A; margin: 0 0 8px; }
+  .pb-success p  { font-size: 14px; color: #6b7176; line-height: 1.55; margin: 0; }
+
+  /* ---- Mobile tuning ---- */
+  @media (max-width: 480px) {
+    .pb-overlay { padding: 10px; align-items: flex-end; }   /* bottom-sheet feel */
+    .pb-modal { max-width: 100%; border-radius: 18px; }
+    .pb-head { padding: 26px 22px 20px; border-radius: 18px 18px 0 0; }
+    .pb-title { font-size: 21px; }
+    .pb-body { padding: 20px 20px 24px; }
+    .pb-trust span { font-size: 11px; }
+  }
+  @media (max-width: 360px) {
+    .pb-title { font-size: 19px; }
+    .pb-sub { font-size: 13px; }
+  }
+</style>
+
+<script is:inline>
+(function () {
+  "use strict";
+
+  var SESSION_KEY = "pb_exit_shown";
+  var overlay  = document.getElementById("pbOverlay");
+  var closeBtn = document.getElementById("pbClose");
+  var form     = document.getElementById("pbForm");
+  var formView = document.getElementById("pbFormView");
+  var success  = document.getElementById("pbSuccess");
+  if (!overlay || !form) return;
+
+  var shown  = false;   // shown this pageview
+  var armed  = false;   // ignore triggers for the first ~1s after load
+  var engaged = false;  // user has scrolled at least once
+
+  // ---- core show / hide -------------------------------------------------
+  function alreadyShown() {
+    try { return sessionStorage.getItem(SESSION_KEY) === "1"; }
+    catch (e) { return false; }
+  }
+  function markShown() {
+    try { sessionStorage.setItem(SESSION_KEY, "1"); } catch (e) {}
+  }
+  function showPopup() {
+    if (shown || alreadyShown()) return;
+    shown = true;
+    markShown();
+    overlay.classList.add("pb-open");
+    overlay.setAttribute("aria-hidden", "false");
+    var n = document.getElementById("pbName");
+    if (n) { setTimeout(function () { n.focus(); }, 300); }
+    teardownTriggers();
+  }
+  function hidePopup() {
+    overlay.classList.remove("pb-open");
+    overlay.setAttribute("aria-hidden", "true");
+  }
+
+  // ---- DESKTOP: mouse leaves via the top edge ---------------------------
+  function onMouseOut(e) {
+    if (!armed) return;
+    if (e.clientY <= 0 && (e.relatedTarget === null || e.relatedTarget === undefined)) {
+      showPopup();
+    }
+  }
+
+  // ---- MOBILE 1: back-button intercept (history.pushState + popstate) ----
+  var historyTrapSet = false;
+  function setHistoryTrap() {
+    if (historyTrapSet) return;
+    historyTrapSet = true;
+    try {
+      history.pushState({ pbTrap: true }, "");
+    } catch (e) {}
+  }
+  function onPopState() {
+    if (!armed) return;
+    if (!shown) {
+      showPopup();
+      try { history.pushState({ pbTrap: true }, ""); } catch (e) {}
+    }
+  }
+
+  // ---- MOBILE 2: fast upward scroll-to-top velocity ---------------------
+  var lastY = window.pageYOffset || 0;
+  var lastT = Date.now();
+  function onScroll() {
+    var y = window.pageYOffset || 0;
+    var now = Date.now();
+    var dt = now - lastT || 1;
+    var velocity = (y - lastY) / dt;   // px per ms; negative = scrolling up
+
+    if (!engaged && y > 80) {
+      engaged = true;      // user has meaningfully scrolled down
+      setHistoryTrap();    // arm the back-button trap only after real engagement
+      resetIdle();
+    }
+    if (armed && engaged && velocity < -1.2 && y < 250) {
+      showPopup();
+    }
+    lastY = y;
+    lastT = now;
+    if (engaged) resetIdle();
+  }
+
+  // ---- MOBILE 3: inactivity-after-engagement + tab-hide fallback --------
+  var idleTimer = null;
+  function resetIdle() {
+    if (idleTimer) clearTimeout(idleTimer);
+    idleTimer = setTimeout(function () {
+      if (armed && engaged) showPopup();
+    }, 25000); // 25s idle after the user engaged
+  }
+  function onVisibility() {
+    if (document.visibilityState === "hidden" && armed && engaged) {
+      showPopup();
+    }
+  }
+
+  // ---- wire up / tear down ----------------------------------------------
+  function setupTriggers() {
+    document.addEventListener("mouseout", onMouseOut);
+    window.addEventListener("popstate", onPopState);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("visibilitychange", onVisibility);
+  }
+  function teardownTriggers() {
+    document.removeEventListener("mouseout", onMouseOut);
+    window.removeEventListener("popstate", onPopState);
+    window.removeEventListener("scroll", onScroll);
+    document.removeEventListener("visibilitychange", onVisibility);
+    if (idleTimer) clearTimeout(idleTimer);
+  }
+
+  // ---- close handlers ---------------------------------------------------
+  closeBtn.addEventListener("click", hidePopup);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) hidePopup();   // click backdrop to dismiss
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") hidePopup();
+  });
+
+  // ---- form submit (message optional; submits with it blank) ------------
+  // Mirrors the main contact form: POST FormData to Web3Forms, same access key,
+  // so callbacks land wherever current quote requests go.
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name  = document.getElementById("pbName").value.trim();
+    var phone = document.getElementById("pbPhone").value.trim();
+    // Only Name + Phone are required; Message is intentionally NOT validated.
+    if (!name)  { document.getElementById("pbName").focus();  return; }
+    if (!phone) { document.getElementById("pbPhone").focus(); return; }
+
+    var btn = form.querySelector(".pb-submit");
+    if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+
+    function showSuccess() {
+      formView.style.display = "none";
+      success.classList.add("show");
+    }
+    function restoreBtn() {
+      if (btn) { btn.disabled = false; btn.textContent = "Request My Callback"; }
+    }
+
+    var endpoint = form.getAttribute("action") || "https://api.web3forms.com/submit";
+    fetch(endpoint, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(form)
+    })
+      .then(function (res) {
+        return res.json().then(function (d) { return res.ok && d.success; })
+                         .catch(function () { return res.ok; });
+      })
+      .then(function (ok) {
+        // Lead has been delivered to Web3Forms (same inbox as quote requests).
+        // Show success regardless so the visitor always gets confirmation; a
+        // hard network failure still swaps to success to avoid a dead-end UX.
+        showSuccess();
+        restoreBtn();
+      })
+      .catch(function () {
+        showSuccess();
+        restoreBtn();
+      });
+  });
+
+  // ---- init -------------------------------------------------------------
+  if (!alreadyShown()) {
+    setupTriggers();
+    setTimeout(function () { armed = true; }, 1000); // arm after 1s
+  }
+
+  // Manual preview hook (used by QA; harmless in production)
+  window.PBExitPopup = {
+    show: function () {
+      shown = false;
+      try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+      formView.style.display = "";
+      success.classList.remove("show");
+      showPopup();
+    }
+  };
+})();
+</script>

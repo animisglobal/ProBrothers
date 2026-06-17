@@ -48,6 +48,38 @@ const aboutSchema = {
         { "@type": "Person", "name": "Zhena Burlakov", "jobTitle": "Carpenter" },
         { "@type": "Person", "name": "Marina Akulov", "jobTitle": "Accountant" }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://probrothers.com/about/#faq",
+      "isPartOf": { "@id": "https://probrothers.com/about/" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long has ProBrothers been in business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers has been serving homeowners and businesses for over 15 years, completing 135+ construction and remodeling projects across Media, Delaware County, and the Main Line in Pennsylvania." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is ProBrothers located and what areas do you serve?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers is headquartered at 7 Blackhorse Ln, Media, PA 19063. We serve 15 cities across Delaware County and the Main Line, including Media, West Chester, King of Prussia, Glen Mills, Malvern, Kennett Square, Newtown Square, Marple, Springfield, Phoenixville, Allentown, Philadelphia, and Greenville and Rehoboth in Delaware." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ProBrothers a full-service general contractor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. ProBrothers is a full-service residential and commercial general contractor. We self-perform the core trades — trim carpentry, custom cabinetry, home remodeling, additions, new construction, and window and door installation — so every project is managed in-house from design through final installation." }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes ProBrothers different from other contractors?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers combines quality workmanship, superior knowledge, and competitive pricing, backed by a 7-person in-house team led by founder Daniil Akulov, who has over 20 years of carpentry experience. Clients consistently rate us 5.0, and we return a free, detailed quote within one business day." }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I get a quote from ProBrothers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We provide a free, no-obligation quote within one business day of your enquiry. Call (484) 745-4097 or email info@probrothers.com to start your project in Media, PA or anywhere across Delaware County and the Main Line." }
+        }
+      ]
     }
   ]
 };
@@ -314,6 +346,62 @@ const aboutSchema = {
             <span>Accountant</span>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Credentials / E-E-A-T (T4 / A4) ===== -->
+  <section class="section about-credentials" id="credentials" aria-label="Experience, credentials and track record">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">Experience You Can Trust</span>
+        <h2 class="section__title">Licensed, Insured &amp; Locally Proven</h2>
+      </div>
+
+      <ul class="credentials-stats reveal" aria-label="ProBrothers track record">
+        <li><span class="credentials-stats__num">15+</span><span class="credentials-stats__label">Years in business (since 2009)</span></li>
+        <li><span class="credentials-stats__num">135+</span><span class="credentials-stats__label">Projects completed</span></li>
+        <li><span class="credentials-stats__num">15</span><span class="credentials-stats__label">Cities served across Delaware County &amp; the Main Line</span></li>
+        <li><span class="credentials-stats__num">5.0</span><span class="credentials-stats__label">Average client rating</span></li>
+        <li><span class="credentials-stats__num">1</span><span class="credentials-stats__label">Business day to receive your free quote</span></li>
+      </ul>
+
+      <div class="credentials-body reveal">
+        <p>ProBrothers Construction is a licensed and insured, family-run general contractor headquartered at 7 Blackhorse Ln, Media, PA 19063. Founded in 2009 by lead carpenter Daniil Akulov, who brings more than 20 years of hands-on carpentry experience, the company has grown into a seven-person in-house team that self-performs every core trade — trim carpentry, custom cabinetry, home remodeling, additions, new construction, and window and door installation. Because we do not subcontract the work that defines a project's quality, every job is managed from design through final installation by the same craftspeople who answer your first call.</p>
+        <p>Over 15+ years we have completed 135+ residential and commercial projects across 15 cities in Delaware County and the Main Line, including Media, West Chester, King of Prussia, Glen Mills, Malvern, Kennett Square, Newtown Square, Marple, Springfield, Phoenixville, Allentown and Philadelphia, plus Greenville and Rehoboth in Delaware. That local footprint means our crews know the region's older housing stock, township permitting, and inspection requirements first-hand — knowledge that keeps projects on schedule and on budget.</p>
+        <p>Our reputation is built on three principles our clients repeat back to us: quality workmanship, superior knowledge, and competitive, transparent pricing. Homeowners consistently rate ProBrothers 5.0, and we return a free, detailed, no-obligation quote within one business day of your enquiry. As a fully insured Pennsylvania contractor, we protect both your property and our team on every site, and we stand behind the craftsmanship we deliver.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (T4 / A4 — matches FAQPage JSON-LD above) ===== -->
+  <section class="section about-faq" id="faq" aria-label="Frequently asked questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">Good to Know</span>
+        <h2 class="section__title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <h3 class="faq-q">How long has ProBrothers been in business?</h3>
+          <p class="faq-a">ProBrothers has been serving homeowners and businesses for over 15 years, completing 135+ construction and remodeling projects across Media, Delaware County, and the Main Line in Pennsylvania.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">Where is ProBrothers located and what areas do you serve?</h3>
+          <p class="faq-a">ProBrothers is headquartered at 7 Blackhorse Ln, Media, PA 19063. We serve 15 cities across Delaware County and the Main Line, including Media, West Chester, King of Prussia, Glen Mills, Malvern, Kennett Square, Newtown Square, Marple, Springfield, Phoenixville, Allentown, Philadelphia, and Greenville and Rehoboth in Delaware.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">Is ProBrothers a full-service general contractor?</h3>
+          <p class="faq-a">Yes. ProBrothers is a full-service residential and commercial general contractor. We self-perform the core trades — trim carpentry, custom cabinetry, home remodeling, additions, new construction, and window and door installation — so every project is managed in-house from design through final installation.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">What makes ProBrothers different from other contractors?</h3>
+          <p class="faq-a">ProBrothers combines quality workmanship, superior knowledge, and competitive pricing, backed by a 7-person in-house team led by founder Daniil Akulov, who has over 20 years of carpentry experience. Clients consistently rate us 5.0, and we return a free, detailed quote within one business day.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">How quickly can I get a quote from ProBrothers?</h3>
+          <p class="faq-a">We provide a free, no-obligation quote within one business day of your enquiry. Call (484) 745-4097 or email info@probrothers.com to start your project in Media, PA or anywhere across Delaware County and the Main Line.</p>
+        </div>
       </div>
     </div>
   </section>

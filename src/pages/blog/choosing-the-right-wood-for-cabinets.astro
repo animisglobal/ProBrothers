@@ -48,7 +48,7 @@ const pageSchema = {
       "url": "https://probrothers.com/blog/choosing-the-right-wood-for-cabinets/",
       "datePublished": "2024-12-23",
       "dateModified": "2024-12-23",
-      "author": { "@type": "Person", "name": "ProBrothers Team" },
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
         "name": "ProBrothers",
@@ -154,7 +154,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2024-12-23" />
-          <meta itemprop="author" content="ProBrothers" />
+          <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
             <img src="/assets/img/blog/Wood-for-cabinets.webp"
@@ -167,6 +167,8 @@ const pageSchema = {
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=cabinets">Cabinets</a></li>
               </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
             </div>
           </div>
 
@@ -378,6 +380,9 @@ const pageSchema = {
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
 .post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
 .post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
 .post-body { padding: 2rem 2.5rem 2.5rem; }
 .post-body__intro p { font-size: 1.08rem; line-height: 1.8; color: var(--text, #333); margin-bottom: 1rem; }
 .post-body__section { margin-top: 2.2rem; }

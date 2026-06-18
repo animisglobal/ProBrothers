@@ -1,0 +1,201 @@
+---
+/**
+ * Terms of Service page for probrothers.com (E-E-A-T fix E4).
+ * Mirrors the structure/styling of privacy-policy.astro (same Layout, page-banner,
+ * .legal__body, breadcrumb + WebPage/BreadcrumbList JSON-LD, Contact CTA).
+ * Original (not migrated) content — ProBrothers has no prior ToS page.
+ * Scope: estimates-only / non-binding, enquiry-form terms, limitation of
+ * liability, governing law (Pennsylvania), disputes contact.
+ */
+import Layout from '../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://probrothers.com/terms-of-service/",
+      "name": "Terms of Service | ProBrothers",
+      "url": "https://probrothers.com/terms-of-service/",
+      "description": "ProBrothers Terms of Service — the terms that govern your use of this website, our quote and enquiry process, limitation of liability, and governing law.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/" },
+      "breadcrumb": { "@id": "https://probrothers.com/terms-of-service/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/terms-of-service/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://probrothers.com/terms-of-service/" }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Terms of Service | ProBrothers — Media, PA"
+  description="ProBrothers Terms of Service — the terms that govern your use of this website, our quote and enquiry process, limitation of liability, and governing law (Pennsylvania)."
+  canonical="https://probrothers.com/terms-of-service/"
+  ogTitle="Terms of Service | ProBrothers — Media, PA"
+  ogDescription="The terms that govern your use of the ProBrothers website, our quote and enquiry process, limitation of liability, and governing law."
+  ogUrl="https://probrothers.com/terms-of-service/"
+  ogImage="https://probrothers.com/assets/img/hero-remodel.webp"
+  twitterTitle="Terms of Service | ProBrothers — Media, PA"
+  twitterDescription="The terms that govern your use of the ProBrothers website, our quote and enquiry process, limitation of liability, and governing law."
+  twitterImage="https://probrothers.com/assets/img/hero-remodel.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/hero-remodel.webp"
+          imagesrcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+          imagesizes="100vw" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/hero-remodel.webp"
+         srcset="/assets/img/hero-remodel-sm.webp 800w, /assets/img/hero-remodel.webp 1600w"
+         sizes="100vw" alt="ProBrothers general contractor office in Media, PA" fetchpriority="high" width="1600" height="1067" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Terms of Service</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Terms of Service</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; The Terms Governing Your Use of This Website &amp; Our Services</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Legal body ===== -->
+  <section class="section legal" aria-label="Terms of Service">
+    <div class="container container--narrow">
+      <article class="legal__body">
+        <p>Last updated: June 18, 2026</p>
+        <p>These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the website located at https://probrothers.com/ (the &ldquo;Website&rdquo;), operated by ProBrothers (&ldquo;ProBrothers&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;). By accessing or using the Website, requesting a quote, or submitting an enquiry, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Website.</p>
+
+        <h2><strong>1. About ProBrothers</strong></h2>
+        <p>ProBrothers is a full-service residential and commercial general contractor based at 7 Blackhorse Ln, Media, PA 19063, serving Delaware County and the Main Line, Pennsylvania. We provide trim carpentry, custom cabinetry, home remodeling, additions, new construction, and window and door installation services.</p>
+
+        <h2><strong>2. Information Is for General Purposes Only</strong></h2>
+        <p>The content on this Website &mdash; including service descriptions, project galleries, blog articles, pricing references, and guides &mdash; is provided for general informational purposes only. While we make reasonable efforts to keep the information accurate and current, we make no warranties or representations of any kind, express or implied, about the completeness, accuracy, reliability, or suitability of any information on the Website. Any reliance you place on such information is strictly at your own risk.</p>
+
+        <h2><strong>3. Quotes and Estimates Are Not Binding Contracts</strong></h2>
+        <p>Requesting a quote or estimate through the Website, by phone, or by email does not create a binding contract for work. Any quote or estimate we provide is an approximation based on the information available at the time and is subject to change following a site visit, detailed assessment, changes in scope, material availability, or market pricing.</p>
+        <p>Work is only undertaken once a separate, written service agreement or contract is signed by both you and ProBrothers. That signed agreement &mdash; not these Terms and not any figure quoted on or through this Website &mdash; sets out the binding scope, price, schedule, warranties, and payment terms for your project.</p>
+
+        <h2><strong>4. Enquiry and Quote-Request Forms</strong></h2>
+        <p>When you submit an enquiry or quote-request form, you agree to provide accurate, current, and complete information. You authorize ProBrothers to contact you by phone, email, or text regarding your enquiry using the contact details you provide. Submitting a form does not obligate you to engage our services, nor does it obligate ProBrothers to perform any work. Information you submit through forms is handled in accordance with our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+
+        <h2><strong>5. Intellectual Property</strong></h2>
+        <p>All content on this Website &mdash; including text, graphics, logos, project photographs, and design &mdash; is the property of ProBrothers or its content suppliers and is protected by applicable intellectual property laws. You may view and print pages from the Website for your own personal, non-commercial use. You may not reproduce, distribute, modify, or republish any content without our prior written permission.</p>
+
+        <h2><strong>6. Acceptable Use</strong></h2>
+        <p>You agree not to use the Website in any way that is unlawful, fraudulent, or harmful, or that interferes with any other party's use of the Website. You agree not to attempt to gain unauthorized access to any part of the Website, its servers, or any connected systems, and not to use the Website's forms to transmit spam, malware, or abusive content.</p>
+
+        <h2><strong>7. Third-Party Links</strong></h2>
+        <p>The Website may contain links to third-party websites or resources that are not operated by us. We provide these links for convenience only and have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites. Accessing a third-party site is at your own risk.</p>
+
+        <h2><strong>8. Limitation of Liability</strong></h2>
+        <p>To the fullest extent permitted by law, ProBrothers shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, data, goodwill, or other intangible losses, arising out of or relating to your use of (or inability to use) the Website or your reliance on any information presented on it. Nothing in these Terms limits or excludes any liability that cannot be limited or excluded under applicable Pennsylvania or U.S. law. Liability for the actual performance of contracted construction work is governed exclusively by your signed service agreement, not by these Terms.</p>
+
+        <h2><strong>9. No Warranty</strong></h2>
+        <p>The Website is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without warranties of any kind, either express or implied. We do not warrant that the Website will be uninterrupted, error-free, secure, or free of viruses or other harmful components.</p>
+
+        <h2><strong>10. Indemnification</strong></h2>
+        <p>You agree to indemnify and hold harmless ProBrothers and its owners, employees, and contractors from any claims, damages, losses, or expenses (including reasonable attorneys' fees) arising out of your misuse of the Website or your violation of these Terms.</p>
+
+        <h2><strong>11. Governing Law</strong></h2>
+        <p>These Terms are governed by and construed in accordance with the laws of the Commonwealth of Pennsylvania, without regard to its conflict-of-law principles. You agree that any dispute arising out of or relating to these Terms or your use of the Website shall be subject to the exclusive jurisdiction of the state and federal courts located in Delaware County, Pennsylvania.</p>
+
+        <h2><strong>12. Changes to These Terms</strong></h2>
+        <p>We may update these Terms from time to time. We will post any changes on this page and update the &ldquo;Last updated&rdquo; date above. Your continued use of the Website after changes are posted constitutes your acceptance of the revised Terms.</p>
+
+        <h4><strong>Contact Us</strong></h4>
+        <p>If you have any questions about these Terms of Service, you can contact us:</p>
+        <p>By email: <a href="mailto:info@probrothers.com"><strong>info@probrothers.com</strong></a></p>
+        <p>By phone number: (484) 745-4097</p>
+        <p>By mail: 7 Blackhorse Ln, Media, PA 19063</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .container--narrow { max-width: 860px; }
+  .legal__body {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--accent);
+    padding: 2.4rem 2.4rem 2rem;
+  }
+  .legal__body p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0 0 1rem;
+  }
+  .legal__body h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.3;
+    margin: 2rem 0 1rem;
+  }
+  .legal__body h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 1.6rem 0 .8rem;
+  }
+  .legal__body h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 1.6rem 0 .8rem;
+  }
+  .legal__body ul {
+    margin: 0 0 1rem;
+    padding-left: 1.4rem;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .legal__body li { margin-bottom: .6rem; }
+  .legal__body a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .legal__body a:hover { color: var(--dark); text-decoration: underline; }
+  .legal__body strong { color: var(--dark); }
+  @media (max-width: 600px) {
+    .legal__body { padding: 1.6rem 1.4rem; }
+    .legal__body h2 { font-size: 1.3rem; }
+  }
+</style>

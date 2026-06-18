@@ -53,7 +53,7 @@ const pageSchema = {
       "url": "https://probrothers.com/blog/kitchen-cabinets-cost/",
       "datePublished": "2026-04-01",
       "dateModified": "2026-04-01",
-      "author": { "@type": "Person", "name": "ProBrothers Team" },
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
         "name": "ProBrothers",
@@ -172,7 +172,7 @@ const pageSchema = {
         <!-- ===== Main Article ===== -->
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2026-04-01" />
-          <meta itemprop="author" content="ProBrothers" />
+          <meta itemprop="author" content="Daniil Akulov" />
 
           <!-- Featured image -->
           <div class="post-hero reveal">
@@ -193,6 +193,8 @@ const pageSchema = {
                 <li><a href="/blog/?category=remodeling">Remodeling</a></li>
                 <li><a href="/blog/?category=renovation">Renovation</a></li>
               </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
             </div>
           </div>
 
@@ -624,6 +626,9 @@ const pageSchema = {
   transition: color .2s;
 }
 .post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
 
 /* ===== Post Body ===== */
 .post-body {

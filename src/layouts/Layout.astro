@@ -6,14 +6,14 @@ import ExitPopup from '../components/ExitPopup.astro';
 
 // Per-page metadata. Defaults reproduce the original index.html exactly.
 const {
-  title = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
+  title = 'ProBrothers — General & Home Remodeling Contractor | Media, PA',
   description = "ProBrothers — full-service residential & commercial contractor in Media, PA. 15+ years of trim, cabinetry, remodeling, additions & window work.",
   canonical = 'https://probrothers.com/',
-  ogTitle = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
+  ogTitle = 'ProBrothers — General & Home Remodeling Contractor | Media, PA',
   ogDescription = 'Full-service residential & commercial construction and remodeling. Trim, cabinets, additions, windows & doors in Media, PA. Free quote within one business day.',
   ogUrl = 'https://probrothers.com/',
   ogImage = 'https://probrothers.com/assets/img/hero-trim.webp',
-  twitterTitle = 'ProBrothers — #1 General & Home Contractor of 2026 | Media, PA',
+  twitterTitle = 'ProBrothers — General & Home Remodeling Contractor | Media, PA',
   twitterDescription = 'Full-service residential & commercial construction and remodeling in Media, PA. Free quote within one business day.',
   twitterImage = 'https://probrothers.com/assets/img/hero-trim.webp',
   preloadHero = true,
@@ -84,6 +84,16 @@ const {
     "slogan": "15+ years of expert craftsmanship · serving 15 cities across Delaware County & the Main Line, PA",
     "knowsAbout": ["Home remodeling", "Kitchen remodeling", "Custom cabinetry", "Trim carpentry", "Home additions", "Window and door installation", "Residential construction", "Commercial construction"],
     "foundingDate": "2009",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Pennsylvania Home Improvement Contractor Registration",
+      "credentialCategory": "license",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Pennsylvania Office of Attorney General",
+        "url": "https://www.attorneygeneral.gov/protect-yourself/home-improvement-contractor/"
+      }
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",

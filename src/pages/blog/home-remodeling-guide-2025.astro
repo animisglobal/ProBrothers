@@ -49,7 +49,7 @@ const pageSchema = {
       "url": "https://probrothers.com/blog/home-remodeling-guide-2025/",
       "datePublished": "2025-03-24",
       "dateModified": "2025-03-24",
-      "author": { "@type": "Person", "name": "ProBrothers Team" },
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
         "name": "ProBrothers",
@@ -147,7 +147,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-03-24" />
-          <meta itemprop="author" content="ProBrothers" />
+          <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
             <img
@@ -169,6 +169,8 @@ const pageSchema = {
                 <li><a href="/blog/?category=painting">Painting</a></li>
                 <li><a href="/blog/?category=renovation">Renovation</a></li>
               </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
             </div>
           </div>
 
@@ -385,6 +387,9 @@ const pageSchema = {
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
 .post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
 .post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
 .post-body { padding: 2rem 2.5rem 2.5rem; }
 .post-body__section { margin-top: 2.2rem; }
 .post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }

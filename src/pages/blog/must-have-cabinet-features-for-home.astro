@@ -47,7 +47,7 @@ const pageSchema = {
       "headline": "Must-Have Cabinet Features for Your Home in 2026",
       "url": "https://probrothers.com/blog/must-have-cabinet-features-for-home/",
       "datePublished": "2024-12-17",
-      "dateModified": "2024-12-17",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
@@ -154,6 +154,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2024-12-17" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
@@ -163,6 +164,8 @@ const pageSchema = {
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2024-12-17" class="post-hero__date" itemprop="datePublished">December 17, 2024</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=cabinets">Cabinets</a></li>
@@ -305,7 +308,7 @@ const pageSchema = {
                 </div>
                 <div class="post-faq__item reveal">
                   <h3>How much does it cost to add custom storage features to existing cabinets?</h3>
-                  <p>The cost to add custom features like pull-out spice racks or heavy-duty pot drawers typically ranges from $150 to $500 per unit. Investing in these specialized storage solutions during a renovation can significantly increase your home's resale value, especially in competitive markets like Kennett Square and Malvern, where buyers look for highly organized, "chef-ready" kitchens. Kitchen storage layout standards are published by the <a href="https://www.nkba.org/" rel="noopener" target="_blank">National Kitchen &amp; Bath Association (NKBA)</a>, the professional body that sets design clearance and accessibility benchmarks used by contractors nationwide.</p>
+                  <p>The cost to add custom features like pull-out spice racks or heavy-duty pot drawers typically ranges from $150 to $500 per unit. Investing in these specialized storage solutions during a renovation can significantly increase your home's resale value, especially in competitive markets like Kennett Square and Malvern, where buyers look for highly organized, "chef-ready" kitchens. According to the <a href="https://www.remodeling.hw.net/cost-vs-value/2025/" rel="noopener" target="_blank">Remodeling Magazine Cost vs. Value Report</a>, kitchen upgrades — including custom storage features — consistently rank among the highest-ROI investments homeowners can make before listing.</p>
                 </div>
                 <div class="post-faq__item reveal">
                   <h3>Are open cabinets harder to maintain than closed ones?</h3>
@@ -399,6 +402,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__sep { color: var(--muted); }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }

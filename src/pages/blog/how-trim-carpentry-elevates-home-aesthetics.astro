@@ -47,7 +47,7 @@ const pageSchema = {
       "headline": "How Trim Carpentry Elevates Home Aesthetics in 2026",
       "url": "https://probrothers.com/blog/how-trim-carpentry-elevates-home-aesthetics/",
       "datePublished": "2025-03-07",
-      "dateModified": "2025-03-07",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
@@ -154,6 +154,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-03-07" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
@@ -163,6 +164,8 @@ const pageSchema = {
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-03-07" class="post-hero__date" itemprop="datePublished">March 7, 2025</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=design">Design</a></li>
@@ -223,7 +226,7 @@ const pageSchema = {
 
             <div class="post-body__section reveal">
               <h2>The Impact of Trim Carpentry on Home Value</h2>
-              <p>Well-executed trim work adds value to a home by enhancing its aesthetic appeal and structural integrity. Home buyers in 2026 often appreciate detailed trim work as it reflects the level of care and craftsmanship put into the home. For those considering whole house renovations or a home remodeler for resale value, incorporating decorative trim and moldings can make a property stand out in the market. Industry quality standards for finish carpentry are set by the <a href="https://www.woodworking.org/" rel="noopener" target="_blank">Architectural Woodwork Institute (AWI)</a>, whose grading system (Economy, Custom, Premium) guides professional contractors on material and installation expectations.</p>
+              <p>Well-executed trim work adds value to a home by enhancing its aesthetic appeal and structural integrity. Home buyers in 2026 often appreciate detailed trim work as it reflects the level of care and craftsmanship put into the home. For those considering whole house renovations or a home remodeler for resale value, incorporating decorative trim and moldings can make a property stand out in the market. Trim and millwork materials sourced from <a href="https://us.fsc.org/" rel="noopener" target="_blank">Forest Stewardship Council (FSC)</a>-certified suppliers meet internationally recognized standards for responsible sourcing and material quality, an increasingly important consideration for buyers evaluating a home's environmental credentials.</p>
             </div>
 
             <div class="post-body__section reveal">
@@ -388,6 +391,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__sep { color: var(--muted); }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }

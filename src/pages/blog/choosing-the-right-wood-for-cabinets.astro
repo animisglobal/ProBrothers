@@ -47,7 +47,7 @@ const pageSchema = {
       "headline": "Best Wood for Cabinets in 2026 | ProBrothers",
       "url": "https://probrothers.com/blog/choosing-the-right-wood-for-cabinets/",
       "datePublished": "2024-12-23",
-      "dateModified": "2024-12-23",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
@@ -154,6 +154,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2024-12-23" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
@@ -163,6 +164,8 @@ const pageSchema = {
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2024-12-23" class="post-hero__date" itemprop="datePublished">December 23, 2024</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=cabinets">Cabinets</a></li>
@@ -256,7 +259,7 @@ const pageSchema = {
 
             <div class="post-body__section reveal">
               <h2>3. Final Thoughts: Wood and Finish for Every Space</h2>
-              <p>Choosing the right wood and finish for your cabinets in 2026 requires careful consideration of both form and function. Whether you're designing a kitchen, bathroom, mudroom, or office, the wood you choose should align with your room's aesthetic while also providing the necessary durability. Pairing your chosen wood with the right finish will enhance its longevity and ensure your cabinets look beautiful for years to come. For industry-standard construction guidelines, the <a href="https://www.woodworking.org/" rel="noopener" target="_blank">Architectural Woodwork Institute (AWI)</a> publishes quality standards used by professional cabinet makers across North America.</p>
+              <p>Choosing the right wood and finish for your cabinets in 2026 requires careful consideration of both form and function. Whether you're designing a kitchen, bathroom, mudroom, or office, the wood you choose should align with your room's aesthetic while also providing the necessary durability. Pairing your chosen wood with the right finish will enhance its longevity and ensure your cabinets look beautiful for years to come. For sustainably sourced wood, look for materials certified by the <a href="https://us.fsc.org/" rel="noopener" target="_blank">Forest Stewardship Council (FSC)</a>, the internationally recognized standard for responsible forest management and chain-of-custody certification.</p>
               <p>From the warmth of oak or cherry to the sleekness of walnut or maple, there's a perfect wood and finish for every room. By understanding the strengths and characteristics of each material, you can create cabinetry that suits your needs and enhances your home's design.</p>
             </div>
 
@@ -375,6 +378,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__sep { color: var(--muted); }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }

@@ -27,7 +27,7 @@ const pageSchema = {
       "headline": "Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026",
       "url": "https://probrothers.com/blog/custom-construction-services-offered-by-probrothers/",
       "datePublished": "2025-04-07",
-      "dateModified": "2025-04-07",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers", "url": "https://probrothers.com/", "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" } },
       "image": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/blog/architect-1080589_1280-1024x682.webp", "width": 750, "height": 500 },
@@ -113,12 +113,15 @@ const pageSchema = {
       <div class="post-layout">
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-04-07" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
             <img src="/assets/img/blog/architect-1080589_1280-1024x682.webp" alt="Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026" width="1024" height="682" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-04-07" class="post-hero__date">April 7, 2025</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=build">Build</a></li>
@@ -412,6 +415,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2,#f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
 .post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }

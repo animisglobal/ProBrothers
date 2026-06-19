@@ -47,7 +47,7 @@ const pageSchema = {
       "headline": "Custom Built Additions: Expanding Your Home with Style and Functionality in 2026",
       "url": "https://probrothers.com/blog/everything-you-need-to-know-about-custom-built-additions/",
       "datePublished": "2025-03-10",
-      "dateModified": "2025-03-10",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
@@ -158,6 +158,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-03-10" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
@@ -167,6 +168,8 @@ const pageSchema = {
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-03-10" class="post-hero__date" itemprop="datePublished">March 10, 2025</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=cabinets">Cabinets</a></li>
@@ -198,7 +201,7 @@ const pageSchema = {
               <h2>Benefits of Custom Built Additions</h2>
               <ul class="post-list">
                 <li><strong>Personalization</strong> – Every aspect of a custom addition is designed to fit your specific needs and preferences, ensuring your home is tailored to your lifestyle in 2026 and beyond.</li>
-                <li><strong>Increased Home Value</strong> – Adding square footage and functional spaces boosts property value, making it a wise investment. The <a href="https://www.nahb.org/research" rel="noopener" target="_blank">National Association of Home Builders (NAHB)</a> research shows that home additions consistently rank among the remodeling projects that add the most long-term value for homeowners.</li>
+                <li><strong>Increased Home Value</strong> – Adding square footage and functional spaces boosts property value, making it a wise investment. Research from the <a href="https://www.jchs.harvard.edu/" rel="noopener" target="_blank">Joint Center for Housing Studies at Harvard University</a> shows that home additions — particularly those that add functional living space — consistently rank among the remodeling projects that add the most long-term value for homeowners.</li>
                 <li><strong>Enhanced Comfort</strong> – Whether it's a new master suite, a sun-room, or an extended kitchen, an addition enhances daily living.</li>
                 <li><strong>Cost-Effective Alternative to Moving</strong> – Rather than purchasing a new home, expanding your existing space is often more practical and budget-friendly, especially when preparing for the housing market of 2026.</li>
                 <li><strong>Energy Efficiency</strong> – New spaces can be built with the latest energy-efficient materials and technology, reducing utility costs.</li>
@@ -417,6 +420,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__sep { color: var(--muted); }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }

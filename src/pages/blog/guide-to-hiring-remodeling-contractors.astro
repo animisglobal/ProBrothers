@@ -27,7 +27,7 @@ const pageSchema = {
       "headline": "The Complete Guide to Hiring Remodeling Contractors in 2026",
       "url": "https://probrothers.com/blog/guide-to-hiring-remodeling-contractors/",
       "datePublished": "2025-10-17",
-      "dateModified": "2025-10-17",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers", "url": "https://probrothers.com/", "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" } },
       "image": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/blog/18.webp", "width": 1600, "height": 1034 },
@@ -109,12 +109,15 @@ const pageSchema = {
       <div class="post-layout">
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-10-17" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
             <img src="/assets/img/blog/18.webp" alt="The Complete Guide to Hiring Remodeling Contractors in 2026" width="1024" height="536" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-10-17" class="post-hero__date">October 17, 2025</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=contractors">Contractors</a></li>
@@ -298,7 +301,7 @@ const pageSchema = {
               <p>Once you've narrowed your list to 3-5 candidates, it's interview time. These questions separate professionals from pretenders.</p>
 
               <h3>1. Are You Licensed and Certified?</h3>
-              <p>This isn't optional. Ask to see their contractor license number. Verify it online with your state's licensing board — in Pennsylvania, use the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement-contractor/" rel="noopener" target="_blank">PA Attorney General's HIC contractor lookup</a>. Also ask about special certifications: 1. CGR (Certified Graduate Remodeler) through the <a href="https://www.nahb.org/" rel="noopener" target="_blank">National Association of Home Builders (NAHB)</a> 2. LEED (Leadership in Energy and Environmental Design) through the U.S. Green Building Council 3. Membership in industry organizations like NARI These credentials prove they're staying current with: 1. Building codes 2. Construction standards 3. New construction technologies 4. Business practices 5. Better equipment and tools</p>
+              <p>This isn't optional. Ask to see their contractor license number. Verify it online with your state's licensing board — in Pennsylvania, use the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement-contractor/" rel="noopener" target="_blank">PA Attorney General's HIC contractor lookup</a>. Also ask about special certifications: 1. CGR (Certified Graduate Remodeler) — a credential that demonstrates advanced knowledge in remodeling and business management 2. LEED (Leadership in Energy and Environmental Design) through the <a href="https://www.usgbc.org/" rel="noopener" target="_blank">U.S. Green Building Council</a> 3. Membership in industry organizations like NARI These credentials prove they're staying current with: 1. Building codes 2. Construction standards 3. New construction technologies 4. Business practices 5. Better equipment and tools</p>
 
               <h3>2. Do You Carry Workers' Compensation and Liability Insurance?</h3>
               <p>If your home remodeling contractor doesn't carry proper insurance, you're liable if anyone is injured on site. Full stop. Ask to see copies of their insurance certificates. Don't take their word for it. According to Probrothers, in some areas small companies aren't required to carry workers' compensation. But if one of their employees is injured on the job, you're liable. This applies to handymen too, since they often work alone or with just one other employee.</p>
@@ -537,7 +540,7 @@ const pageSchema = {
               <p>In 2026, budget $19.65 to $196.50 per square foot depending on: 1. Complexity of your project 2. Quality of construction materials 3. ROI you're targeting 4. Your location Factor in significant flexibility for contingencies. Tariffs are causing material costs to fluctuate more than previous years. Generally, you'll pay $26.20 to $275.10 per square foot for complete renovation projects including labour.</p>
 
               <h3>What certifications should home remodeling contractors have?</h3>
-              <p>Look for these industry-recognized credentials: CGR (Certified Graduate Remodeler) – Demonstrates advanced knowledge in remodeling and business management through the NAHB LEED Certification Demonstrates proficiency in sustainable and green construction markets by the U.S. Green Building Council NARI Membership – Belonging to the National Association of the Remodeling Industry indicates a remodeling contractor's commitment to professional standards These acronyms represent continuing industry education and dedication to the profession.</p>
+              <p>Look for these industry-recognized credentials: CGR (Certified Graduate Remodeler) – Demonstrates advanced knowledge in remodeling and business management. LEED Certification – Demonstrates proficiency in sustainable and green construction markets, administered by the <a href="https://www.usgbc.org/" rel="noopener" target="_blank">U.S. Green Building Council</a>. NARI Membership – Belonging to the National Association of the Remodeling Industry indicates a remodeling contractor's commitment to professional standards. These credentials represent continuing industry education and dedication to the profession.</p>
 
               <h3>Do I need building permits for my renovation project?</h3>
               <p>It's a matter of the type of work. Typically require permits: 1. Providing structural changes (removing walls etc.) 2. Electrical work other than fixture replacement 3. Plumbing services other than simple repairs Adding square footage Structural changes such as a new bathroom addition/poolhouse or covered porch Roof replacement Foundation work All building permits must be secured in the name of your licensed contractor, not you. Consult your local building authority for requirements in your area.</p>
@@ -634,6 +637,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2,#f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
 .post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }

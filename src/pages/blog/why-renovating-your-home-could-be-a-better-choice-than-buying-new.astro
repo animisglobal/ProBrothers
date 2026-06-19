@@ -49,7 +49,7 @@ const pageSchema = {
       "headline": "Why Renovating Beats Buying New in 2026 | ProBrothers",
       "url": "https://probrothers.com/blog/why-renovating-your-home-could-be-a-better-choice-than-buying-new/",
       "datePublished": "2024-09-29",
-      "dateModified": "2024-09-29",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
@@ -156,6 +156,7 @@ const pageSchema = {
 
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2024-09-29" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
@@ -165,6 +166,8 @@ const pageSchema = {
                  class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2024-09-29" class="post-hero__date" itemprop="datePublished">September 29, 2024</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=build">Build</a></li>
@@ -328,6 +331,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__sep { color: var(--muted); }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }

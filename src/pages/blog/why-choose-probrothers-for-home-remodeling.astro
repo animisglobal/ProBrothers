@@ -50,7 +50,7 @@ const pageSchema = {
       "headline": "Why ProBrothers Is the Top Choice for Custom Home Remodeling",
       "url": "https://probrothers.com/blog/why-choose-probrothers-for-home-remodeling/",
       "datePublished": "2025-11-24",
-      "dateModified": "2025-11-24",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business",
         "@type": "Organization",
@@ -166,6 +166,7 @@ const pageSchema = {
         <!-- ===== Main Article ===== -->
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-11-24" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <!-- Featured image -->
@@ -181,6 +182,8 @@ const pageSchema = {
             />
             <div class="post-hero__meta">
               <time datetime="2025-11-24" class="post-hero__date" itemprop="datePublished">November 24, 2025</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=cabinets">Cabinets</a></li>
@@ -579,6 +582,7 @@ const pageSchema = {
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__sep { color: var(--muted); }
 .post-hero__cats {
   list-style: none;

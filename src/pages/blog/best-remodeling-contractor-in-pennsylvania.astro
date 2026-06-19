@@ -27,7 +27,7 @@ const pageSchema = {
       "headline": "Remodeling Your Home, Kitchen, Bathroom, or Basement? How to Find the Best Remodeling Contractor in Pennsylvania",
       "url": "https://probrothers.com/blog/best-remodeling-contractor-in-pennsylvania/",
       "datePublished": "2025-08-25",
-      "dateModified": "2025-08-25",
+      "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers", "url": "https://probrothers.com/", "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" } },
       "image": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/blog/scott-webb-1ddol8rgUH8-unsplash-scaled-1-1024x680.webp", "width": 750, "height": 500 },
@@ -106,12 +106,15 @@ const pageSchema = {
       <div class="post-layout">
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-08-25" />
+          <meta itemprop="dateModified" content="2026-06-19" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
             <img src="/assets/img/blog/scott-webb-1ddol8rgUH8-unsplash-scaled-1-1024x680.webp" alt="How to Find the Best Remodeling Contractor in Pennsylvania" width="1024" height="680" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-08-25" class="post-hero__date">August 25, 2025</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=remodeling">Remodeling</a></li>
@@ -171,7 +174,7 @@ const pageSchema = {
               <ul class="post-list post-list--checkmark">
                 <li>Ask for recommendations from friends and neighbors.</li>
                 <li>Search Google using your town name: "renovation services near me" or "custom carpentry Paoli."</li>
-                <li>Check review sites like <a href="https://www.houzz.com/professionals" rel="noopener" target="_blank">Houzz</a>, Yelp, and Angi.</li>
+                <li>Check review sites like Google, Yelp, and Angi. Verify any candidate's HIC registration with the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement-contractor/" rel="noopener" target="_blank">Pennsylvania Attorney General's HIC contractor lookup</a>.</li>
                 <li>Look in local Facebook groups and community boards.</li>
                 <li>Visit home expos and showrooms to see residential construction services in action.</li>
               </ul>
@@ -369,6 +372,7 @@ const pageSchema = {
 .post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
 .post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2,#f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
 .post-hero__date { font-weight: 700; }
+.post-hero__updated { font-size: .82rem; color: var(--muted); font-style: italic; }
 .post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
 .post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
 .post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }

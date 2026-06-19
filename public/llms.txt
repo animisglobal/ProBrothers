@@ -1,28 +1,54 @@
 # ProBrothers
 
-> Full-service residential & commercial general contractor in Media, PA. 15+ years
-> of trim carpentry, custom cabinetry, home remodeling, additions, and window & door
-> installation across Delaware County and the greater Philadelphia area.
+> Full-service residential & commercial general contractor in Media, PA. Founded 2009
+> by master carpenter Daniil Akulov. 15+ years of expertise in trim carpentry, custom
+> cabinetry, home remodeling, additions, and window & door installation across Delaware
+> County and the greater Philadelphia area. 135+ projects completed. 5.0 client rating.
+> Licensed & Insured (PA HIC). Phone: (484) 745-4097.
+
+## Core Pages
+- [Home](https://probrothers.com/)
+- [About ProBrothers](https://probrothers.com/about/)
+- [Contact / Get a Free Quote](https://probrothers.com/contact/)
+- [Project Portfolio](https://probrothers.com/projects/)
 
 ## Services
+- [All Services](https://probrothers.com/services/)
 - [Trim & Molding](https://probrothers.com/services/trim/)
-- [Cabinets](https://probrothers.com/services/cabinets/)
-- [Remodeling](https://probrothers.com/services/remodeling/)
-- [Additions](https://probrothers.com/services/additions/)
+- [Custom Cabinets](https://probrothers.com/services/cabinets/)
+- [Home Remodeling](https://probrothers.com/services/remodeling/)
+- [Home Additions](https://probrothers.com/services/additions/)
 - [Construction Services](https://probrothers.com/services/construction-services/)
 - [Windows & Doors](https://probrothers.com/services/windows-and-doors/)
 
-## Locations
+## Service Areas (Pennsylvania & Delaware)
 - [Media, PA](https://probrothers.com/locations/media/)
 - [West Chester, PA](https://probrothers.com/locations/west-chester/)
 - [Philadelphia, PA](https://probrothers.com/locations/philadelphia/)
-- [All service areas](https://probrothers.com/locations/)
+- [King of Prussia, PA](https://probrothers.com/locations/king-of-prussia/)
+- [Malvern, PA](https://probrothers.com/locations/malvern/)
+- [Glen Mills, PA](https://probrothers.com/locations/glen-mills/)
+- [Springfield, PA](https://probrothers.com/locations/springfield/)
+- [Marple, PA](https://probrothers.com/locations/marple/)
+- [Kennett Square, PA](https://probrothers.com/locations/kennett-square/)
+- [Phoenixville, PA](https://probrothers.com/locations/phoenixville/)
+- [Nether Providence, PA](https://probrothers.com/locations/nether-providence/)
+- [Newtown, PA](https://probrothers.com/locations/newtown/)
+- [Allentown, PA](https://probrothers.com/locations/allentown/)
+- [Greenville, DE](https://probrothers.com/locations/greenville/)
+- [Rehoboth, DE](https://probrothers.com/locations/rehoboth/)
+- [All Service Areas](https://probrothers.com/locations/)
 
-## Company
-- [About](https://probrothers.com/about/)
-- [Contact / Get a Quote](https://probrothers.com/contact/)
-
-## Top Guides
-- [Kitchen Cabinets Cost (2026)](https://probrothers.com/blog/kitchen-cabinets-cost/)
-- [Hiring Remodeling Contractors](https://probrothers.com/blog/guide-to-hiring-remodeling-contractors/)
+## Top Guides & Resources
+- [Home Remodeling Cost in Delaware County PA (2026)](https://probrothers.com/blog/home-remodeling-cost-delaware-county-pa-2026/)
+- [Kitchen Cabinets Cost Guide](https://probrothers.com/blog/kitchen-cabinets-cost/)
+- [Home Remodeling Guide 2026](https://probrothers.com/blog/home-remodeling-guide-2026/)
+- [Guide to Hiring Remodeling Contractors](https://probrothers.com/blog/guide-to-hiring-remodeling-contractors/)
+- [Top General Contractors in Pennsylvania](https://probrothers.com/blog/top-general-contractors-in-pennsylvania/)
 - [Best Remodeling Contractor in PA](https://probrothers.com/blog/best-remodeling-contractor-in-pennsylvania/)
+- [All Blog Posts](https://probrothers.com/blog/)
+
+## Legal
+- [Privacy Policy](https://probrothers.com/privacy-policy/)
+- [Terms of Service](https://probrothers.com/terms-of-service/)
+- [Accessibility Statement](https://probrothers.com/accessibility-statement/)

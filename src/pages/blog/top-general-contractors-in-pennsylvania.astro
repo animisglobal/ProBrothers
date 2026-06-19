@@ -1,19 +1,20 @@
 ---
 /**
  * Source URL: https://probrothers.com/blog/top-general-contractors-in-pennsylvania/
- * Last optimized: 2026-06-19 by Spark
- * Changes: Full competitive rewrite — 1,600+ words, HICPA/licensing authority section,
- *   vetting checklist, cost expectations, red flags, expanded ProBrothers positioning,
- *   FAQPage JSON-LD (7 Qs), dateModified + itemprop freshness updated, title updated
- *   with 2026, meta description geo+CTA strengthened, outbound authority link PA AG,
- *   expanded internal links, AI-SEO: .aeo-answer block, question-based H2s, entity clarity.
+ * Last optimized: 2026-06-19 by Spark (pass 2 — full competitive depth rebuild)
+ * Target: 2,800–3,500+ words — definitive PA general contractor resource
+ * Competitors measured: callmoser.com ~2,200w, topgeneralcontractors.com ~800w, D&B ~520w
+ * Changes vs pass 1: added GC/sub/CM explainer, types of GCs, expanded vetting process,
+ *   full questions-to-ask list, contracts/change orders/lien waivers, permits/UCC/township section,
+ *   timeline expectations, insurance & bonding explainer, expanded cost table, expanded FAQ to 12,
+ *   jump-link TOC, ≥2 outbound authority links (PA AG + PA L&I UCC), all schema updated.
  */
 
 import Layout from '../../layouts/Layout.astro';
 
 const relatedPosts = [
-  { slug: 'best-remodeling-contractor-in-pennsylvania', title: 'How to Find the Best Remodeling Contractor in Pennsylvania', date: 'August 25, 2025', dateIso: '2025-08-25', image: '/assets/img/svc-remodel.webp', imageAlt: 'Best Remodeling Contractor in Pennsylvania — ProBrothers guide', imgW: 750, imgH: 500 },
-  { slug: 'guide-to-hiring-remodeling-contractors', title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', date: 'October 17, 2025', dateIso: '2025-10-17', image: '/assets/img/hero-trim.webp', imageAlt: 'Guide to Hiring Remodeling Contractors in Pennsylvania 2026', imgW: 1600, imgH: 1034 },
+  { slug: 'best-remodeling-contractor-in-pennsylvania', title: 'How to Find the Best Remodeling Contractor in Pennsylvania', date: 'August 25, 2025', dateIso: '2025-08-25', image: '/assets/img/svc-remodel.webp', imageAlt: 'Finding the best remodeling contractor in Pennsylvania — ProBrothers guide', imgW: 750, imgH: 500 },
+  { slug: 'guide-to-hiring-remodeling-contractors', title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', date: 'October 17, 2025', dateIso: '2025-10-17', image: '/assets/img/hero-trim.webp', imageAlt: 'Complete guide to hiring remodeling contractors in Pennsylvania 2026', imgW: 1600, imgH: 1034 },
 ];
 const mostViewed = [
   { title: 'Smart Home Upgrades in 2026 that Favor Renovation Over a New Purchase', slug: 'why-renovating-your-home-could-be-a-better-choice-than-buying-new', views: 579 },
@@ -21,34 +22,71 @@ const mostViewed = [
   { title: 'Comprehensive Construction Services: Building Your Dream Home with ProBrothers in 2026', slug: 'custom-construction-services-offered-by-probrothers', views: 435 },
 ];
 
+const tocItems = [
+  { id: 'what-is-a-gc', label: 'What Does a General Contractor Do?' },
+  { id: 'gc-types', label: 'Types of General Contractors in PA' },
+  { id: 'hicpa', label: 'PA Licensing & HICPA Registration' },
+  { id: 'how-to-find', label: 'How to Find & Vet a GC in PA' },
+  { id: 'questions-to-ask', label: '15 Questions to Ask Before Hiring' },
+  { id: 'red-flags', label: 'Red Flags & Scams to Avoid' },
+  { id: 'contracts', label: 'Contracts, Change Orders & Lien Waivers' },
+  { id: 'permits', label: 'Permits & Inspections in PA' },
+  { id: 'insurance', label: 'Insurance & Bonding Explained' },
+  { id: 'costs', label: 'Cost Expectations by Project Type' },
+  { id: 'timeline', label: 'Timeline Expectations' },
+  { id: 'top-contractors', label: 'Top General Contractors in PA (2026)' },
+  { id: 'why-probrothers', label: 'Why ProBrothers for Delaware County & Main Line' },
+  { id: 'faq', label: 'Frequently Asked Questions' },
+];
+
 const faqItems = [
   {
     q: "Do general contractors in Pennsylvania need to be licensed?",
-    a: "Pennsylvania does not issue a statewide general contractor license, but any contractor performing $5,000 or more per year in residential home improvement work must register under HICPA — the Home Improvement Consumer Protection Act — with the PA Attorney General's Office. Registration requires proof of $50,000 in liability insurance and workers' compensation coverage. Always ask for the contractor's HIC registration number and verify it at the PA Attorney General's official registration lookup before signing a contract."
+    a: "Pennsylvania does not issue a statewide general contractor license, but any contractor performing $5,000 or more per year in residential home improvement work must register under HICPA — the Home Improvement Consumer Protection Act — with the PA Attorney General's Office. Registration requires proof of $50,000 in liability insurance and workers' compensation coverage. Always ask for the contractor's HIC registration number and verify it at the PA Attorney General's official database before signing a contract."
   },
   {
     q: "What is HICPA and how does it protect Pennsylvania homeowners?",
-    a: "HICPA (Home Improvement Consumer Protection Act, 73 Pa. Stat. § 517.1) is a Pennsylvania law requiring home improvement contractors to register, carry insurance, and use written contracts that include their registration number, project scope, timeline, and payment schedule. Under HICPA, homeowners can void a contract if required information is missing and have the right to pursue legal remedies for contractor fraud or abandonment. Contact the PA Attorney General's Bureau of Consumer Protection at 1-888-520-6680 for complaints."
+    a: "HICPA (Home Improvement Consumer Protection Act, 73 Pa. Stat. § 517.1) is a Pennsylvania law requiring home improvement contractors to register, carry insurance, and use written contracts that include their registration number, project scope, timeline, and payment schedule. Under HICPA, homeowners can void a contract if required information is missing, and have the right to pursue legal remedies for contractor fraud or abandonment. Contact the PA Attorney General's Bureau of Consumer Protection at 1-888-520-6680 for complaints."
+  },
+  {
+    q: "What is the difference between a general contractor and a subcontractor?",
+    a: "A general contractor (GC) manages the entire construction project — hiring subcontractors, coordinating schedules, pulling permits, and serving as the single point of accountability. Subcontractors are trade specialists (plumbers, electricians, tile setters, framers) hired by the GC to perform specific scopes of work. As a homeowner, you contract with the GC; the GC contracts separately with each sub. This is why the GC's vetting process for their own subs matters — their subs' quality becomes your result."
+  },
+  {
+    q: "What permits are required for home renovation in Pennsylvania?",
+    a: "Pennsylvania enforces the Uniform Construction Code (UCC), administered locally by each municipality. Permits are required for structural work, additions, new construction, electrical upgrades, plumbing alterations, HVAC changes, and most significant renovations. In Delaware County, each township (Media, Upper Providence, Middletown, Springfield, etc.) has its own permit office. Your GC should pull all required permits — if a contractor suggests skipping permits, that is both illegal and creates liability for you as the homeowner."
   },
   {
     q: "How much does a general contractor cost in Pennsylvania?",
-    a: "General contractor fees in Pennsylvania typically fall in two models: a markup on materials and subcontractor labor (usually 10–20%), or a flat project fee. For a mid-size kitchen remodel in Delaware County or the Main Line, expect total project costs of $30,000–$80,000 depending on scope and finishes. Home additions range from $80,000 to $200,000+. Always get 3 itemized bids, not ballpark estimates. A suspiciously low bid — more than 20% below competitors — is a red flag worth investigating."
+    a: "General contractor fees are typically built into the project price as a 10–20% markup on materials and subcontractor labor, or as a flat project management fee. For a mid-size kitchen remodel in Delaware County or the Main Line, expect total project costs of $35,000–$80,000 depending on scope and finishes. Home additions range from $80,000 to $250,000+. Always get 3 itemized bids. A bid more than 20% below competitors typically signals missing scope, uninsured subs, or planned material substitutions."
+  },
+  {
+    q: "What is a lien waiver and do I need one in Pennsylvania?",
+    a: "A lien waiver is a document in which a contractor or subcontractor waives their right to file a mechanics' lien against your property. In Pennsylvania, subcontractors who are not paid by the GC can file a lien against your property even if you already paid the GC in full. Requesting conditional lien waivers (waiver effective only upon payment clearing) from your GC and their major subs at each payment milestone protects you from this risk. Include a lien waiver requirement in your written contract."
   },
   {
     q: "What are the biggest red flags when hiring a contractor in Pennsylvania?",
-    a: "Key red flags include: demanding more than 30% upfront before work starts (a likely HICPA violation), no written contract, no HIC registration number, no physical business address, pressure to sign immediately, vague or non-itemized estimates, and inability to provide proof of insurance. Under HICPA, contractors who misrepresent work, abandon a project after partial payment, or use fraudulent inducement can face civil and criminal liability."
+    a: "Key red flags: demanding more than 30% upfront before work starts (likely a HICPA violation), no written contract, no verifiable HIC registration, no physical business address, pressure to sign immediately, vague or non-itemized estimates, and inability to provide proof of insurance. Under HICPA, contractors who misrepresent work, abandon a project after partial payment, or use fraudulent inducement face civil and criminal liability. Contact the PA Attorney General at 1-888-520-6680 if you encounter these signs."
+  },
+  {
+    q: "What is a design-build contractor and is it right for my project?",
+    a: "A design-build contractor provides both design services and construction under a single contract, so your architect/designer and builder are one integrated team. This model reduces hand-off friction, speeds timelines, and keeps design decisions grounded in construction reality. It works best for projects where the client doesn't have a pre-existing design — whole-home renovations, significant additions, new construction. Traditional design-bid-build (hire architect separately, then contractor bids on drawings) gives more design control but takes longer."
   },
   {
     q: "Does ProBrothers serve areas outside Media, PA?",
-    a: "Yes. ProBrothers serves a wide area across Delaware County and the Main Line, including Media, King of Prussia, West Chester, Glen Mills, Malvern, Newtown Square, Phoenixville, and surrounding Chester County communities. Contact us to confirm service availability for your specific zip code."
+    a: "Yes. ProBrothers serves a wide area across Delaware County and the Main Line, including Media, King of Prussia, West Chester, Glen Mills, Malvern, Newtown Square, Marple, Phoenixville, Springfield, and surrounding Chester County communities. Contact us to confirm service availability for your specific zip code."
   },
   {
     q: "How do I verify a contractor's registration in Pennsylvania?",
-    a: "Visit the Pennsylvania Attorney General's Home Improvement Contractor registration database at www.attorneygeneral.gov and search by contractor name or registration number. Confirm the registration is active, not expired, and that the contractor carries the required insurance. Also check for unresolved consumer complaints filed with the Bureau of Consumer Protection."
+    a: "Visit the Pennsylvania Attorney General's Home Improvement Contractor registration database at www.attorneygeneral.gov and search by contractor name or registration number. Confirm the registration is active, not expired, and the contractor carries the required insurance. Also check for unresolved consumer complaints filed with the Bureau of Consumer Protection."
+  },
+  {
+    q: "How long does a home renovation or addition take in Pennsylvania?",
+    a: "Timeline varies widely by scope. A bathroom remodel typically takes 3–6 weeks once work begins. A full kitchen remodel runs 6–12 weeks. A room addition or second-story addition takes 3–6 months including permit approvals. Permit wait times in Delaware County townships typically add 2–6 weeks before construction can begin. Weather delays are common in PA winters (November–March). Get the project schedule in writing as part of your contract, including what triggers a change to the timeline."
   },
   {
     q: "What questions should I ask a general contractor before hiring?",
-    a: "Ask: (1) What is your PA HIC registration number and can I verify it? (2) Do you carry general liability and workers' comp insurance — can I see the certificate? (3) Who are your subcontractors and are they also insured? (4) Will you pull all required permits? (5) What is the payment schedule and will it be in the written contract? (6) Can you provide 3 references from projects similar to mine? (7) What is the estimated timeline and what causes delays? These seven questions separate reliable contractors from risky ones."
+    a: "Essential questions: (1) What is your PA HIC registration number? (2) Can I see your certificate of liability insurance and workers' comp? (3) Who are your subcontractors and are they insured? (4) Will you pull all permits? (5) What is the payment schedule? (6) How do you handle change orders — in writing, before work starts? (7) Can you provide 3 references from similar projects? (8) What is the estimated timeline and how do you handle delays? (9) Do you carry a commercial general liability policy of at least $1M? (10) Will you provide conditional lien waivers at each payment milestone?"
   }
 ];
 
@@ -58,24 +96,28 @@ const pageSchema = {
     {
       "@type": "BlogPosting",
       "@id": "https://probrothers.com/blog/top-general-contractors-in-pennsylvania/",
-      "headline": "Top General Contractors in Pennsylvania 2026: What to Look For Before You Hire",
+      "headline": "Top General Contractors in Pennsylvania 2026: The Definitive Hiring Guide",
       "url": "https://probrothers.com/blog/top-general-contractors-in-pennsylvania/",
       "datePublished": "2025-08-22",
       "dateModified": "2026-06-19",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov" },
       "publisher": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers", "url": "https://probrothers.com/", "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" } },
       "image": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/blog/Untitled-design-5-1024x768.webp", "width": 1024, "height": 768 },
-      "description": "Looking for the top general contractors in Pennsylvania? This 2026 guide covers PA licensing (HICPA), how to vet and hire a contractor, red flags, cost expectations, and why ProBrothers leads in Delaware County and the Main Line.",
+      "description": "The definitive 2026 guide to top general contractors in Pennsylvania — what a GC does, HICPA licensing, how to vet bids, red flags, contracts, permits, costs, and why ProBrothers leads in Delaware County and the Main Line.",
       "mainEntityOfPage": { "@id": "https://probrothers.com/blog/top-general-contractors-in-pennsylvania/" },
       "inLanguage": "en-US",
       "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "wordCount": 3200,
       "about": [
         { "@type": "Thing", "name": "General Contractors" },
         { "@type": "Thing", "name": "Pennsylvania Home Improvement Consumer Protection Act" },
-        { "@type": "Thing", "name": "Home Renovation" }
+        { "@type": "Thing", "name": "Home Renovation" },
+        { "@type": "Thing", "name": "Uniform Construction Code Pennsylvania" },
+        { "@type": "Thing", "name": "Delaware County Pennsylvania" }
       ],
       "mentions": [
-        { "@type": "Organization", "name": "Pennsylvania Office of Attorney General", "url": "https://www.attorneygeneral.gov/protect-yourself/home-improvement/" }
+        { "@type": "Organization", "name": "Pennsylvania Office of Attorney General", "url": "https://www.attorneygeneral.gov/protect-yourself/home-improvement/" },
+        { "@type": "Organization", "name": "Pennsylvania Department of Labor and Industry", "url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home" }
       ]
     },
     {
@@ -93,25 +135,22 @@ const pageSchema = {
       "mainEntity": faqItems.map(item => ({
         "@type": "Question",
         "name": item.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": item.a
-        }
+        "acceptedAnswer": { "@type": "Answer", "text": item.a }
       }))
     }
   ]
 };
 ---
 <Layout
-  title="Top General Contractors in Pennsylvania 2026 | ProBrothers"
-  description="Hiring a general contractor in Pennsylvania? Our 2026 guide covers HICPA licensing, how to vet bids, red flags, cost ranges, and why ProBrothers leads in Media, King of Prussia &amp; Delaware County. Free quotes available."
+  title="Top General Contractors in Pennsylvania 2026 — The Definitive Hiring Guide | ProBrothers"
+  description="Hiring a general contractor in Pennsylvania? Our 2026 guide covers what GCs do, HICPA licensing, how to vet bids, red flags, contracts, permits, cost ranges, and why ProBrothers leads in Media, King of Prussia &amp; Delaware County. Free quotes."
   canonical="https://probrothers.com/blog/top-general-contractors-in-pennsylvania/"
-  ogTitle="Top General Contractors in Pennsylvania 2026: What to Look For Before You Hire"
-  ogDescription="The 2026 guide to top general contractors in Pennsylvania — HICPA licensing, vetting checklists, cost expectations, red flags to avoid, and why ProBrothers is Delaware County's customer-first choice."
+  ogTitle="Top General Contractors in Pennsylvania 2026: The Definitive Hiring Guide"
+  ogDescription="Everything PA homeowners need to know before hiring a general contractor — HICPA licensing, vetting checklists, contracts, permits, costs, red flags, and why ProBrothers leads in Delaware County and the Main Line."
   ogUrl="https://probrothers.com/blog/top-general-contractors-in-pennsylvania/"
   ogImage="https://probrothers.com/assets/img/blog/Untitled-design-5-1024x768.webp"
-  twitterTitle="Top General Contractors in Pennsylvania — 2026 Guide"
-  twitterDescription="HICPA licensing, vetting tips, cost ranges, red flags &amp; top PA contractors for 2026. ProBrothers serves Media, King of Prussia &amp; Delaware County."
+  twitterTitle="Top General Contractors in Pennsylvania — 2026 Definitive Guide"
+  twitterDescription="HICPA licensing, vetting steps, contracts, permits, costs, red flags &amp; top PA contractors for 2026. ProBrothers serves Media, King of Prussia &amp; Delaware County."
   twitterImage="https://probrothers.com/assets/img/blog/Untitled-design-5-1024x768.webp"
   preloadHero={false}
 >
@@ -121,7 +160,7 @@ const pageSchema = {
   </Fragment>
 
   <section class="page-banner" aria-labelledby="banner-heading">
-    <img class="page-banner__bg" src="/assets/img/hero-cabinets.webp" srcset="/assets/img/hero-cabinets-sm.webp 800w, /assets/img/hero-cabinets.webp 1600w" sizes="100vw" alt="Top General Contractors in Pennsylvania 2026 — kitchen remodel by ProBrothers, Media PA" fetchpriority="high" width="1600" height="1067" />
+    <img class="page-banner__bg" src="/assets/img/hero-cabinets.webp" srcset="/assets/img/hero-cabinets-sm.webp 800w, /assets/img/hero-cabinets.webp 1600w" sizes="100vw" alt="ProBrothers general contractor team delivering a completed kitchen remodel in Delaware County, Pennsylvania 2026" fetchpriority="high" width="1600" height="1067" />
     <div class="page-banner__overlay" aria-hidden="true"></div>
     <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
     <div class="container page-banner__inner">
@@ -132,7 +171,7 @@ const pageSchema = {
           <li><span aria-current="page">Top General Contractors in Pennsylvania 2026</span></li>
         </ol>
       </nav>
-      <h1 class="page-banner__title" id="banner-heading">Top General Contractors in Pennsylvania 2026: What to Look For Before You Hire</h1>
+      <h1 class="page-banner__title" id="banner-heading">Top General Contractors in Pennsylvania 2026: The Definitive Hiring Guide</h1>
       <p class="page-banner__sub">ProBrothers</p>
     </div>
     <div class="page-banner__wave" aria-hidden="true">
@@ -156,7 +195,7 @@ const pageSchema = {
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
-            <img src="/assets/img/blog/Untitled-design-5-1024x768.webp" alt="ProBrothers general contractor team completing a home renovation project in Delaware County, Pennsylvania" width="1024" height="768" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
+            <img src="/assets/img/blog/Untitled-design-5-1024x768.webp" alt="ProBrothers general contractor team completing a custom kitchen remodel in Delaware County Pennsylvania" width="1024" height="768" fetchpriority="high" loading="eager" class="post-hero__img" itemprop="image" />
             <div class="post-hero__meta">
               <time datetime="2025-08-22" class="post-hero__date">August 22, 2025</time>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
@@ -173,174 +212,392 @@ const pageSchema = {
 
           <div class="post-body" itemprop="articleBody">
 
-          <!-- Table of Contents -->
-          <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
-            <h3 class="post-toc__title">Table of Contents</h3>
-            <nav class="post-toc__nav" aria-label="Article sections">
-              <ol class="post-toc__list" id="tocList"></ol>
-            </nav>
-          </div>
-
-            <!-- AEO answer block — extractable by AI engines -->
+            <!-- AEO extractable answer block -->
             <div class="aeo-answer post-body__intro reveal" role="note" aria-label="Quick answer">
-              <p><strong>The top general contractors in Pennsylvania</strong> are registered under HICPA (the Home Improvement Consumer Protection Act), carry verifiable liability insurance, and have a track record of completed residential projects with documented references. In Delaware County and the Main Line, ProBrothers (Media, PA) is recognized for full-service kitchen, bath, addition, and remodeling work backed by 15+ years of local experience and 135+ completed projects.</p>
+              <p><strong>The top general contractors in Pennsylvania</strong> are HICPA-registered, carry verified liability insurance, manage projects from permit to final walkthrough, and have documented local references. In Delaware County and the Main Line, ProBrothers (Media, PA) delivers full-service kitchen, bath, addition, cabinetry, and remodeling work backed by 15+ years of local experience and 135+ completed projects.</p>
+            </div>
+
+            <!-- Manual TOC (jump links) -->
+            <div class="post-toc-manual reveal" aria-label="Table of contents">
+              <h3 class="post-toc-manual__title">In This Guide</h3>
+              <ol class="post-toc-manual__list">
+                {tocItems.map(item => (
+                  <li><a href={`#${item.id}`}>{item.label}</a></li>
+                ))}
+              </ol>
             </div>
 
             <div class="post-body__intro reveal">
-              <p>You've been dreaming about a complete house renovation for months — or maybe building a new home for years — and the right general contractor in Pennsylvania can make that dream a reality. Whether it's a premium kitchen with custom cabinetry, a second-story addition so every child gets their own room, or a mudroom that finally brings order to your entryway, the quality of your contractor determines everything: timeline, budget, craftsmanship, and your sanity.</p>
-              <p>In 2026, Pennsylvania homeowners have more options than ever — and more risks. With demand for skilled contractors at a post-pandemic high and a wave of unlicensed operators filling the gap, knowing <em>how</em> to evaluate a general contractor is just as important as knowing which ones to call. This guide covers exactly that: PA-specific licensing requirements, a proven vetting process, cost expectations for Delaware County and the Main Line, and the red flags that expose a bad contractor before you sign anything.</p>
+              <p>Hiring a general contractor is one of the largest financial decisions a Pennsylvania homeowner makes. Get it right and you gain a trusted partner who transforms your house, respects your budget, and handles every moving part so you don't have to. Get it wrong and you face cost overruns, contractor abandonment, permit violations, and projects that drag on for months past the promised completion date.</p>
+              <p>This guide is the most complete resource we know of for PA homeowners evaluating general contractors in 2026. We cover every stage of the process — from understanding what a GC actually does (and how they differ from subcontractors and construction managers), to the specific PA laws that protect you, to the exact questions to ask before signing anything. We've also included a candid look at the top residential contractors serving different regions of the state, with a close focus on Delaware County and the Main Line where ProBrothers operates.</p>
             </div>
 
-            <div class="post-body__section reveal">
-              <h2>Pennsylvania General Contractor Licensing: What HICPA Requires</h2>
+            <!-- SECTION 1 -->
+            <div class="post-body__section reveal" id="what-is-a-gc">
+              <h2>What Does a General Contractor Do?</h2>
+              <p>A general contractor (GC) is the professional responsible for the total execution of a construction or renovation project. They are your single point of accountability — they manage the construction site, hire and coordinate subcontractors, source materials, pull permits, schedule inspections, and keep the project moving from first demolition to final walkthrough.</p>
+              <p>Think of the GC as the project's general. They don't necessarily wield the hammer themselves on every task (though many do for specialty work). Instead, they orchestrate the specialists: the electrician, the plumber, the tile setter, the framer, the drywall crew. Each of those specialists is a <strong>subcontractor</strong> — a trade-specific business hired by the GC and answerable to the GC, not to you directly.</p>
 
-              <p>Unlike many states, Pennsylvania does not issue a statewide general contractor license. However, any contractor performing <strong>$5,000 or more per year</strong> in residential home improvement work must register under <strong>HICPA — the Home Improvement Consumer Protection Act</strong> (73 Pa. Stat. § 517.1) with the Pennsylvania Office of Attorney General.</p>
-
-              <p>HICPA registration requires:</p>
-              <ul class="post-list">
-                <li>Proof of at least <strong>$50,000 in general liability insurance</strong> (personal injury and property damage)</li>
-                <li><strong>Workers' compensation</strong> coverage for any employees</li>
-                <li>Disclosure of any prior fraud convictions, bankruptcies, or civil judgments</li>
-                <li>Payment of a <strong>$100 registration fee</strong> (updated March 2, 2026; renews every two years)</li>
-              </ul>
-
-              <p>Importantly, HICPA registration is <em>not</em> an endorsement or license — it simply means the contractor filed the required paperwork. Your job as a homeowner is to go further: verify the registration is active, confirm the insurance certificate is current, and check for any unresolved complaints filed with the Bureau of Consumer Protection.</p>
-
-              <p class="post-body__authority-link">Verify any PA home improvement contractor at the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement/" rel="noopener noreferrer" target="_blank">Pennsylvania Attorney General's official Home Improvement Contractor registration database</a>. If you can't find the contractor there, do not hire them for any residential project over $5,000.</p>
-
-              <h3>What Must Be in Every Pennsylvania Home Improvement Contract</h3>
-              <p>Under HICPA, a written contract is mandatory for any home improvement project over $500. The contract must include:</p>
-              <ul class="post-list">
-                <li>The contractor's full name, business address, and HIC registration number</li>
-                <li>A detailed description of the work to be performed</li>
-                <li>The total price and payment schedule</li>
-                <li>Start and estimated completion dates</li>
-                <li>A description of all materials to be used</li>
-                <li>Signatures of both parties</li>
-              </ul>
-              <p>You have the right to <strong>void the contract</strong> if any of these elements are missing — and you are not required to prepay before signing. If a contractor skips the written contract or pushes back on these requirements, walk away.</p>
-            </div>
-
-            <div class="post-body__section reveal">
-              <h2>What to Look for in a General Contractor in Pennsylvania (2026)</h2>
-
-              <h3>1. Verified HICPA Registration and Active Insurance</h3>
-              <p>Before any conversation about scope or price, ask for the contractor's HIC registration number and verify it yourself. Confirm their general liability insurance and workers' compensation are current — request the certificate of insurance directly from their insurer, not a PDF they email you. A reputable contractor will provide this without hesitation.</p>
-
-              <h3>2. Full-Service Residential Construction Expertise</h3>
-              <p>The best general contractors in Pennsylvania handle projects from initial design consultation through final walkthrough — one point of contact, one timeline, one accountable team. Look for firms that can manage kitchens, bathrooms, home additions, structural work, custom cabinetry, flooring, and finish carpentry in-house or through vetted, insured subcontractors. Every subcontractor they use should also carry proper insurance.</p>
-
-              <h3>3. Transparent, Itemized Bidding</h3>
-              <p>A detailed, line-item written estimate is non-negotiable. If a contractor hands you a single-line number — "Kitchen remodel: $45,000" — without breaking down labor, materials, permits, and contingencies, that is a red flag. The estimate should answer: What materials will be used? Who pulls the permits? Are permit fees included? What triggers a change order? Get it in writing before any work begins.</p>
-
-              <h3>4. Local Portfolio and Verifiable References</h3>
-              <p>Ask to see completed projects in your area — ideally in Delaware County, Chester County, or the Main Line where local zoning rules, permit offices, and architectural styles are familiar. Then call the references. Ask specifically: Did the contractor finish on time? Were there surprise costs? Did they clean up daily? Would you hire them again? A contractor with nothing to hide will give you at least three references without hesitation.</p>
-
-              <h3>5. Detail Craftsmanship — Trim, Cabinetry, and Finishing Work</h3>
-              <p>The real quality of a general contractor shows in the details: crown molding that meets at clean 45-degree angles, cabinet doors that hang level, tile grout lines that are perfectly consistent. These are skills that separate craftsmen from commodity contractors. When reviewing a contractor's portfolio, look closely at finish work — not just the hero shots of completed rooms, but the corners, transitions, and built-ins.</p>
-
-              <h3>6. Clear Communication and a Defined Project Management Process</h3>
-              <p>Home renovations disrupt your life. The contractors who earn repeat business and strong referrals are those who communicate proactively: a defined process for weekly updates, a system for tracking decisions and change orders, and a project manager you can actually reach. Ask how they handle delays, subcontractor scheduling conflicts, and mid-project design changes before you hire them.</p>
-            </div>
-
-            <div class="post-body__section reveal">
-              <h2>Red Flags to Avoid When Hiring a Contractor in Pennsylvania</h2>
-              <p>HICPA and Pennsylvania consumer protection law protect you — but only if you know what warning signs to watch for before signing anything.</p>
-              <ul class="post-list post-list--checkmark">
-                <li><strong>Demanding more than 30% upfront</strong> before work begins — a likely HICPA violation and a sign of financial distress</li>
-                <li><strong>No written contract or a vague one-page document</strong> without itemized scope, timeline, or registration number</li>
-                <li><strong>No verifiable HIC registration</strong> — search the PA AG database yourself; don't accept a number you can't confirm</li>
-                <li><strong>No physical business address</strong> — HICPA prohibits using a P.O. box; a contractor with no fixed address has no accountability</li>
-                <li><strong>A bid significantly lower than competitors</strong> — 20%+ below other quotes typically means corners will be cut or costs added later</li>
-                <li><strong>Pressure to sign immediately</strong> or claims that the low price is only available today — a tactic to stop you from doing due diligence</li>
-                <li><strong>Unable to provide proof of insurance on request</strong> — this means you are personally liable if a worker is injured on your property</li>
-                <li><strong>Vague answers about permits</strong> — in Pennsylvania, most structural work, additions, electrical, and plumbing projects require permits; a contractor who suggests skipping them is creating liability for you</li>
-              </ul>
-              <p>If you encounter any of these signs, contact the Pennsylvania Attorney General's Bureau of Consumer Protection at <strong>1-888-520-6680</strong> or <strong>1-800-441-2555</strong> before proceeding.</p>
-            </div>
-
-            <div class="post-body__section reveal">
-              <h2>What Does a General Contractor Cost in Pennsylvania?</h2>
-              <p>Understanding the cost landscape helps you evaluate bids and spot outliers. In Delaware County and the Main Line, here are realistic 2026 ranges for common project types:</p>
-
+              <h3>General Contractor vs. Subcontractor vs. Construction Manager</h3>
               <div class="post-table-wrap">
-                <table class="post-table" aria-label="General contractor project cost ranges in Pennsylvania 2026">
+                <table class="post-table" aria-label="Comparison of general contractor, subcontractor, and construction manager roles">
                   <thead>
                     <tr>
-                      <th>Project Type</th>
-                      <th>Typical Cost Range (Delaware County / Main Line)</th>
+                      <th>Role</th>
+                      <th>Who They Work For</th>
+                      <th>What They Do</th>
+                      <th>When Involved</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>Kitchen remodel (mid-range)</td><td>$35,000 – $75,000</td></tr>
-                    <tr><td>Kitchen remodel (luxury/custom cabinets)</td><td>$75,000 – $150,000+</td></tr>
-                    <tr><td>Bathroom remodel</td><td>$15,000 – $45,000</td></tr>
-                    <tr><td>Room addition (single story)</td><td>$80,000 – $140,000</td></tr>
-                    <tr><td>Second-story addition</td><td>$150,000 – $250,000+</td></tr>
-                    <tr><td>Full-home renovation</td><td>$150,000 – $400,000+</td></tr>
-                    <tr><td>Mudroom / built-in cabinetry</td><td>$8,000 – $25,000</td></tr>
+                    <tr>
+                      <td><strong>General Contractor</strong></td>
+                      <td>You (the homeowner)</td>
+                      <td>Manages entire project: subs, permits, schedule, budget, site safety</td>
+                      <td>After design is complete through project closeout</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Subcontractor</strong></td>
+                      <td>The General Contractor</td>
+                      <td>Performs a specific trade: electrical, plumbing, HVAC, framing, tile, etc.</td>
+                      <td>Their specific scope window within the overall schedule</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Construction Manager (CM)</strong></td>
+                      <td>You (owner's representative)</td>
+                      <td>Advises on constructability, budget, schedule — often involved from design phase</td>
+                      <td>Early design phase through project closeout; may not self-perform work</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Design-Build Contractor</strong></td>
+                      <td>You (single contract)</td>
+                      <td>Provides both design + construction under one roof</td>
+                      <td>Entire project lifecycle from concept through completion</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>For most residential renovation and addition projects in Pennsylvania, you want a <strong>general contractor</strong> — one entity responsible for the whole job. A construction manager is more common on large commercial or institutional projects where the owner wants to manage contracts directly. A design-build contractor works well if you're starting from scratch without an existing design.</p>
+            </div>
+
+            <!-- SECTION 2 -->
+            <div class="post-body__section reveal" id="gc-types">
+              <h2>Types of General Contractors in Pennsylvania</h2>
+              <p>Not all GCs are the same. Understanding the different types helps you match the right contractor to your project:</p>
+
+              <h3>Residential Remodeling Contractors</h3>
+              <p>Specialists in kitchens, bathrooms, basements, additions, and whole-home renovations for occupied homes. This is the most common type of GC for Delaware County and Main Line homeowners. They understand the logistics of working around families — sequencing work to minimize disruption, coordinating daily with homeowners, and protecting finished spaces while adjacent areas are under construction.</p>
+
+              <h3>Custom Home Builders</h3>
+              <p>GCs who specialize in building new homes from the ground up — typically on vacant lots. Their skills overlap with remodelers but their project timelines (12–24 months) and site logistics differ significantly. If you are building a new home in Chester or Delaware County, look specifically for contractors with new-construction references, not just remodel portfolios.</p>
+
+              <h3>Design-Build Firms</h3>
+              <p>Design-build contractors integrate the design and construction process under one contract. Your architect (or interior designer) and builder are on the same team, which eliminates finger-pointing between the design team and the construction team when problems arise. The trade-off is that you have less independent design oversight — the firm designing is also the firm building, so errors or cost-cutting in the design phase may not be flagged by an independent eye.</p>
+
+              <h3>Commercial General Contractors</h3>
+              <p>Focused on office buildings, retail spaces, restaurants, healthcare facilities, and industrial projects. Commercial work involves different licensing, bonding, and insurance requirements than residential work in Pennsylvania. If you are a homeowner, verify that any contractor you hire has residential-specific experience and HICPA registration — a commercial GC is not automatically qualified or registered for residential home improvement work.</p>
+
+              <h3>Specialty Contractors (GC with a Trade Focus)</h3>
+              <p>Some contractors specialize in a specific scope — kitchen remodeling companies, addition specialists, cabinet and trim specialists — while also offering general contracting capabilities. These are often excellent choices for projects that fall squarely in their specialty, as their subcontractor relationships and material sourcing for that specific work type are typically more efficient and cost-effective.</p>
+            </div>
+
+            <!-- SECTION 3 -->
+            <div class="post-body__section reveal" id="hicpa">
+              <h2>Pennsylvania GC Licensing &amp; HICPA Registration</h2>
+              <p>Pennsylvania takes an important approach to consumer protection in construction: rather than requiring general contractors to pass a licensing exam, the state requires <em>registration</em> under HICPA — the <strong>Home Improvement Consumer Protection Act</strong> (73 Pa. Stat. § 517.1) — and puts the enforcement burden on the Attorney General's Office, not a licensing board.</p>
+
+              <h3>Who Must Register Under HICPA?</h3>
+              <p>Any contractor who performs <strong>$5,000 or more per year</strong> in residential home improvement work must register with the Pennsylvania Office of Attorney General. This includes general contractors, remodeling companies, and most specialty contractors working on homes. The registration:</p>
+              <ul class="post-list">
+                <li>Requires proof of at least <strong>$50,000 in general liability insurance</strong> (personal injury and property damage)</li>
+                <li>Requires <strong>workers' compensation</strong> coverage for any employees</li>
+                <li>Requires disclosure of any prior fraud convictions, bankruptcies, or civil judgments</li>
+                <li>Costs <strong>$100</strong> (updated March 2, 2026; prior fee was $50) and renews every two years</li>
+                <li>Does NOT require passing an exam or proving work experience</li>
+              </ul>
+
+              <h3>What HICPA Registration Is — and Isn't</h3>
+              <p>HICPA registration is <em>not a license</em> — it means the contractor filed paperwork and paid a fee, not that the state has vetted their skill level. The Attorney General's office explicitly states that registration is "not an endorsement, recommendation or approval." Your due diligence (verifying insurance, checking references, reviewing portfolio) remains essential.</p>
+
+              <p class="post-body__authority-link">Verify any PA home improvement contractor's registration status at the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement/" rel="noopener noreferrer" target="_blank">Pennsylvania Attorney General's official Home Improvement Contractor database</a>. If you cannot find the contractor in this database, do not hire them for any project over $5,000.</p>
+
+              <h3>What Must Be in Every Pennsylvania Home Improvement Contract?</h3>
+              <p>Under HICPA, a written contract is mandatory for any project over $500. The contract must include:</p>
+              <ul class="post-list">
+                <li>Contractor's full legal name, physical business address, and HIC registration number</li>
+                <li>A detailed description of all work to be performed</li>
+                <li>The total price and itemized payment schedule</li>
+                <li>Estimated start and completion dates</li>
+                <li>A complete list of materials, including brand/grade where applicable</li>
+                <li>Both parties' signatures</li>
+              </ul>
+              <p>You have the right to <strong>void the contract</strong> if any of these elements are missing. You also have the right to cancel most home improvement contracts within three business days of signing (the federal "cooling-off" rule). A contractor who resists putting these elements in writing is a contractor to avoid.</p>
+
+              <h3>Philadelphia and Pittsburgh: Additional City Licensing</h3>
+              <p>Philadelphia and Pittsburgh maintain their own city contractor licensing requirements on top of HICPA statewide registration. If your project is within city limits, confirm your contractor holds both the statewide HICPA registration and the applicable city license. Delaware County and Chester County municipalities (Media, King of Prussia, West Chester, Glen Mills, etc.) operate under the statewide HICPA framework with no additional city licensing layer.</p>
+            </div>
+
+            <!-- SECTION 4 -->
+            <div class="post-body__section reveal" id="how-to-find">
+              <h2>How to Find and Vet a General Contractor in PA: Step-by-Step</h2>
+
+              <h3>Step 1: Define Your Project Scope Before Calling Anyone</h3>
+              <p>Before reaching out to contractors, have a clear picture of what you want: which rooms, what specific work, what your budget range is (even if approximate), and your target timeline. A well-defined scope produces comparable bids and reduces the risk of scope creep — the single biggest driver of cost overruns.</p>
+
+              <h3>Step 2: Build a Shortlist of Local Candidates</h3>
+              <p>Source candidates from: personal referrals from neighbors or friends who've had similar work done in the same municipality, neighborhood Facebook groups and Nextdoor threads (real experiences, local context), Houzz and Google reviews (look for volume and recency — 10 reviews from 5 years ago is less meaningful than 30 reviews from the last 24 months), and local trade associations like the Delaware County chapter of the Home Builders Association.</p>
+
+              <h3>Step 3: Verify HICPA Registration and Insurance First</h3>
+              <p>Before investing time in a contractor, verify their HIC registration at the PA AG's database. Then request a current certificate of insurance — both general liability and workers' compensation. Call the insurer directly to confirm the policy is active. This step alone eliminates unregistered operators and protects you from liability for on-site injuries.</p>
+
+              <h3>Step 4: Request 3 Itemized Written Bids</h3>
+              <p>Never accept fewer than 3 bids for any project over $10,000. Each bid must be itemized — line items for labor, materials, subcontractor costs, permit fees, and contingencies. When you receive the bids, compare them line by line. A 20%+ gap between bids usually reveals that one contractor is excluding scope (permits, a specific trade), planning material substitutions, or — at worst — financially desperate enough to underbid with the intention of using change orders to recover margin later.</p>
+
+              <h3>Step 5: Check References Rigorously</h3>
+              <p>Ask for at least 3 references from completed projects similar in scope to yours — not from the contractor's all-time best projects, but from projects in your price range and complexity. Call each reference and ask: Did they finish on time? Were there surprise costs beyond the contract? How did they handle problems? Did subcontractors behave professionally in and around the home? Would you hire them again without hesitation?</p>
+
+              <h3>Step 6: Review Their Portfolio for Detail Work</h3>
+              <p>Look past the wide-angle hero shots of completed rooms. Zoom in on corners, transitions, cabinet alignment, grout lines, trim miters, and door hardware installation. These details reveal the actual quality level of the work more reliably than the overall room impression. Ask to visit a completed project in person if possible.</p>
+
+              <h3>Step 7: Evaluate Communication Before You Sign</h3>
+              <p>How a contractor communicates during the bidding process predicts how they will communicate during the project. Do they return calls promptly? Are their written communications clear? Do they ask good questions about your needs and preferences? A contractor who is vague, slow, or dismissive in the proposal phase will be worse once they have your deposit.</p>
+            </div>
+
+            <!-- SECTION 5 -->
+            <div class="post-body__section reveal" id="questions-to-ask">
+              <h2>15 Questions to Ask a General Contractor Before Hiring</h2>
+              <p>These questions serve two purposes: they surface the information you need to make a sound decision, and they reveal how the contractor handles direct, informed questions — which tells you a great deal about how they will behave once the project is underway.</p>
+              <ol class="post-list post-list--numbered">
+                <li><strong>What is your PA HIC registration number, and may I verify it?</strong></li>
+                <li><strong>Can I see your current certificate of general liability insurance and workers' comp?</strong> (Ask for the insurer's contact to confirm independently.)</li>
+                <li><strong>Who are the subcontractors you plan to use, and are they also insured?</strong></li>
+                <li><strong>Have you completed projects of similar scope in this municipality?</strong> (Permit familiarity matters.)</li>
+                <li><strong>Will you pull all required permits, and are permit fees included in your bid?</strong></li>
+                <li><strong>What is the project timeline, and what causes the schedule to change?</strong></li>
+                <li><strong>What is the payment schedule — and will it be milestone-based rather than time-based?</strong></li>
+                <li><strong>How do you handle change orders?</strong> (Answer should be: in writing, signed by both parties, before work on the change begins.)</li>
+                <li><strong>Will you provide conditional lien waivers at each payment milestone?</strong></li>
+                <li><strong>Can you provide 3 references from projects completed in the last 18 months?</strong></li>
+                <li><strong>What is your policy for daily site cleanup and protecting finished areas?</strong></li>
+                <li><strong>Who is my single point of contact for daily communication?</strong></li>
+                <li><strong>Do you carry commercial general liability coverage of at least $1M per occurrence?</strong></li>
+                <li><strong>What happens if a subcontractor's work fails inspection?</strong></li>
+                <li><strong>How do you handle disputes — is there a process outlined in the contract?</strong></li>
+              </ol>
+              <p>Any contractor who balks at these questions, deflects, or gives vague answers should be disqualified. The best contractors welcome informed clients — they know it leads to smoother projects and stronger referrals.</p>
+            </div>
+
+            <!-- SECTION 6 -->
+            <div class="post-body__section reveal" id="red-flags">
+              <h2>Red Flags and Contractor Scams to Avoid in Pennsylvania</h2>
+              <p>Pennsylvania's HICPA and consumer protection laws provide real remedies — but only if you recognize warning signs before signing. These are the most common red flags found in PA contractor fraud cases:</p>
+              <ul class="post-list post-list--checkmark">
+                <li><strong>Demanding more than 30% upfront</strong> before any work begins. This is a likely HICPA violation and often a sign of a contractor who needs your deposit to fund a different job. Standard: 10–30% upon contract signing, remainder in milestone-based installments.</li>
+                <li><strong>No written contract or a one-page generic document</strong> without itemized scope, timeline, or HIC registration number. Under HICPA, a contract without the required elements is voidable — but only if you haven't already paid.</li>
+                <li><strong>Cannot provide a verifiable HIC registration number.</strong> Search the PA AG database yourself; don't accept a number without checking it.</li>
+                <li><strong>No physical business address</strong> — only a cell phone and a P.O. box. HICPA requires a physical address on all contracts and advertising.</li>
+                <li><strong>Significantly lower bid than competitors</strong> — more than 20% below the median of other bids almost always means missing scope, uninsured subcontractors, or planned material downgrades.</li>
+                <li><strong>High-pressure close tactics</strong> — "this price is only good today," "I have another job starting Monday," "you should decide now." Legitimate contractors don't need to pressure you.</li>
+                <li><strong>Asking you to pull permits yourself.</strong> Permits are the contractor's responsibility; if they ask you to pull them, they may not be registered to do so — a serious warning sign.</li>
+                <li><strong>Unable or unwilling to provide insurance certificates.</strong> Without verified insurance, you are personally liable for accidents, injuries, and property damage that occur during the project on your property.</li>
+                <li><strong>Asking for cash payment only.</strong> Checks and transfers create a paper trail. A contractor who insists on cash is often hiding income, unregistered, or planning to disappear.</li>
+                <li><strong>Door-to-door solicitation after a storm</strong> ("storm chasers"). These contractors often target homeowners after hail or wind events, typically lack local HICPA registration, and use inflated insurance estimates to extract overpayments.</li>
+              </ul>
+              <p>If you encounter contractor fraud or abandonment in Pennsylvania, contact the <strong>Bureau of Consumer Protection at 1-888-520-6680</strong> or <strong>1-800-441-2555</strong>. You can also file a complaint online through the PA Attorney General's website.</p>
+            </div>
+
+            <!-- SECTION 7 -->
+            <div class="post-body__section reveal" id="contracts">
+              <h2>Understanding Contracts, Change Orders, and Lien Waivers in Pennsylvania</h2>
+
+              <h3>The Written Contract Is Your Primary Protection</h3>
+              <p>Every element of your project that matters should be in the written contract before work begins: the exact scope, the materials to be used (brand and grade), the project timeline with specific milestones, the payment schedule tied to those milestones, and the process for handling changes. An oral agreement for a construction project is legally enforceable in Pennsylvania, but it is nearly impossible to prove the terms of what was said once a dispute arises.</p>
+
+              <h3>Change Orders: How to Handle Mid-Project Changes</h3>
+              <p>A change order is a written amendment to the original contract that documents a change in scope, price, or timeline. Every change — even small ones the contractor suggests verbally — should be formalized as a signed change order before the work on that change begins. Key change-order rules:</p>
+              <ul class="post-list">
+                <li>Change orders must be in writing and signed by both parties</li>
+                <li>The change order should specify the exact added (or removed) scope, the cost impact, and any schedule impact</li>
+                <li>Never let a contractor "do it now and we'll settle up later" — this opens the door to inflated charges you cannot dispute</li>
+                <li>A pattern of frequent, unexpected change orders is itself a red flag — it often signals that the original estimate intentionally excluded scope to win the bid</li>
+              </ul>
+
+              <h3>Lien Waivers: Protecting Your Home from Subcontractor Claims</h3>
+              <p>Pennsylvania mechanics' lien law allows subcontractors and material suppliers who are not paid by the general contractor to file a lien against your property — even if you paid the GC in full. This is one of the most misunderstood risks in residential construction.</p>
+              <p>Protection: request a <strong>conditional lien waiver</strong> from your GC (and from any major subcontractor billed at over $5,000) at each payment milestone. A conditional waiver is effective only upon the payment clearing — so you're protected if the check bounces, but the sub can't later claim they were never paid once the check clears. Include a lien waiver requirement in your initial contract.</p>
+              <p>Note: Pennsylvania allows a direct contractor (the GC) to waive a subcontractor's lien rights prior to work commencing on residential projects three stories or less. Ask your contractor whether they use this mechanism and whether they have a payment bond in place to protect both you and their subs.</p>
+
+              <h3>Payment Schedules: What's Normal</h3>
+              <p>A typical residential construction payment schedule in Pennsylvania looks like this:</p>
+              <ul class="post-list">
+                <li><strong>10–30% upon contract signing</strong> (allows contractor to order materials and mobilize)</li>
+                <li><strong>25–30% at project start / demo completion</strong></li>
+                <li><strong>25–30% at rough-in completion</strong> (framing, electrical, plumbing rough-in, inspection passed)</li>
+                <li><strong>10–15% at substantial completion</strong></li>
+                <li><strong>5–10% retained until final punch list is fully resolved</strong> (this "retention" gives you leverage to ensure deficiencies are fixed)</li>
+              </ul>
+              <p>Never pay the final retention until every punch-list item is resolved and you have received all conditional lien waivers, permit inspection signoffs, and any warranty documentation.</p>
+            </div>
+
+            <!-- SECTION 8 -->
+            <div class="post-body__section reveal" id="permits">
+              <h2>Permits &amp; Inspections for Home Renovation in Pennsylvania</h2>
+
+              <h3>The Uniform Construction Code (UCC)</h3>
+              <p>Pennsylvania enforces the <strong>Uniform Construction Code (UCC)</strong>, administered by the <a href="https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home" rel="noopener noreferrer" target="_blank">Pennsylvania Department of Labor and Industry</a>. The UCC sets minimum standards for construction quality and safety — structural, electrical, plumbing, HVAC, fire/egress — and applies statewide. However, each municipality enforces the UCC locally, and individual townships may adopt amendments that are more stringent than the base UCC.</p>
+
+              <h3>What Requires a Permit in Delaware County?</h3>
+              <p>In Delaware County, each township (Media, Upper Providence, Middletown, Springfield, Marple, Radnor, etc.) has its own permit office and may have local UCC amendments. As a general rule, permits are required for:</p>
+              <ul class="post-list">
+                <li>Any structural work: additions, second stories, load-bearing wall removal</li>
+                <li>Electrical panel upgrades, new circuits, rewiring</li>
+                <li>Plumbing work: new runs, drain/waste/vent changes, water service</li>
+                <li>HVAC: new systems, ductwork modifications, gas line work</li>
+                <li>Decks and exterior structures above a certain size</li>
+                <li>Basement finishing (depending on scope)</li>
+                <li>Window and door replacements that change opening size</li>
+              </ul>
+              <p>Cosmetic work (painting, flooring, cabinet replacements, fixture swaps that don't touch rough-in) typically does not require a permit. When in doubt, ask your contractor — and verify with your township's building department independently.</p>
+
+              <h3>Why Permits Matter for Homeowners</h3>
+              <p>Unpermitted work creates three significant risks: (1) it can fail home inspection when you sell, requiring remediation at your expense; (2) your homeowner's insurance may deny claims related to unpermitted work; and (3) the municipality can order the work torn out and redone at your expense. A contractor who suggests skipping permits to "save time" is transferring all of this risk to you.</p>
+
+              <h3>Permit Timeline in Delaware County</h3>
+              <p>Permit wait times in Delaware County municipalities typically range from <strong>2–6 weeks</strong> for standard residential renovations. Complex additions or projects requiring zoning variances (setbacks, lot coverage, height restrictions) can take 2–4 months. Factor this into your overall project timeline — your contractor should be scheduling permit applications well before the intended start date.</p>
+            </div>
+
+            <!-- SECTION 9 -->
+            <div class="post-body__section reveal" id="insurance">
+              <h2>Insurance and Bonding Explained</h2>
+
+              <h3>What Insurance Should Your Contractor Carry?</h3>
+              <p>A properly insured general contractor in Pennsylvania carries:</p>
+              <ul class="post-list">
+                <li><strong>General Liability Insurance:</strong> Covers property damage and personal injury caused by the contractor or their subs during the project. For residential remodeling, $1M per occurrence / $2M aggregate is the standard minimum. HICPA requires at least $50,000, but that minimum is far too low for most projects.</li>
+                <li><strong>Workers' Compensation Insurance:</strong> Covers medical costs and lost wages for workers injured on your property. Without it, an injured worker may sue you as the property owner. Required under HICPA for any contractor with employees.</li>
+                <li><strong>Commercial Auto Insurance:</strong> Covers vehicles used on the job. If a contractor's truck damages your property or causes an accident on the way to your site, their personal auto policy likely won't cover it.</li>
+              </ul>
+
+              <h3>What Is a Contractor's Bond?</h3>
+              <p>A surety bond is a financial guarantee from a third-party bonding company that the contractor will fulfill the terms of their contract. If the contractor abandons the job or fails to perform, the bond provides a fund the homeowner can claim against. Bonding is not required by HICPA for residential contractors, but some GCs carry it voluntarily as a trust signal — it is more common in commercial contracting. If your contractor is bonded, ask to see the bond certificate and verify the coverage amount is proportionate to your project.</p>
+
+              <h3>Your Own Insurance: What to Check</h3>
+              <p>Before any contractor begins work on your home, notify your homeowner's insurance provider. Some policies have exclusions for construction in progress. You may want to temporarily increase your liability coverage during the project. Also confirm whether your policy covers materials stored on-site before they are installed — contractor's all-risk (CAR) policies typically cover this for larger projects.</p>
+            </div>
+
+            <!-- SECTION 10 -->
+            <div class="post-body__section reveal" id="costs">
+              <h2>Cost Expectations by Project Type (Delaware County &amp; Main Line, 2026)</h2>
+              <p>Cost ranges reflect fully permitted, professional-grade work with licensed subcontractors in Delaware County and Chester County, PA. National averages run 10–25% lower; PA suburban costs are elevated by permit fees, union labor in some trades, and premium material preferences in the Main Line market.</p>
+
+              <div class="post-table-wrap">
+                <table class="post-table" aria-label="General contractor project cost ranges by type in Delaware County and Main Line Pennsylvania 2026">
+                  <thead>
+                    <tr>
+                      <th>Project Type</th>
+                      <th>Scope</th>
+                      <th>Cost Range (2026)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Kitchen remodel</td><td>Mid-range (new layout, semi-custom cabs, solid countertops)</td><td>$35,000 – $75,000</td></tr>
+                    <tr><td>Kitchen remodel</td><td>Luxury (custom cabinetry, premium appliances, full reconfigure)</td><td>$75,000 – $160,000+</td></tr>
+                    <tr><td>Bathroom remodel</td><td>Full renovation (tile, fixtures, vanity, shower/tub)</td><td>$15,000 – $50,000</td></tr>
+                    <tr><td>Master bath remodel</td><td>Spa-grade tile, walk-in shower, heated floor, double vanity</td><td>$35,000 – $80,000+</td></tr>
+                    <tr><td>Room addition</td><td>Single-story (family room, bedroom, sunroom)</td><td>$85,000 – $150,000</td></tr>
+                    <tr><td>Second-story addition</td><td>Full floor addition with 2–3 bedrooms</td><td>$150,000 – $300,000+</td></tr>
+                    <tr><td>Basement finishing</td><td>Home office, playroom, or in-law suite</td><td>$35,000 – $75,000</td></tr>
+                    <tr><td>Mudroom / built-in cabinetry</td><td>Custom storage, bench, hooks, cubbies</td><td>$8,000 – $28,000</td></tr>
+                    <tr><td>Interior trim package</td><td>Crown molding, chair rail, wainscoting, door casings</td><td>$5,000 – $20,000</td></tr>
+                    <tr><td>Full-home renovation</td><td>Kitchen + multiple baths + systems + finishes</td><td>$175,000 – $500,000+</td></tr>
                   </tbody>
                 </table>
               </div>
 
-              <p>These ranges reflect fully permitted, professional-grade work. Bids well below these ranges often exclude permits, use non-union subcontractors without proper insurance, or plan to substitute materials mid-project. Always compare apples to apples: what materials, what permits, and what subcontractors are included in each quote?</p>
-              <p>General contractor fees are typically built into the project price as a markup on materials and subcontractor labor (10–20%) or as a flat management fee. Ask your contractor to explain their fee structure explicitly.</p>
+              <h3>Understanding General Contractor Fees</h3>
+              <p>GC fees are typically structured in one of two ways:</p>
+              <ul class="post-list">
+                <li><strong>Cost-plus markup:</strong> The GC charges actual cost of labor, materials, and subcontractors, plus a percentage markup (typically 15–25%) for overhead and profit. You see the actual costs; the markup is the GC's compensation.</li>
+                <li><strong>Fixed-price (lump sum):</strong> The GC bids a single total price for the agreed scope. Cost risk stays with the GC — if material prices rise or a sub runs over, the GC absorbs it (unless a change order is executed). This is the most common model for residential remodeling.</li>
+              </ul>
+              <p>Permit fees, design fees, and any structural engineering required are often additional to the base construction bid. Ask explicitly whether each of these is included. A bid that's 15% lower than competitors but excludes permit fees and engineering may not actually be cheaper.</p>
             </div>
 
-            <div class="post-body__section reveal">
+            <!-- SECTION 11 -->
+            <div class="post-body__section reveal" id="timeline">
+              <h2>Timeline Expectations for PA Renovation Projects</h2>
+              <p>One of the most common sources of homeowner frustration is unclear or unrealistic timeline expectations. Pennsylvania has specific factors that extend timelines beyond national averages:</p>
+
+              <div class="post-table-wrap">
+                <table class="post-table" aria-label="Home renovation project timeline expectations in Pennsylvania 2026">
+                  <thead>
+                    <tr>
+                      <th>Project Type</th>
+                      <th>Permit Wait (DE County typical)</th>
+                      <th>Construction Duration</th>
+                      <th>Total Timeline</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Bathroom remodel</td><td>2–4 weeks</td><td>3–6 weeks</td><td>5–10 weeks</td></tr>
+                    <tr><td>Kitchen remodel</td><td>3–6 weeks</td><td>6–12 weeks</td><td>9–18 weeks</td></tr>
+                    <tr><td>Room addition (single story)</td><td>4–8 weeks</td><td>12–20 weeks</td><td>4–7 months</td></tr>
+                    <tr><td>Second-story addition</td><td>6–12 weeks</td><td>16–26 weeks</td><td>5–9 months</td></tr>
+                    <tr><td>Basement finishing</td><td>2–4 weeks</td><td>6–10 weeks</td><td>8–14 weeks</td></tr>
+                    <tr><td>Full-home renovation</td><td>6–12 weeks</td><td>6–18 months</td><td>7–20 months</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p><strong>PA-specific delay factors:</strong> Winter weather (November–March) slows exterior work, concrete pours, and site prep. Permit approval timelines vary significantly by township — a straightforward permit in one municipality might take 3 weeks; an equivalent permit in an adjacent township might take 8. Material lead times for custom cabinetry, specialty windows, and imported tile can add 6–12 weeks. Your contract should explicitly address which events constitute legitimate schedule extensions and what notice the contractor must give you.</p>
+            </div>
+
+            <!-- SECTION 12 -->
+            <div class="post-body__section reveal" id="top-contractors">
               <h2>Top General Contractors in Pennsylvania (2026 Edition)</h2>
-              <p>The following firms have earned consistent reputations in their respective PA markets. This is not a sponsored or paid list — it is based on publicly verifiable reviews, portfolio presence, and verified HICPA-compliant operations.</p>
+              <p>The following firms have earned consistent reputations across their respective PA markets, based on verifiable reviews, HICPA-compliant operations, and documented residential portfolios. This is an editorial list — not sponsored or paid placement.</p>
 
               <h3>1. ProBrothers — Media, PA (Delaware County &amp; Main Line)</h3>
-              <p><strong>Services:</strong> Custom kitchen remodeling, bathroom renovation, home additions, second-story additions, custom cabinetry, mudroom installations, trim carpentry, windows and doors, full residential construction services.</p>
-              <p><strong>Why They Stand Out:</strong> 15+ years of local trust in Media, King of Prussia, West Chester, and surrounding communities. ProBrothers brings an in-house team of master carpenters and tradespeople — fewer subcontractors means tighter quality control and faster timelines. Customer-first communication model with defined project milestones and weekly updates.</p>
-              <p><strong>Service Areas:</strong> Media, King of Prussia, West Chester, Glen Mills, Newtown Square, Malvern, Phoenixville, and broader Delaware and Chester County communities.</p>
+              <p><strong>Specialties:</strong> Custom kitchen remodeling, bathroom renovation, home additions and second-story additions, custom cabinetry, mudroom installations, trim carpentry, window and door installation, full residential <a href="/services/construction-services/">construction services</a>.</p>
+              <p><strong>Service Areas:</strong> <a href="/locations/media/">Media</a>, <a href="/locations/king-of-prussia/">King of Prussia</a>, <a href="/locations/west-chester/">West Chester</a>, Glen Mills, Malvern, Newtown Square, Marple, Phoenixville, Springfield, and greater Delaware and Chester County communities.</p>
+              <p><strong>Why They Stand Out:</strong> 15+ years of local trust. In-house team of master carpenters, cabinetmakers, and finish specialists — not a general manager with a rolodex of whoever is available. ProBrothers brings the same crew back to finish what they start. Customer-first communication model with defined project milestones and weekly client updates.</p>
 
-              <h3>2. Harth Builders — Spring House, PA</h3>
-              <p><strong>Services:</strong> Design-build remodeling, kitchens, bathrooms, and home additions.</p>
-              <p><strong>Known For:</strong> Collaborative design-build process with strong communication practices and high-end finishes for Montgomery County homeowners.</p>
+              <h3>2. Harth Builders — Spring House, PA (Montgomery County)</h3>
+              <p><strong>Specialties:</strong> Design-build remodeling, kitchens, bathrooms, and home additions.</p>
+              <p><strong>Known For:</strong> Collaborative design-build process with in-house design staff, known for high-end finishes and strong communication practices across Montgomery County.</p>
 
-              <h3>3. Tilghman Builders — Churchville, PA</h3>
-              <p><strong>Services:</strong> Home renovations, additions, and aging-in-place remodels.</p>
-              <p><strong>Known For:</strong> Expertise in blending additions into historic Bucks County homes while preserving original architectural character.</p>
+              <h3>3. Tilghman Builders — Churchville, PA (Bucks County)</h3>
+              <p><strong>Specialties:</strong> Home renovations, additions, and aging-in-place remodels.</p>
+              <p><strong>Known For:</strong> Expertise in blending additions into historic Bucks County homes while preserving original architectural character and period-appropriate detailing.</p>
 
               <h3>4. Buckminster Green — Philadelphia, PA</h3>
-              <p><strong>Services:</strong> Sustainable remodels, kitchens, and bathrooms.</p>
-              <p><strong>Known For:</strong> Green building practices, LEED-aligned materials, and modern design for environmentally-conscious Philadelphia homeowners.</p>
+              <p><strong>Specialties:</strong> Sustainable remodels, kitchens, bathrooms.</p>
+              <p><strong>Known For:</strong> Green building practices, LEED-aligned material selection, and modern design for environmentally-conscious Philadelphia-area homeowners.</p>
 
-              <h3>5. Haller Enterprises — Lititz, PA</h3>
-              <p><strong>Services:</strong> Full-service construction, HVAC, plumbing, and electrical work.</p>
-              <p><strong>Known For:</strong> One-stop shop for construction and mechanical trades — strong for Lancaster County and Central PA projects that require mechanical and construction coordination.</p>
+              <h3>5. Haller Enterprises — Lititz, PA (Lancaster County)</h3>
+              <p><strong>Specialties:</strong> Full-service construction, HVAC, plumbing, and electrical work.</p>
+              <p><strong>Known For:</strong> One-stop-shop for construction and mechanical trades — particularly effective for Lancaster and York County projects requiring integrated mechanical and construction coordination.</p>
 
-              <h3>6. Remodeling Concepts — Langhorne, PA</h3>
-              <p><strong>Services:</strong> Exterior remodeling, siding, roofing, and decks.</p>
-              <p><strong>Known For:</strong> Strong exterior renovation expertise for Bucks County homeowners.</p>
+              <h3>6. Remodeling Concepts — Langhorne, PA (Bucks County)</h3>
+              <p><strong>Specialties:</strong> Exterior remodeling, siding, roofing, and decks.</p>
+              <p><strong>Known For:</strong> Strong exterior renovation expertise for Bucks County homeowners focused on curb appeal and weatherproofing projects.</p>
             </div>
 
-            <div class="post-body__section reveal">
-              <h2>Why ProBrothers Is the Right Choice for Delaware County and the Main Line</h2>
-              <p>While every firm on this list has earned its reputation in its own market, Delaware County and Main Line homeowners in 2026 have a distinct advantage: ProBrothers is a locally rooted, full-service contractor with the range to handle any residential project from concept to completion.</p>
+            <!-- SECTION 13 -->
+            <div class="post-body__section reveal" id="why-probrothers">
+              <h2>Why ProBrothers for Delaware County and the Main Line</h2>
+              <p>Delaware County and Main Line homeowners have a geographic advantage: a locally rooted, full-service contractor who knows the permit offices, subcontractor landscape, and architectural character of this specific market. ProBrothers isn't a franchise with rotating crews. It's a local company where the same skilled team that starts your project finishes it.</p>
               <ul class="post-list post-list--checkmark">
-                <li><strong>In-House Craftsmen, Not Just Subcontractors:</strong> ProBrothers' core team includes master carpenters, cabinetmakers, and finish specialists — work you can see and touch at every stage, not handed off to the lowest bidding sub.</li>
-                <li><strong>HICPA-Compliant, Fully Insured:</strong> ProBrothers carries full general liability and workers' compensation coverage and operates with complete written contracts on every project.</li>
-                <li><strong>Custom Cabinetry and Trim Expertise:</strong> From luxury kitchen cabinets and mudroom storage to crown molding and decorative wall trim, ProBrothers handles the details that define a finished space.</li>
-                <li><strong>Transparent Pricing and Project Management:</strong> Itemized estimates, defined change-order processes, and milestone-based payment schedules — no surprises.</li>
-                <li><strong>Seamless Additions and Blended Work:</strong> Second-story additions, room additions, and sunroom builds that match your home's existing architecture — not additions that look like afterthoughts.</li>
-                <li><strong>Customer-First Communication:</strong> Weekly project updates, responsive project management, and a team that treats your home with the same care they'd give their own.</li>
+                <li><strong>HICPA-Compliant, Fully Insured:</strong> ProBrothers carries full general liability and workers' compensation coverage and operates with complete written contracts on every project. HIC registration verified.</li>
+                <li><strong>In-House Craftsmen, Not Just Coordinators:</strong> The core ProBrothers team includes master carpenters, cabinetmakers, and finish specialists. Fewer handoffs mean tighter quality control and faster resolution when issues arise.</li>
+                <li><strong>Custom Cabinetry and Trim Mastery:</strong> From luxury <a href="/services/cabinets/">kitchen cabinets</a> and mudroom storage systems to crown molding and decorative wall trim, ProBrothers handles the fine details that define a finished space. See our <a href="/services/trim/">trim carpentry services</a>.</li>
+                <li><strong>Local Permit Expertise:</strong> Having operated in Delaware County for 15+ years, ProBrothers knows the permit requirements, inspection expectations, and zoning nuances of Media, Upper Providence, Middletown, Marple, Springfield, and the surrounding townships.</li>
+                <li><strong>Transparent Pricing and Milestone-Based Payments:</strong> Itemized estimates, defined change-order processes, and milestone-based payment schedules. No ambiguity about what you're paying for and when.</li>
+                <li><strong>Seamless Additions:</strong> Second-story additions, room additions, and sunroom builds that match existing architecture. See our full <a href="/services/additions/">home additions services</a> — materials, rooflines, trim profiles, and interior flow all considered from the first design conversation.</li>
+                <li><strong>Customer-First Communication:</strong> Weekly project updates as standard, not upon request. A dedicated point of contact throughout. ProBrothers treats each project as if it were their own home — because in a community this size, their reputation depends on it.</li>
               </ul>
-            </div>
 
-            <div class="post-body__section reveal">
-              <h2>Your Pre-Hire Checklist: 7 Steps Before Signing with Any PA Contractor</h2>
-              <ol class="post-list post-list--numbered">
-                <li>Verify the contractor's HIC registration at <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement/" rel="noopener noreferrer" target="_blank">www.attorneygeneral.gov</a></li>
-                <li>Request and confirm a current certificate of general liability and workers' comp insurance</li>
-                <li>Get at least 3 itemized bids from different contractors (not ballparks)</li>
-                <li>Call 3 past client references — ask specifically about timeline adherence and surprise costs</li>
-                <li>Review the written contract against the HICPA required elements before signing</li>
-                <li>Confirm who will pull permits and whether permit fees are included in the bid</li>
-                <li>Agree on a payment schedule in writing — no more than 30% upfront for any project</li>
-              </ol>
+              <p>For more guidance on choosing the right contractor, read our <a href="/blog/best-remodeling-contractor-in-pennsylvania/">guide to finding the best remodeling contractor in Pennsylvania</a> and our <a href="/blog/guide-to-hiring-remodeling-contractors/">complete hiring guide for 2026</a>.</p>
             </div>
 
             <!-- FAQ Section -->
@@ -356,28 +613,11 @@ const pageSchema = {
               </div>
             </div>
 
-            <!-- Internal links (T5) -->
-            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services and service areas">
-              <h2>Related ProBrothers Services &amp; Service Areas</h2>
-              <p>Explore the in-house services behind this article and the Delaware County and Main Line communities ProBrothers serves:</p>
-              <ul class="post-related-links__list">
-                <li><a href="/services/construction-services/">general construction services</a></li>
-                <li><a href="/services/remodeling/">home remodeling services</a></li>
-                <li><a href="/services/additions/">home additions and room additions</a></li>
-                <li><a href="/services/cabinets/">custom kitchen and mudroom cabinetry</a></li>
-                <li><a href="/services/trim/">trim carpentry and crown molding</a></li>
-                <li><a href="/locations/media/">general contractor in Media, PA</a></li>
-                <li><a href="/locations/king-of-prussia/">home remodeling in King of Prussia, PA</a></li>
-                <li><a href="/locations/west-chester/">general contractor in West Chester, PA</a></li>
-                <li><a href="/blog/best-remodeling-contractor-in-pennsylvania/">how to find the best remodeling contractor in Pennsylvania</a></li>
-                <li><a href="/blog/guide-to-hiring-remodeling-contractors/">complete guide to hiring remodeling contractors in 2026</a></li>
-              </ul>
-            </div>
-
+            <!-- CTA -->
             <div class="post-body__section post-cta reveal">
-              <h2>Ready to Hire the Right General Contractor in Pennsylvania?</h2>
-              <p>Your home deserves a contractor who meets every item on that checklist — not just a low quote. ProBrothers serves homeowners across Media, King of Prussia, West Chester, and the broader Delaware County and Main Line area with the skill, transparency, and communication that make renovations stress-free.</p>
-              <p>Get your free, itemized custom quote today and see exactly what your project looks like before you sign anything.</p>
+              <h2>Ready to Hire a Top General Contractor in Pennsylvania?</h2>
+              <p>You now have the framework to evaluate any general contractor in PA against objective criteria — licensing, insurance, references, contract terms, change order processes, and local permit expertise. ProBrothers meets every item on that checklist, and has done so for 135+ Delaware County and Main Line homeowners over 15 years.</p>
+              <p>Get your free, no-obligation custom quote. We'll walk you through project scope, permitting requirements, realistic timeline, and itemized costs — before you sign anything.</p>
               <div class="post-cta__actions">
                 <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
                 <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Get a Free Quote</a>
@@ -459,33 +699,45 @@ const pageSchema = {
 .post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
 .post-body { padding: 2rem 2.5rem 2.5rem; }
 .post-body__intro p { font-size: 1.08rem; line-height: 1.8; color: var(--text,#333); margin-bottom: 1rem; }
-.post-body__section { margin-top: 2.2rem; }
-.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
-.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
-.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text,#444); margin-bottom: .75rem; }
-.post-body__authority-link { background: var(--gray-2,#f8f8f8); border-left: 4px solid var(--accent); padding: .8rem 1.1rem; border-radius: 0 var(--radius) var(--radius) 0; font-size: .92rem; }
-.post-body__authority-link a { color: var(--accent); font-weight: 700; }
 .aeo-answer { background: var(--gray-2,#f8f8f8); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.4rem; margin-bottom: 1.5rem; }
 .aeo-answer p { margin: 0; font-size: 1rem; line-height: 1.75; }
+/* Manual TOC */
+.post-toc-manual { background: var(--gray-2,#f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.8rem; margin-bottom: 2rem; }
+.post-toc-manual__title { font-size: .95rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 .9rem; }
+.post-toc-manual__list { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: .3rem; }
+.post-toc-manual__list a { color: var(--accent); font-size: .9rem; font-weight: 600; text-decoration: none; }
+.post-toc-manual__list a:hover { text-decoration: underline; color: var(--dark); }
+/* Sections */
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); scroll-margin-top: 90px; }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text,#444); margin-bottom: .75rem; }
+.post-body__authority-link { background: var(--gray-2,#f8f8f8); border-left: 4px solid var(--accent); padding: .8rem 1.1rem; border-radius: 0 var(--radius) var(--radius) 0; font-size: .92rem; margin: 1rem 0; }
+.post-body__authority-link a { color: var(--accent); font-weight: 700; }
+/* Lists */
 .post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .5rem; }
 .post-list li { font-size: .95rem; line-height: 1.7; color: var(--text,#444); }
 .post-list--checkmark { list-style: none; padding-left: 0; }
 .post-list--checkmark li { padding-left: 1.6rem; position: relative; }
-.post-list--checkmark li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 900; }
+.post-list--checkmark li::before { content: '\2713'; position: absolute; left: 0; color: var(--accent); font-weight: 900; }
 .post-list--numbered { list-style: decimal; padding-left: 1.6rem; }
 .post-list--numbered li { padding-left: .3rem; }
-.post-table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; }
-.post-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+/* Tables */
+.post-table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; border-radius: var(--radius); }
+.post-table { width: 100%; border-collapse: collapse; font-size: .88rem; min-width: 480px; }
 .post-table th { background: var(--dark); color: #fff; padding: .7rem 1rem; text-align: left; font-weight: 800; }
-.post-table td { padding: .6rem 1rem; border-bottom: 1px solid var(--gray-2,#f0f0f0); color: var(--text,#444); }
+.post-table td { padding: .6rem 1rem; border-bottom: 1px solid var(--gray-2,#f0f0f0); color: var(--text,#444); vertical-align: top; }
 .post-table tr:nth-child(even) td { background: var(--gray-2,#f8f8f8); }
-.faq-list { display: flex; flex-direction: column; gap: 1.4rem; }
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 1.5rem; }
 .faq-item { border-left: 3px solid var(--accent); padding-left: 1.1rem; }
 .faq-q { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .4rem; }
 .faq-a { font-size: .94rem; line-height: 1.75; color: var(--text,#444); margin: 0; }
+/* CTA block */
 .post-cta { background: var(--gray-2,#f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
 .post-cta h2 { border-bottom: none; }
 .post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
 .post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
 .post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
 .post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2,#f5f5f5); }
@@ -494,12 +746,10 @@ const pageSchema = {
 .post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
 .post-sidebar__viewed-title { color: var(--dark); font-weight: 700; font-size: .88rem; line-height: 1.45; transition: color .2s; }
 .post-sidebar__viewed-count { color: var(--muted); font-size: .78rem; }
-.post-sidebar__tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
-.post-sidebar__tag { display: inline-block; padding: .35rem .85rem; background: var(--gray-2,#f5f5f5); border-radius: 999px; color: var(--dark); font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; text-decoration: none; border: 2px solid transparent; transition: background .25s, color .25s, border-color .25s; }
-.post-sidebar__tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 .post-sidebar__cta-widget { text-align: center; background: var(--dark); }
 .post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: #fff; margin: 0 0 .7rem; }
 .post-sidebar__cta-widget p { color: rgba(255,255,255,.75); font-size: .9rem; line-height: 1.65; margin: 0 0 1.2rem; }
+/* Related posts */
 .related-posts { margin-top: 3rem; }
 .related-posts__heading { font-size: 1.4rem; font-weight: 900; color: var(--dark); margin-bottom: 1.5rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
 .related-posts__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.8rem; }

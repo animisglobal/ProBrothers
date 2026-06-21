@@ -7,8 +7,12 @@ import type { APIRoute } from 'astro';
 
 const SITE = 'https://probrothers.com';
 
-// All page modules. Eagerly globbed so this works at build time (static output).
-const pages = import.meta.glob('./**/*.astro', { eager: true });
+// All page file paths. We only need the KEYS (file paths) to derive routes — not
+// the module exports — so we glob LAZILY (eager: false). Eager-importing every
+// page module pulled all page/component CSS into this route's chunk, which Astro
+// then linked (sitemap_xml.*.css) into every HTML <head>. Lazy glob keeps the
+// keys available at build time without bundling that stray stylesheet (TB1).
+const pages = import.meta.glob('./**/*.astro');
 
 // Routes we never want in the sitemap.
 const EXCLUDE = new Set(['/404/']);

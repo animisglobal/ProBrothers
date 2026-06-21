@@ -6,14 +6,14 @@ import ExitPopup from '../components/ExitPopup.astro';
 
 // Per-page metadata. Defaults reproduce the original index.html exactly.
 const {
-  title = 'ProBrothers — General & Home Remodeling Contractor | Media, PA',
-  description = "ProBrothers — full-service residential & commercial contractor in Media, PA. 15+ years of trim, cabinetry, remodeling, additions & window work.",
+  title = 'ProBrothers Construction — General & Home Remodeling Contractor | Media, PA',
+  description = "ProBrothers Construction — full-service residential & commercial contractor in Media, PA. 15+ years of trim, cabinetry, remodeling, additions & window work.",
   canonical = 'https://probrothers.com/',
-  ogTitle = 'ProBrothers — General & Home Remodeling Contractor | Media, PA',
+  ogTitle = 'ProBrothers Construction — General & Home Remodeling Contractor | Media, PA',
   ogDescription = 'Full-service residential & commercial construction and remodeling. Trim, cabinets, additions, windows & doors in Media, PA. Free quote within one business day.',
   ogUrl = 'https://probrothers.com/',
   ogImage = 'https://probrothers.com/assets/img/hero-trim.webp',
-  twitterTitle = 'ProBrothers — General & Home Remodeling Contractor | Media, PA',
+  twitterTitle = 'ProBrothers Construction — General & Home Remodeling Contractor | Media, PA',
   twitterDescription = 'Full-service residential & commercial construction and remodeling in Media, PA. Free quote within one business day.',
   twitterImage = 'https://probrothers.com/assets/img/hero-trim.webp',
   preloadHero = true,
@@ -43,7 +43,7 @@ const {
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="ProBrothers" />
+  <meta property="og:site_name" content="ProBrothers Construction" />
   <meta property="og:title" content={ogTitle} />
   <meta property="og:description" content={ogDescription} />
   <meta property="og:url" content={ogUrl} />
@@ -59,7 +59,8 @@ const {
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
     "@id": "https://probrothers.com/#business",
-    "name": "ProBrothers",
+    "name": "ProBrothers Construction",
+    "alternateName": "ProBrothers",
     "image": "https://probrothers.com/assets/img/hero-trim.webp",
     "logo": "https://probrothers.com/assets/img/logo.png",
     "url": "https://probrothers.com/",
@@ -109,9 +110,10 @@ const {
     }],
     "sameAs": [
       "https://www.instagram.com/probrothersconstructionn1",
+      "https://www.facebook.com/profile.php?id=100080301824582",
       "https://www.youtube.com/@probrothersconstruction",
       "https://www.yelp.com/biz/probrothers-media-2",
-      "https://www.facebook.com/profile.php?id=100080301824582"
+      "https://maps.app.goo.gl/Wtwfh7T95hxaF5kj6"
     ]
   })} />
 

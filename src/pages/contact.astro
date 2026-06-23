@@ -340,4 +340,46 @@ const contactSchema = {
       </div>
     </div>
   </section>
+
+  <!-- T4: GA4 conversion tracking — Web3Forms AJAX submit + generate_lead event -->
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('contactForm');
+      var success = document.getElementById('formSuccess');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('.contact-form__submit');
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        })
+          .then(function (r) { return r.json().catch(function () { return { success: r.ok }; }); })
+          .then(function (data) {
+            if (data && data.success) {
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'generate_lead', {
+                  event_category: 'Contact',
+                  event_label: 'Web3Forms'
+                });
+              }
+              if (success) success.hidden = false;
+              form.reset();
+              if (btn) { btn.textContent = 'Submitted'; }
+            } else {
+              if (btn) { btn.disabled = false; btn.textContent = 'Submit'; }
+              alert('Sorry, your message could not be sent. Please call (484) 745-4097.');
+            }
+          })
+          .catch(function () {
+            if (btn) { btn.disabled = false; btn.textContent = 'Submit'; }
+            alert('Sorry, your message could not be sent. Please call (484) 745-4097.');
+          });
+      });
+    })();
+  </script>
 </Layout>

@@ -31,6 +31,17 @@ const {
 
     gtag('config', 'G-SGDC0JHS43');
   </script>
+  <!-- T4: GA4 phone_call conversion — site-wide delegated listener for any tel: click -->
+  <script is:inline>
+    document.addEventListener('click', function (e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+      if (!link || typeof window.gtag !== 'function') return;
+      window.gtag('event', 'phone_call', {
+        event_category: 'Contact',
+        event_label: link.getAttribute('href').replace('tel:', '')
+      });
+    }, { passive: true });
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

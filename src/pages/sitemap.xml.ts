@@ -15,7 +15,10 @@ const SITE = 'https://probrothers.com';
 const pages = import.meta.glob('./**/*.astro');
 
 // Routes we never want in the sitemap.
-const EXCLUDE = new Set(['/404/']);
+// /blog/home-remodeling-guide-2025/ is a legacy slug that 301-redirects to the
+// 2026 guide (see public/_redirects); the .astro file exists only to serve the
+// redirect, so it must NOT be advertised as a canonical URL in the sitemap (S2).
+const EXCLUDE = new Set(['/404/', '/blog/home-remodeling-guide-2025/']);
 
 function fileToUrlPath(file: string): string | null {
   // file looks like "./about.astro", "./blog/index.astro", "./blog/page/2/index.astro"

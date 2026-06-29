@@ -168,6 +168,7 @@ const {
   <!-- Preload the LCP hero image so the browser fetches it immediately, before CSS/JS parse -->
   {preloadHero && (
     <link rel="preload" as="image" href="/assets/img/slide-trim.webp"
+          imagesrcset="/assets/img/slide-trim-640.webp 640w, /assets/img/slide-trim-1024.webp 1024w, /assets/img/slide-trim-1366.webp 1366w, /assets/img/slide-trim-1920.webp 1920w, /assets/img/slide-trim.webp 2560w"
           imagesizes="100vw" fetchpriority="high" />
   )}
   <link rel="preload" href="/assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin />

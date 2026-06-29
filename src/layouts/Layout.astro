@@ -22,14 +22,38 @@ const {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGDC0JHS43"></script>
+  <!-- Google tag (gtag.js) — gtag defined immediately so window.gtag + dataLayer
+       are available to conversion handlers; the heavy external gtag.js loader is
+       delay-loaded (first interaction / idle) to keep it off the critical path and
+       eliminate the forced reflow it triggers during page load. Events queued into
+       dataLayer before the loader arrives are drained by gtag.js once it loads. -->
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-SGDC0JHS43');
+
+    (function () {
+      var loaded = false;
+      function loadGA() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SGDC0JHS43';
+        document.head.appendChild(s);
+        events.forEach(function (e) { window.removeEventListener(e, loadGA); });
+      }
+      var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click', 'pointerdown'];
+      events.forEach(function (e) { window.addEventListener(e, loadGA, { passive: true }); });
+      // Fallback: no-interaction sessions (fast bounces) still get tracked, while
+      // still firing after the page is idle so the loader stays out of the critical path.
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGA, { timeout: 4000 });
+      } else {
+        setTimeout(loadGA, 4000);
+      }
+    })();
   </script>
   <!-- T4: GA4 phone_call conversion — site-wide delegated listener for any tel: click -->
   <script is:inline>

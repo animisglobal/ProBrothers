@@ -1,9 +1,9 @@
 # ProBrothers 301 redirect map — old WP slugs → new Astro slugs
 # Cloudflare static-assets worker honors this file (OLD  NEW  301). First match wins.
 
-# Canonical host: force www → apex (301), preserving path + query. Must be FIRST
-# so www requests are host-normalized before any path rule resolves its destination.
-https://www.probrothers.com/*   https://probrothers.com/:splat   301
+# Canonical host: www → apex 301 is enforced by functions/_middleware.js
+# (Cloudflare Pages _redirects ignores full-URL/hostname sources, so it cannot
+# live here; the Pages Function handles host normalization before static serving).
 
 # Services (flat → foldered)
 /trim/                        /services/trim/                 301

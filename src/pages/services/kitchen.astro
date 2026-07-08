@@ -1,0 +1,635 @@
+---
+/**
+ * Source: Copy from /home/rajeev/main/websites/Probrothers/src/content/kitchen-page-copy.md
+ *
+ * SEO additions:
+ *   - Unique <title> optimised to ≤60 chars.
+ *   - Unique meta description ≤160 chars.
+ *   - Canonical pointing to /services/kitchen/.
+ *   - Open Graph + Twitter Card tags.
+ *   - JSON-LD: Service, BreadcrumbList, FAQPage schemas.
+ *   - AEO answer block (extractable LLM answer).
+ *   - Internal links to related service pages.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://probrothers.com/services/kitchen/",
+      "name": "Kitchen Remodeling",
+      "serviceType": "Kitchen Remodeling",
+      "description": "Kitchen remodeling in Media, PA and Delaware County. ProBrothers handles custom cabinets, countertops, islands, tile backsplash, flooring, and full layout redesign.",
+      "provider": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "GeneralContractor",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "telephone": "+1-484-745-4097",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Blackhorse Ln",
+          "addressLocality": "Media",
+          "addressRegion": "PA",
+          "postalCode": "19063",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": [
+        "Media, PA", "Delaware County, PA", "West Chester, PA", "King of Prussia, PA",
+        "Newtown Square, PA", "Springfield, PA", "Glen Mills, PA",
+        "Malvern, PA", "Nether Providence, PA", "Main Line, PA"
+      ],
+      "url": "https://probrothers.com/services/kitchen/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/services/kitchen/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://probrothers.com/services/" },
+        { "@type": "ListItem", "position": 3, "name": "Kitchen Remodeling", "item": "https://probrothers.com/services/kitchen/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://probrothers.com/services/kitchen/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a kitchen remodel cost in Delaware County, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A kitchen remodel in Delaware County, PA typically costs between $20,000 and $80,000. A budget refresh — new cabinets and countertops — runs $20,000–$35,000. A mid-range full kitchen remodel with new cabinets, countertops, tile backsplash, and appliances runs $35,000–$60,000. A premium custom kitchen with quartz or stone countertops, custom cabinetry, and layout redesign runs $60,000–$80,000+. ProBrothers provides a free detailed quote for every project within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a kitchen remodel take in Media, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most kitchen remodels in Media, PA take 4 to 8 weeks from demolition to final walkthrough. A targeted refresh (new cabinets, countertops, backsplash) takes 3–5 weeks. A full gut renovation with layout changes and new plumbing or electrical takes 6–10 weeks. Custom cabinet lead times (4–6 weeks from order) are often the longest single variable. ProBrothers provides a written project schedule before work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a permit for a kitchen remodel in Delaware County, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in most cases. Kitchen remodels in Delaware County that involve moving plumbing (sink, dishwasher drain), adding or relocating electrical circuits, or structural changes (wall removal) require permits. A purely cosmetic update — replacing cabinet doors, painting, swapping countertops — typically does not. ProBrothers handles all permit applications and inspections in Media, Springfield, West Chester, and surrounding municipalities so homeowners don't have to navigate the process alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between the cabinets service and a full kitchen remodel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ProBrothers cabinets service focuses on custom cabinetry — design, build, and installation. A kitchen remodel is a broader scope: it includes cabinets but also countertops, backsplash, flooring, lighting, plumbing fixtures, and possibly layout changes. If you only need new cabinet boxes and doors, the cabinets service is the right fit. If you want to transform the entire kitchen, that's a full kitchen remodel. ProBrothers handles both, and we can advise on the right scope during your free consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kitchen remodeling areas does ProBrothers serve in Pennsylvania?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProBrothers serves homeowners across Delaware County and the Main Line, including Media, West Chester, King of Prussia, Newtown Square, Springfield, Glen Mills, Malvern, Kennett Square, Nether Providence, Marple, and Philadelphia. Our office is at 7 Blackhorse Ln, Media, PA 19063. For kitchen remodeling inquiries, call (484) 745-4097 or submit a quote request — we respond within one business day."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Kitchen Remodeling Contractor Media, PA | ProBrothers"
+  description="Kitchen remodeling in Media, PA. ProBrothers handles cabinets, countertops, islands & layout redesign across Delaware County. Free quote — 1 business day."
+  canonical="https://probrothers.com/services/kitchen/"
+  ogTitle="Kitchen Remodeling Contractor in Media, PA | ProBrothers"
+  ogDescription="Kitchen remodeling in Media, PA. ProBrothers handles cabinets, countertops, islands & layout redesign across Delaware County. Free quote — 1 business day."
+  ogUrl="https://probrothers.com/services/kitchen/"
+  ogImage="https://probrothers.com/assets/img/services/two-tone-grey-kitchen-1.webp"
+  twitterTitle="Kitchen Remodeling Contractor in Media, PA | ProBrothers"
+  twitterDescription="Kitchen remodeling in Media, PA. ProBrothers handles cabinets, countertops, islands & layout redesign across Delaware County. Free quote — 1 business day."
+  twitterImage="https://probrothers.com/assets/img/services/two-tone-grey-kitchen-1.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/services/two-tone-grey-kitchen-1.webp" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/services/two-tone-grey-kitchen-1.webp"
+         alt="Kitchen Remodeling Contractor in Media, PA — ProBrothers" fetchpriority="high" width="1024" height="769" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/services/">Services</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Kitchen Remodeling</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Kitchen Remodeling Contractor in Media, PA</h1>
+      <p class="page-banner__sub">ProBrothers &mdash; Kitchen Remodeling in <a href="/locations/media/" style="color:inherit;text-decoration:underline">Media, PA</a> &amp; Delaware County</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== Service marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ===== AEO answer block (extractable LLM answer) ===== -->
+  <aside class="aeo-answer" aria-label="Quick answer">
+    <p><strong>ProBrothers Construction remodels kitchens in <a href="/locations/media/">Media, PA</a> and across Delaware County</strong> &mdash; custom cabinets, countertops, islands, tile backsplash, flooring, and full layout redesign. 15+ years, 5.0 rating, 135+ completed projects. Licensed and insured in Pennsylvania. Free quote within one business day.</p>
+  </aside>
+
+  <!-- ===== What Is Kitchen Remodeling ===== -->
+  <section class="section svc-overview" id="what-is-kitchen-remodeling" aria-label="What Is Kitchen Remodeling">
+    <div class="container">
+      <div class="svc-overview__grid">
+        <div class="svc-overview__content reveal" data-reveal="left">
+          <span class="section__kicker">SERVICE OVERVIEW</span>
+          <h2 class="section__title">
+            Kitchen Remodeling in Media, PA
+            <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+              <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+              <circle cx="8" cy="12" r="3" style="--len:20"/>
+              <circle cx="152" cy="13" r="3" style="--len:20"/>
+            </svg>
+          </h2>
+          <p class="svc-overview__para">A kitchen remodel updates or completely rebuilds the kitchen — from a targeted cabinet-and-countertop refresh to a full gut renovation that reconfigures the layout, plumbing, and electrical. In Delaware County, PA, kitchen remodels typically range from <strong>$20,000 to $80,000</strong> depending on scope, materials, and kitchen size. ProBrothers Construction has delivered kitchen remodels across <a href="/locations/media/">Media</a>, <a href="/locations/west-chester/">West Chester</a>, Newtown Square, <a href="/locations/king-of-prussia/">King of Prussia</a>, and the broader Main Line since 2009.</p>
+          <p class="svc-overview__para">Our team manages every stage in-house — demolition, framing, electrical coordination, plumbing, cabinetry, countertops, tile, and trim. We provide written project schedules and weekly progress updates throughout the job.</p>
+          <a href="/contact/" class="btn btn--accent btn--lg" data-magnetic>Request a Free Quote</a>
+        </div>
+        <div class="svc-overview__media reveal" data-reveal="right">
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/services/two-tone-grey-kitchen-2.webp"
+                 alt="Two-tone kitchen remodel by ProBrothers in Delaware County, PA"
+                 loading="lazy" width="480" height="320" />
+            <figcaption>Delaware County Kitchen</figcaption>
+          </figure>
+          <figure class="svc-overview__figure">
+            <img src="/assets/img/services/two-tone-grey-kitchen-1.webp"
+                 alt="Custom kitchen cabinets and countertops installed by ProBrothers in Media, PA"
+                 loading="lazy" width="1024" height="769" />
+            <figcaption>Media, PA Kitchen</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Custom Cabinets & Storage ===== -->
+  <section class="section svc-why-trim" id="custom-cabinets-storage" aria-label="Custom Cabinets & Storage" style="background:var(--gray-2)">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">CABINETRY</span>
+        <h2 class="section__title">
+          CUSTOM CABINETS &amp; STORAGE
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-why-trim__grid">
+        <div class="svc-why-trim__text reveal">
+          <p>The backbone of every kitchen remodel is the cabinetry. ProBrothers designs and builds <a href="/services/cabinets/">custom kitchen cabinets</a> in solid wood, plywood, or MDF — fully sized and configured to your kitchen's exact dimensions. We offer painted, stained, and glazed finishes, soft-close hinges and drawer glides, pull-out shelving, lazy Susans, and custom pantry solutions.</p>
+          <p>For homeowners in Delaware County who want semi-custom options, we also source and install premium cabinet lines with shorter lead times. Every cabinet installation includes a free in-home design consultation so you can visualize layout, door style, and hardware before any work begins.</p>
+          <a href="/contact/" class="btn btn--accent btn--lg" style="margin-top:1rem;display:inline-block" data-magnetic>Get a Free Cabinet Consultation</a>
+        </div>
+        <blockquote class="svc-testimonial reveal" data-reveal="right">
+          <div class="review__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;The kitchen cabinets ProBrothers built for us are absolutely stunning. Custom-sized to every inch of the space, soft-close everything, and the paint finish is flawless. They finished on schedule and the crew was professional throughout.&rdquo;</p>
+          <footer>Michael R., West Chester, PA</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Countertops & Backsplash ===== -->
+  <section class="section" id="countertops-backsplash" aria-label="Countertops & Backsplash">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">SURFACES</span>
+        <h2 class="section__title">
+          COUNTERTOPS &amp; BACKSPLASH
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-prose reveal">
+        <p>ProBrothers installs quartz, granite, quartzite, marble, porcelain, and butcher block countertops — templated to fit your kitchen and edge-profiled to your specification. We work with local Delaware County stone fabricators to keep lead times short and quality control tight.</p>
+        <p>Tile backsplash installation is a ProBrothers specialty. Subway tile, herringbone mosaic, Zellige handmade tile, large-format porcelain slab backsplash — our tile setters handle the full scope from layout planning to grouting and sealing. Backsplash upgrades typically cost $1,500&ndash;$5,000 for a standard kitchen in <a href="/locations/media/">Media, PA</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Kitchen Islands & Layout Redesign ===== -->
+  <section class="section" id="kitchen-islands-layout" aria-label="Kitchen Islands & Layout Redesign" style="background:var(--gray-2)">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">ISLANDS &amp; LAYOUT</span>
+        <h2 class="section__title">
+          KITCHEN ISLANDS &amp; LAYOUT REDESIGN
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-prose reveal">
+        <p>An island transforms how a kitchen works — adding prep space, seating, storage, and a social focal point. ProBrothers designs and builds custom kitchen islands: waterfall countertops, built-in seating overhangs, electrical outlets for small appliances, and custom cabinetry below.</p>
+        <p>For homeowners looking to open up their kitchen or change the flow, we handle layout redesigns that may involve removing non-load-bearing walls, relocating the sink or range, or expanding into an adjacent dining area. All layout changes in <a href="/locations/media/">Media, PA</a> and Delaware County are permitted and inspected per local code. This type of work often overlaps with our <a href="/services/remodeling/">full home remodeling</a> scope.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Flooring, Lighting & Appliances ===== -->
+  <section class="section" id="flooring-lighting-appliances" aria-label="Flooring, Lighting & Appliances">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">FINISHING DETAILS</span>
+        <h2 class="section__title">
+          FLOORING, LIGHTING &amp; APPLIANCES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="svc-prose reveal">
+        <p>A complete kitchen remodel goes beyond cabinets and countertops. ProBrothers installs hardwood, engineered wood, LVP, and large-format tile flooring in kitchens across Delaware County. We replace recessed lighting, add under-cabinet lighting, and install pendant lights over islands &mdash; all fully permitted electrical work.</p>
+        <p>We also coordinate appliance selection and installation, ensuring your new cabinet layout integrates seamlessly with your refrigerator, range, dishwasher, and microwave dimensions. For premium kitchen remodels ($60,000+), we project-manage the full scope including appliance delivery and final commissioning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Choose Us Stats ===== -->
+  <section class="section why why-about" id="why-choose-us" aria-label="Why Choose ProBrothers">
+    <div class="why__divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false">
+        <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker section__kicker--light">The ProBrothers Difference</span>
+        <h2 class="section__title section__title--light">WHY CHOOSE US</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="15">0</div>
+          <h3>Years of Professional Experience</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.12s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="135">0</div>
+          <h3>Completed Projects and Investments</h3>
+        </div>
+        <div class="why__item reveal" style="--d:.24s">
+          <div class="why__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="why__num" data-count="12">0</div>
+          <h3>Skilled Professionals</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section svc-faq" id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">HAVE QUESTIONS?</span>
+        <h2 class="section__title">
+          FREQUENTLY ASKED QUESTIONS
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <dl class="faq-list">
+        <div class="faq-item reveal">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              How much does a kitchen remodel cost in Delaware County, PA?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>A kitchen remodel in Delaware County, PA typically costs between <strong>$20,000 and $80,000</strong>. A budget refresh &mdash; new cabinets and countertops &mdash; runs $20,000&ndash;$35,000. A mid-range full kitchen remodel with new cabinets, countertops, tile backsplash, and appliances runs $35,000&ndash;$60,000. A premium custom kitchen with quartz or stone countertops, custom cabinetry, and layout redesign runs $60,000&ndash;$80,000+. ProBrothers provides a free detailed quote for every project within one business day.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.07s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              How long does a kitchen remodel take in Media, PA?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Most kitchen remodels in Media, PA take <strong>4 to 8 weeks</strong> from demolition to final walkthrough. A targeted refresh (new cabinets, countertops, backsplash) takes 3&ndash;5 weeks. A full gut renovation with layout changes and new plumbing or electrical takes 6&ndash;10 weeks. Custom cabinet lead times (4&ndash;6 weeks from order) are often the longest single variable. ProBrothers provides a written project schedule before work begins.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.14s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              Do I need a permit for a kitchen remodel in Delaware County, PA?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>Yes, in most cases. Kitchen remodels in Delaware County that involve moving plumbing (sink, dishwasher drain), adding or relocating electrical circuits, or structural changes (wall removal) require permits. A purely cosmetic update &mdash; replacing cabinet doors, painting, swapping countertops &mdash; typically does not. ProBrothers handles all permit applications and inspections in <a href="/locations/media/">Media</a>, Springfield, <a href="/locations/west-chester/">West Chester</a>, and surrounding municipalities.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.21s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What&apos;s the difference between the cabinets service and a full kitchen remodel?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>The <a href="/services/cabinets/">ProBrothers cabinets service</a> focuses on custom cabinetry &mdash; design, build, and installation. A <strong>kitchen remodel</strong> is a broader scope: it includes cabinets but also countertops, backsplash, flooring, lighting, plumbing fixtures, and possibly layout changes. If you only need new cabinet boxes and doors, the cabinets service is the right fit. If you want to transform the entire kitchen, that&apos;s a full kitchen remodel. ProBrothers handles both, and we can advise on the right scope during your free consultation.</p>
+          </dd>
+        </div>
+        <div class="faq-item reveal" style="--d:.28s">
+          <dt class="faq-item__q">
+            <button aria-expanded="false" class="faq-item__btn">
+              What kitchen remodeling areas does ProBrothers serve in Pennsylvania?
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+          </dt>
+          <dd class="faq-item__a">
+            <p>ProBrothers serves homeowners across <strong>Delaware County and the Main Line</strong>, including Media, <a href="/locations/west-chester/">West Chester</a>, <a href="/locations/king-of-prussia/">King of Prussia</a>, Newtown Square, Springfield, Glen Mills, Malvern, Kennett Square, Nether Providence, Marple, and Philadelphia. Our office is at 7 Blackhorse Ln, Media, PA 19063. Call <strong>(484) 745-4097</strong> or submit a quote request &mdash; we respond within one business day.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== Related Services ===== -->
+  <section class="section" id="related-services" style="background:var(--gray-2)" aria-label="Related Services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__kicker">EXPLORE MORE</span>
+        <h2 class="section__title">
+          RELATED SERVICES
+          <svg class="blueprint" viewBox="0 0 160 24" aria-hidden="true" focusable="false">
+            <path d="M0,12 C40,4 80,20 120,10 L160,14" stroke-width="2.5" style="--len:220"/>
+            <circle cx="8" cy="12" r="3" style="--len:20"/>
+            <circle cx="152" cy="13" r="3" style="--len:20"/>
+          </svg>
+        </h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="/assets/img/services/blue-cabinets.webp" alt="Custom cabinetry design and installation by ProBrothers" loading="lazy" width="768" height="1024" />
+          </div>
+          <div class="card__body">
+            <h3>Custom Cabinets</h3>
+            <p>Dedicated custom cabinetry design and installation — kitchen, bathroom vanities, mudroom, and office built-ins.</p>
+            <a href="/services/cabinets/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.1s">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Full home remodeling services by ProBrothers" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Home Remodeling</h3>
+            <p>Full-service home remodeling — kitchens, bathrooms, basements, and whole-home renovations across Delaware County.</p>
+            <a href="/services/remodeling/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <div class="card__media">
+            <img src="/assets/img/svc-remodel.webp" alt="Bathroom remodeling by ProBrothers in Media, PA" loading="lazy" width="750" height="500" />
+          </div>
+          <div class="card__body">
+            <h3>Bathroom Remodeling</h3>
+            <p>Gut renovations, tile, vanity upgrades, and accessible bathroom conversions across Delaware County.</p>
+            <a href="/services/bathroom/" class="card__link">Learn More <span aria-hidden="true">&#8594;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service Contact Form ===== -->
+  <section class="section svc-contact-form" id="quote-form" aria-label="Request a Kitchen Remodeling Quote">
+    <div class="container">
+      <div class="svc-contact-form__wrap reveal">
+        <div class="contact-form-box">
+          <h2 class="contact-form-box__heading">Ready to Start Your Kitchen Remodel?</h2>
+          <p class="contact-form-box__sub">Tell us about your kitchen project and we&apos;ll get back to you within one business day.</p>
+
+          <form class="contact-form" id="kitchenForm" action="https://api.web3forms.com/submit" method="post" novalidate aria-label="Kitchen remodeling quote form">
+            <input type="hidden" name="access_key" value="5023493a-aaa6-4fa5-9f80-e594deaa9dec" />
+            <input type="hidden" name="subject" value="ProBrothers — Kitchen Remodeling quote submission" />
+            <input type="hidden" name="from_name" value="ProBrothers Website" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="kitFirstName">First Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="kitFirstName" name="firstName" autocomplete="given-name" placeholder="First" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="contact-form__group">
+                <label for="kitLastName">Last Name <abbr title="required" aria-label="required">*</abbr></label>
+                <div class="contact-form__input-wrap">
+                  <input type="text" id="kitLastName" name="lastName" autocomplete="family-name" placeholder="Last" required aria-required="true" />
+                  <span class="contact-form__line" aria-hidden="true"></span>
+                </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="kitEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+              <div class="contact-form__input-wrap">
+                <input type="email" id="kitEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+              <span class="contact-form__error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="contact-form__group">
+              <label for="kitPhone">Phone</label>
+              <div class="contact-form__input-wrap">
+                <input type="tel" id="kitPhone" name="phone" autocomplete="tel" placeholder="(555) 000-0000" />
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="kitMessage">Message</label>
+              <div class="contact-form__input-wrap">
+                <textarea id="kitMessage" name="message" rows="5" placeholder="Tell us about your kitchen remodeling project..."></textarea>
+                <span class="contact-form__line" aria-hidden="true"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>Submit</button>
+            <div class="contact-form__success" role="status" aria-live="polite" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Your quote request has been submitted successfully. We&apos;ll get back to you soon!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact CTA ===== -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Kitchen Remodel?</h2>
+      <p>ProBrothers serves Media, PA and all of Delaware County. Whether you need a cabinet refresh or a complete kitchen transformation, we bring 15+ years of craftsmanship to every project.</p>
+      <p class="cta__licence">Licensed &amp; insured Pennsylvania contractor</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.svc-overview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.svc-overview__content .section__title { text-align: left; }
+.svc-overview__content .section__title + .blueprint { margin-left: 0; }
+.svc-overview__content .section__kicker { display: block; }
+.svc-overview__para { color: var(--muted); font-size: 1rem; line-height: 1.78; margin: 0 0 1.2rem; }
+.svc-overview__para:first-of-type { margin-top: 1.4rem; }
+.svc-overview__media { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.svc-overview__figure { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); position: relative; aspect-ratio: 3/4; }
+.svc-overview__figure img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .8s var(--ease); }
+.svc-overview__figure:hover img { transform: scale(1.04); }
+.svc-overview__figure figcaption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: .6rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,.75), transparent);
+  color: #fff; font-weight: 800; font-size: .82rem;
+  text-transform: uppercase; letter-spacing: .06em;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+.svc-overview__figure:hover figcaption { opacity: 1; transform: translateY(0); }
+
+.svc-why-trim__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin-top: 2rem; }
+.svc-why-trim__text p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.2rem; }
+.svc-testimonial {
+  background: #fff; border-radius: var(--radius); padding: 2rem;
+  box-shadow: var(--shadow-sm); position: relative;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  border-top: 4px solid var(--accent);
+}
+.svc-testimonial::before {
+  content: "\201C"; position: absolute; top: -18px; left: 18px;
+  font-size: 5rem; color: var(--accent);
+  font-family: Georgia, serif; line-height: 1; opacity: .55;
+}
+.svc-testimonial:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.svc-testimonial .review__stars { color: var(--accent); letter-spacing: .15em; margin-bottom: .8rem; }
+.svc-testimonial p { font-size: 1rem; font-style: italic; color: var(--ink); margin-bottom: 1rem; }
+.svc-testimonial footer { font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .04em; }
+
+.svc-prose { max-width: 980px; margin: 2rem auto 0; }
+.svc-prose p { color: var(--muted); font-size: 1rem; line-height: 1.78; margin-bottom: 1.2rem; text-align: center; }
+
+.faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: .8rem; }
+.faq-item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; border-left: 4px solid var(--accent); }
+.faq-item__btn {
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  padding: 1.3rem 1.6rem;
+  font-family: 'Raleway', system-ui, sans-serif;
+  font-weight: 700; font-size: 1rem; color: var(--dark);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  transition: color .2s;
+}
+.faq-item__btn:hover { color: var(--accent); }
+.faq-item__icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: grid; place-items: center; font-size: 1.3rem; font-weight: 900;
+  transition: transform .3s var(--ease);
+}
+.faq-item__btn[aria-expanded="true"] .faq-item__icon { transform: rotate(45deg); }
+.faq-item__a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease), padding .3s; padding: 0 1.6rem; }
+.faq-item__a.open { max-height: 600px; padding: 0 1.6rem 1.3rem; }
+.faq-item__a p { color: var(--muted); font-size: .95rem; line-height: 1.75; }
+
+@media (max-width: 900px) {
+  .svc-overview__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-why-trim__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 480px) {
+  .svc-overview__media { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+document.querySelectorAll('.faq-item__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item__btn').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.faq-item').querySelector('.faq-item__a').classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.closest('.faq-item').querySelector('.faq-item__a').classList.add('open');
+    }
+  });
+});
+</script>

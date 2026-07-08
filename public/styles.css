@@ -19,6 +19,13 @@
 .about-credentials .credentials-licence li{font-size:.95rem;color:var(--ink)}
 .about-credentials .credentials-licence a{color:var(--accent);font-weight:700;text-decoration:none}
 .about-credentials .credentials-licence a:hover{text-decoration:underline}
+.about-credentials .credentials-detail{margin:1.4rem 0 0;max-width:75ch;display:grid;gap:0;border:1px solid var(--gray);border-radius:var(--radius);overflow:hidden}
+.about-credentials .credentials-detail__row{display:grid;grid-template-columns:1fr 1fr;padding:.75rem 1.2rem;font-size:.9rem;border-bottom:1px solid var(--gray)}
+.about-credentials .credentials-detail__row:last-child{border-bottom:0}
+.about-credentials .credentials-detail__row:nth-child(even){background:var(--gray-2)}
+.about-credentials .credentials-detail dt{font-weight:700;color:var(--dark)}
+.about-credentials .credentials-detail dd{color:var(--ink)}
+@media(max-width:600px){.about-credentials .credentials-detail__row{grid-template-columns:1fr}.about-credentials .credentials-detail dd{margin-top:.2rem}}
 .team__card--author .team__bio{margin:.6rem 0 0;font-size:.9rem;line-height:1.6;color:var(--muted)}
 .about-faq{background:var(--gray-2)}
 .about-faq .faq-list{display:grid;gap:1.1rem;max-width:860px;margin-inline:auto}

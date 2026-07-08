@@ -193,7 +193,7 @@ const contactSchema = {
             <h2 class="contact-form-box__heading">Drop Us a Line</h2>
             <p class="contact-form-box__sub">Tell us about your project and we'll get back to you within one business day.</p>
 
-            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="post" novalidate aria-label="Contact form">
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="post" aria-label="Contact form">
               <!-- Web3Forms -->
               <input type="hidden" name="access_key" value="5023493a-aaa6-4fa5-9f80-e594deaa9dec" />
               <input type="hidden" name="subject" value="ProBrothers — Contact submission" />
@@ -221,35 +221,26 @@ const contactSchema = {
                 </div>
               </div>
 
-              <!-- Email -->
+              <!-- Phone -->
               <div class="contact-form__group">
-                <label for="contactEmail">Email <abbr title="required" aria-label="required">*</abbr></label>
+                <label for="contactPhone">Phone <abbr title="required" aria-label="required">*</abbr></label>
                 <div class="contact-form__input-wrap">
-                  <input type="email" id="contactEmail" name="email" autocomplete="email"
-                         placeholder="you@example.com" required aria-required="true" />
+                  <input type="tel" id="contactPhone" name="phone" autocomplete="tel"
+                         placeholder="(555) 000-0000" required aria-required="true" />
                   <span class="contact-form__line" aria-hidden="true"></span>
                 </div>
                 <span class="contact-form__error" role="alert" aria-live="polite"></span>
               </div>
 
-              <!-- Phone -->
-              <div class="contact-form__group">
-                <label for="contactPhone">Phone</label>
-                <div class="contact-form__input-wrap">
-                  <input type="tel" id="contactPhone" name="phone" autocomplete="tel"
-                         placeholder="(555) 000-0000" />
-                  <span class="contact-form__line" aria-hidden="true"></span>
-                </div>
-              </div>
-
               <!-- Message -->
               <div class="contact-form__group">
-                <label for="contactMessage">Message</label>
+                <label for="contactMessage">Message <abbr title="required" aria-label="required">*</abbr></label>
                 <div class="contact-form__input-wrap">
                   <textarea id="contactMessage" name="message" rows="5"
-                            placeholder="Tell us about your project..."></textarea>
+                            placeholder="Tell us about your project..." required aria-required="true"></textarea>
                   <span class="contact-form__line" aria-hidden="true"></span>
                 </div>
+                <span class="contact-form__error" role="alert" aria-live="polite"></span>
               </div>
 
               <button type="submit" class="btn btn--accent btn--lg contact-form__submit" data-magnetic>

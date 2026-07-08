@@ -9,8 +9,7 @@
     • Desktop: mouseout across the top edge of the viewport.
     • Mobile/touch: back-button intercept (history.pushState/popstate),
       fast scroll-to-top flick, inactivity-after-scroll + tab-hidden fallbacks.
-    • Fields: Name (required), Phone (required), Message (OPTIONAL — submit
-      works blank). On submit, swap to the success state.
+    • Fields: Name (required), Phone (required), Message (required). On submit, swap to the success state.
 
   Lead destination: submits to the SAME Web3Forms endpoint + access_key the
   site's main /contact/ quote form already uses, so callbacks land exactly
@@ -37,7 +36,7 @@
       </div>
 
       <div class="pb-body">
-        <form id="pbForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+        <form id="pbForm" action="https://api.web3forms.com/submit" method="post">
           <!-- Web3Forms — same access key as the main contact/quote form -->
           <input type="hidden" name="access_key" value="5023493a-aaa6-4fa5-9f80-e594deaa9dec" />
           <input type="hidden" name="subject" value="ProBrothers — Callback request (exit-intent popup)" />
@@ -53,8 +52,8 @@
             <input class="pb-input" type="tel" id="pbPhone" name="phone" placeholder="(484) 745-4097" required autocomplete="tel">
           </div>
           <div class="pb-field">
-            <label class="pb-label" for="pbMessage">Message <span class="pb-optional">(optional)</span></label>
-            <textarea class="pb-textarea" id="pbMessage" name="message" placeholder="A line or two about your project — or leave blank and we'll ask on the call."></textarea>
+            <label class="pb-label" for="pbMessage">Message <abbr title="required" aria-label="required">*</abbr></label>
+            <textarea class="pb-textarea" id="pbMessage" name="message" placeholder="Tell us about your project..." required aria-required="true"></textarea>
           </div>
           <button class="pb-submit" type="submit">Request My Callback</button>
           <p class="pb-foot">
@@ -343,11 +342,12 @@
   // so callbacks land wherever current quote requests go.
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var name  = document.getElementById("pbName").value.trim();
-    var phone = document.getElementById("pbPhone").value.trim();
-    // Only Name + Phone are required; Message is intentionally NOT validated.
-    if (!name)  { document.getElementById("pbName").focus();  return; }
-    if (!phone) { document.getElementById("pbPhone").focus(); return; }
+    var name    = document.getElementById("pbName").value.trim();
+    var phone   = document.getElementById("pbPhone").value.trim();
+    var message = document.getElementById("pbMessage").value.trim();
+    if (!name)    { document.getElementById("pbName").focus();    return; }
+    if (!phone)   { document.getElementById("pbPhone").focus();   return; }
+    if (!message) { document.getElementById("pbMessage").focus(); return; }
 
     var btn = form.querySelector(".pb-submit");
     if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
@@ -374,6 +374,12 @@
         // Lead has been delivered to Web3Forms (same inbox as quote requests).
         // Show success regardless so the visitor always gets confirmation; a
         // hard network failure still swaps to success to avoid a dead-end UX.
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "generate_lead", {
+            event_category: "Contact",
+            event_label: "Exit Popup"
+          });
+        }
         showSuccess();
         restoreBtn();
       })

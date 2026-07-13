@@ -1,0 +1,569 @@
+---
+/**
+ * Wainscoting in Historic Delaware County Homes — Matching Original Profiles
+ * Author: Daniil Akulov | datePublished: 2026-07-13
+ * Source: reports/probrothers/probrothers_wainscoting_blog_draft_2026-07-13.html
+ * P2 content fix — registry/probrothers/probrothers_content_fixes.md
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const relatedPosts = [
+  {
+    slug: 'how-trim-carpentry-elevates-home-aesthetics',
+    title: 'The Art of Trim Carpentry: Elevating Your Home\'s Aesthetics in 2026',
+    date: 'March 7, 2025',
+    dateIso: '2025-03-07',
+    image: '/assets/img/blog/Black-Beams-1-1024x766.webp',
+    imageAlt: 'The Art of Trim Carpentry: Elevating Your Home\'s Aesthetics in 2026',
+    imgW: 1024,
+    imgH: 766,
+  },
+  {
+    slug: 'crown-molding-installation-delaware-county-pa',
+    title: 'Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees',
+    date: 'July 13, 2026',
+    dateIso: '2026-07-13',
+    image: '/assets/img/projects/White-Coffered-1-768x1024.webp',
+    imageAlt: 'White coffered ceiling trim installation — ProBrothers ceiling carpentry',
+    imgW: 768,
+    imgH: 1024,
+  },
+];
+
+const mostViewed = [
+  { title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)', slug: 'kitchen-cabinets-cost', views: 582 },
+  { title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', slug: 'guide-to-hiring-remodeling-contractors', views: 437 },
+  { title: 'Why ProBrothers Is the Top Choice for Custom Home Remodeling', slug: 'why-choose-probrothers-for-home-remodeling', views: 435 },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/",
+      "headline": "Wainscoting in Historic Delaware County Homes — Matching Original Profiles",
+      "url": "https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/",
+      "datePublished": "2026-07-13",
+      "dateModified": "2026-07-13",
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/projects/Stair-Trim-1-735x1024.webp",
+        "width": 735, "height": 1024
+      },
+      "description": "Daniil Akulov shares what it takes to match original wainscoting profiles in Delaware County's older homes — period-appropriate materials, plaster wall installation, and local cost data for Media, PA and the Main Line.",
+      "mainEntityOfPage": { "@id": "https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "about": { "@type": "Service", "name": "Wainscoting Installation", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://probrothers.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Wainscoting in Historic Delaware County Homes", "item": "https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does wainscoting installation cost in Media, PA?", "acceptedAnswer": { "@type": "Answer", "text": "A typical hallway in a Delaware County home — 12–20 linear feet, picture-frame moulding style — runs $1,500–$3,500 all-in for labor and materials with a quality paint finish. A full family room or dining room wainscoting project at mid-range rates is $3,000–$6,000+. Historic profile matching on plaster walls adds $4–$8 per linear foot over standard rates. Our Newtown Square family room decorative panel package was part of a $22,000 scope that included crown and custom cabinetry." } },
+        { "@type": "Question", "name": "Can you match the original wainscoting profile in my older Delaware County home?", "acceptedAnswer": { "@type": "Answer", "text": "Usually, yes — through one of three approaches: stock profile matching (works in ~40% of cases), custom milling from a sample (exact match, higher cost), or a complementary period-compatible profile (the right choice when the originals are in different rooms). Bring us a sample of the existing profile and we will assess the options on-site." } },
+        { "@type": "Question", "name": "Does wainscoting work on plaster walls in older Delaware County homes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Plaster wall installation requires additional prep — skimming high spots, using construction adhesive plus fasteners placed at lath locations, and allowing for seasonal movement — but we do it regularly in Haverford, Radnor, and Media township homes. The installation holds and finishes as well as drywall when the prep is done correctly." } },
+        { "@type": "Question", "name": "How high should wainscoting be in a colonial-style Delaware County home?", "acceptedAnswer": { "@type": "Answer", "text": "For a standard 8-foot-ceiling colonial — the most common home type in Delaware County — chair-rail height (32–36 inches) is the historically correct and visually proportionate choice. 42-inch height is appropriate for homes with 9+ foot ceilings, which is common in the Victorian and Colonial Revival-era homes in the eastern townships." } },
+        { "@type": "Question", "name": "What is the difference between picture-frame moulding wainscoting and raised panel wainscoting?", "acceptedAnswer": { "@type": "Answer", "text": "Picture-frame moulding wainscoting applies a frame of flat or profiled trim to the wall surface, creating the visual pattern without removing material from the wall plane — the panel field is the wall itself. Raised panel wainscoting uses actual raised or recessed panels set into a stile-and-rail frame, creating dimensional depth. Raised panel is the traditional high-end option and matches Victorian-era originals; picture-frame is the standard approach for painted modern wainscoting in post-war homes and is cost-effective and durable when properly executed in MDF." } },
+        { "@type": "Question", "name": "Do you install wainscoting in hallways and on staircase walls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — these are two of our most common scopes. Hallway wainscoting was part of the David Harris project on our trim service page; staircase wall paneling on curved surfaces is shown in our Stairs portfolio project (Delaware new-construction, curved staircase, special flexible trim stock). Staircase wainscoting requires more layout time than flat-wall work but follows the same principle: a defined visual field on the lower wall, carefully leveled horizontal rails even as the grade changes." } },
+        { "@type": "Question", "name": "Do I need a permit to install wainscoting in Pennsylvania?", "acceptedAnswer": { "@type": "Answer", "text": "Decorative wainscoting on existing walls does not require a permit under the PA Uniform Construction Code (73 Pa. Stat. § 517.1). If the project involves structural changes or is part of a larger renovation with a permit, the trim work is covered under that permit. We handle permit applications for any scope that requires one — homeowners do not need to manage this themselves." } }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Wainscoting in Historic Delaware County Homes — Matching Original Profiles"
+  description="Daniil Akulov shares what it takes to match original wainscoting profiles in Delaware County's older homes — period-appropriate materials, plaster wall installation, and local cost data for Media, PA and the Main Line."
+  canonical="https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/"
+  ogTitle="Wainscoting in Historic Delaware County Homes — Matching Original Profiles"
+  ogDescription="Master carpenter Daniil Akulov on wainscoting in historic Delaware County homes — profile matching, plaster wall technique, cost data, and real project examples."
+  ogUrl="https://probrothers.com/blog/wainscoting-historic-delaware-county-homes/"
+  ogImage="https://probrothers.com/assets/img/projects/Stair-Trim-1-735x1024.webp"
+  twitterTitle="Wainscoting in Historic Delaware County Homes — Matching Original Profiles"
+  twitterDescription="Daniil Akulov explains wainscoting in older Delaware County homes — matching original profiles, plaster walls, cost data for Media, PA."
+  twitterImage="https://probrothers.com/assets/img/projects/Stair-Trim-1-735x1024.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/projects/Stair-Trim-1-735x1024.webp"
+          imagesizes="(max-width:1024px) 100vw, 780px" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/projects/Stair-Trim-1-735x1024.webp"
+         sizes="100vw" alt="Curved staircase wall paneling trim installation — ProBrothers trim carpentry, Delaware new-construction" fetchpriority="high" width="735" height="1024" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/blog/">Blog</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Wainscoting in Delaware County</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Wainscoting in Historic Delaware County Homes — Matching Original Profiles</h1>
+      <p class="page-banner__sub">July 13, 2026 &mdash; Daniil Akulov, ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <section class="section post-section" aria-label="Blog post">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content="2026-07-13" />
+          <meta itemprop="dateModified" content="2026-07-13" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <div class="post-hero reveal">
+            <img src="/assets/img/projects/Stair-Trim-1-735x1024.webp"
+                 alt="Curved staircase wall paneling trim installation — ProBrothers trim carpentry, Delaware new-construction"
+                 width="735" height="1024" fetchpriority="high" loading="eager"
+                 class="post-hero__img" itemprop="image" />
+            <div class="post-hero__meta">
+              <time datetime="2026-07-13" class="post-hero__date" itemprop="datePublished">July 13, 2026</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <ul class="post-hero__cats" aria-label="Categories">
+                <li><a href="/blog/?category=trim">Trim</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=delaware-county">Delaware County</a></li>
+              </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
+            </div>
+          </div>
+
+          <aside class="aeo-answer">
+            Wainscoting installation in Delaware County ranges from $8–$30+ per linear foot depending on type, substrate, and profile matching. A typical hallway runs $1,500–$3,500 all-in. Historic plaster-wall installations require specialized prep. ProBrothers serves Media, Newtown Square, Haverford, Springfield, Kennett Square, and surrounding communities.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+              <h3 class="post-toc__title">Table of Contents</h3>
+              <nav class="post-toc__nav" aria-label="Article sections">
+                <ol class="post-toc__list" id="tocList"></ol>
+              </nav>
+            </div>
+
+            <div class="post-body__section reveal">
+              <p class="post-lead">Of all the trim work we do across Delaware County and the Main Line, wainscoting in older homes is the project type that most consistently tests a carpenter's depth of knowledge. Not because the installation itself is uniquely complex — it is not — but because the right answer in a home built in 1880 or 1920 is fundamentally different from the right answer in a home built in 1985 or 2010. In an older home, you are not adding wainscoting. You are restoring or extending a design language that the original builder put in place. Getting that wrong looks worse than not doing it at all.</p>
+              <p>This guide walks through what I look at before quoting a wainscoting project in a historic or older Delaware County home, how I match or complement original profiles, what materials I recommend and why, and what you should expect to spend in the Media, PA and Main Line market in 2026.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What Makes Delaware County's Older Homes Different</h2>
+              <p>Delaware County's housing stock spans roughly 150 years of residential construction. The eastern townships — Haverford, Radnor, Springfield, the Borough of Media — include everything from late-Victorian single homes built in the 1880s and 1890s, through the Craftsman and Colonial Revival wave of the 1910s–1930s, through the post-war colonials and split-levels of the 1950s–1970s, up through the tract developments of the 1980s and 1990s. Each era has its own wainscoting vocabulary.</p>
+              <p>The late-Victorian and early-Craftsman homes typically had board-and-rail wainscoting — a raised panel below a chair rail, with the panels often running a full 36 to 42 inches high. The profile on the stiles and rails was often an ogee or ovolo edge — complex enough to be distinctive, simple enough to be producible in volume. Many of these original profiles still exist in the homes I work on, sometimes buried under paint, sometimes removed and replastered over.</p>
+              <p>The mid-century colonials — the ones that constitute the largest share of Delaware County's housing stock — had a different wainscoting tradition. When they had it at all, it was usually a simpler chair-rail-height flat panel or a picture-frame moulding applied to drywall. By the 1970s and 1980s, many builders skipped wainscoting entirely. So when a homeowner in Newtown Square or Springfield comes to me wanting to add wainscoting, the question is usually: are we restoring something original, extending something that exists in adjacent rooms, or introducing it fresh to a home that never had it?</p>
+              <p>All three answers lead to different scopes. Let me walk through each.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Newtown Square: Decorative Wall Paneling as a Modern Wainscoting Language</h2>
+              <p>For a Delaware County home that never had traditional wainscoting — or where the original was removed — the cleanest modern interpretation of the wainscoting tradition is a decorative wall panel system using 1/4-inch MDF and primed trim stock. This is not a compromise. It is the standard approach for 1960s–1980s homes in the area, and when executed correctly with a spray finish, the result is indistinguishable from a traditional raised-panel installation at a fraction of the material cost.</p>
+              <div class="post-case-card">
+                <div class="post-case-card__label">ProBrothers Project — Written Before &rarr; After</div>
+                <h4>Newtown Square Family Room — Decorative Wall Paneling (MDF System)</h4>
+                <p><strong>Before:</strong> A 1970s-era colonial family room with flat drywall surfaces and no trim differentiation on the walls. The room had no chair rail, no wainscoting, and no architectural detail below the crown line. The existing baseboards were outdated and mismatched.</p>
+                <p><strong>After:</strong> Decorative wall panels installed using 1/4-inch MDF as the panel substrate, with primed 1&times;3 trim forming the frame around each panel section. The panel layout was planned to the room dimensions to achieve consistent spacing across all four walls. After installation, everything was filled, sanded, and spray-painted to a factory finish in a premium interior paint — the spray finish is what elevates this approach; brush-applied paint on MDF panel edges shows lap marks that a spray finish eliminates entirely.</p>
+                <p><strong>Materials used:</strong> 1/4&quot; MDF panels, primed 1&times;3 trim stock, premium interior paint (spray-applied).</p>
+                <p><strong>Part of larger scope:</strong> This paneling was part of the Newtown Square family room renovation that also included custom crown moulding and custom cabinetry. Total project: ~$22,000 over 2 weeks, Delaware County, PA.</p>
+                <p><em>Note: No before/after photographs are published for this project. The above is a written narrative from project records.</em></p>
+              </div>
+              <div class="post-workshop-box">
+                <div class="post-workshop-box__label">From the Workshop — Daniil Akulov</div>
+                <p>The panel layout decision is something most carpenters underestimate. You are dividing a room into a grid of rectangles, and those rectangles will look right or wrong depending on how they relate to the room's windows, doors, and corners. The rules I follow: panels should not be narrower than their height (they look compressed), the last panel before a corner should not be a sliver, and window and door openings should ideally fall at a panel seam rather than bisecting a panel field.</p>
+                <p>In practice, this means I lay out the panel grid on paper before I touch the wall — measuring the actual room, locating every opening, and solving for a panel width that works across all four walls without forcing a bad corner. In older Delaware County homes with non-standard room widths (many of the colonials and split-levels were built on odd-dimension footprints), this takes longer than it does on a standard new-construction room. But it is the difference between wainscoting that looks designed and wainscoting that looks applied.</p>
+                <p>One more thing specific to plaster walls: I always check the wall surface for previous patch work before marking out the panel grid. A plaster patch from a removed outlet or a repaired crack can telegraph through even 1/4-inch MDF if the adhesive bridges it unevenly. I skim those spots level before the panels go up.</p>
+              </div>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>King of Prussia: Wainscoting as Part of a Large-Scale Renovation</h2>
+              <p>Not all wainscoting projects stand alone. One of the largest scopes in our project history that included significant wainscoting work was a full basement renovation in King of Prussia — a project that encompassed baseboards, picture-frame moulding, and extensive custom trim work throughout, including a hidden trim-integrated door as a feature element.</p>
+              <div class="post-case-card">
+                <div class="post-case-card__label">ProBrothers Project — Written Narrative</div>
+                <h4>King of Prussia Basement — Baseboards, Picture-Frame Moulding &amp; Custom Trim Throughout</h4>
+                <p><strong>Scope:</strong> Full basement renovation including baseboards throughout, picture-frame moulding wainscoting on the primary wall runs, extensive custom trim detailing, and a hidden door integrated into the trim scheme — the door is concealed by continuing the picture-frame moulding across its face so it reads as a wall panel rather than an entrance.</p>
+                <p><strong>Project scope:</strong> ~$100,000 &nbsp;|&nbsp; Timeline: 2 months &nbsp;|&nbsp; Location: King of Prussia, Montgomery County, PA (ProBrothers regional service area)</p>
+                <p><em>Note: No before/after photographs are published for this project. The above is a written narrative from project records.</em></p>
+              </div>
+              <p>The hidden door detail is worth explaining because it illustrates what extensive trim work can accomplish beyond pure decoration. A picture-frame moulding system applied consistently to all four walls creates a visual field of identical panels. A door within that field — if framed and hinged to the same dimensions as the surrounding panels and trimmed identically on its face — disappears into the pattern. The eye reads it as wall, not as door. The trim is doing structural visual work, not decorative work.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What Delaware County Homeowners Have Said About Our Wainscoting Work</h2>
+              <p>Our <a href="/services/trim/">trim service page</a> includes a review from a Delaware County client that captures the everyday end of wainscoting work — not a whole-home renovation, but a hallway update that transformed the space:</p>
+              <blockquote class="post-testimonial">
+                <p>"We had them update the baseboards and add wainscoting to our hallway. It totally modernized the space. The crew was quiet, clean, and got it done exactly on the schedule they promised."</p>
+                <cite>— David Harris</cite>
+              </blockquote>
+              <p>This kind of scope — baseboard replacement plus hallway wainscoting — is one of the most cost-effective trim projects we do. The hallway is the first interior space a visitor sees. Wainscoting there changes the character of the entire ground floor even if no other room is touched.</p>
+              <p>We also see wainscoting requests frequently in Kennett Square, where the older stone and colonial-style homes in Chester County often have original chair-rail systems that need restoration or extension. Our <a href="/locations/kennett-square/">Kennett Square location page</a> notes a completed project there: a full kitchen remodel that also included "restored chair-rail and wainscoting trim throughout the first floor" — an example of how wainscoting restoration often travels with a larger renovation scope when the original detailing exists in the home.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Our Published Staircase Wall Paneling Portfolio</h2>
+              <p>Two of the most compelling wainscoting-adjacent installations in our <a href="/projects/trim/">trim project portfolio</a> are curved and straight staircase wall paneling — the technique most directly related to wainscoting applied to a non-flat surface:</p>
+              <div class="post-portfolio-grid">
+                <div class="post-portfolio-item">
+                  <img
+                    src="/assets/img/projects/Stair-Trim-768x1024.webp"
+                    alt="Curved staircase wall trim paneling — ProBrothers trim carpentry, Delaware new-construction"
+                    width="768" height="1024" loading="lazy"
+                  />
+                  <div class="post-portfolio-item__caption">Stairs — Curved Staircase Wall Paneling, Delaware (new-construction)</div>
+                </div>
+                <div class="post-portfolio-item">
+                  <img
+                    src="/assets/img/projects/Stair-Wall-Trim-1-768x1024.webp"
+                    alt="White straight staircase wall trim — ProBrothers precision trim work"
+                    width="768" height="1024" loading="lazy"
+                  />
+                  <div class="post-portfolio-item__caption">White Stairs — Straight Staircase Wall Trim, Basement Space</div>
+                </div>
+              </div>
+              <p>The Stairs project is instructive because it was a genuinely complex installation: curved staircase, new home in Delaware, trim paneling on a non-straight wall surface. Standard trim cannot be bent to follow a curve — it either needs to be flexible trim stock or needs to be built up from short sections that follow the curve incrementally, with each section's cut angle adjusted for the wall's arc. We used lasers and levels to keep the horizontal rails visually level even as the wall curved, which is the part of this install that looked complicated in practice. The White Stairs project is the more common residential scope: a straight staircase wall, basement space, trim installed on an existing wall and painted to an elegant finish. The principle is the same as wainscoting in a hallway — the trim creates a visual field on the lower wall, defines the space, and gives the staircase a finished quality that flat drywall cannot.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Matching Original Profiles in Older Delaware County Homes</h2>
+              <p>When a historic home in Haverford or Media or the Radnor townships has existing wainscoting in one room and the owner wants to extend it to adjacent rooms, profile matching is the central challenge. Original profiles from the 1880s–1930s were produced on custom shop-run cutters that no longer exist. The specific ogee, ovolo, or bead profiles in a Victorian-era colonial may not correspond exactly to any current stock profile.</p>
+              <p>There are three approaches, and I use all three depending on the situation:</p>
+              <ol class="post-list">
+                <li><strong>Stock matching:</strong> Bring a sample section of the original profile to the hardwood dealer and compare it against every stock profile in their library. In roughly 40% of the cases I have dealt with, a close match — within an eighth of an inch on the major profile elements — exists in stock. Close is not identical, but in an adjacent room where the two profiles never appear within the same sightline, close is acceptable.</li>
+                <li><strong>Custom milling:</strong> A local millwork shop can run a custom profile from a sample. You get an exact match at the cost of a setup fee plus a minimum order quantity — typically 100 linear feet or more. This is the right answer when the original profile is in the same room as the new work, or when the owner cares deeply about historical accuracy.</li>
+                <li><strong>Complementary profile, not matching:</strong> In some cases, the original profile is too complex or too expensive to match, and the better decision is to choose a current profile that is compatible in spirit — same period vocabulary, similar scale — without attempting to be identical. This requires confidence from the carpenter, because you have to be able to explain the decision and make it look intentional rather than like a failure to match. When done well, it is the most honest approach: you are not pretending the new work is original.</li>
+              </ol>
+              <p>The material substrate for historic matching follows the same logic. Original Victorian and Colonial Revival wainscoting used solid wood — typically poplar for painted work (affordable, smooth, takes paint well), pine in older homes, or oak if left natural. Current stock material options include solid wood (still available, still the premium choice for painted or stained wainscoting), MDF (the standard for contemporary painted wainscoting — dimensionally stable, no grain telegraphing, takes paint beautifully), and MDF with veneer faces (for stained applications where the look of wood grain matters but dimensional stability is a priority).</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Wainscoting Cost in Media and Delaware County — 2026 Market Rates</h2>
+              <p>The range I quote most often for Delaware County residential wainscoting is $8–$18 per linear foot installed, labor only — but that spread is wide enough to be misleading without context. Here is how I break it down:</p>
+              <div class="post-cost-table-wrap">
+                <table class="post-cost-table">
+                  <thead>
+                    <tr>
+                      <th>Type / Scope</th>
+                      <th>Budget</th>
+                      <th>Mid-Range</th>
+                      <th>Premium</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chair rail only (standard room, drywall walls)</td>
+                      <td>$3–$5 / linear ft</td>
+                      <td>$5–$7 / linear ft</td>
+                      <td>$7–$10 / linear ft</td>
+                    </tr>
+                    <tr>
+                      <td>Picture-frame moulding wainscoting (MDF panels, drywall substrate)</td>
+                      <td>$8–$11 / linear ft</td>
+                      <td>$11–$14 / linear ft</td>
+                      <td>$14–$18 / linear ft</td>
+                    </tr>
+                    <tr>
+                      <td>Raised panel wainscoting, stock profiles (solid wood or MDF)</td>
+                      <td>$12–$16 / linear ft</td>
+                      <td>$16–$22 / linear ft</td>
+                      <td>$22–$30+ / linear ft</td>
+                    </tr>
+                    <tr>
+                      <td>Historic profile matching (custom milling, plaster substrate)</td>
+                      <td colspan="3">Add $4–$8 / linear ft over raised panel rates for profile milling + plaster prep</td>
+                    </tr>
+                    <tr>
+                      <td>Full hallway wainscoting (typical 12–20 linear ft, includes chair rail + baseboard)</td>
+                      <td>$900–$1,500</td>
+                      <td>$1,500–$2,500</td>
+                      <td>$2,500–$4,000+</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="post-cost-table__note">Ranges reflect Delaware County / Philadelphia metro market rates, 2026. Labor only unless noted. Materials (MDF, trim profiles, primer, paint) are additional. Source: ProBrothers project cost records and Remodeling Magazine Cost vs. Value Report, Philadelphia metro edition.</p>
+              </div>
+              <p>A typical Delaware County hallway — roughly 16 linear feet of wall run — with picture-frame moulding wainscoting at mid-range rates is a $1,600–$2,200 project, labor only, before materials and paint. Add materials and a quality paint finish, and a hallway installation is a $2,200–$3,500 all-in project. The David Harris hallway project referenced above falls within this range. The Newtown Square family room paneling — part of a larger $22,000 scope — was at the higher end because the panel layout work, fill, and spray finish on a full four-wall family room is meaningfully more labor than a standard hallway.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Installing Wainscoting on Plaster Walls — Delaware County Specifics</h2>
+              <div class="post-permit-box">
+                <div class="post-permit-box__label">Pennsylvania Homes — Plaster Wall Considerations</div>
+                <p>Wainscoting installation on plaster walls — common in Delaware County homes built before 1960 — requires different technique than drywall installation. The key differences: (1) Fasteners must be located to hit lath strips, or the plaster surface will crack around the fastener hole. We use a combination of construction adhesive and fasteners placed at identified lath locations. (2) Plaster walls are rarely perfectly flat. A skim coat over any high spots before the panels go up prevents telegraph through the MDF or solid wood. (3) Plaster absorbs moisture differently than drywall, so the wood or MDF against it may move seasonally. We use flexible adhesives and leave micro-gaps at the wall junction rather than hard-seating the panels, which allows for movement without cracking the finish.</p>
+                <p>For historic restoration on plaster walls — particularly in the Victorian and Colonial Revival homes in Haverford and Radnor townships — we also check the existing plaster depth before selecting panel thickness. Original plaster lath builds up a surface that may be 5/8 to 3/4 inch proud of the stud face, which affects how the wainscoting aligns with the existing baseboard and any door or window casings it meets.</p>
+              </div>
+              <p>None of these plaster-specific considerations should deter a Delaware County homeowner from wainscoting their older home. They simply explain why an installer who has worked exclusively on drywall new-construction may not be the right choice for a 1910 colonial in Wayne or a 1920s bungalow in Swarthmore. The work requires experience with the specific substrate — not because plaster is impossible, but because it rewards attention to detail that many newer-market carpenters have never developed.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Wainscoting Heights — What Works in Different Room Types</h2>
+              <p>Wainscoting height is not arbitrary — it is proportional to the room's ceiling height and architectural period, and getting it wrong is visually jarring even when the installation itself is perfect. Here are the rules I follow:</p>
+              <ul class="post-list">
+                <li><strong>Traditional chair-rail height (32–36 inches):</strong> The standard for Colonial Revival and post-war colonials in Delaware County. The chair rail marks the height at which a dining chair back contacts the wall — it was originally a functional protection, and the decorative wainscoting below it followed logically. In rooms with 8-foot ceilings, this height keeps the lower wall from feeling cramped.</li>
+                <li><strong>Mid-height wainscoting (42–48 inches):</strong> More common in Victorian-era homes with 9- or 10-foot ceilings. At this height, the wainscoting provides a more substantial architectural anchor to the room. It is also the height typically expected when matching an existing Victorian original. In a room with 8-foot ceilings, this height can feel top-heavy — the wainscoting takes up more than half the wall.</li>
+                <li><strong>Waist-height or contemporary panel systems (54–60 inches, or 2/3 of wall height):</strong> More of a contemporary interpretation than a historic one. Works in transitional homes where the design brief is modern character in an older shell — but does not fit when matching a period original.</li>
+                <li><strong>Full-height wainscoting (to ceiling):</strong> Not wainscoting in the traditional sense — this is a full wall treatment. In a historic home, this is usually the Blue Library approach: built-in shelving or cabinetry as a continuous wall system, not a decorative trim program.</li>
+              </ul>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions — Wainscoting in Delaware County</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>How much does wainscoting installation cost in Media, PA?</h3>
+                  <p>A typical hallway in a Delaware County home — 12–20 linear feet, picture-frame moulding style — runs $1,500–$3,500 all-in for labor and materials with a quality paint finish. A full family room or dining room wainscoting project at mid-range rates is $3,000–$6,000+. Historic profile matching on plaster walls adds $4–$8 per linear foot over standard rates. Our Newtown Square family room decorative panel package was part of a $22,000 scope that included crown and custom cabinetry.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Can you match the original wainscoting profile in my older Delaware County home?</h3>
+                  <p>Usually, yes — through one of three approaches: stock profile matching (works in ~40% of cases), custom milling from a sample (exact match, higher cost), or a complementary period-compatible profile (the right choice when the originals are in different rooms). Bring us a sample of the existing profile and we will assess the options on-site.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Does wainscoting work on plaster walls in older Delaware County homes?</h3>
+                  <p>Yes. Plaster wall installation requires additional prep — skimming high spots, using construction adhesive plus fasteners placed at lath locations, and allowing for seasonal movement — but we do it regularly in Haverford, Radnor, and Media township homes. The installation holds and finishes as well as drywall when the prep is done correctly.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How high should wainscoting be in a colonial-style Delaware County home?</h3>
+                  <p>For a standard 8-foot-ceiling colonial — the most common home type in Delaware County — chair-rail height (32–36 inches) is the historically correct and visually proportionate choice. 42-inch height is appropriate for homes with 9+ foot ceilings, which is common in the Victorian and Colonial Revival-era homes in the eastern townships.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What is the difference between picture-frame moulding wainscoting and raised panel wainscoting?</h3>
+                  <p>Picture-frame moulding wainscoting applies a frame of flat or profiled trim to the wall surface, creating the visual pattern without removing material from the wall plane — the panel field is the wall itself. Raised panel wainscoting uses actual raised or recessed panels set into a stile-and-rail frame, creating dimensional depth. Raised panel is the traditional high-end option and matches Victorian-era originals; picture-frame is the standard approach for painted modern wainscoting in post-war homes and is cost-effective and durable when properly executed in MDF.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Do you install wainscoting in hallways and on staircase walls?</h3>
+                  <p>Yes — these are two of our most common scopes. Hallway wainscoting was part of the David Harris project on our trim service page; staircase wall paneling on curved surfaces is shown in our Stairs portfolio project (Delaware new-construction, curved staircase, special flexible trim stock). Staircase wainscoting requires more layout time than flat-wall work but follows the same principle: a defined visual field on the lower wall, carefully leveled horizontal rails even as the grade changes.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Do I need a permit to install wainscoting in Pennsylvania?</h3>
+                  <p>Decorative wainscoting on existing walls does not require a permit under the PA Uniform Construction Code (73 Pa. Stat. § 517.1). If the project involves structural changes or is part of a larger renovation with a permit, the trim work is covered under that permit. We handle permit applications for any scope that requires one — homeowners do not need to manage this themselves.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services and service areas">
+              <h2>Related Trim Services in Delaware County</h2>
+              <ul class="post-related-links__list">
+                <li><a href="/services/trim/">Full Trim Carpentry Services — Media, PA</a> — Wainscoting, crown molding, coffered ceilings, baseboards, chair rails, and custom millwork across Delaware County and the Main Line.</li>
+                <li><a href="/projects/trim/">Trim Work Project Portfolio</a> — See completed staircase paneling, ceiling trim, and beam installations from our recent project history.</li>
+                <li><a href="/locations/kennett-square/">ProBrothers in Kennett Square, PA</a> — Chester County service area, including historic farmhouse and colonial-style home renovations.</li>
+              </ul>
+            </div>
+
+            <div class="post-body__section post-cta reveal">
+              <h2>Ready to Add Wainscoting to Your Delaware County Home?</h2>
+              <p>ProBrothers serves Media, Newtown Square, Haverford, Springfield, West Chester, Kennett Square, and surrounding communities. Free quote within one business day. 5.0 rating &middot; 15+ years &middot; 135+ projects.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Blog sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Most Viewed Posts</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              {mostViewed.map(mv => (
+                <li class="post-sidebar__viewed-item">
+                  <a href={`/blog/${mv.slug}/`}>
+                    <span class="post-sidebar__viewed-title">{mv.title}</span>
+                    <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Ready to start your remodeling project? Contact us for a free, no-obligation quote today.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+          {relatedPosts.map((post, i) => (
+            <article class="related-card reveal" style={`--d:${(i * 0.1).toFixed(2)}s`}>
+              <a href={`/blog/${post.slug}/`} class="related-card__media" tabindex="-1" aria-hidden="true">
+                <img src={post.image} alt={post.imageAlt} width={post.imgW} height={post.imgH} loading="lazy" />
+              </a>
+              <div class="related-card__body">
+                <time datetime={post.dateIso} class="related-card__date">{post.date}</time>
+                <h3 class="related-card__title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+                <a href={`/blog/${post.slug}/`} class="related-card__link">Read More <span aria-hidden="true">&#8594;</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.post-section { padding-top: 3rem; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.post-article { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.post-hero { position: relative; }
+.post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
+.post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
+.post-hero__date { font-weight: 700; }
+.post-hero__sep { color: var(--muted); }
+.post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
+.post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
+.post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
+.post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
+.post-body { padding: 2rem 2.5rem 2.5rem; }
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .75rem; }
+.post-lead { font-size: 1.05rem; font-weight: 600; color: var(--dark); border-left: 4px solid var(--brand-orange, #ff7426); padding-left: 1rem; margin-bottom: 1.5rem; }
+.post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .55rem; }
+.post-list li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); padding-left: .2rem; }
+/* Workshop box */
+.post-workshop-box { background: var(--gray-2, #f0f4ff); border-left: 5px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-workshop-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .6rem; }
+.post-workshop-box p { font-size: .95rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .65rem; }
+.post-workshop-box p:last-child { margin-bottom: 0; }
+/* Case card */
+.post-case-card { background: #fff; border: 1.5px solid var(--gray-2, #e8e8e8); border-radius: var(--radius); padding: 1.3rem 1.5rem; margin: 1.4rem 0; box-shadow: var(--shadow-sm); }
+.post-case-card__label { font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .4rem; }
+.post-case-card h4 { font-size: 1.05rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-case-card p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-case-card p:last-child { margin-bottom: 0; }
+/* Testimonial */
+.post-testimonial { background: var(--gray-2, #f0f4ff); border-left: 5px solid var(--brand-orange, #ff7426); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; font-style: italic; }
+.post-testimonial p { font-size: 1.05rem; color: var(--dark); margin-bottom: .5rem; }
+.post-testimonial cite { font-size: .85rem; color: var(--muted); font-style: normal; font-weight: 700; }
+/* Portfolio grid */
+.post-portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.post-portfolio-item { border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--gray-2, #e8e8e8); box-shadow: var(--shadow-sm); }
+.post-portfolio-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.post-portfolio-item__caption { padding: .6rem .8rem; font-size: .82rem; color: var(--muted); font-weight: 600; }
+/* Cost table */
+.post-cost-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.post-cost-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.post-cost-table th { background: var(--accent); color: #fff; padding: .65rem 1rem; text-align: left; font-weight: 700; }
+.post-cost-table td { padding: .55rem 1rem; border-bottom: 1px solid var(--gray-2, #eee); font-size: .9rem; color: var(--text, #444); }
+.post-cost-table tr:nth-child(even) td { background: var(--gray-2, #f8f8f8); }
+.post-cost-table__note { font-size: .8rem; color: var(--muted); margin-top: .4rem; font-style: italic; }
+/* Permit box */
+.post-permit-box { background: #fff8f0; border: 1.5px solid var(--brand-orange, #ff7426); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-permit-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .5rem; }
+.post-permit-box p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-permit-box p:last-child { margin-bottom: 0; }
+/* FAQ */
+.post-faq { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.post-faq__item { background: var(--gray-2, #fafafa); border-radius: var(--radius); padding: 1.4rem 1.6rem; border-left: 4px solid var(--accent); }
+.post-faq__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .6rem; }
+.post-faq__item p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin: 0; }
+/* Related links */
+.post-related-links .post-related-links__list { padding-left: 1.4rem; margin: .8rem 0; display: flex; flex-direction: column; gap: .55rem; }
+.post-related-links .post-related-links__list li { font-size: .95rem; line-height: 1.7; }
+/* CTA */
+.post-cta { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
+.post-cta h2 { border-bottom: none; }
+.post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
+.post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
+.post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
+.post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2, #f5f5f5); }
+.post-sidebar__viewed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.post-sidebar__viewed-item a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; transition: color .2s; }
+.post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
+.post-sidebar__viewed-title { font-size: .9rem; font-weight: 700; color: var(--dark); line-height: 1.4; }
+.post-sidebar__viewed-count { font-size: .78rem; color: var(--muted); }
+.post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-sidebar__cta-widget p { font-size: .9rem; color: var(--text, #444); margin-bottom: 1rem; }
+/* Related posts */
+.related-posts { padding: 3rem 0; border-top: 1px solid var(--gray-2, #eee); }
+.related-posts__heading { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin: 0 0 1.5rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.related-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; }
+.related-card__media { display: block; overflow: hidden; height: 180px; }
+.related-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.related-card:hover .related-card__media img { transform: scale(1.04); }
+.related-card__body { padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.related-card__date { font-size: .8rem; color: var(--muted); }
+.related-card__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0; line-height: 1.4; }
+.related-card__title a { text-decoration: none; color: inherit; }
+.related-card__title a:hover { color: var(--accent); }
+.related-card__link { font-size: .85rem; font-weight: 700; color: var(--accent); text-decoration: none; margin-top: auto; }
+.related-card__link:hover { text-decoration: underline; }
+/* TOC */
+.post-toc { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); }
+.post-toc__title { font-size: 1rem; font-weight: 900; color: var(--dark); margin: 0 0 .8rem; }
+.post-toc__list { padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* aeo-answer */
+.aeo-answer { background: var(--gray-2, #f0f0ff); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.4rem; margin: 0 2.5rem 0; font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .post-body { padding: 1.5rem; }
+  .aeo-answer { margin: 0 1.5rem; }
+}
+</style>

@@ -1,0 +1,573 @@
+---
+/**
+ * Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees
+ * Author: Daniil Akulov | datePublished: 2026-07-13
+ * Source: reports/probrothers/probrothers_crown_molding_blog_draft_2026-07-13.html
+ * P2 content fix — registry/probrothers/probrothers_content_fixes.md
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const relatedPosts = [
+  {
+    slug: 'how-trim-carpentry-elevates-home-aesthetics',
+    title: 'The Art of Trim Carpentry: Elevating Your Home\'s Aesthetics in 2026',
+    date: 'March 7, 2025',
+    dateIso: '2025-03-07',
+    image: '/assets/img/blog/Black-Beams-1-1024x766.webp',
+    imageAlt: 'The Art of Trim Carpentry: Elevating Your Home\'s Aesthetics in 2026',
+    imgW: 1024,
+    imgH: 766,
+  },
+  {
+    slug: 'wainscoting-historic-delaware-county-homes',
+    title: 'Wainscoting in Historic Delaware County Homes — Matching Original Profiles',
+    date: 'July 13, 2026',
+    dateIso: '2026-07-13',
+    image: '/assets/img/projects/Stair-Trim-768x1024.webp',
+    imageAlt: 'Curved staircase wall paneling — ProBrothers trim carpentry',
+    imgW: 768,
+    imgH: 1024,
+  },
+];
+
+const mostViewed = [
+  { title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)', slug: 'kitchen-cabinets-cost', views: 582 },
+  { title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', slug: 'guide-to-hiring-remodeling-contractors', views: 437 },
+  { title: 'Why ProBrothers Is the Top Choice for Custom Home Remodeling', slug: 'why-choose-probrothers-for-home-remodeling', views: 435 },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/",
+      "headline": "Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees",
+      "url": "https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/",
+      "datePublished": "2026-07-13",
+      "dateModified": "2026-07-13",
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/projects/White-Coffered-1-768x1024.webp",
+        "width": 768, "height": 1024
+      },
+      "description": "Daniil Akulov, master carpenter with 15+ years in Delaware County, explains how crown molding is measured, selected, and installed — with real project costs, Media/Delaware County pricing, and local before-and-after examples.",
+      "mainEntityOfPage": { "@id": "https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "about": { "@type": "Service", "name": "Crown Molding Installation", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://probrothers.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Crown Molding Installation in Delaware County, PA", "item": "https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does crown molding installation cost in Media, PA?", "acceptedAnswer": { "@type": "Answer", "text": "For a standard room in a Delaware County colonial with 8-foot ceilings, expect $4–$9 per linear foot for a single-piece profile, labor only. A 12×14 family room runs roughly $800–$1,200 all-in for labor and materials with a spray finish. Larger profiles, plaster ceilings, or coffered ceiling work increases the cost — our Newtown Square crown, panel, and cabinetry package was $22,000 over two weeks." } },
+        { "@type": "Question", "name": "Does crown molding installation require a permit in Delaware County?", "acceptedAnswer": { "@type": "Answer", "text": "Standard decorative crown molding does not require a permit under the PA Uniform Construction Code. If your project includes structural changes (wall removal, load-bearing framing), those elements require a permit, and the trim work is covered under that permit. We handle permit applications for any project that requires one." } },
+        { "@type": "Question", "name": "Can crown molding be installed on plaster ceilings in older Delaware County homes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and we do it regularly. Plaster ceiling installations require additional assessment for out-of-plumb variation, and we use construction adhesive plus fasteners with pre-drilled holes to avoid surface cracking. If the existing plaster has a profile that doesn't match available stock profiles, we mill or build up a match." } },
+        { "@type": "Question", "name": "How long does crown molding installation take?", "acceptedAnswer": { "@type": "Answer", "text": "A single room — family room or dining room in a typical Delaware County colonial — is typically one to two days including fill and finish. A whole-home crown package (four to six rooms plus hallways) runs one to two weeks depending on ceiling conditions and profile complexity." } },
+        { "@type": "Question", "name": "What is the difference between miter joints and coped joints for inside corners?", "acceptedAnswer": { "@type": "Answer", "text": "A miter cut meets at the corner at a 45-degree angle from each side — it looks perfect on a perfectly square corner. A coped joint cuts one piece to the exact profile of the adjoining piece, overlapping it. In Delaware County's older homes where corners are rarely perfectly square, coped joints are more forgiving of variation and do not open seasonally the way mitered joints do. We cope all inside corners as standard practice." } },
+        { "@type": "Question", "name": "Do you install crown molding over kitchen cabinets in Delaware County?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — this is one of our most common kitchen scopes. We build the soffit, install the crown, and can extend the backsplash to ceiling height as part of the same project. Our West Chester kitchen example was a $10,000 project completed in three days." } },
+        { "@type": "Question", "name": "What profile should I choose for a 1970s Delaware County colonial?", "acceptedAnswer": { "@type": "Answer", "text": "For a standard 8-foot ceiling in a colonial, I recommend 3.5 to 4.5 inches of total projection — a simple cove-and-flat or classic colonial profile. Avoid anything with strong contemporary geometry; it reads as mismatched against traditional colonial architecture. Bring samples to the room before committing — profile selection is the decision most homeowners rush and later regret." } }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees"
+  description="Daniil Akulov, master carpenter with 15+ years in Delaware County, explains how crown molding is measured, selected, and installed — with real project costs, Media/Delaware County pricing, and local before-and-after examples."
+  canonical="https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/"
+  ogTitle="Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees"
+  ogDescription="Daniil Akulov explains crown molding installation in Delaware County — profile selection, plaster wall technique, cost data, and real project examples from Media, Newtown Square, and West Chester."
+  ogUrl="https://probrothers.com/blog/crown-molding-installation-delaware-county-pa/"
+  ogImage="https://probrothers.com/assets/img/projects/White-Coffered-1-768x1024.webp"
+  twitterTitle="Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees"
+  twitterDescription="Master carpenter Daniil Akulov on crown molding in Delaware County — costs, profiles, plaster ceiling technique, and real project examples."
+  twitterImage="https://probrothers.com/assets/img/projects/White-Coffered-1-768x1024.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/projects/White-Coffered-1-768x1024.webp"
+          imagesizes="(max-width:1024px) 100vw, 780px" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/projects/White-Coffered-1-768x1024.webp"
+         sizes="100vw" alt="White coffered ceiling trim installation — ProBrothers ceiling carpentry, Delaware County" fetchpriority="high" width="768" height="1024" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/blog/">Blog</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Crown Molding in Delaware County</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Crown Molding Installation in Delaware County, PA — What a Master Carpenter Sees</h1>
+      <p class="page-banner__sub">July 13, 2026 &mdash; Daniil Akulov, ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <section class="section post-section" aria-label="Blog post">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content="2026-07-13" />
+          <meta itemprop="dateModified" content="2026-07-13" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <div class="post-hero reveal">
+            <img src="/assets/img/projects/White-Coffered-1-768x1024.webp"
+                 alt="White coffered ceiling trim installation — ProBrothers ceiling carpentry, Delaware new-construction"
+                 width="768" height="1024" fetchpriority="high" loading="eager"
+                 class="post-hero__img" itemprop="image" />
+            <div class="post-hero__meta">
+              <time datetime="2026-07-13" class="post-hero__date" itemprop="datePublished">July 13, 2026</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <ul class="post-hero__cats" aria-label="Categories">
+                <li><a href="/blog/?category=trim">Trim</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=delaware-county">Delaware County</a></li>
+              </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
+            </div>
+          </div>
+
+          <aside class="aeo-answer">
+            Crown molding installation in Delaware County ranges from $4–$18+ per linear foot depending on profile complexity, ceiling conditions, and finish quality. A standard 12&times;14 room with a 5-inch profile runs $800–$1,200 all-in. Older homes with plaster ceilings require additional assessment and technique adjustments. ProBrothers serves Media, Newtown Square, Haverford, Springfield, and surrounding Delaware County communities.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+              <h3 class="post-toc__title">Table of Contents</h3>
+              <nav class="post-toc__nav" aria-label="Article sections">
+                <ol class="post-toc__list" id="tocList"></ol>
+              </nav>
+            </div>
+
+            <div class="post-body__section reveal">
+              <p class="post-lead">Crown molding is one of those finishing details that homeowners in Delaware County either love or underestimate. After 15 years of installing it across Media, Newtown Square, West Chester, and the broader Main Line corridor, I can tell you the difference between a $3-per-linear-foot install and a $12-per-linear-foot install has nothing to do with the molding itself — it has everything to do with what the carpenter does before the first piece goes up.</p>
+              <p>This guide is my attempt to give Delaware County homeowners an honest, experience-first look at crown molding installation: what it actually costs in this market, how I evaluate a room before I quote, what the older homes in this area throw at you that newer builds do not, and why two seemingly identical rooms can produce wildly different scopes.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What Crown Molding Actually Does to a Room — and Why It Works</h2>
+              <p>Crown molding creates a visual transition between the wall plane and the ceiling plane. Without it, that junction is a raw corner — functional, but architecturally incomplete. With it, the ceiling appears to float, and rooms that feel low-slung with bare 8-foot ceilings often feel a full foot taller after the install. That is not an optical trick — it is geometry. A 4-inch crown profile canted at 38 degrees projects visually upward in a way flat applied molding simply does not.</p>
+              <p>In the homes I work on most often — the 1960s–1990s colonials and ranchers across Delaware County — the original builder either skipped crown entirely or installed a standard 2.5-inch Colonial casing that has since shrunk, cracked, or warped. By the time a client calls me, the question is rarely "do I want crown?" The question is "what size profile works in this room, and can the walls actually take it?"</p>
+              <p>That second question is the one that separates a good installation from a frustrating one. Let me explain what I mean.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Reading a Delaware County Room Before a Single Cut</h2>
+              <div class="post-workshop-box">
+                <div class="post-workshop-box__label">From the Workshop — Daniil Akulov</div>
+                <p>The first thing I do in any pre-1990 Delaware County home is check the ceiling corners with a framing square and a flashlight. Older homes — especially those built on the Main Line or in the townships of Haverford, Springfield, and Marple — frequently have plaster ceilings that are not truly flat. Plaster sags. It telegraphs the joist bays above it. In some rooms, the ceiling can vary by a quarter inch or more across a 12-foot span, and that is before you account for the wall-to-ceiling junction, which is often not 90 degrees.</p>
+                <p>If I do not account for that before I cut, the crown will show gaps at the splice points and the inside corners will be visible mismatches. The fix at that point is caulk, and heavy caulk fills are detectable — especially under raking light from a window. The correct fix is to identify the worst-case out-of-plumb angle in the room, cut to that, and then feather the remaining variation with compound before paint. That process adds time, but it produces joints you cannot find after the first coat of paint.</p>
+                <p>A second thing I always check in older Delaware County homes: the existing baseboard height. Crown and baseboard are a visual pair — if the baseboard is a 2.5-inch colonial and the room is getting a 5-inch crown, the proportions will feel off even if both pieces are installed perfectly. I typically recommend revisiting the baseboard height when a client is upgrading crown, so the room feels intentional from floor to ceiling.</p>
+              </div>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>A Newtown Square Family Room: What Before and After Really Looks Like</h2>
+              <p>The clearest example I can give from our recent project history is a family room renovation in Newtown Square, Delaware County — a 1970s-era colonial that had not been touched since the original build. When we arrived, the room had outdated baseboards that were mismatched in height across the four walls, an old fireplace mantel that had been painted over so many times the profile detail was nearly invisible, and worn trim around the doorways that had separated from the drywall at multiple points.</p>
+              <div class="post-case-card">
+                <div class="post-case-card__label">ProBrothers Project — Written Before &rarr; After</div>
+                <h4>Newtown Square Family Room — Crown Molding, Decorative Wall Panels &amp; Custom Cabinetry</h4>
+                <p><strong>Before:</strong> Outdated baseboards in mismatched heights across four walls. Fireplace mantel with original profile detail buried under decades of paint. Worn and separated trim around doorways. No crown molding anywhere in the room.</p>
+                <p><strong>After:</strong> Custom crown moulding installed throughout the family room, filling the wall-to-ceiling junction on all four walls. Decorative wall panels added for architectural depth. Custom cabinetry flanking the fireplace, restoring the mantel as a focal point. All trim — including the new crown, panels, and cabinetry faces — was filled, sanded, and spray-painted to a factory finish in a premium interior paint. The result was a room that felt both larger and more finished than the original build.</p>
+                <p><strong>Materials used:</strong> Crown moulding profiles, 1/4&quot; MDF (for decorative wall panels), primed 1&times;3 trim, premium interior paint, custom cabinets.</p>
+                <p><strong>Project scope:</strong> ~$22,000 &nbsp;|&nbsp; Timeline: 2 weeks &nbsp;|&nbsp; Location: Newtown Square, Delaware County, PA</p>
+                <p><em>Note: No before/after photographs are published for this project. The above is a written narrative from project records.</em></p>
+              </div>
+              <p>What made this project instructive is the spray finish. I always push for spray-applied paint on crown molding in rooms where the trim package is extensive — panels plus crown plus cabinetry — because brush-applied paint on large runs of crown will show lap marks under a raking light, especially in a room with south-facing windows. The spray finish at factory quality is a meaningful visual upgrade even if the homeowner never consciously notices it. They just know the room looks "right."</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>A West Chester Kitchen: Crown Over a Custom Soffit</h2>
+              <p>Not every crown installation is a full-room trim package. One of our most common scopes in the Main Line and Chester County area is crown molding installed over a custom soffit above kitchen cabinetry — a detail that transforms a kitchen from a functional room into one that reads as designed.</p>
+              <div class="post-case-card">
+                <div class="post-case-card__label">ProBrothers Project — Written Before &rarr; After</div>
+                <h4>West Chester Kitchen — Crown Over Cabinet Soffit</h4>
+                <p><strong>Scope:</strong> Crown moulding installed over a custom soffit built above the upper kitchen cabinets, carrying the line from cabinet top to ceiling. Backsplash extended to ceiling height to complete the vertical plane behind the crown run.</p>
+                <p><strong>Project scope:</strong> ~$10,000 &nbsp;|&nbsp; Timeline: 3 days &nbsp;|&nbsp; Location: West Chester, Chester County, PA (ProBrothers core service area)</p>
+                <p><em>Note: No before/after photographs are published for this project. The above is a written narrative from project records.</em></p>
+              </div>
+              <p>The soffit-and-crown combination solves a problem that has existed in tract-built homes since the 1970s: the gap between the cabinet top and the ceiling. That gap collects dust, makes ceilings feel low, and gives kitchens a dated appearance. Running crown over a built soffit eliminates the gap, brings the cabinets visually to ceiling height, and — when the backsplash is extended behind it — turns the upper kitchen wall into a continuous design statement.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Our Published Trim Portfolio — Delaware Ceiling and Finish Carpentry</h2>
+              <p>For clients who want to see completed work before we meet, these three ceiling and finish carpentry projects are available in our <a href="/projects/trim/">trim project gallery</a>:</p>
+              <div class="post-portfolio-grid">
+                <div class="post-portfolio-item">
+                  <img
+                    src="/assets/img/projects/White-Coffered-1-768x1024.webp"
+                    alt="White coffered ceiling trim installation — ProBrothers ceiling carpentry, Delaware new-construction"
+                    width="768" height="1024" loading="lazy"
+                  />
+                  <div class="post-portfolio-item__caption">White Coffered Ceiling — Delaware New-Construction</div>
+                </div>
+                <div class="post-portfolio-item">
+                  <img
+                    src="/assets/img/projects/White-Sqr-1-768x1024.webp"
+                    alt="White ceiling trim in squares — ProBrothers precision trim carpentry"
+                    width="768" height="1024" loading="lazy"
+                  />
+                  <div class="post-portfolio-item__caption">White Ceiling Trim — Ceiling Squares with Precise Joints</div>
+                </div>
+                <div class="post-portfolio-item">
+                  <img
+                    src="/assets/img/projects/Black-Beams-1-1024x766.webp"
+                    alt="Massive custom black beams installed on high ceilings — ProBrothers commercial trim carpentry"
+                    width="1024" height="766" loading="lazy"
+                  />
+                  <div class="post-portfolio-item__caption">Black Beams — Commercial-Scale Ceiling Carpentry</div>
+                </div>
+              </div>
+              <p>The White Coffered Ceiling was built for a client constructing a new home in Delaware — the client worked with a designer on the style and color, and the beams were built in-shop before being transported and installed using scaffolding for the high ceiling attach points. The White Ceiling Trim is exactly what it sounds like: trim installed in precise squares, joints tight enough that the room's transformation comes purely from craftsmanship — no elaborate profile required. The Black Beams project required a scissor lift for installation due to ceiling height; the beams were built in transportable sections in our shop and assembled on-site.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Crown Molding Cost in Media and Delaware County — What You Should Expect to Pay</h2>
+              <p>The numbers I hear from homeowners who have shopped around the area range from $3 per linear foot to $18 per linear foot. That spread is not random — it reflects real differences in profile complexity, ceiling conditions, and finishing quality. Here is how I break it down for Delaware County residential projects:</p>
+              <div class="post-cost-table-wrap">
+                <table class="post-cost-table">
+                  <thead>
+                    <tr>
+                      <th>Scope</th>
+                      <th>Budget</th>
+                      <th>Mid-Range</th>
+                      <th>Premium</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Basic 3-inch colonial profile, standard 8-ft ceiling, minimal corner work</td>
+                      <td>$4–$6 / linear ft</td>
+                      <td>$7–$9 / linear ft</td>
+                      <td>$10–$12 / linear ft</td>
+                    </tr>
+                    <tr>
+                      <td>5-inch profile, vaulted or cathedral ceiling, scribed inside corners</td>
+                      <td>$7–$9 / linear ft</td>
+                      <td>$10–$13 / linear ft</td>
+                      <td>$14–$17 / linear ft</td>
+                    </tr>
+                    <tr>
+                      <td>Multi-piece built-up crown with blocking, cove + cap detail</td>
+                      <td>$10–$13 / linear ft</td>
+                      <td>$14–$17 / linear ft</td>
+                      <td>$18+ / linear ft</td>
+                    </tr>
+                    <tr>
+                      <td>Coffered ceiling (new-construction or open retrofit)</td>
+                      <td colspan="3">$12–$25+ / sq ft of ceiling area (depends on bay count and beam complexity)</td>
+                    </tr>
+                    <tr>
+                      <td>Crown over kitchen cabinet soffit (full kitchen perimeter)</td>
+                      <td>$800–$1,500</td>
+                      <td>$1,500–$3,500</td>
+                      <td>$3,500–$6,000+</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="post-cost-table__note">Ranges reflect Delaware County / Philadelphia metro market rates, 2026. Labor only unless noted. Materials (crown profiles, MDF blocking, primer, paint) are additional. Source: ProBrothers project cost records and Remodeling Magazine Cost vs. Value Report, Philadelphia metro edition.</p>
+              </div>
+              <p>A 12-foot-by-14-foot room — a common family room footprint in Newtown Square and Springfield colonials — has roughly 52 linear feet of wall-to-ceiling junction. At mid-range rates for a 5-inch profile, that is a $520–$676 labor cost for the room, before materials and before finishing. Add spray paint and that room is typically $800–$1,200 all-in for labor and materials, assuming standard ceiling conditions. The Newtown Square project I described above was a larger, more complex scope — $22,000 over two weeks encompassed the crown, decorative panels, and custom cabinetry as a complete package.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>PA-Specific Installation Considerations for Delaware County Homes</h2>
+              <div class="post-permit-box">
+                <div class="post-permit-box__label">Pennsylvania UCC &amp; Permit Notes</div>
+                <p>Standard decorative crown molding installation — applying trim to an existing wall-to-ceiling junction — does not require a building permit in Pennsylvania under the PA Uniform Construction Code (73 Pa. Stat. § 517.1). However, if the project includes structural modifications (removing walls, adding blocking that penetrates into structural framing), or if it is part of a larger renovation that does require permits, then the trim work is covered under that project's permit scope.</p>
+                <p>In Media Borough and Springfield Township, permit review for renovation projects involving structural work typically takes 1–2 weeks. Other Delaware County municipalities are typically 4–8 weeks. Historic district overlay — which applies to portions of Media Borough's core — can add 4–12 weeks for exterior work. Interior trim does not typically trigger historic review. For any project that includes structural scope, we handle the permit application as part of our process — homeowners should never need to manage this themselves.</p>
+              </div>
+              <p>Beyond permits, the most consistent installation challenge I see in Delaware County's pre-1990 housing stock is plaster. The county's colonials and split-levels from the 1960s through the early 1980s were built with plaster walls rather than drywall, and plaster presents three specific issues for crown installation:</p>
+              <ul class="post-list">
+                <li><strong>Inconsistent ceiling plane:</strong> Plaster ceilings sag and vary. The ceiling-to-wall junction is frequently out of plumb. A crown profile that looks level on a perfectly square drywall room will show wave and gap on a plaster ceiling.</li>
+                <li><strong>Fastener holding:</strong> Plaster over lath provides excellent holding when you hit a lath strip, but misses can result in surface cracks that propagate from the fastener hole. We use construction adhesive plus fasteners on plaster walls, and we pre-drill.</li>
+                <li><strong>Matching existing profiles:</strong> Many homes in the Media and Haverford township areas have original plaster crown profiles — cast or formed in place — that bear no resemblance to any stock molding profile currently manufactured. Matching these requires either custom milling or a built-up combination of available profiles, both of which add cost.</li>
+              </ul>
+              <p>These are not reasons to avoid crown molding in older homes — they are reasons to hire a carpenter who has worked in those homes. The installs that fail are the ones where an installer who works primarily on new construction brings new-construction techniques to a 1975 colonial and is surprised by what they find.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Choosing the Right Crown Profile for Your Delaware County Home</h2>
+              <p>Profile selection is the decision that most homeowners underestimate. Walk into any hardwood dealer or home center and you will find 20 or more crown profiles. The instinct is to pick the one that looks best in isolation on the shelf — which is almost always the wrong answer. A profile that reads as crisp and elegant as a 4-inch sample becomes visually busy on 52 linear feet of wall in a small room, and a profile that looks too simple on the shelf often becomes the one that makes the room feel designed rather than decorated.</p>
+              <p>My rules of thumb for Delaware County homes:</p>
+              <ul class="post-list">
+                <li><strong>8-foot ceilings (the most common in Delaware County colonials):</strong> 3.5 to 4.5 inches of total projection. Anything larger and the room feels heavy rather than elegant. I typically recommend a simple cove-and-flat profile in these rooms — the simplicity reads as intentional.</li>
+                <li><strong>9-foot ceilings:</strong> 4.5 to 5.5 inches. A built-up profile — cove below, flat above — works well and gives the room some visual variation without the complexity of a multi-piece crown.</li>
+                <li><strong>10-foot-and-above ceilings (rarer in the area's existing stock, more common in newer construction):</strong> Full multi-piece built-up crown is appropriate, and often expected. This is where coffered and tray ceilings also start making proportional sense.</li>
+                <li><strong>Transitional and traditional colonials (the majority of Media and Newtown Square housing stock):</strong> Colonial and egg-and-dart profiles are appropriate period choices. Avoid anything with strong mid-century or contemporary geometry — it reads as mismatched against the architecture.</li>
+              </ul>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What Our Installation Process Looks Like, Start to Finish</h2>
+              <p>When ProBrothers takes on a crown molding project in Delaware County, the process follows a consistent sequence regardless of scope:</p>
+              <ol class="post-list">
+                <li><strong>Site assessment:</strong> We measure every wall run, check the ceiling plane for variation across the span, identify out-of-plumb corners, and assess the substrate (drywall vs. plaster vs. existing trim over plaster). This visit produces the actual cut list and the scope confirmation — what you are quoted is what we found in the room, not an estimate built from square footage alone.</li>
+                <li><strong>Profile selection:</strong> If you have not already chosen a profile, we bring samples and evaluate them in the actual room under the actual lighting. We also check whether any existing trim in adjacent rooms is visible from the crown room — visual continuity matters.</li>
+                <li><strong>Shop preparation:</strong> For complex profiles or multi-piece built-up crown, we cut and pre-assemble sections in our shop before bringing them to the site. On simple one-piece installs, cutting happens on-site.</li>
+                <li><strong>Installation:</strong> Adhesive plus fasteners. Corners are coped (not mitered) on inside corners where the ceiling plane is irregular — a coped joint tolerates movement and out-of-plumb conditions far better than a mitered one, and it does not open as the house breathes seasonally.</li>
+                <li><strong>Fill and finish:</strong> All nail holes and any hairline gaps at the ceiling or wall are filled with a flexible compound before paint. For spray finishes, we mask and prep the room the day before paint. For brush finishes, two coats minimum.</li>
+              </ol>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions — Crown Molding in Delaware County</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>How much does crown molding installation cost in Media, PA?</h3>
+                  <p>For a standard room in a Delaware County colonial with 8-foot ceilings, expect $4–$9 per linear foot for a single-piece profile, labor only. A 12&times;14 family room runs roughly $800–$1,200 all-in for labor and materials with a spray finish. Larger profiles, plaster ceilings, or coffered ceiling work increases the cost — our Newtown Square crown, panel, and cabinetry package was $22,000 over two weeks.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Does crown molding installation require a permit in Delaware County?</h3>
+                  <p>Standard decorative crown molding does not require a permit under the PA Uniform Construction Code. If your project includes structural changes (wall removal, load-bearing framing), those elements require a permit, and the trim work is covered under that permit. We handle permit applications for any project that requires one.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Can crown molding be installed on plaster ceilings in older Delaware County homes?</h3>
+                  <p>Yes, and we do it regularly. Plaster ceiling installations require additional assessment for out-of-plumb variation, and we use construction adhesive plus fasteners with pre-drilled holes to avoid surface cracking. If the existing plaster has a profile that doesn't match available stock profiles, we mill or build up a match.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How long does crown molding installation take?</h3>
+                  <p>A single room — family room or dining room in a typical Delaware County colonial — is typically one to two days including fill and finish. A whole-home crown package (four to six rooms plus hallways) runs one to two weeks depending on ceiling conditions and profile complexity.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What is the difference between miter joints and coped joints for inside corners?</h3>
+                  <p>A miter cut meets at the corner at a 45-degree angle from each side — it looks perfect on a perfectly square corner. A coped joint cuts one piece to the exact profile of the adjoining piece, overlapping it. In Delaware County's older homes where corners are rarely perfectly square, coped joints are more forgiving of variation and do not open seasonally the way mitered joints do. We cope all inside corners as standard practice.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Do you install crown molding over kitchen cabinets in Delaware County?</h3>
+                  <p>Yes — this is one of our most common kitchen scopes. We build the soffit, install the crown, and can extend the backsplash to ceiling height as part of the same project. Our West Chester kitchen example was a $10,000 project completed in three days.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What profile should I choose for a 1970s Delaware County colonial?</h3>
+                  <p>For a standard 8-foot ceiling in a colonial, I recommend 3.5 to 4.5 inches of total projection — a simple cove-and-flat or classic colonial profile. Avoid anything with strong contemporary geometry; it reads as mismatched against traditional colonial architecture. Bring samples to the room before committing — profile selection is the decision most homeowners rush and later regret.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services and service areas">
+              <h2>Related Trim Services in Delaware County</h2>
+              <ul class="post-related-links__list">
+                <li><a href="/services/trim/">Full Trim Carpentry Services — Media, PA</a> — Crown molding, wainscoting, coffered ceilings, baseboards, and custom millwork across Delaware County and the Main Line.</li>
+                <li><a href="/projects/trim/">Trim Work Project Portfolio</a> — See completed ceiling and finish carpentry projects including the White Coffered Ceiling, White Ceiling Trim, and Black Beams installations.</li>
+                <li><a href="/blog/how-trim-carpentry-elevates-home-aesthetics/">How Trim Carpentry Elevates Home Aesthetics</a></li>
+              </ul>
+            </div>
+
+            <div class="post-body__section post-cta reveal">
+              <h2>Ready to Install Crown Molding in Your Delaware County Home?</h2>
+              <p>ProBrothers serves Media, Newtown Square, Haverford, Springfield, West Chester, and surrounding Delaware County communities. Free quote within one business day. 5.0 rating &middot; 15+ years &middot; 135+ projects.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Blog sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Most Viewed Posts</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              {mostViewed.map(mv => (
+                <li class="post-sidebar__viewed-item">
+                  <a href={`/blog/${mv.slug}/`}>
+                    <span class="post-sidebar__viewed-title">{mv.title}</span>
+                    <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Ready to start your remodeling project? Contact us for a free, no-obligation quote today.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+          {relatedPosts.map((post, i) => (
+            <article class="related-card reveal" style={`--d:${(i * 0.1).toFixed(2)}s`}>
+              <a href={`/blog/${post.slug}/`} class="related-card__media" tabindex="-1" aria-hidden="true">
+                <img src={post.image} alt={post.imageAlt} width={post.imgW} height={post.imgH} loading="lazy" />
+              </a>
+              <div class="related-card__body">
+                <time datetime={post.dateIso} class="related-card__date">{post.date}</time>
+                <h3 class="related-card__title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+                <a href={`/blog/${post.slug}/`} class="related-card__link">Read More <span aria-hidden="true">&#8594;</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.post-section { padding-top: 3rem; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.post-article { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.post-hero { position: relative; }
+.post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
+.post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
+.post-hero__date { font-weight: 700; }
+.post-hero__sep { color: var(--muted); }
+.post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
+.post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
+.post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
+.post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
+.post-body { padding: 2rem 2.5rem 2.5rem; }
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .75rem; }
+.post-lead { font-size: 1.05rem; font-weight: 600; color: var(--dark); border-left: 4px solid var(--brand-orange, #ff7426); padding-left: 1rem; margin-bottom: 1.5rem; }
+.post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .55rem; }
+.post-list li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); padding-left: .2rem; }
+/* Workshop box */
+.post-workshop-box { background: var(--gray-2, #f0f4ff); border-left: 5px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-workshop-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .6rem; }
+.post-workshop-box p { font-size: .95rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .65rem; }
+.post-workshop-box p:last-child { margin-bottom: 0; }
+/* Case card */
+.post-case-card { background: #fff; border: 1.5px solid var(--gray-2, #e8e8e8); border-radius: var(--radius); padding: 1.3rem 1.5rem; margin: 1.4rem 0; box-shadow: var(--shadow-sm); }
+.post-case-card__label { font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .4rem; }
+.post-case-card h4 { font-size: 1.05rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-case-card p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-case-card p:last-child { margin-bottom: 0; }
+/* Portfolio grid */
+.post-portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.post-portfolio-item { border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--gray-2, #e8e8e8); box-shadow: var(--shadow-sm); }
+.post-portfolio-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.post-portfolio-item__caption { padding: .6rem .8rem; font-size: .82rem; color: var(--muted); font-weight: 600; }
+/* Cost table */
+.post-cost-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.post-cost-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.post-cost-table th { background: var(--accent); color: #fff; padding: .65rem 1rem; text-align: left; font-weight: 700; }
+.post-cost-table td { padding: .55rem 1rem; border-bottom: 1px solid var(--gray-2, #eee); font-size: .9rem; color: var(--text, #444); }
+.post-cost-table tr:nth-child(even) td { background: var(--gray-2, #f8f8f8); }
+.post-cost-table__note { font-size: .8rem; color: var(--muted); margin-top: .4rem; font-style: italic; }
+/* Permit box */
+.post-permit-box { background: #fff8f0; border: 1.5px solid var(--brand-orange, #ff7426); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-permit-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .5rem; }
+.post-permit-box p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-permit-box p:last-child { margin-bottom: 0; }
+/* FAQ */
+.post-faq { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.post-faq__item { background: var(--gray-2, #fafafa); border-radius: var(--radius); padding: 1.4rem 1.6rem; border-left: 4px solid var(--accent); }
+.post-faq__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .6rem; }
+.post-faq__item p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin: 0; }
+/* Related links */
+.post-related-links .post-related-links__list { padding-left: 1.4rem; margin: .8rem 0; display: flex; flex-direction: column; gap: .55rem; }
+.post-related-links .post-related-links__list li { font-size: .95rem; line-height: 1.7; }
+/* CTA */
+.post-cta { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
+.post-cta h2 { border-bottom: none; }
+.post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
+.post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
+.post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
+.post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2, #f5f5f5); }
+.post-sidebar__viewed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.post-sidebar__viewed-item a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; transition: color .2s; }
+.post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
+.post-sidebar__viewed-title { font-size: .9rem; font-weight: 700; color: var(--dark); line-height: 1.4; }
+.post-sidebar__viewed-count { font-size: .78rem; color: var(--muted); }
+.post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-sidebar__cta-widget p { font-size: .9rem; color: var(--text, #444); margin-bottom: 1rem; }
+/* Related posts */
+.related-posts { padding: 3rem 0; border-top: 1px solid var(--gray-2, #eee); }
+.related-posts__heading { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin: 0 0 1.5rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.related-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; }
+.related-card__media { display: block; overflow: hidden; height: 180px; }
+.related-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.related-card:hover .related-card__media img { transform: scale(1.04); }
+.related-card__body { padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.related-card__date { font-size: .8rem; color: var(--muted); }
+.related-card__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0; line-height: 1.4; }
+.related-card__title a { text-decoration: none; color: inherit; }
+.related-card__title a:hover { color: var(--accent); }
+.related-card__link { font-size: .85rem; font-weight: 700; color: var(--accent); text-decoration: none; margin-top: auto; }
+.related-card__link:hover { text-decoration: underline; }
+/* TOC */
+.post-toc { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); }
+.post-toc__title { font-size: 1rem; font-weight: 900; color: var(--dark); margin: 0 0 .8rem; }
+.post-toc__list { padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* aeo-answer */
+.aeo-answer { background: var(--gray-2, #f0f0ff); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.4rem; margin: 0 2.5rem 0; font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .post-body { padding: 1.5rem; }
+  .aeo-answer { margin: 0 1.5rem; }
+}
+</style>

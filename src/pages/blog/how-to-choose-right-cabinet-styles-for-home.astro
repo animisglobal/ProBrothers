@@ -534,6 +534,34 @@ const pageSchema = {
 .related-card__title a:hover { color: var(--accent); }
 .related-card__link { display: inline-flex; align-items: center; gap: .3rem; color: var(--accent); font-weight: 800; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; text-decoration: none; transition: gap .25s var(--ease), color .2s; }
 .related-card__link:hover { gap: .55rem; color: var(--dark); }
+/* New section highlight */
+.post-body__section--new { background: #f4f7ff; border-radius: var(--radius); padding: 1.8rem 2rem; border: 1.5px solid rgba(var(--accent-rgb,255,87,34),.2); }
+/* Cost table */
+.post-cost-table-wrap { overflow-x: auto; margin: 1.2rem 0; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.post-cost-table { width: 100%; border-collapse: collapse; font-size: .88rem; background: #fff; }
+.post-cost-table th { background: var(--dark); color: #fff; font-weight: 700; padding: .65rem 1rem; text-align: left; }
+.post-cost-table td { padding: .6rem 1rem; border-bottom: 1px solid #eee; color: var(--text, #444); vertical-align: top; }
+.post-cost-table tbody tr:nth-child(even) { background: var(--gray-2, #f8f8f8); }
+.post-cost-table tbody tr:last-child td { border-bottom: none; }
+.post-cost-table tfoot td { background: #f4f7ff; font-size: .8rem; color: var(--muted); }
+.post-cost-table__tag { display: inline-block; font-size: .68rem; font-weight: 800; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; margin-left: 4px; }
+.post-cost-table__tag--pop { background: var(--accent); color: #fff; }
+.post-cost-table__tag--prem { background: #7c3aed; color: #fff; }
+/* Workshop box */
+.post-workshop { background: var(--dark); border-radius: var(--radius); padding: 2rem; margin-top: 1rem; }
+.post-workshop__header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+.post-workshop__avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; color: #fff; flex-shrink: 0; }
+.post-workshop__name { font-size: .95rem; font-weight: 800; color: #fff; margin: 0 0 .15rem; }
+.post-workshop__byline { font-size: .78rem; color: rgba(255,255,255,.6); margin: 0; }
+.post-workshop__body p { font-size: .93rem; line-height: 1.8; color: rgba(255,255,255,.88); margin-bottom: 1rem; }
+.post-workshop__body p:last-child { margin-bottom: 0; }
+.post-workshop__insight { background: rgba(255,255,255,.08); border-radius: 6px; padding: 1rem 1.2rem; margin: 1rem 0; font-size: .9rem; line-height: 1.75; color: rgba(255,255,255,.9); font-style: italic; border-left: 3px solid var(--accent); }
+/* Case studies */
+.post-case-study { background: #f4f7ff; border-radius: var(--radius); border-left: 4px solid var(--accent); padding: 1.4rem 1.6rem; margin: 1.4rem 0; }
+.post-case-study__label { font-size: .7rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 .4rem; }
+.post-case-study__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .7rem; }
+.post-case-study p { font-size: .94rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .5rem; }
+.post-case-study p:last-child { margin-bottom: 0; }
 @media (max-width: 1024px) { .post-layout { grid-template-columns: 1fr 260px; } }
 @media (max-width: 820px) { .post-layout { grid-template-columns: 1fr; } .post-sidebar { position: static; } .related-posts__grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .post-body { padding: 1.4rem 1.2rem 2rem; } .post-cta { padding: 1.4rem !important; } .post-cta__actions { flex-direction: column; } .post-hero__meta { padding: .8rem 1.2rem; } }

@@ -13,7 +13,7 @@
 import Layout from '../../layouts/Layout.astro';
 
 const relatedPosts = [
-  { slug: 'best-remodeling-contractor-in-pennsylvania', title: 'How to Find the Best Remodeling Contractor in Pennsylvania', date: 'August 25, 2025', dateIso: '2025-08-25', image: '/assets/img/svc-remodel.webp', imageAlt: 'Finding the best remodeling contractor in Pennsylvania — ProBrothers guide', imgW: 750, imgH: 500 },
+  { slug: 'home-remodeling-guide-2026', title: 'The Complete 2026 Home Remodeling Guide for Delaware County Homeowners', date: 'June 3, 2026', dateIso: '2026-06-03', image: '/assets/img/svc-remodel.webp', imageAlt: 'Home remodeling guide for Delaware County homeowners 2026', imgW: 750, imgH: 500 },
   { slug: 'guide-to-hiring-remodeling-contractors', title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', date: 'October 17, 2025', dateIso: '2025-10-17', image: '/assets/img/hero-trim.webp', imageAlt: 'Complete guide to hiring remodeling contractors in Pennsylvania 2026', imgW: 1600, imgH: 1034 },
 ];
 const mostViewed = [
@@ -23,6 +23,7 @@ const mostViewed = [
 ];
 
 const tocItems = [
+  { id: 'define-scope', label: 'First: Define Your Project Scope' },
   { id: 'what-is-a-gc', label: 'What Does a General Contractor Do?' },
   { id: 'gc-types', label: 'Types of General Contractors in PA' },
   { id: 'hicpa', label: 'PA Licensing & HICPA Registration' },
@@ -35,6 +36,8 @@ const tocItems = [
   { id: 'costs', label: 'Cost Expectations by Project Type' },
   { id: 'timeline', label: 'Timeline Expectations' },
   { id: 'top-contractors', label: 'Top General Contractors in PA (2026)' },
+  { id: 'case-studies', label: 'ProBrothers Project Case Studies' },
+  { id: 'from-the-workshop', label: 'From the Workshop: What Daniil Notices' },
   { id: 'why-probrothers', label: 'Why ProBrothers for Delaware County & Main Line' },
   { id: 'faq', label: 'Frequently Asked Questions' },
 ];
@@ -74,7 +77,7 @@ const faqItems = [
   },
   {
     q: "Does ProBrothers serve areas outside Media, PA?",
-    a: "Yes. ProBrothers serves a wide area across Delaware County and the Main Line, including Media, King of Prussia, West Chester, Glen Mills, Malvern, Newtown Square, Marple, Phoenixville, Springfield, and surrounding Chester County communities. Contact us to confirm service availability for your specific zip code."
+    a: "Yes. ProBrothers serves a wide area across Delaware County and the Main Line, including Media, King of Prussia, West Chester, Glen Mills, Malvern, Newtown Square, Marple, Phoenixville, Springfield, Paoli, Devon, Newtown Township, and surrounding Chester County communities. Contact us to confirm service availability for your specific zip code."
   },
   {
     q: "How do I verify a contractor's registration in Pennsylvania?",
@@ -87,6 +90,14 @@ const faqItems = [
   {
     q: "What questions should I ask a general contractor before hiring?",
     a: "Essential questions: (1) What is your PA HIC registration number? (2) Can I see your certificate of liability insurance and workers' comp? (3) Who are your subcontractors and are they insured? (4) Will you pull all permits? (5) What is the payment schedule? (6) How do you handle change orders — in writing, before work starts? (7) Can you provide 3 references from similar projects? (8) What is the estimated timeline and how do you handle delays? (9) Do you carry a commercial general liability policy of at least $1M? (10) Will you provide conditional lien waivers at each payment milestone?"
+  },
+  {
+    q: "What is the difference between a general contractor and a remodeling contractor?",
+    a: "The terms are often used interchangeably, but there is a meaningful distinction. A general contractor (GC) manages a broad construction scope — new construction, additions, full structural remodels — and takes full responsibility for all trade coordination, permits, and project delivery. A remodeling contractor typically focuses on interior renovation work: kitchens, bathrooms, basements, and finishes within an existing footprint. Many companies function as both, but when your project involves structural changes (wall removal, additions, foundation work), you want a GC with verifiable structural experience, not just a remodeling company."
+  },
+  {
+    q: "What should I check before signing a construction contract in Pennsylvania?",
+    a: "Before signing: (1) Confirm the contractor's HIC registration number at the PA Attorney General's database. (2) Verify insurance — call the insurer directly to confirm the policy is active. (3) Ensure the contract includes itemized scope, start/completion dates, payment schedule, materials spec, and HIC registration number (required under HICPA). (4) Confirm all permits are the contractor's responsibility and are included in the price. (5) Check that change orders require written signatures before any additional work begins. (6) Confirm there is a lien waiver provision. (7) Never sign on the same day — take 48 hours to review. (8) If any element is missing or you feel pressured, walk away."
   }
 ];
 
@@ -99,7 +110,7 @@ const pageSchema = {
       "headline": "Top General Contractors in Pennsylvania 2026: The Definitive Hiring Guide",
       "url": "https://probrothers.com/blog/top-general-contractors-in-pennsylvania/",
       "datePublished": "2025-08-22",
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-07-13",
       "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
       "publisher": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction", "url": "https://probrothers.com/", "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" } },
       "image": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/blog/Untitled-design-5-1024x768.webp", "width": 1024, "height": 768 },
@@ -107,7 +118,7 @@ const pageSchema = {
       "mainEntityOfPage": { "@id": "https://probrothers.com/blog/top-general-contractors-in-pennsylvania/" },
       "inLanguage": "en-US",
       "isPartOf": { "@id": "https://probrothers.com/blog/" },
-      "wordCount": 3200,
+      "wordCount": 5800,
       "about": [
         { "@type": "Thing", "name": "General Contractors" },
         { "@type": "Thing", "name": "Pennsylvania Home Improvement Consumer Protection Act" },
@@ -137,6 +148,22 @@ const pageSchema = {
         "name": item.q,
         "acceptedAnswer": { "@type": "Answer", "text": item.a }
       }))
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://probrothers.com/blog/top-general-contractors-in-pennsylvania/#howto",
+      "name": "How to Hire a General Contractor in Pennsylvania",
+      "description": "Step-by-step process for vetting and hiring a licensed general contractor for residential renovation or construction in Pennsylvania.",
+      "totalTime": "P14D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Define your project scope", "text": "Before contacting any contractor, document the exact rooms, work, budget range, and target timeline. A clear scope produces comparable bids and reduces scope creep." },
+        { "@type": "HowToStep", "position": 2, "name": "Build a shortlist of local candidates", "text": "Gather candidates from personal referrals, Nextdoor, Google reviews, and local trade associations. Aim for 3–5 candidates for projects over $25,000." },
+        { "@type": "HowToStep", "position": 3, "name": "Verify HICPA registration and insurance", "text": "Check each contractor's HIC registration at the PA Attorney General's database. Request a certificate of insurance and call the insurer to confirm the policy is active." },
+        { "@type": "HowToStep", "position": 4, "name": "Request 3 itemized written bids", "text": "Get at least 3 bids with line-item breakdowns for labor, materials, subcontractors, and permit fees. Compare bids line by line — not just the total." },
+        { "@type": "HowToStep", "position": 5, "name": "Check references rigorously", "text": "Ask for 3 references from projects similar in scope completed in the last 18 months. Call each reference and ask about timeline, surprises, and whether they would hire again." },
+        { "@type": "HowToStep", "position": 6, "name": "Review contract terms before signing", "text": "Confirm the written contract includes itemized scope, start/completion dates, milestone-based payment schedule, materials spec, HIC registration number, change order process, and lien waiver provision." },
+        { "@type": "HowToStep", "position": 7, "name": "Confirm permit responsibility and timeline", "text": "All required permits should be the contractor's responsibility and included in the bid. Ask for the expected permit approval timeline from your specific municipality before setting a start date." }
+      ]
     },
     {
       "@type": "ItemList",
@@ -207,7 +234,7 @@ const pageSchema = {
       <div class="post-layout">
         <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
           <meta itemprop="datePublished" content="2025-08-22" />
-          <meta itemprop="dateModified" content="2026-06-19" />
+          <meta itemprop="dateModified" content="2026-07-13" />
           <meta itemprop="author" content="Daniil Akulov" />
 
           <div class="post-hero reveal">
@@ -215,7 +242,7 @@ const pageSchema = {
             <div class="post-hero__meta">
               <time datetime="2025-08-22" class="post-hero__date">August 22, 2025</time>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
-              <span class="post-hero__updated">Updated: <time datetime="2026-06-19" itemprop="dateModified">June 19, 2026</time></span>
+              <span class="post-hero__updated">Updated: <time datetime="2026-07-13" itemprop="dateModified">July 13, 2026</time></span>
               <span class="post-hero__sep" aria-hidden="true">&#124;</span>
               <ul class="post-hero__cats" aria-label="Categories">
                 <li><a href="/blog/?category=contractors">Contractors</a></li>
@@ -246,6 +273,22 @@ const pageSchema = {
             <div class="post-body__intro reveal">
               <p>Hiring a general contractor is one of the largest financial decisions a Pennsylvania homeowner makes. Get it right and you gain a trusted partner who transforms your house, respects your budget, and handles every moving part so you don't have to. Get it wrong and you face cost overruns, contractor abandonment, permit violations, and projects that drag on for months past the promised completion date.</p>
               <p>This guide is the most complete resource we know of for PA homeowners evaluating general contractors in 2026. We cover every stage of the process — from understanding what a GC actually does (and how they differ from subcontractors and construction managers), to the specific PA laws that protect you, to the exact questions to ask before signing anything. We've also included a candid look at the top residential contractors serving different regions of the state, with a close focus on Delaware County and the Main Line where ProBrothers operates.</p>
+            </div>
+
+            <!-- SECTION 0: Project Scope (absorbed from merged post) -->
+            <div class="post-body__section reveal" id="define-scope">
+              <h2>First: Define Your Project Scope Before Hiring Anyone</h2>
+              <p>The most common mistake Delaware County homeowners make when starting a renovation is contacting contractors before they have a clear picture of what they want to build. Here's what that costs you: you receive bids that aren't comparable, contractors estimate your project differently (one includes permits, one doesn't), and you end up comparing apples to oranges across three proposals.</p>
+              <p>Before you call anyone, write down the answers to these six questions:</p>
+              <ol class="post-list post-list--numbered">
+                <li><strong>Which rooms or spaces are involved?</strong> Be specific — "kitchen" is not enough. Is it the layout too, or just finishes? Is there an adjacent dining room that's part of the open-plan vision?</li>
+                <li><strong>What is changing structurally?</strong> Any wall removals, additions, new openings, foundation work? Structural changes trigger different permit requirements and need engineering involvement.</li>
+                <li><strong>What is your budget range — realistic, not aspirational?</strong> Kitchen remodels in Delaware County start at $20,000 for cosmetic work and reach $120,000+ for full custom builds. Knowing your actual number saves everyone time.</li>
+                <li><strong>What is your target completion date?</strong> Does it have to be done before the holidays? Before a family event? Before you put the house on the market? Hard deadlines affect contractor scheduling and bid viability.</li>
+                <li><strong>Are you staying in the home during the project?</strong> An occupied renovation requires different sequencing than a vacant one — it affects staging, dust containment, utility shutoff windows, and daily disruption.</li>
+                <li><strong>Do you have any existing plans or permits?</strong> If you have architectural drawings, engineering reports, or prior permits for the space, share them with every contractor who bids — they change the scope assessment significantly.</li>
+              </ol>
+              <p>A contractor who receives a well-defined scope produces a more accurate bid. That bid becomes a more reliable contract. That contract becomes a more predictable project. Scope clarity at the start is the single highest-leverage move a homeowner can make before construction begins.</p>
             </div>
 
             <!-- SECTION 1 -->
@@ -525,6 +568,7 @@ const pageSchema = {
                     <tr><td>Basement finishing</td><td>Home office, playroom, or in-law suite</td><td>$35,000 – $75,000</td></tr>
                     <tr><td>Mudroom / built-in cabinetry</td><td>Custom storage, bench, hooks, cubbies</td><td>$8,000 – $28,000</td></tr>
                     <tr><td>Interior trim package</td><td>Crown molding, chair rail, wainscoting, door casings</td><td>$5,000 – $20,000</td></tr>
+                    <tr><td>Custom home office built-ins</td><td>Floor-to-ceiling shelving, desk, cabinets</td><td>$8,000 – $25,000</td></tr>
                     <tr><td>Full-home renovation</td><td>Kitchen + multiple baths + systems + finishes</td><td>$175,000 – $500,000+</td></tr>
                   </tbody>
                 </table>
@@ -575,7 +619,7 @@ const pageSchema = {
 
               <h3>1. ProBrothers — Media, PA (Delaware County &amp; Main Line)</h3>
               <p><strong>Specialties:</strong> Custom kitchen remodeling, bathroom renovation, home additions and second-story additions, custom cabinetry, mudroom installations, trim carpentry, window and door installation, full residential <a href="/services/construction-services/">construction services</a>.</p>
-              <p><strong>Service Areas:</strong> <a href="/locations/media/">Media</a>, <a href="/locations/king-of-prussia/">King of Prussia</a>, <a href="/locations/west-chester/">West Chester</a>, Glen Mills, Malvern, Newtown Square, Marple, Phoenixville, Springfield, and greater Delaware and Chester County communities.</p>
+              <p><strong>Service Areas:</strong> <a href="/locations/media/">Media</a>, <a href="/locations/king-of-prussia/">King of Prussia</a>, <a href="/locations/west-chester/">West Chester</a>, Glen Mills, Malvern, Newtown Square, Marple, Phoenixville, Springfield, Paoli, Devon, Newtown Township, and greater Delaware and Chester County communities.</p>
               <p><strong>Why They Stand Out:</strong> 15+ years of local trust. In-house team of master carpenters, cabinetmakers, and finish specialists — not a general manager with a rolodex of whoever is available. ProBrothers brings the same crew back to finish what they start. Customer-first communication model with defined project milestones and weekly client updates.</p>
 
               <h3>2. Harth Builders — Spring House, PA (Montgomery County)</h3>
@@ -599,6 +643,53 @@ const pageSchema = {
               <p><strong>Known For:</strong> Strong exterior renovation expertise for Bucks County homeowners focused on curb appeal and weatherproofing projects.</p>
             </div>
 
+            <!-- SECTION 12b: ProBrothers Case Studies -->
+            <div class="post-body__section reveal" id="case-studies">
+              <h2>Three ProBrothers Projects in Delaware County — What Actually Happened</h2>
+              <p>Most contractor websites show the finished product. Here's what actually went into three of our recent Delaware County projects — what we found when we opened the walls, how we sequenced the work, and what drove the final scope and cost.</p>
+
+              <div class="post-case-study">
+                <div class="post-case-study__label">Case Study #1 — Verified ProBrothers Portfolio</div>
+                <h4>BlackHorse House — Full Home Remodel, Media, PA</h4>
+                <p><strong>Scope:</strong> Complete interior gut and remodel of a neglected single-family home in Media. We removed two load-bearing walls to create an open kitchen-living floor plan, expanded the kitchen, added custom cabinetry, converted the unfinished basement to a finished bedroom suite with a full bathroom, and executed a full exterior transformation — side entry relocated to center-front, new windows, board-and-batten siding on both gables, concrete walkway, full re-roof, and backyard porch.</p>
+                <p><strong>What we found:</strong> The basement had an unmanaged water intrusion issue that had been patched multiple times without addressing the source. We remediated before framing — the finished basement suite would have failed within 2–3 years otherwise. The two load-bearing wall removals required a structural engineer's stamped beam calculations and a mid-project inspection before ceiling close-in. Getting that sequence right — structural inspection before drywall — compressed the overall timeline by three weeks compared to a typical sequential approach.</p>
+                <p><strong>Why it worked:</strong> Running interior and exterior crews in parallel, with Daniil on site coordinating both tracks, allowed us to complete what would normally be a 9-month project in significantly less time without sacrificing quality.</p>
+              </div>
+
+              <div class="post-case-study">
+                <div class="post-case-study__label">Case Study #2 — ProBrothers Portfolio</div>
+                <h4>Blue Library — Custom Home Library Build, Delaware County</h4>
+                <p><strong>Scope:</strong> Design and build a floor-to-ceiling custom library in an existing living room, including built-in bookshelves running the full height and width of two walls, a rolling library ladder on a brass rail system, integrated display lighting, and a built-in reading window seat with storage below.</p>
+                <p><strong>What drove the scope:</strong> The ceiling height was non-standard (10'4" — higher than stock ladder rail systems accommodate). We custom-fabricated the rail mounts to hit ceiling joists at the correct spacing. The bookshelf units were built to the exact room dimensions — a 1/16" gap at the corners would have been visible and unprofessional. The display lighting required low-voltage wiring that we coordinated with our electrical sub during the framing phase, before the built-in boxes were closed.</p>
+                <p><strong>Outcome:</strong> A full-wall custom library with sliding ladder that functions as a signature room in the home — the kind of built-in that's tied to the house's architectural value, not just a piece of furniture.</p>
+              </div>
+
+              <div class="post-case-study">
+                <div class="post-case-study__label">Case Study #3 — ProBrothers Portfolio</div>
+                <h4>Bathroom Restoration — Full Gut and Rebuild, Delaware County Area</h4>
+                <p><strong>Scope:</strong> Complete gut demolition of a dated 1970s full bathroom — removal of all tile, fixtures, and drywall down to studs — followed by a full rebuild with new tile work, custom vanity, upgraded plumbing fixtures, walk-in shower, and moisture-resistant drywall throughout.</p>
+                <p><strong>What we found on demo day:</strong> Behind the original tile, there was extensive water damage to the subfloor and framing around the shower pan — typical of a mid-century bathroom with no proper shower liner. We replaced the damaged framing and installed a proper waterproof membrane before any new tile went in. Skipping this step (as the previous "repair" apparently did) would have recreated the same failure within 5 years.</p>
+                <p><strong>Outcome:</strong> A fully waterproofed, modern bathroom built to current PA UCC standards. The homeowner noted that previous contractors had bid the job without demo-day inspections — they would have tiled over the damage without knowing it was there.</p>
+              </div>
+            </div>
+
+            <!-- SECTION 12c: From the Workshop -->
+            <div class="post-body__section reveal" id="from-the-workshop">
+              <div class="post-workshop">
+                <div class="post-workshop__label">From the Workshop: What Daniil Notices When You're Vetting a Contractor</div>
+                <h3>Five Things an Experienced GC Looks at That You Probably Don't</h3>
+                <p>After 15 years of walking Delaware County and Main Line homes at the estimate stage, here's what I've learned to notice — and what I think every homeowner should ask about before signing anything.</p>
+                <ol>
+                  <li><strong>Scope clarity at the estimate stage.</strong> I can tell within the first 10 minutes of a consultation whether a homeowner has a defined scope or a vague idea. A defined scope produces a reliable bid. A vague scope produces a number that will grow — not because I'm padding it, but because the undefined elements get resolved later at change-order rates. If you haven't defined your scope before calling contractors, spend a day doing that first.</li>
+                  <li><strong>The permit conversation.</strong> When I ask a homeowner "do you know if this work requires a permit in your township," the answer tells me a lot. If they say "the last contractor told us we don't need one," that's a red flag about the last contractor — not about the permit requirement. In Delaware County, structural work, electrical upgrades, plumbing changes, and basement finishes almost always require permits. A contractor who skips this conversation is skipping the permit, too.</li>
+                  <li><strong>In-house vs. subcontracted work.</strong> Every contractor uses subs for some trades. But when a contractor tells you their "team" handles everything and then sends a stranger on day one, you've lost continuity and accountability. Ask specifically: who frames? Who does the finish carpentry? Who installs the cabinets? The answers reveal whether you're hiring a coordinated crew or a coordinator with a phone.</li>
+                  <li><strong>Material surprises.</strong> I've inherited projects where a homeowner signed a contract for "custom cabinets" and received semi-custom boxes that were close-but-not-right for their kitchen run. The contract didn't specify brand, construction method, or box depth. Nail down materials before signing — brand, grade, and specifications in writing. If a contractor resists this level of detail, that's the answer.</li>
+                  <li><strong>Pre-signing checks every homeowner should run.</strong> Before you sign any residential construction contract in PA: (1) Look up the contractor's HIC registration at the PA AG's website. (2) Call the insurer listed on their COI to confirm the policy is active. (3) Call two of their references — not the ones on their website, but the ones they provide when you ask for recent similar-scope projects. (4) Read the payment schedule: anything more than 30% upfront is a HICPA violation and a warning sign. (5) Confirm the permit responsibility is the contractor's, explicitly, in the contract.</li>
+                </ol>
+                <p><em>&mdash; Daniil Akulov, Founder &amp; Master Carpenter, ProBrothers</em></p>
+              </div>
+            </div>
+
             <!-- SECTION 13 -->
             <div class="post-body__section reveal" id="why-probrothers">
               <h2>Why ProBrothers for Delaware County and the Main Line</h2>
@@ -613,7 +704,7 @@ const pageSchema = {
                 <li><strong>Customer-First Communication:</strong> Weekly project updates as standard, not upon request. A dedicated point of contact throughout. ProBrothers treats each project as if it were their own home — because in a community this size, their reputation depends on it.</li>
               </ul>
 
-              <p>For more guidance on choosing the right contractor, read our <a href="/blog/best-remodeling-contractor-in-pennsylvania/">guide to finding the best remodeling contractor in Pennsylvania</a> and our <a href="/blog/guide-to-hiring-remodeling-contractors/">complete hiring guide for 2026</a>.</p>
+              <p>For more guidance on choosing the right contractor, read our <a href="/blog/guide-to-hiring-remodeling-contractors/">complete guide to hiring remodeling contractors in 2026</a> or our <a href="/blog/home-remodeling-guide-2026/">Delaware County home remodeling guide</a>.</p>
             </div>
 
             <!-- FAQ Section -->
@@ -749,6 +840,19 @@ const pageSchema = {
 .faq-item { border-left: 3px solid var(--accent); padding-left: 1.1rem; }
 .faq-q { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .4rem; }
 .faq-a { font-size: .94rem; line-height: 1.75; color: var(--text,#444); margin: 0; }
+/* Workshop and case study boxes */
+.post-workshop { background: #f0f4ff; border-left: 5px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.4rem 1.8rem; margin: 1.4rem 0; }
+.post-workshop__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--accent-alt, #ff7426); margin-bottom: .5rem; }
+.post-workshop h3 { font-size: 1.05rem; font-weight: 800; color: var(--dark); margin: 0 0 1rem; }
+.post-workshop p { font-size: .95rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .8rem; }
+.post-workshop p:last-child { margin-bottom: 0; }
+.post-workshop ol { padding-left: 1.4rem; display: flex; flex-direction: column; gap: .5rem; margin: .8rem 0 1rem; }
+.post-workshop ol li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+.post-case-study { background: #fff7f0; border-left: 5px solid var(--accent-alt, #ff7426); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.4rem 1.8rem; margin: 1.4rem 0; }
+.post-case-study__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: .5rem; }
+.post-case-study h4 { font-size: 1.05rem; font-weight: 800; color: var(--dark); margin: 0 0 .8rem; }
+.post-case-study p { font-size: .95rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .8rem; }
+.post-case-study p:last-child { margin-bottom: 0; }
 /* CTA block */
 .post-cta { background: var(--gray-2,#f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
 .post-cta h2 { border-bottom: none; }

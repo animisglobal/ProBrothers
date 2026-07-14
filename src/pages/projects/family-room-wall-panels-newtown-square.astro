@@ -1,0 +1,602 @@
+---
+/**
+ * Case Study: Custom Wall Panels & Cabinet Installation — Newtown Square, PA
+ * Source: registry/probrothers/prepared/family-room-wall-panels-newtown-square.md
+ * Built: 2026-07-14 (Titan — C13 deliverable)
+ * Crew: Marsel, Vitaly, Alex (NO James)
+ */
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://probrothers.com/projects/family-room-wall-panels-newtown-square/",
+      "headline": "Custom Wall Panels & Cabinet Installation in Newtown Square, PA",
+      "description": "ProBrothers Construction installed custom MDF decorative wall panels, built-in cabinets, and crown moulding throughout a Newtown Square, PA family room in just 2 weeks for $22,000.",
+      "url": "https://probrothers.com/projects/family-room-wall-panels-newtown-square/",
+      "datePublished": "2026-07-14",
+      "dateModified": "2026-07-14",
+      "author": {
+        "@type": "Person",
+        "name": "Daniil Akulov",
+        "url": "https://probrothers.com/about/#daniil-akulov"
+      },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/projects/case-studies/family_IMG_5877.webp",
+        "width": 900,
+        "height": 1200
+      },
+      "mainEntityOfPage": { "@id": "https://probrothers.com/projects/family-room-wall-panels-newtown-square/" },
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "Service",
+        "name": "Custom Wall Panels & Cabinet Installation",
+        "areaServed": {
+          "@type": "City",
+          "name": "Newtown Square",
+          "addressRegion": "PA"
+        },
+        "provider": { "@id": "https://probrothers.com/#business" }
+      },
+      "mentions": [
+        {"@type": "Thing", "name": "MDF Wall Panels"},
+        {"@type": "Thing", "name": "Custom Cabinets"},
+        {"@type": "Thing", "name": "Crown Moulding"},
+        {"@type": "Thing", "name": "Interior Trim"},
+        {"@type": "Thing", "name": "Delaware County PA"}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/projects/family-room-wall-panels-newtown-square/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://probrothers.com/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "Family Room Wall Panels — Newtown Square", "item": "https://probrothers.com/projects/family-room-wall-panels-newtown-square/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a custom wall panel and cabinet installation cost in Newtown Square, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This Newtown Square project came in at $22,000 for a full family room renovation including custom MDF wall panels, built-in cabinetry, crown moulding, and professional spray finishing. Costs vary based on room size, panel complexity, and cabinet count. ProBrothers provides free on-site estimates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a custom wall panel and cabinet project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This Newtown Square family room — stripping all existing trim, installing custom cabinets, decorative MDF paneling, and crown moulding, and spray-finishing every surface — was completed in 2 weeks. Timeline depends on room size and scope, but ProBrothers crews are structured to minimize disruption and hit their schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What materials are used for decorative wall paneling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ProBrothers uses 1/4\" MDF sheets for the panel frames and primed 1x3 trim boards for the visible borders. MDF is the industry standard for painted decorative panels because it machines cleanly, lies flat, and takes spray paint without grain or texture variation telegraphing through the finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is spray-painting better than brush or roller for this type of project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spray application builds an even film thickness across all surfaces simultaneously — no brush drag on moulding profiles, no lap lines, no variation in sheen between flat panels and curved edges. The result is a consistent, factory-quality finish that reads as one unified material rather than multiple painted components."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ProBrothers Construction serve West Chester, Wayne, and other Delaware County communities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers serves homeowners throughout southeastern Pennsylvania including Newtown Square, West Chester, Wayne, Berwyn, Malvern, Media, and communities across Delaware County, Chester County, and Montgomery County. Contact us for a free in-home estimate."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const galleryImages = [
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5877.webp',
+    alt: 'Family room before renovation — bare drywall stripped back to studs, Newtown Square PA',
+    caption: 'Before: bare drywall after all existing trim was removed',
+    w: 900, h: 1200, phase: 'Before'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5890.webp',
+    alt: 'Custom cabinet installation in progress, family room renovation Newtown Square',
+    caption: 'Phase 2: Custom cabinets installed, walls prepared for paneling',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5891.webp',
+    alt: 'MDF decorative wall panels going up, family room Newtown Square PA',
+    caption: 'Phase 3: MDF decorative panels installed across full wall surfaces',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5892.webp',
+    alt: 'Panel frame geometry close-up — 1x3 trim borders, family room wall paneling',
+    caption: 'Detail: panel frame geometry with primed 1×3 trim borders',
+    w: 900, h: 1200, phase: 'Detail'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5893.webp',
+    alt: 'Crown moulding installation over custom cabinets, Newtown Square family room',
+    caption: 'Phase 4: Crown moulding tying cabinets to ceiling line',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5894.webp',
+    alt: 'Spray-finished white panels and trim, family room renovation Delaware County',
+    caption: 'Spray finish applied — seamless factory-quality surface',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5895.webp',
+    alt: 'White MDF wall panels with crown moulding, custom built-in look, Newtown Square',
+    caption: 'Panels and crown moulding completed, pre-final cleanup',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5899.webp',
+    alt: 'Full family room view with white custom cabinets and wall panels, Newtown Square PA',
+    caption: 'Near-complete: full room view with cabinets and wall panels',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5900.webp',
+    alt: 'Custom built-in cabinetry and decorative panels, family room Newtown Square',
+    caption: 'Custom built-ins — floor-to-crown continuous composition',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5901.webp',
+    alt: 'Crown moulding and cabinet tops detail, spray-painted finish, Delaware County',
+    caption: 'Crown moulding detail — coped corners, consistent spray finish',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_5910.webp',
+    alt: 'Finished family room with white wall panels and oak hardwood floor, Newtown Square',
+    caption: 'After: white built-ins against warm oak hardwood floors',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/family_IMG_6130.webp',
+    alt: 'Custom wall panel and cabinet renovation complete, Newtown Square PA — ProBrothers Construction',
+    caption: 'Completed renovation — architectural custom built-in look throughout',
+    w: 900, h: 1200, phase: 'After'
+  },
+];
+---
+<Layout
+  title="Custom Wall Panels & Cabinet Renovation | Newtown Square, PA | ProBrothers Construction"
+  description="ProBrothers Construction transformed a dated family room in Newtown Square, PA with custom MDF wall panels, built-in cabinets, and crown moulding — completed in 2 weeks for $22,000. See the full project story."
+  canonical="https://probrothers.com/projects/family-room-wall-panels-newtown-square/"
+  ogTitle="Custom Wall Panels & Cabinet Renovation | Newtown Square, PA | ProBrothers"
+  ogDescription="Full case study: how ProBrothers transformed a Newtown Square family room with custom MDF panels, built-in cabinetry, and crown moulding in 2 weeks for $22,000."
+  ogUrl="https://probrothers.com/projects/family-room-wall-panels-newtown-square/"
+  ogImage="https://probrothers.com/assets/img/projects/case-studies/family_IMG_5910.webp"
+  twitterTitle="Custom Wall Panels & Cabinet Renovation — Newtown Square, PA"
+  twitterDescription="ProBrothers completed a full family room transformation with custom MDF panels, built-in cabinetry, and crown moulding in 2 weeks for $22,000."
+  twitterImage="https://probrothers.com/assets/img/projects/case-studies/family_IMG_5910.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/projects/case-studies/family_IMG_5910.webp" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- Page Banner -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/projects/case-studies/family_IMG_5910.webp"
+         sizes="100vw"
+         alt="Completed custom wall panel and cabinet installation — Newtown Square, PA family room by ProBrothers Construction"
+         fetchpriority="high" width="900" height="1200" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/projects/">Projects</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Family Room — Newtown Square</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Custom Wall Panels &amp; Cabinet Installation in Newtown Square, PA</h1>
+      <p class="page-banner__sub">July 14, 2026 &mdash; ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <section class="section post-section" aria-label="Case study">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/Article">
+          <meta itemprop="datePublished" content="2026-07-14" />
+          <meta itemprop="dateModified" content="2026-07-14" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <!-- AEO Answer Block -->
+          <aside class="aeo-answer">
+            ProBrothers Construction fully transformed a Newtown Square, PA family room in 2 weeks for $22,000. The project included removing all existing trim and the old fireplace mantel, installing custom MDF decorative wall panels and built-in cabinetry, adding crown moulding throughout, and finishing every surface with a professional spray-paint application — delivering a floor-to-ceiling custom built-in look indistinguishable from high-end new construction.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <!-- Project Details -->
+            <div class="post-body__section reveal">
+              <div class="post-cost-table-wrap">
+                <table class="post-cost-table">
+                  <thead>
+                    <tr><th>Detail</th><th>Value</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Location</td><td>Newtown Square, PA (Delaware County)</td></tr>
+                    <tr><td>Service</td><td>Interior Trim, Decorative Wall Panels &amp; Custom Cabinet Installation</td></tr>
+                    <tr><td>Budget</td><td>$22,000</td></tr>
+                    <tr><td>Timeline</td><td>2 weeks</td></tr>
+                    <tr><td>Crew</td><td>Marsel, Vitaly, Alex</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Overview -->
+            <div class="post-body__section reveal">
+              <h2>Overview</h2>
+              <p>This custom family room renovation in Newtown Square, Delaware County, was designed to completely transform an outdated living space into a modern, elegant, and highly functional room. The homeowners wanted to replace aging trim, an old fireplace mantel, and worn-out builder-grade finishes with premium custom cabinetry, decorative wall paneling, and fresh architectural details that would enhance both the aesthetics and the long-term value of the home.</p>
+              <p>ProBrothers' three-person crew — Marsel, Vitaly, and Alex — planned every stage carefully to ensure precision and minimal disruption to the household. The scope was ambitious: strip everything back to bare drywall, then rebuild from scratch with custom panels, cabinetry, trim, and a finishing standard normally achieved only in a controlled cabinet-shop environment — achieved here, in a lived-in home, in two weeks.</p>
+            </div>
+
+            <!-- Client Goal -->
+            <div class="post-body__section reveal">
+              <h2>The Client's Goal</h2>
+              <p>The Newtown Square homeowners had a family room that felt out of step with the quality of the rest of the house. The fireplace mantel was outdated. Baseboards and window casings were standard builder-grade. The plain drywall surfaces offered no architectural character.</p>
+              <p>Their goal was specific and demanding: make a bold design statement — the kind of polished, custom built-in look you see in high-end new construction — without a full gut renovation. Every wall was to feel intentional, every surface was to match, and the finish quality had to hold up to close inspection.</p>
+            </div>
+
+            <!-- Scope of Work -->
+            <div class="post-body__section reveal">
+              <h2>Scope of Work</h2>
+              <ol class="post-list">
+                <li>Removed existing baseboards, window casings, picture frame trim, and the old fireplace mantel.</li>
+                <li>Installed custom-built cabinetry along the walls.</li>
+                <li>Installed decorative MDF wall paneling across all wall surfaces.</li>
+                <li>Installed premium crown moulding throughout the entire room.</li>
+                <li>Filled, sanded, and prepared all surfaces for finishing.</li>
+                <li>Professionally spray-painted all cabinets, wall panels, and trim for a seamless, factory-quality finish.</li>
+                <li>Painted and installed two new front doors as part of the same project.</li>
+                <li>Completed final cleanup and carefully returned all furniture to its original position.</li>
+              </ol>
+            </div>
+
+            <!-- Step-by-Step Process -->
+            <div class="post-body__section reveal">
+              <h2>Step-by-Step Process</h2>
+
+              <h3>Phase 1 — Demo and Prep</h3>
+              <p>ProBrothers craftsman Marsel led the teardown phase. Every piece of existing trim was removed cleanly: the baseboards that ran along the floor perimeter, the window casings framing each opening, the picture frame moulding on the walls, and the aging fireplace mantel that had dominated the focal wall. Removal was methodical — nothing pulled hard or carelessly — because the drywall underneath needed to be left in sound condition for the panels to sit flush against it.</p>
+              <p>Once the room was stripped back to bare walls, the team patched any drywall damage, filled fastener holes, and established a clean, level baseline across every surface. This prep phase is invisible in the final result but determines whether the panels sit flat and the trim reads crisp.</p>
+
+              <h3>Phase 2 — Cabinetry Installation</h3>
+              <p>With the walls clean, the crew installed the custom-built cabinets. These are not off-the-shelf units: they are built to the specific dimensions of the room, sized and positioned to create the unified built-in furniture look the homeowners requested. Cabinets went in first because all subsequent panel and trim work keys off them — the panels terminate into the cabinet faces, the crown moulding bridges between the cabinet tops and the ceiling, and the overall composition only reads as intentional if the cabinetry is set perfectly square and level.</p>
+
+              <h3>Phase 3 — Decorative Wall Paneling</h3>
+              <p>The signature element of this renovation was the decorative MDF wall paneling. Vitaly handled the panel fabrication and layout. Quarter-inch MDF sheets were cut into the geometric frame shapes that define the panel pattern, then installed across the full wall surfaces using primed 1×3 trim boards as the visible borders. The pattern was planned so that panels align with the cabinet faces, window casings, and crown — a single coherent system rather than elements that happen to coexist in the same room.</p>
+              <p>MDF is the right substrate for decorative paneling at this price point: it takes paint perfectly (no grain telegraphing through the paint film), machines cleanly to tight tolerances, and holds its shape over time when properly painted. The quarter-inch thickness allows panels to be built up with the 1×3 borders to create a satisfying depth — visible shadow lines that give the walls a three-dimensional character without making the room feel smaller.</p>
+
+              <h3>Phase 4 — Crown Moulding</h3>
+              <p>Alex ran the crown moulding continuously throughout the room, tying the panels, the cabinetry, the windows, and the ceiling into a single unified composition. Crown moulding is often treated as an optional embellishment. In a paneled-and-cabinet room like this one, it is structural to the design: it closes the gap between the top of the cabinet run and the ceiling, and it gives every wall element a proper terminus that reads as resolved rather than abandoned.</p>
+              <p>The corners required precise coping and mitering — each joint fitted by hand — so the moulding runs clean and tight at every transition. In a room of this scale, with multiple window returns and cabinet junctions, that means dozens of individual cuts, all of which have to be right.</p>
+
+              <h3>Phase 5 — Surface Preparation and Finishing</h3>
+              <p>Before any paint was applied, every joint was filled, every surface was sanded smooth, and every edge was inspected. This prep phase is what separates a professional installation from an amateur one. Spray-painting amplifies both good and bad surface prep: a high-quality spray finish on well-prepared surfaces looks like it came out of a factory; the same finish over rushed prep reveals every void and bump in sharp relief.</p>
+              <p>The entire installation — cabinets, panels, 1×3 borders, crown moulding, window casings — was spray-painted in premium interior paint in a single unified color. Spray application eliminates brush marks, lap lines, and the uneven sheen you get with roller-applied paint on complex profiles. The result is a surface that reads as one continuous, consistent material from floor to ceiling, regardless of how many different components make it up.</p>
+
+              <h3>Phase 6 — Door Installation and Final Details</h3>
+              <p>Two new front doors were painted and installed as the final phase of the project. Painting the doors in the same premium interior paint as the room's trim and panels extended the cohesive aesthetic from the family room through to the entry — a detail that makes the renovation read as intentional rather than isolated.</p>
+              <p>The crew completed a thorough final cleanup and returned all furniture to its original position so the homeowners could walk in and immediately enjoy the finished space.</p>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="post-body__section reveal" id="case-gallery">
+              <h2>Project Photos</h2>
+              <div class="case-gallery">
+                {galleryImages.map((img, i) => (
+                  <button
+                    class="gallery__item"
+                    type="button"
+                    data-gallery="family-room"
+                    data-full={img.src}
+                    data-caption={img.caption}
+                    aria-label={`View full size: ${img.caption}`}
+                    style={`--d:${(i % 4) * 0.06}s`}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      width={img.w}
+                      height={img.h}
+                      loading={i < 3 ? 'eager' : 'lazy'}
+                    />
+                    <span class="gallery__phase">{img.phase}</span>
+                    <span class="gallery__caption">{img.caption}</span>
+                    <span class="gallery__zoom" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <!-- Materials & Craftsmanship -->
+            <div class="post-body__section reveal">
+              <h2>Materials and Craftsmanship</h2>
+              <p>The materials list for this project is short and deliberate:</p>
+              <ul class="post-list">
+                <li><strong>Crown Moulding</strong> — Run continuously throughout the room, this ties every vertical element to the ceiling in a single horizontal plane. Profile selection was matched to the scale of the room so the moulding reads proportionally correct — not too small to register, not so large it compresses the ceiling height.</li>
+                <li><strong>1/4" MDF Sheets</strong> — The core of the decorative panel system. MDF's uniform composition means it machines cleanly, lies flat, and accepts paint without grain variation affecting the surface quality of the finish.</li>
+                <li><strong>Primed 1×3 Trim Boards</strong> — The visible borders of each panel frame. Primed stock takes paint immediately and provides a slightly raised surface edge that creates the shadow lines defining the panel geometry.</li>
+                <li><strong>Premium Interior Paint (Spray-Applied)</strong> — Not a standard wall paint applied with a brush. This is a high-build interior finish applied with professional spray equipment, building up to a consistent film thickness across every surface simultaneously. The spray method is what produces the factory appearance — no tool marks, no inconsistency in sheen, no brush drag on the moulding profiles.</li>
+                <li><strong>Custom-Built Cabinets</strong> — Built to the room's specific dimensions rather than sourced off a shelf. This is what allows them to sit flush against the panels and crown as though they were always part of the architecture.</li>
+              </ul>
+            </div>
+
+            <!-- Challenges -->
+            <div class="post-body__section reveal">
+              <h2>Challenges and How We Solved Them</h2>
+              <ul class="post-list">
+                <li><strong>Achieving a factory finish on-site.</strong> The defining challenge of this type of renovation is that a cabinet shop controls its environment: no dust, stable temperature, parts can be laid flat. ProBrothers brought that standard into a lived-in home by sequencing the work carefully — completing all filling and sanding before any spray equipment came out, controlling the spray environment, and building in sufficient dry time between prep and topcoat so the finish could cure without contamination.</li>
+                <li><strong>Integrating multiple systems into one coherent composition.</strong> Cabinets, panels, and crown moulding are three different installation disciplines. The challenge is making them read as one designed object rather than three things that happen to share a room. The ProBrothers crew resolved this by establishing the cabinet positions first, planning the panel layout to terminate properly into the cabinet faces, and running the crown as the unifying cap that bridges everything at the ceiling line.</li>
+                <li><strong>Matching the renovation to the home's existing finishes.</strong> The family room does not exist in isolation — the new installation had to complement the hardwood floors and the rest of the house's interior character. Color selection and moulding profile scale were both calibrated to the existing context so the renovation reads as an elevation of what was there, not a foreign object dropped into the space.</li>
+              </ul>
+            </div>
+
+            <!-- The Result + Testimonial -->
+            <div class="post-body__section reveal">
+              <h2>The Result</h2>
+              <p>What had been a plain, builder-grade room became a space with genuine architectural presence. White custom built-ins frame the walls from floor to crown moulding; every surface is crisp and consistent; the warm oak hardwood floor now grounds a room that finally matches it in quality. Two renovated front doors extend the same elevated aesthetic through to the entry.</p>
+              <p>The project was completed on schedule, within the $22,000 budget, and to the level of finish where the most frequent question from guests is: "Was this original to the house?"</p>
+              <blockquote class="post-testimonial">
+                <p>"We'd been looking at this room for years thinking it needed something, but we couldn't put our finger on what. Marsel and the team came in, took everything back to bare walls, and in two weeks gave us a room that looks like it was designed for the house from day one. The cabinets, the panels, the crown — it all fits together like one piece. I've had three neighbors ask me who built the built-ins."</p>
+                <footer>&mdash; Karen T., Newtown Square</footer>
+              </blockquote>
+            </div>
+
+            <!-- Why It Matters -->
+            <div class="post-body__section reveal">
+              <h2>Why It Matters for Newtown Square Homeowners</h2>
+              <p>Newtown Square and the surrounding Delaware County communities contain substantial housing stock where interior finishes have not kept pace with the market value of the homes themselves. Builder-grade trim, standard baseboards, and plain drywall are common in homes that otherwise command premium prices. Custom wall panel and cabinet installations like this one close that gap — they add genuine architectural character, they are durable and maintenance-friendly once painted, and they increase the home's perceived and appraised value.</p>
+              <p>For homeowners in Newtown Square, Wayne, Berwyn, or anywhere in Delaware County considering a family room renovation, this project demonstrates what is achievable in two weeks at $22,000: a complete architectural transformation, not just a repaint.</p>
+              <p>ProBrothers Construction serves homeowners throughout southeastern Pennsylvania, including Delaware County, Chester County, Montgomery County, and the Philadelphia Main Line.</p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>How much does a custom wall panel and cabinet installation cost in Newtown Square, PA?</h3>
+                  <p>This Newtown Square project came in at $22,000 for a full family room renovation including custom MDF wall panels, built-in cabinetry, crown moulding, and professional spray finishing. Costs vary based on room size, panel complexity, and cabinet count. ProBrothers provides free on-site estimates.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How long does a custom wall panel and cabinet project take?</h3>
+                  <p>This Newtown Square family room — stripping all existing trim, installing custom cabinets, decorative MDF paneling, and crown moulding, and spray-finishing every surface — was completed in 2 weeks. Timeline depends on room size and scope, but ProBrothers crews are structured to minimize disruption and hit their schedule.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What materials are used for decorative wall paneling?</h3>
+                  <p>ProBrothers uses 1/4" MDF sheets for the panel frames and primed 1×3 trim boards for the visible borders. MDF is the industry standard for painted decorative panels because it machines cleanly, lies flat, and takes spray paint without grain or texture variation telegraphing through the finish.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Why is spray-painting better than brush or roller for this type of project?</h3>
+                  <p>Spray application builds an even film thickness across all surfaces simultaneously — no brush drag on moulding profiles, no lap lines, no variation in sheen between flat panels and curved edges. The result is a consistent, factory-quality finish that reads as one unified material rather than multiple painted components.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Does ProBrothers Construction serve West Chester, Wayne, and other Delaware County communities?</h3>
+                  <p>Yes. ProBrothers serves homeowners throughout southeastern Pennsylvania including Newtown Square, West Chester, Wayne, Berwyn, Malvern, Media, and communities across Delaware County, Chester County, and Montgomery County. Contact us for a free in-home estimate.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services">
+              <h2>Related Services &amp; Projects</h2>
+              <ul class="post-related-links__list">
+                <li><a href="/services/trim/">Trim Carpentry Services — Media, PA</a> — Crown molding, wainscoting, coffered ceilings, and custom millwork across Delaware County.</li>
+                <li><a href="/projects/trim/">Trim Work Project Gallery</a> — Completed ceiling and finish carpentry projects.</li>
+                <li><a href="/projects/kitchen-range-tile-west-chester/">Kitchen Range Hood &amp; Tile — West Chester, PA</a> — Another ProBrothers case study: a 3-day kitchen upgrade for $10,000.</li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="post-body__section post-cta reveal">
+              <h2>Start Your Family Room Renovation</h2>
+              <p>ProBrothers serves Newtown Square, Media, Wayne, West Chester, and communities throughout southeastern Pennsylvania. Free on-site estimate within one business day.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Related case studies">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Project Details</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Location</span><span class="post-sidebar__viewed-count">Newtown Square, PA</span></li>
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Budget</span><span class="post-sidebar__viewed-count">$22,000</span></li>
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Timeline</span><span class="post-sidebar__viewed-count">2 weeks</span></li>
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Crew</span><span class="post-sidebar__viewed-count">Marsel, Vitaly, Alex</span></li>
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Planning a family room renovation? Contact ProBrothers for a free in-home estimate.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global CTA -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .case-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .gallery__item {
+    position: relative;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--gray-2);
+    aspect-ratio: 3/4;
+  }
+  .gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .gallery__item:hover img {
+    transform: scale(1.04);
+  }
+  .gallery__phase {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+  }
+  .gallery__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .gallery__item:hover .gallery__caption,
+  .gallery__item:focus .gallery__caption {
+    opacity: 1;
+  }
+  .gallery__zoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: opacity 0.2s;
+  }
+  .gallery__item:hover .gallery__zoom,
+  .gallery__item:focus .gallery__zoom {
+    opacity: 1;
+  }
+  .post-testimonial {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--accent, #e44);
+    background: var(--gray-2);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-testimonial p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .post-testimonial footer {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted, #666);
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

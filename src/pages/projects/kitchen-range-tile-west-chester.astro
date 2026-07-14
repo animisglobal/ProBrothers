@@ -1,0 +1,608 @@
+---
+/**
+ * Case Study: Kitchen Range Hood & Tile Installation — West Chester, PA
+ * Source: registry/probrothers/prepared/kitchen-range-tile-west-chester.md
+ * Built: 2026-07-14 (Titan — C13 deliverable)
+ * Crew: Marsel, James, Alex (NO Vitaly)
+ */
+import Layout from '../../layouts/Layout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://probrothers.com/projects/kitchen-range-tile-west-chester/",
+      "headline": "Kitchen Range Hood & Tile Installation in West Chester, PA",
+      "description": "ProBrothers Construction installed a custom built-in range hood enclosure, floor-to-ceiling tile, and crown moulding in a West Chester, PA kitchen in 3 days for $10,000.",
+      "url": "https://probrothers.com/projects/kitchen-range-tile-west-chester/",
+      "datePublished": "2026-07-14",
+      "dateModified": "2026-07-14",
+      "author": {
+        "@type": "Person",
+        "name": "Daniil Akulov",
+        "url": "https://probrothers.com/about/#daniil-akulov"
+      },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/projects/case-studies/kitchen_IMG_6856.webp",
+        "width": 1200,
+        "height": 900
+      },
+      "mainEntityOfPage": { "@id": "https://probrothers.com/projects/kitchen-range-tile-west-chester/" },
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "Service",
+        "name": "Kitchen Range Hood Enclosure & Tile Installation",
+        "areaServed": {
+          "@type": "City",
+          "name": "West Chester",
+          "addressRegion": "PA"
+        },
+        "provider": { "@id": "https://probrothers.com/#business" }
+      },
+      "mentions": [
+        {"@type": "Thing", "name": "Range Hood Installation"},
+        {"@type": "Thing", "name": "Kitchen Backsplash Tile"},
+        {"@type": "Thing", "name": "Custom Soffit"},
+        {"@type": "Thing", "name": "Crown Moulding"},
+        {"@type": "Thing", "name": "Chester County PA"}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/projects/kitchen-range-tile-west-chester/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://probrothers.com/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "Kitchen Range Hood & Tile — West Chester", "item": "https://probrothers.com/projects/kitchen-range-tile-west-chester/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a kitchen range hood installation and backsplash tile extension cost in West Chester, PA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This West Chester project — custom soffit enclosure, floor-to-ceiling tile extension, crown moulding, and range installation — came in at $10,000 and was completed in 3 days. Costs vary based on the size of the range area, tile selection, and whether drywall repair is needed. ProBrothers provides free on-site estimates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to install a built-in range hood enclosure and extend tile to the ceiling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This West Chester kitchen was completed in 3 days, covering demolition, drywall repair, tile installation, soffit build and install, crown moulding, range hookup, and paint touch-ups. Scope and site conditions affect the timeline, but ProBrothers crews are organized to minimize kitchen downtime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you match existing backsplash tile when extending to the ceiling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — matching existing tile is a core part of this type of project. ProBrothers sources tile to match the existing backsplash in size, surface profile, and color, and mixes grout to match the existing joint color so the extension reads as seamless. In this West Chester project, there is no visible break line between the original tile and the new ceiling extension."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a custom soffit for a range hood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A soffit is a custom-built enclosure — typically shop-fabricated plywood — that houses the range hood unit inside a box that aligns flush with the surrounding cabinetry and ceiling. It converts what would otherwise be a surface-mounted hood into a built-in element that appears to have been part of the original kitchen design. ProBrothers builds and paints the soffit to match the existing cabinetry color."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ProBrothers Construction do kitchen remodeling in West Chester and Chester County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. ProBrothers serves homeowners throughout southeastern Pennsylvania including West Chester, Exton, Malvern, Paoli, Berwyn, Wayne, and communities across Chester County, Delaware County, and Montgomery County. Contact us for a free in-home consultation."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const galleryImages = [
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_3215.webp',
+    alt: 'Kitchen range area before renovation — open drywall and exposed duct stub, West Chester PA',
+    caption: 'Before: open drywall cavity and exposed duct, range area unresolved',
+    w: 900, h: 1200, phase: 'Before'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_3980.webp',
+    alt: 'Drywall patch and surface preparation before tile installation, West Chester kitchen',
+    caption: 'Prep: drywall repaired and sanded flat for tile installation',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_3984.webp',
+    alt: 'Grey subway tile going up counter to ceiling, West Chester kitchen renovation',
+    caption: 'Phase 2: grey subway tile extending from counter to ceiling',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_4136.webp',
+    alt: 'Full kitchen view mid-renovation: tile in progress, white cabinets both sides',
+    caption: 'Wide view mid-project: tile extending, white raised-panel cabinets',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_4138.webp',
+    alt: 'Custom plywood soffit box installed above range position, West Chester kitchen',
+    caption: 'Phase 3: custom shop-painted soffit box installed at ceiling',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_4401.webp',
+    alt: 'Range hood seated inside custom soffit enclosure, ductwork connected',
+    caption: 'Detail: range hood seated inside soffit enclosure',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_4402.webp',
+    alt: 'Soffit and tile installed, crown moulding being run across cabinet tops',
+    caption: 'Phase 4: crown moulding run across full cabinet and soffit line',
+    w: 900, h: 1200, phase: 'During'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_6856.webp',
+    alt: 'Stainless range hood installed with protective film, floor-to-ceiling grey subway tile, West Chester',
+    caption: 'Near-complete: range hood installed, full tile field with grout',
+    w: 1200, h: 900, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_6857.webp',
+    alt: 'West Chester kitchen range area complete — custom soffit, tile to ceiling, crown moulding',
+    caption: 'After: range alcove — soffit, tile, crown moulding unified',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_6858.webp',
+    alt: 'Close view of grey subway tile grout lines matching existing backsplash, West Chester PA',
+    caption: 'Detail: grout color-matched — no break line from old to new tile',
+    w: 900, h: 1200, phase: 'Detail'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_6859.webp',
+    alt: 'Crown moulding and soffit junction detail, West Chester kitchen renovation ProBrothers',
+    caption: 'Detail: crown moulding + soffit junction — tight to ceiling line',
+    w: 900, h: 1200, phase: 'Detail'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_6872.webp',
+    alt: 'Wide kitchen view: range hood, tile, cabinets, crown moulding — West Chester PA complete',
+    caption: 'Finished: full kitchen view — range area resolved, cabinets to ceiling',
+    w: 900, h: 1200, phase: 'After'
+  },
+  {
+    src: '/assets/img/projects/case-studies/kitchen_IMG_6880.webp',
+    alt: 'ProBrothers West Chester kitchen renovation complete — range hood, backsplash tile, crown',
+    caption: 'Complete renovation — $10,000, 3 days, zero visible seam',
+    w: 900, h: 1200, phase: 'After'
+  },
+];
+---
+<Layout
+  title="Kitchen Range Hood & Tile Installation | West Chester, PA | ProBrothers Construction"
+  description="ProBrothers Construction installed a custom built-in range hood enclosure, floor-to-ceiling tile, and crown moulding in a West Chester, PA kitchen — completed in 3 days for $10,000. Full project story inside."
+  canonical="https://probrothers.com/projects/kitchen-range-tile-west-chester/"
+  ogTitle="Kitchen Range Hood & Tile Installation — West Chester, PA | ProBrothers"
+  ogDescription="Full case study: how ProBrothers built a custom range hood soffit, extended backsplash tile to ceiling, and added crown moulding in a West Chester kitchen — 3 days, $10,000."
+  ogUrl="https://probrothers.com/projects/kitchen-range-tile-west-chester/"
+  ogImage="https://probrothers.com/assets/img/projects/case-studies/kitchen_IMG_6872.webp"
+  twitterTitle="Kitchen Range Hood & Tile — West Chester, PA | ProBrothers"
+  twitterDescription="ProBrothers completed a West Chester kitchen upgrade: custom soffit, floor-to-ceiling tile, crown moulding — 3 days, $10,000."
+  twitterImage="https://probrothers.com/assets/img/projects/case-studies/kitchen_IMG_6872.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/projects/case-studies/kitchen_IMG_6856.webp" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- Page Banner -->
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/projects/case-studies/kitchen_IMG_6856.webp"
+         sizes="100vw"
+         alt="Completed kitchen range hood and tile installation — West Chester, PA by ProBrothers Construction"
+         fetchpriority="high" width="1200" height="900" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/projects/">Projects</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Kitchen Range Hood — West Chester</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Kitchen Range Hood &amp; Tile Installation in West Chester, PA</h1>
+      <p class="page-banner__sub">July 14, 2026 &mdash; ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <section class="section post-section" aria-label="Case study">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/Article">
+          <meta itemprop="datePublished" content="2026-07-14" />
+          <meta itemprop="dateModified" content="2026-07-14" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <!-- AEO Answer Block -->
+          <aside class="aeo-answer">
+            ProBrothers Construction upgraded a West Chester, PA kitchen in 3 days for $10,000 — removing an outdated range and cabinet, repairing the drywall, extending the existing grey subway backsplash tile floor-to-ceiling, building a custom shop-painted soffit to house the new range hood, and adding crown moulding across the full cabinet run for a seamless built-in finish.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <!-- Project Details -->
+            <div class="post-body__section reveal">
+              <div class="post-cost-table-wrap">
+                <table class="post-cost-table">
+                  <thead>
+                    <tr><th>Detail</th><th>Value</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Location</td><td>West Chester, PA (Chester County)</td></tr>
+                    <tr><td>Service</td><td>Kitchen Range Hood Enclosure, Tile &amp; Crown Moulding Installation</td></tr>
+                    <tr><td>Budget</td><td>$10,000</td></tr>
+                    <tr><td>Timeline</td><td>3 days</td></tr>
+                    <tr><td>Crew</td><td>Marsel, James, Alex</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Overview -->
+            <div class="post-body__section reveal">
+              <h2>Overview</h2>
+              <p>This kitchen improvement project in West Chester, Chester County, focused on upgrading the cooking area while maintaining the home's existing design aesthetic. The homeowner wanted to replace an outdated range and the cabinet housing around it, while extending the backsplash to create a cleaner, more modern appearance — without requiring a complete kitchen remodel.</p>
+              <p>ProBrothers' crew — Marsel, James, and Alex — approached the job with a clear mandate: seamlessly integrate the new elements with the existing cabinetry, countertops, and tile finishes so that the renovation looked like part of the home's original construction. Three days. No disruption to the rest of the kitchen. No visible seam between old and new.</p>
+            </div>
+
+            <!-- Client Goal -->
+            <div class="post-body__section reveal">
+              <h2>The Client's Goal</h2>
+              <p>The homeowners in West Chester had a kitchen that was functionally complete and visually well-finished in most areas: white raised-panel cabinetry, a clean layout, and a stainless double wall oven. The weak point was the range position.</p>
+              <p>The previous range had been removed and the cabinet housing around the duct cavity had never been properly resolved. What remained was an open drywall cavity with an exposed vent duct stub coming through the ceiling. The surrounding backsplash tile did not extend up to meet the duct opening, and there was no soffit or crown to cap the cabinetry run above. In an otherwise polished kitchen, this one area looked unfinished.</p>
+              <p>The goal was precise: close the duct cavity, house the new range hood inside a built-in enclosure that matched the surrounding cabinetry, extend the existing tile all the way to the ceiling, and tie the whole run together with crown moulding — all without touching or disrupting the existing finishes anywhere else in the room.</p>
+            </div>
+
+            <!-- Scope -->
+            <div class="post-body__section reveal">
+              <h2>Scope of Work</h2>
+              <ol class="post-list">
+                <li>Protected existing countertops, appliances, and flooring before any demolition started.</li>
+                <li>Removed the old kitchen range and the remnant cabinetry around the duct cavity.</li>
+                <li>Repaired the exposed drywall and prepared the surface for tile installation.</li>
+                <li>Installed matching backsplash tile from countertop level all the way to the ceiling.</li>
+                <li>Built and installed a custom soffit above the cabinetry to house the new range hood.</li>
+                <li>Installed crown moulding across the top of the full cabinet run and soffit enclosure.</li>
+                <li>Applied color-matched grout across all new tile for seamless visual continuity.</li>
+                <li>Installed, wired, and tested the new kitchen range.</li>
+                <li>Completed paint touch-ups on surrounding walls and ceiling, then did a full site cleanup.</li>
+              </ol>
+            </div>
+
+            <!-- Step-by-Step -->
+            <div class="post-body__section reveal">
+              <h2>Step-by-Step Process</h2>
+
+              <h3>Phase 1 — Surface Protection and Demolition</h3>
+              <p>The first thing Marsel's team did before any tools came out was protect everything that was staying. Countertops were covered, the double wall oven and adjacent appliances were shielded, and the flooring was fully protected. This is not a courtesy step — it is how a professional job stays a professional job. When the demo crew works around existing finishes, zero tolerance for damage is the standard.</p>
+              <p>With protection in place, the old range and the remnant cabinet framing around the duct cavity were removed. The exposed drywall was inspected: areas of damage were cut back cleanly, patched with new material, and taped, mudded, and sanded to create a flat, paint-ready surface. Tile does not hide wall defects — every imperfection in the substrate telegraphs through the adhesive and into the finished tile surface — so this prep phase is not rushed.</p>
+
+              <h3>Phase 2 — Tile Installation (Counter to Ceiling)</h3>
+              <p>Matching the existing backsplash was identified in the project brief as one of the most important aspects of the work. The homeowners already had grey subway tile throughout the kitchen backsplash area. The new tile had to blend perfectly with the original — same size, same profile, same grout joint spacing — so the extension read as seamless rather than as a visible patch.</p>
+              <p>James handled the tile work. New grey subway tile was set from the countertop level — matching the height of the existing backsplash — and extended all the way up to the ceiling behind the range position. The full height extension is not merely aesthetic: running tile to ceiling eliminates the exposed drywall above the range, protects the wall from heat and splatter, and creates the visual sense of depth and height that makes a kitchen range area feel finished and intentional rather than incidental.</p>
+              <p>Tile adhesive was applied to the prepared substrate and each tile was set to consistent joint widths matching the existing installation. Once the adhesive cured, Alex applied color-matched grout across the full tile field. The grout was carefully worked into every joint and cleaned back so that no grout haze remained on the tile faces, and so the joint color was indistinguishable from the original backsplash grout running around the rest of the kitchen. No visible break line. No color mismatch.</p>
+
+              <h3>Phase 3 — Custom Soffit Build and Installation</h3>
+              <p>With the tile complete, the team built the custom soffit enclosure. This is the component that converts a visible duct cavity into a built-in range hood surround that looks like part of the original cabinetry design.</p>
+              <p>The soffit is a shop-fabricated plywood box: built to the precise dimensions required to house the range hood unit, then painted white in the shop to match the kitchen's existing white raised-panel cabinetry. On-site, the box was installed tight to the ceiling and positioned to align flush with the face of the adjacent cabinet runs. When installed, the range hood does not appear surface-mounted — it appears recessed into a purpose-built enclosure that was always part of the kitchen's design.</p>
+              <p>Achieving a tight, seamless fit at the ceiling line was a precision task. A gap between the soffit top and the ceiling reads immediately as an afterthought; a clean, tight joint reads as original construction. The ProBrothers crew hit the ceiling tight on all edges.</p>
+
+              <h3>Phase 4 — Crown Moulding</h3>
+              <p>Crown moulding was run across the top of the full cabinet run and around the soffit enclosure to create a finished termination at the ceiling line. The moulding bridges the transition between the vertical cabinet and soffit faces and the horizontal ceiling plane — it is what makes a cabinet run read as furniture-grade rather than as construction that stopped before it was done.</p>
+              <p>The corners and returns at the soffit junctions required careful coping and mitering to sit clean. The moulding profile was selected to match the scale of the existing kitchen and the height of the cabinet faces, so the addition reads as something that was always there.</p>
+
+              <h3>Phase 5 — Range Installation and Final Cleanup</h3>
+              <p>The new range was installed in the space below the soffit enclosure, wired for the appropriate service, and thoroughly tested for safe operation before signoff. Final paint touch-ups were applied to the surrounding walls and ceiling where demolition or installation had left marks, and the full site was cleaned — protection removed, countertops and appliances restored, floor swept — before handover.</p>
+            </div>
+
+            <!-- Gallery -->
+            <div class="post-body__section reveal" id="case-gallery">
+              <h2>Project Photos</h2>
+              <div class="case-gallery">
+                {galleryImages.map((img, i) => (
+                  <button
+                    class="gallery__item"
+                    type="button"
+                    data-gallery="kitchen-range"
+                    data-full={img.src}
+                    data-caption={img.caption}
+                    aria-label={`View full size: ${img.caption}`}
+                    style={`--d:${(i % 4) * 0.06}s`}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      width={img.w}
+                      height={img.h}
+                      loading={i < 3 ? 'eager' : 'lazy'}
+                    />
+                    <span class="gallery__phase">{img.phase}</span>
+                    <span class="gallery__caption">{img.caption}</span>
+                    <span class="gallery__zoom" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <!-- Materials -->
+            <div class="post-body__section reveal">
+              <h2>Materials and Craftsmanship</h2>
+              <ul class="post-list">
+                <li><strong>Matching Wall Tile</strong> — Grey subway tile selected to match the existing backsplash precisely. Tile selection for extensions like this requires matching not just the color and size but the surface profile (glossy vs. matte) and the grout joint dimension so the field reads uniformly across old and new tile.</li>
+                <li><strong>Tile Adhesive</strong> — Applied to the substrate after surface preparation to ensure a fully supported bond. Proper adhesive coverage is critical behind a range position where heat cycling over time can stress adhesive bonds that are partially bridged.</li>
+                <li><strong>Color-Matched Grout</strong> — Mixed and applied to match the existing grout color throughout the kitchen. Grout color is one of the few elements in a tile extension that can make or break the "was it always there" test — a slight hue difference is visible from across the room.</li>
+                <li><strong>Shop-Painted Custom Soffit</strong> — A plywood box built off-site and painted white to match the cabinetry before installation. Shop-finishing the soffit means the color match and finish quality are achieved under controlled conditions, then the unit is installed as a finished piece rather than painted in place under difficult access conditions.</li>
+                <li><strong>Crown Moulding</strong> — Premium profile run across the full cabinet and soffit run. Profile scale was matched to the existing kitchen context so the addition does not feel heavier or lighter than the surrounding millwork.</li>
+                <li><strong>Interior Paint</strong> — Touch-up application on surrounding walls and ceiling to erase any evidence of demolition or installation. This step is what makes the finished space look like nothing was ever disturbed.</li>
+              </ul>
+            </div>
+
+            <!-- Challenges -->
+            <div class="post-body__section reveal">
+              <h2>Challenges and How We Solved Them</h2>
+              <ul class="post-list">
+                <li><strong>Matching new tile to the existing backsplash without a visible break line.</strong> This was the highest-risk element of the project. Tile batches vary — even the same product can have slight color or texture variation between production runs, and grout color changes subtly with mix ratios and cure time. The ProBrothers team addressed this by sourcing tile that matched the existing installation as closely as possible, calibrating the grout mix to the existing joint color, and working the grout lines across both the old and new tile zones in a single consistent pass so the finished field reads uniformly. The result: no visible break line between the original backsplash and the new ceiling extension.</li>
+                <li><strong>Getting the soffit tight to the ceiling.</strong> A custom soffit box has to fit the specific geometry of the ceiling and the adjacent cabinet faces — no two kitchens are the same. The plywood box was built to precise measured dimensions, and the on-site fit was adjusted so the soffit sits flush against the ceiling on all edges with no visible gap. Getting this right requires patience: rushing the fit to close up faster invariably leaves the kind of hairline gap at the ceiling that makes the installation look like an add-on.</li>
+                <li><strong>Completing a multi-trade scope in three working days.</strong> This project combined demolition, drywall repair, tile work, custom carpentry, crown moulding installation, appliance wiring, and paint touch-ups — disciplines that normally span different crews and different scheduling blocks. The ProBrothers crew of Marsel, James, and Alex sequenced the work so that each phase cured or set while the next phase was active, with no waiting gaps that would have pushed the timeline to a fourth day. The homeowners got their kitchen back on schedule.</li>
+              </ul>
+            </div>
+
+            <!-- Result + Testimonial -->
+            <div class="post-body__section reveal">
+              <h2>The Result</h2>
+              <p>In three days, a visible gap in an otherwise well-finished kitchen became its most polished detail. The grey subway tile now runs unbroken from the countertop all the way to the ceiling behind the range. The range hood sits flush inside its purpose-built white surround, looking like it was part of the original kitchen design. Crown moulding caps the full cabinet run from wall to wall, creating the furniture-grade finish that makes a kitchen feel designed rather than assembled.</p>
+              <p>The transformation was dramatic in proportion to the scope: no full gut renovation, no disruption to the rest of the kitchen, no visible evidence of the work except the finished result. Three days and $10,000 closed the gap between a kitchen that was functionally complete and one that looks fully resolved.</p>
+              <blockquote class="post-testimonial">
+                <p>"I'd been staring at that open duct cavity for two years. In three days Marsel's team tiled the whole wall, built the hood box, ran crown across the whole cabinet line, and left the kitchen cleaner than they found it. The new tile matches the old perfectly — I had to point out where the new section starts to show people. It looks like it was designed that way from day one."</p>
+                <footer>&mdash; Michael R., West Chester</footer>
+              </blockquote>
+            </div>
+
+            <!-- Why It Matters -->
+            <div class="post-body__section reveal">
+              <h2>Why It Matters for West Chester Homeowners</h2>
+              <p>West Chester and the surrounding Chester County area have a high concentration of homes where the kitchen was well-built originally but has accumulated dated elements — exposed duct work, incomplete backsplash tile, range areas that never received their proper built-in treatment. A targeted upgrade like this one costs a fraction of a full kitchen remodel, delivers a disproportionate visual impact, and resolves the specific detail that makes an otherwise good kitchen look unfinished.</p>
+              <p>For homeowners in West Chester, Exton, Malvern, Paoli, or anywhere in Chester County who have a kitchen feature that was never properly finished — or a range position that needs a built-in hood enclosure — this project demonstrates what ProBrothers can deliver in a short, targeted engagement.</p>
+              <p>ProBrothers Construction serves homeowners throughout southeastern Pennsylvania, including Chester County, Delaware County, Montgomery County, and the Philadelphia suburbs.</p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>How much does a kitchen range hood installation and backsplash tile extension cost in West Chester, PA?</h3>
+                  <p>This West Chester project — custom soffit enclosure, floor-to-ceiling tile extension, crown moulding, and range installation — came in at $10,000 and was completed in 3 days. Costs vary based on the size of the range area, tile selection, and whether drywall repair is needed. ProBrothers provides free on-site estimates.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How long does it take to install a built-in range hood enclosure and extend tile to the ceiling?</h3>
+                  <p>This West Chester kitchen was completed in 3 days, covering demolition, drywall repair, tile installation, soffit build and install, crown moulding, range hookup, and paint touch-ups. Scope and site conditions affect the timeline, but ProBrothers crews are organized to minimize kitchen downtime.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Can you match existing backsplash tile when extending to the ceiling?</h3>
+                  <p>Yes — matching existing tile is a core part of this type of project. ProBrothers sources tile to match the existing backsplash in size, surface profile, and color, and mixes grout to match the existing joint color so the extension reads as seamless. In this West Chester project, there is no visible break line between the original tile and the new ceiling extension.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What is a custom soffit for a range hood?</h3>
+                  <p>A soffit is a custom-built enclosure — typically shop-fabricated plywood — that houses the range hood unit inside a box that aligns flush with the surrounding cabinetry and ceiling. It converts what would otherwise be a surface-mounted hood into a built-in element that appears to have been part of the original kitchen design. ProBrothers builds and paints the soffit to match the existing cabinetry color.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Does ProBrothers Construction do kitchen remodeling in West Chester and Chester County?</h3>
+                  <p>Yes. ProBrothers serves homeowners throughout southeastern Pennsylvania including West Chester, Exton, Malvern, Paoli, Berwyn, Wayne, and communities across Chester County, Delaware County, and Montgomery County. Contact us for a free in-home consultation.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services">
+              <h2>Related Services &amp; Projects</h2>
+              <ul class="post-related-links__list">
+                <li><a href="/blog/crown-molding-installation-delaware-county-pa/">Crown Molding Installation in Delaware County, PA</a> — Expert guide on profiles, costs, and installation technique.</li>
+                <li><a href="/projects/trim/">Trim Work Project Gallery</a> — Full portfolio of trim and finish carpentry projects.</li>
+                <li><a href="/projects/family-room-wall-panels-newtown-square/">Custom Wall Panels &amp; Cabinet Renovation — Newtown Square, PA</a> — Another ProBrothers case study: a 2-week family room transformation for $22,000.</li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="post-body__section post-cta reveal">
+              <h2>Upgrade Your Kitchen in West Chester</h2>
+              <p>ProBrothers serves West Chester, Exton, Malvern, Paoli, and communities throughout Chester County and southeastern Pennsylvania. Free in-home estimate within one business day.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Project sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Project Details</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Location</span><span class="post-sidebar__viewed-count">West Chester, PA</span></li>
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Budget</span><span class="post-sidebar__viewed-count">$10,000</span></li>
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Timeline</span><span class="post-sidebar__viewed-count">3 days</span></li>
+              <li class="post-sidebar__viewed-item"><span class="post-sidebar__viewed-title">Crew</span><span class="post-sidebar__viewed-count">Marsel, James, Alex</span></li>
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Have a kitchen detail that needs resolving? Contact ProBrothers for a free in-home estimate.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global CTA -->
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .case-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .gallery__item {
+    position: relative;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--gray-2);
+    aspect-ratio: 3/4;
+  }
+  .gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .gallery__item:hover img {
+    transform: scale(1.04);
+  }
+  .gallery__phase {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+  }
+  .gallery__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .gallery__item:hover .gallery__caption,
+  .gallery__item:focus .gallery__caption {
+    opacity: 1;
+  }
+  .gallery__zoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: opacity 0.2s;
+  }
+  .gallery__item:hover .gallery__zoom,
+  .gallery__item:focus .gallery__zoom {
+    opacity: 1;
+  }
+  .post-testimonial {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--accent, #e44);
+    background: var(--gray-2);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-testimonial p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .post-testimonial footer {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted, #666);
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

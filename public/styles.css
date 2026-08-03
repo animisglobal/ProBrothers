@@ -14,17 +14,21 @@
 .about-credentials .credentials-stats li{background:var(--gray-2);border-radius:var(--radius);padding:1.4rem 1rem;text-align:center;box-shadow:var(--shadow-sm)}
 .credentials-stats__num{display:block;font-size:2rem;font-weight:800;color:var(--accent);line-height:1}
 .credentials-stats__label{display:block;margin-top:.5rem;font-size:.82rem;color:var(--muted)}
+.about-credentials .credentials-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:2rem;align-items:start}
 .about-credentials .credentials-body p{margin:0 0 1.1rem;max-width:75ch}
+.about-credentials .credentials-body p:last-child{margin-bottom:0}
 .about-credentials .credentials-licence{list-style:none;margin:1.4rem 0 0;padding:1.2rem 1.4rem;display:grid;gap:.5rem;background:var(--gray-2);border-left:4px solid var(--accent);border-radius:var(--radius);max-width:75ch}
 .about-credentials .credentials-licence li{font-size:.95rem;color:var(--ink)}
 .about-credentials .credentials-licence a{color:var(--accent);font-weight:700;text-decoration:none}
 .about-credentials .credentials-licence a:hover{text-decoration:underline}
-.about-credentials .credentials-detail{margin:1.4rem 0 0;max-width:75ch;display:grid;gap:0;border:1px solid var(--gray);border-radius:var(--radius);overflow:hidden}
+.about-credentials .credentials-detail{margin:0;max-width:75ch;align-self:start;display:grid;gap:0;border:1px solid var(--gray);border-radius:var(--radius);overflow:hidden}
 .about-credentials .credentials-detail__row{display:grid;grid-template-columns:1fr 1fr;padding:.75rem 1.2rem;font-size:.9rem;border-bottom:1px solid var(--gray)}
 .about-credentials .credentials-detail__row:last-child{border-bottom:0}
 .about-credentials .credentials-detail__row:nth-child(even){background:var(--gray-2)}
 .about-credentials .credentials-detail dt{font-weight:700;color:var(--dark)}
 .about-credentials .credentials-detail dd{color:var(--ink)}
+@media(min-width:901px) and (max-width:1150px){.about-credentials .credentials-detail__row{grid-template-columns:1fr}.about-credentials .credentials-detail dd{margin-top:.2rem}}
+@media(max-width:900px){.about-credentials .credentials-body{grid-template-columns:1fr;gap:0}.about-credentials .credentials-detail{margin:1.4rem 0 0}.about-credentials .credentials-body p:last-child{margin-bottom:1.1rem}}
 @media(max-width:600px){.about-credentials .credentials-detail__row{grid-template-columns:1fr}.about-credentials .credentials-detail dd{margin-top:.2rem}}
 .team__card--author .team__bio{margin:.6rem 0 0;font-size:.9rem;line-height:1.6;color:var(--muted)}
 .about-faq{background:var(--gray-2)}

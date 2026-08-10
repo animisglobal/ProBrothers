@@ -1,0 +1,475 @@
+---
+/**
+ * Kitchen Remodel Cost in PA & Choosing a General Contractor (2026)
+ * Author: Daniil Akulov | datePublished: 2026-08-05
+ * Source: reports/probrothers/blog_drafts/kitchen-remodel-cost-pa-choosing-a-general-contractor.md
+ * Note: draft link to https://probrothers.com/pricing.md removed — no /pricing/ page exists (404).
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const relatedPosts = [
+  {
+    slug: 'home-remodeling-cost-delaware-county-pa-2026',
+    title: 'Home Remodeling Cost in Delaware County, PA — 2026 Guide',
+    date: 'June 19, 2026',
+    dateIso: '2026-06-19',
+    image: '/assets/img/blog/home-remodeling-cost-delaware-county-hero.webp',
+    imageAlt: 'Home Remodeling Cost in Delaware County, PA — 2026 Guide',
+    imgW: 1024,
+    imgH: 1024,
+  },
+  {
+    slug: 'kitchen-cabinets-cost',
+    title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)',
+    date: 'April 1, 2026',
+    dateIso: '2026-04-01',
+    image: '/assets/img/blog/Add-a-heading.webp',
+    imageAlt: 'Kitchen Cabinets Cost in Media, PA',
+    imgW: 1200,
+    imgH: 628,
+  },
+];
+
+const mostViewed = [
+  { title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)', slug: 'kitchen-cabinets-cost', views: 582 },
+  { title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', slug: 'guide-to-hiring-remodeling-contractors', views: 437 },
+  { title: 'Why ProBrothers Is the Top Choice for Custom Home Remodeling', slug: 'why-choose-probrothers-for-home-remodeling', views: 435 },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/",
+      "headline": "Kitchen Remodel Cost in PA & How to Choose the Right General Contractor (2026 Guide)",
+      "url": "https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/",
+      "datePublished": "2026-08-05",
+      "dateModified": "2026-08-05",
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/blog/kitchen-remodel-cost-pa-hero.webp",
+        "width": 1536, "height": 1024
+      },
+      "description": "Real 2026 kitchen remodel costs for Delaware & Chester County PA, plus how to vet a licensed PA general contractor before you sign.",
+      "mainEntityOfPage": { "@id": "https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "about": { "@type": "Service", "name": "Kitchen Remodeling", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://probrothers.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Kitchen Remodel Cost in PA & Choosing a General Contractor", "item": "https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does a kitchen remodel cost in Delaware County, PA?", "acceptedAnswer": { "@type": "Answer", "text": "Most full remodels in Delaware County fall between $35,000 and $65,000 for a mid-range project with semi-custom cabinets and stone countertops. Cosmetic refreshes start around $18,000; full custom gut renovations can exceed $100,000." } },
+        { "@type": "Question", "name": "Is a permit required for a kitchen remodel in PA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in most Delaware and Chester County municipalities, any remodel involving electrical, plumbing, or structural changes requires a permit. Even a cabinet-and-counter swap without moving utilities may need one depending on the township — check with your contractor before work starts." } },
+        { "@type": "Question", "name": "How do I verify a contractor's PA HIC number?", "acceptedAnswer": { "@type": "Answer", "text": "Search the number directly on the PA Attorney General's Home Improvement Consumer Protection Act registry. Never rely on a number printed on a business card or truck alone." } },
+        { "@type": "Question", "name": "What's the difference between a general contractor and a handyman for a remodel?", "acceptedAnswer": { "@type": "Answer", "text": "A licensed general contractor carries HIC registration, liability insurance, and workers' compensation, and can legally pull permits and manage subcontractors. A handyman typically cannot pull permits for scoped remodel work and often isn't insured for larger jobs." } },
+        { "@type": "Question", "name": "How long does a kitchen remodel take in PA?", "acceptedAnswer": { "@type": "Answer", "text": "A mid-range remodel typically runs 6–10 weeks from demo to final walkthrough, depending on custom cabinet lead times and inspection scheduling. High-end projects with structural changes can take 12–16 weeks." } },
+        { "@type": "Question", "name": "Should I pay a deposit upfront?", "acceptedAnswer": { "@type": "Answer", "text": "A deposit of roughly 10–30% is standard to secure materials and scheduling. Be cautious of any contractor asking for more than a third of the total project cost before work begins." } },
+        { "@type": "Question", "name": "Can I stay in my house during a kitchen remodel?", "acceptedAnswer": { "@type": "Answer", "text": "Most homeowners do, though you'll want a temporary kitchen setup — a folding table, microwave, and mini-fridge in another room — for at least the 2–3 weeks when plumbing and appliances are disconnected." } },
+        { "@type": "Question", "name": "What should I do if my contractor finds an unexpected issue mid-project?", "acceptedAnswer": { "@type": "Answer", "text": "A written change order should document the new scope and cost before work continues. If your contract already includes an allowance for unforeseen electrical or plumbing issues, ask how it applies before agreeing to additional charges." } }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Kitchen Remodel Cost in PA & Choosing a General Contractor (2026)"
+  description="Real 2026 kitchen remodel costs for Delaware & Chester County PA, plus how to vet a licensed PA general contractor before you sign."
+  canonical="https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/"
+  ogTitle="Kitchen Remodel Cost in PA & Choosing a General Contractor (2026)"
+  ogDescription="What a kitchen remodel actually costs in Delaware & Chester County PA in 2026 — budget, mid-range, and high-end tiers — plus how to vet a licensed PA general contractor before you sign."
+  ogUrl="https://probrothers.com/blog/kitchen-remodel-cost-pa-choosing-a-general-contractor/"
+  ogImage="https://probrothers.com/assets/img/blog/kitchen-remodel-cost-pa-hero.webp"
+  twitterTitle="Kitchen Remodel Cost in PA & Choosing a General Contractor (2026)"
+  twitterDescription="2026 kitchen remodel costs for Delaware & Chester County PA, plus how to vet a licensed PA general contractor."
+  twitterImage="https://probrothers.com/assets/img/blog/kitchen-remodel-cost-pa-hero.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/blog/kitchen-remodel-cost-pa-hero.webp"
+          imagesizes="(max-width:1024px) 100vw, 780px" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/blog/kitchen-remodel-cost-pa-hero.webp"
+         sizes="100vw" alt="Remodeled kitchen with semi-custom cabinetry and stone countertops — ProBrothers Construction, Delaware County PA" fetchpriority="high" width="1536" height="1024" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/blog/">Blog</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Kitchen Remodel Cost &amp; Choosing a Contractor</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Kitchen Remodel Cost in PA &amp; How to Choose the Right General Contractor (2026 Guide)</h1>
+      <p class="page-banner__sub">August 5, 2026 &mdash; Daniil Akulov, ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <section class="section post-section" aria-label="Blog post">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content="2026-08-05" />
+          <meta itemprop="dateModified" content="2026-08-05" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <div class="post-hero reveal">
+            <img src="/assets/img/blog/kitchen-remodel-cost-pa-hero.webp"
+                 alt="Remodeled kitchen with semi-custom cabinetry and stone countertops — ProBrothers Construction, Delaware County PA"
+                 width="1536" height="1024" fetchpriority="high" loading="eager"
+                 class="post-hero__img" itemprop="image" />
+            <div class="post-hero__meta">
+              <time datetime="2026-08-05" class="post-hero__date" itemprop="datePublished">August 5, 2026</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <ul class="post-hero__cats" aria-label="Categories">
+                <li><a href="/blog/?category=remodeling">Remodeling</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=cost-guides">Cost Guides</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=contractors">Contractors</a></li>
+              </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
+            </div>
+          </div>
+
+          <aside class="aeo-answer">
+            A kitchen remodel in Delaware and Chester County, PA runs $18,000&ndash;$32,000 for a cosmetic refresh, $35,000&ndash;$65,000 for a mid-range project with semi-custom cabinets and stone countertops, and $70,000&ndash;$150,000+ for a full gut renovation. Before you sign, verify the contractor&rsquo;s PA Home Improvement Contractor (HIC) registration, current liability insurance, and workers&rsquo; compensation coverage.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+              <h3 class="post-toc__title">Table of Contents</h3>
+              <nav class="post-toc__nav" aria-label="Article sections">
+                <ol class="post-toc__list" id="tocList"></ol>
+              </nav>
+            </div>
+
+            <div class="post-body__section reveal">
+              <p class="post-lead">A homeowner in Newtown Square called us in March with a number in her head: $25,000. Her kitchen had original 1987 oak cabinets, a soffit that ate three feet of ceiling height, and a single GFCI outlet serving the whole counter run. By the time we walked her through what a code-compliant electrical update, new cabinetry, and a modest layout change would actually cost, she was closer to $58,000 &mdash; and she still came in under what two other Delaware County contractors quoted for less scope. That gap between what people expect to spend and what a PA kitchen remodel actually costs is the single biggest source of frustration we see, and it&rsquo;s usually a communication failure, not a pricing problem.</p>
+              <p>In our 17 years remodeling kitchens across Delaware and Chester County, we&rsquo;ve pulled permits, replaced knob-and-tube wiring behind plaster walls, and re-quoted more projects than we can count because the first number a homeowner heard wasn&rsquo;t grounded in what their specific house needed. This guide covers two things directly: what a kitchen remodel actually costs in this market right now, and how to vet the contractor you hire so the number you agree to is the number you pay.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Kitchen Remodel Cost in PA: 2026 Breakdown</h2>
+              <p>Costs in Media, West Chester, King of Prussia, and the rest of the Philadelphia suburbs run higher than national averages you&rsquo;ll find on generic home-improvement sites &mdash; labor rates here, permit fees, and the age of the regional housing stock all push numbers up. Pre-1960s homes in this area routinely need electrical panel work or plumbing rerouting that a national cost calculator never accounts for.</p>
+
+              <h3>Budget tier: $18,000&ndash;$32,000</h3>
+              <p>This range covers a cosmetic-plus-functional refresh: refacing or replacing stock cabinets, laminate or budget-quartz countertops, a new sink and faucet, updated lighting, and repainting. It assumes the kitchen&rsquo;s footprint and plumbing/electrical rough-in stay where they are. We tell clients this tier makes sense when the bones of the room are sound and the goal is a cleaner, more usable space &mdash; not a layout change.</p>
+
+              <h3>Mid-range tier: $35,000&ndash;$65,000</h3>
+              <p>Most of our Delaware and Chester County projects land here. This tier typically includes semi-custom cabinetry, quartz or granite countertops, a tile backsplash, an island or peninsula addition, upgraded appliances, and some electrical work &mdash; added circuits, under-cabinet lighting, or a moved outlet or two. If you&rsquo;re relocating a sink or gas line even a few feet, plan for the higher end of this range; moving plumbing is one of the most consistently underestimated line items in homeowner budgets.</p>
+
+              <h3>High-end tier: $70,000&ndash;$150,000+</h3>
+              <p>Full gut renovations, custom cabinetry, natural stone counters, a layout that removes or moves walls, high-end appliance packages, and structural changes fall here. If a wall you want to remove is load-bearing &mdash; common in older Chester County homes with center hall floor plans &mdash; add engineering review and additional structural cost before you finalize a budget.</p>
+
+              <h3>What actually drives the number up or down</h3>
+              <ul class="post-related-links__list">
+                <li><strong>Cabinets</strong> &mdash; Stock cabinets run roughly $150&ndash;$400 per linear foot installed; semi-custom $400&ndash;$750; full custom can exceed $1,200. Cabinets are usually 30&ndash;40% of total project cost.</li>
+                <li><strong>Countertops</strong> &mdash; Laminate starts around $25&ndash;$40/sq ft installed; quartz and granite typically $60&ndash;$120/sq ft; exotic stone or large-format porcelain slabs can run higher.</li>
+                <li><strong>Labor</strong> &mdash; Skilled trade labor in the Philadelphia suburbs runs higher than the Pennsylvania state average, and licensed electricians and plumbers here are in tight supply, which affects both cost and scheduling.</li>
+                <li><strong>Permits</strong> &mdash; Delaware and Chester County municipalities each set their own permit fees and inspection requirements; a straightforward kitchen remodel might run $200&ndash;$600 in permit costs, but anything touching structural, electrical service, or plumbing venting can push that higher and add inspection time to your timeline.</li>
+                <li><strong>Age of the house</strong> &mdash; Homes built before 1978 may carry lead paint disclosure and remediation requirements once walls are opened. Older wiring and cast iron plumbing often need replacement mid-project once a contractor sees what&rsquo;s actually behind the drywall &mdash; this is the most common source of change orders we see.</li>
+              </ul>
+              <p>If a quote for a full mid-range remodel comes in dramatically below $35,000, look closely at what&rsquo;s excluded &mdash; demo, disposal, permits, and design time get left off low-ball bids more often than not. Our <a href="/services/kitchen/">kitchen remodeling services</a> page has current examples of scope-to-cost for projects we&rsquo;ve completed in this exact service area, and our <a href="/blog/kitchen-cabinets-cost/">kitchen cabinets cost guide for Media, PA</a> breaks cabinetry pricing down line by line. For pricing across every room, see our <a href="/blog/home-remodeling-cost-delaware-county-pa-2026/">Delaware County home remodeling cost guide</a>.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>How to Choose a General Contractor in PA (2026)</h2>
+              <p>Pennsylvania requires most contractors doing home improvement work over $5,000 to hold a Home Improvement Contractor (HIC) registration through the PA Attorney General&rsquo;s office &mdash; this is not optional, and it is the single fastest way to screen out unqualified bidders. Our registration is HIC #195591; any licensed PA contractor should be able to give you theirs without hesitation.</p>
+
+              <h3>Verify licensing and insurance before anything else</h3>
+              <p>Ask for the HIC number and check it directly against the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement-contractors/" target="_blank" rel="noopener">PA Attorney General&rsquo;s Home Improvement Consumer Protection Act registry</a> &mdash; don&rsquo;t take a business card&rsquo;s word for it. Then ask for a certificate of general liability insurance and workers&rsquo; compensation coverage, and confirm the policy is active, not expired. If a contractor hesitates on either request, that&rsquo;s a red flag, not a formality you can skip.</p>
+
+              <h3>Red flags to walk away from</h3>
+              <ul class="post-related-links__list">
+                <li>Asking for full payment, or more than about a third, upfront before any work starts</li>
+                <li>No written contract, or a contract with a vague scope of work (&ldquo;remodel kitchen&rdquo; instead of itemized materials and labor)</li>
+                <li>Door-to-door solicitation or high-pressure &ldquo;today only&rdquo; pricing</li>
+                <li>Reluctance to provide references from projects completed in the last 12 months</li>
+                <li>No physical business address, or an address that&rsquo;s a residential mailbox</li>
+                <li>Subcontracting the entire job out without disclosing it</li>
+              </ul>
+
+              <h3>Questions to ask every contractor you&rsquo;re comparing</h3>
+              <ol class="post-related-links__list">
+                <li>What is your PA HIC number, and can I verify it myself?</li>
+                <li>Can you provide proof of current liability insurance and workers&rsquo; comp?</li>
+                <li>Who pulls the permit &mdash; you or me &mdash; and is that included in the quote?</li>
+                <li>What&rsquo;s your typical timeline from signed contract to first day on site?</li>
+                <li>Will the same crew be on my job start to finish, or is work subcontracted?</li>
+                <li>How do you handle change orders if something unexpected shows up once demo starts?</li>
+                <li>Can I see two or three completed projects similar in scope to mine?</li>
+              </ol>
+
+              <h3>How to compare quotes that aren&rsquo;t apples-to-apples</h3>
+              <p>Two bids for the &ldquo;same&rdquo; kitchen remodel can differ by $20,000 and both be honest &mdash; the difference is usually scope definition, not markup. Line up each quote against a fixed list: cabinet grade (stock/semi-custom/custom), countertop material, whether demo and disposal are included, whether permits and design time are line items or bundled, and what allowance is set for unforeseen electrical or plumbing issues. A contractor who itemizes all of this is giving you a real number to compare; a one-line total is not.</p>
+
+              <h3>Who handles permits</h3>
+              <p>In Delaware and Chester County, the contractor of record typically pulls the permit and schedules inspections &mdash; this should be spelled out in your contract, not left ambiguous. A contractor unwilling to pull permits in their own name, or who suggests skipping permits altogether, is taking on liability that eventually lands on you as the homeowner if the work needs to be unwound for a sale or refinance. For a broader look at what full-scope remodeling projects involve beyond the kitchen, see our <a href="/services/remodeling/">remodeling services overview</a>, and for background on our licensing, insurance, and 135+ completed projects, visit our <a href="/about/">About page</a>. The National Association of the Remodeling Industry also maintains consumer guidance on <a href="https://www.nari.org/homeowners/hire-a-professional" target="_blank" rel="noopener">vetting and hiring a remodeling contractor</a> that&rsquo;s worth a read alongside this one.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>How much does a kitchen remodel cost in Delaware County, PA?</h3>
+                  <p>Most full remodels in Delaware County fall between $35,000 and $65,000 for a mid-range project with semi-custom cabinets and stone countertops. Cosmetic refreshes start around $18,000; full custom gut renovations can exceed $100,000.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Is a permit required for a kitchen remodel in PA?</h3>
+                  <p>Yes, in most Delaware and Chester County municipalities, any remodel involving electrical, plumbing, or structural changes requires a permit. Even a cabinet-and-counter swap without moving utilities may need one depending on the township &mdash; check with your contractor before work starts.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How do I verify a contractor&rsquo;s PA HIC number?</h3>
+                  <p>Search the number directly on the PA Attorney General&rsquo;s Home Improvement Consumer Protection Act registry. Never rely on a number printed on a business card or truck alone.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What&rsquo;s the difference between a general contractor and a handyman for a remodel?</h3>
+                  <p>A licensed general contractor carries HIC registration, liability insurance, and workers&rsquo; compensation, and can legally pull permits and manage subcontractors. A handyman typically cannot pull permits for scoped remodel work and often isn&rsquo;t insured for larger jobs.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How long does a kitchen remodel take in PA?</h3>
+                  <p>A mid-range remodel typically runs 6&ndash;10 weeks from demo to final walkthrough, depending on custom cabinet lead times and inspection scheduling. High-end projects with structural changes can take 12&ndash;16 weeks.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Should I pay a deposit upfront?</h3>
+                  <p>A deposit of roughly 10&ndash;30% is standard to secure materials and scheduling. Be cautious of any contractor asking for more than a third of the total project cost before work begins.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Can I stay in my house during a kitchen remodel?</h3>
+                  <p>Most homeowners do, though you&rsquo;ll want a temporary kitchen setup &mdash; a folding table, microwave, and mini-fridge in another room &mdash; for at least the 2&ndash;3 weeks when plumbing and appliances are disconnected.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What should I do if my contractor finds an unexpected issue mid-project?</h3>
+                  <p>A written change order should document the new scope and cost before work continues. If your contract already includes an allowance for unforeseen electrical or plumbing issues, ask how it applies before agreeing to additional charges.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services and guides">
+              <h2>Related Remodeling Services &amp; Guides</h2>
+              <ul class="post-related-links__list">
+                <li><a href="/services/kitchen/">Kitchen Remodeling Services &mdash; Media, PA</a> &mdash; Full kitchen design, cabinetry, countertops, and installation across Delaware and Chester County.</li>
+                <li><a href="/services/remodeling/">Whole-Home Remodeling Services</a> &mdash; Scope, process, and what a full-house remodel involves beyond the kitchen.</li>
+                <li><a href="/blog/top-general-contractors-in-pennsylvania/">Top General Contractors in Pennsylvania</a> &mdash; How the PA contractor market compares, and where to start your shortlist.</li>
+                <li><a href="/blog/guide-to-hiring-remodeling-contractors/">The Complete Guide to Hiring Remodeling Contractors</a> &mdash; A deeper walkthrough of contracts, references, and payment schedules.</li>
+                <li><a href="/blog/home-remodeling-cost-delaware-county-pa-2026/">Home Remodeling Cost in Delaware County, PA &mdash; 2026 Guide</a></li>
+              </ul>
+            </div>
+
+            <div class="post-body__section post-cta reveal">
+              <h2>Planning a Kitchen Remodel in Delaware or Chester County?</h2>
+              <p>If you&rsquo;re planning a kitchen remodel in Media, Newtown Square, West Chester, or anywhere else in Delaware or Chester County, we&rsquo;ll walk your space in person and give you a scoped, itemized number &mdash; not a ballpark. 5.0 rating &middot; 17 years &middot; 135+ projects &middot; PA HIC #195591.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Blog sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Most Viewed Posts</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              {mostViewed.map(mv => (
+                <li class="post-sidebar__viewed-item">
+                  <a href={`/blog/${mv.slug}/`}>
+                    <span class="post-sidebar__viewed-title">{mv.title}</span>
+                    <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Ready to start your remodeling project? Contact us for a free, no-obligation quote today.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+          {relatedPosts.map((post, i) => (
+            <article class="related-card reveal" style={`--d:${(i * 0.1).toFixed(2)}s`}>
+              <a href={`/blog/${post.slug}/`} class="related-card__media" tabindex="-1" aria-hidden="true">
+                <img src={post.image} alt={post.imageAlt} width={post.imgW} height={post.imgH} loading="lazy" />
+              </a>
+              <div class="related-card__body">
+                <time datetime={post.dateIso} class="related-card__date">{post.date}</time>
+                <h3 class="related-card__title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+                <a href={`/blog/${post.slug}/`} class="related-card__link">Read More <span aria-hidden="true">&#8594;</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.post-section { padding-top: 3rem; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.post-article { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.post-hero { position: relative; }
+.post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
+.post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
+.post-hero__date { font-weight: 700; }
+.post-hero__sep { color: var(--muted); }
+.post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
+.post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
+.post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
+.post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
+.post-body { padding: 2rem 2.5rem 2.5rem; }
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .75rem; }
+.post-lead { font-size: 1.05rem; font-weight: 600; color: var(--dark); border-left: 4px solid var(--brand-orange, #ff7426); padding-left: 1rem; margin-bottom: 1.5rem; }
+.post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .55rem; }
+.post-list li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); padding-left: .2rem; }
+/* Workshop box */
+.post-workshop-box { background: var(--gray-2, #f0f4ff); border-left: 5px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-workshop-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .6rem; }
+.post-workshop-box p { font-size: .95rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .65rem; }
+.post-workshop-box p:last-child { margin-bottom: 0; }
+/* Case card */
+.post-case-card { background: #fff; border: 1.5px solid var(--gray-2, #e8e8e8); border-radius: var(--radius); padding: 1.3rem 1.5rem; margin: 1.4rem 0; box-shadow: var(--shadow-sm); }
+.post-case-card__label { font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .4rem; }
+.post-case-card h4 { font-size: 1.05rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-case-card p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-case-card p:last-child { margin-bottom: 0; }
+/* Portfolio grid */
+.post-portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.post-portfolio-item { border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--gray-2, #e8e8e8); box-shadow: var(--shadow-sm); }
+.post-portfolio-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.post-portfolio-item__caption { padding: .6rem .8rem; font-size: .82rem; color: var(--muted); font-weight: 600; }
+/* Cost table */
+.post-cost-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.post-cost-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.post-cost-table th { background: var(--accent); color: #fff; padding: .65rem 1rem; text-align: left; font-weight: 700; }
+.post-cost-table td { padding: .55rem 1rem; border-bottom: 1px solid var(--gray-2, #eee); font-size: .9rem; color: var(--text, #444); }
+.post-cost-table tr:nth-child(even) td { background: var(--gray-2, #f8f8f8); }
+.post-cost-table__note { font-size: .8rem; color: var(--muted); margin-top: .4rem; font-style: italic; }
+/* Permit box */
+.post-permit-box { background: #fff8f0; border: 1.5px solid var(--brand-orange, #ff7426); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-permit-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .5rem; }
+.post-permit-box p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-permit-box p:last-child { margin-bottom: 0; }
+/* FAQ */
+.post-faq { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.post-faq__item { background: var(--gray-2, #fafafa); border-radius: var(--radius); padding: 1.4rem 1.6rem; border-left: 4px solid var(--accent); }
+.post-faq__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .6rem; }
+.post-faq__item p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin: 0; }
+/* Related links */
+.post-related-links .post-related-links__list { padding-left: 1.4rem; margin: .8rem 0; display: flex; flex-direction: column; gap: .55rem; }
+.post-related-links .post-related-links__list li { font-size: .95rem; line-height: 1.7; }
+/* CTA */
+.post-cta { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
+.post-cta h2 { border-bottom: none; }
+.post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
+.post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
+.post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
+.post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2, #f5f5f5); }
+.post-sidebar__viewed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.post-sidebar__viewed-item a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; transition: color .2s; }
+.post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
+.post-sidebar__viewed-title { font-size: .9rem; font-weight: 700; color: var(--dark); line-height: 1.4; }
+.post-sidebar__viewed-count { font-size: .78rem; color: var(--muted); }
+.post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-sidebar__cta-widget p { font-size: .9rem; color: var(--text, #444); margin-bottom: 1rem; }
+/* Related posts */
+.related-posts { padding: 3rem 0; border-top: 1px solid var(--gray-2, #eee); }
+.related-posts__heading { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin: 0 0 1.5rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.related-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; }
+.related-card__media { display: block; overflow: hidden; height: 180px; }
+.related-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.related-card:hover .related-card__media img { transform: scale(1.04); }
+.related-card__body { padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.related-card__date { font-size: .8rem; color: var(--muted); }
+.related-card__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0; line-height: 1.4; }
+.related-card__title a { text-decoration: none; color: inherit; }
+.related-card__title a:hover { color: var(--accent); }
+.related-card__link { font-size: .85rem; font-weight: 700; color: var(--accent); text-decoration: none; margin-top: auto; }
+.related-card__link:hover { text-decoration: underline; }
+/* TOC */
+.post-toc { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); }
+.post-toc__title { font-size: 1rem; font-weight: 900; color: var(--dark); margin: 0 0 .8rem; }
+.post-toc__list { padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* aeo-answer */
+.aeo-answer { background: var(--gray-2, #f0f0ff); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.4rem; margin: 0 2.5rem 0; font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .post-body { padding: 1.5rem; }
+  .aeo-answer { margin: 0 1.5rem; }
+}
+</style>

@@ -1,0 +1,480 @@
+---
+/**
+ * Home Additions in Central & Delaware County, PA (2026 Guide)
+ * Author: Daniil Akulov | datePublished: 2026-08-05
+ * Source: reports/probrothers/blog_drafts/home-additions-central-delaware-county-pa.md
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const relatedPosts = [
+  {
+    slug: 'everything-you-need-to-know-about-custom-built-additions',
+    title: 'Everything You Need to Know About Custom-Built Additions',
+    date: 'March 7, 2025',
+    dateIso: '2025-03-07',
+    image: '/assets/img/blog/home-remodeling-cost-delaware-county-hero.webp',
+    imageAlt: 'Custom-built home additions — ProBrothers Construction, Delaware County PA',
+    imgW: 1024,
+    imgH: 1024,
+  },
+  {
+    slug: 'home-remodeling-cost-delaware-county-pa-2026',
+    title: 'Home Remodeling Cost in Delaware County, PA — 2026 Guide',
+    date: 'June 19, 2026',
+    dateIso: '2026-06-19',
+    image: '/assets/img/blog/home-remodeling-cost-delaware-county-hero.webp',
+    imageAlt: 'Home Remodeling Cost in Delaware County, PA — 2026 Guide',
+    imgW: 1024,
+    imgH: 1024,
+  },
+];
+
+const mostViewed = [
+  { title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)', slug: 'kitchen-cabinets-cost', views: 582 },
+  { title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', slug: 'guide-to-hiring-remodeling-contractors', views: 437 },
+  { title: 'Why ProBrothers Is the Top Choice for Custom Home Remodeling', slug: 'why-choose-probrothers-for-home-remodeling', views: 435 },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://probrothers.com/blog/home-additions-central-delaware-county-pa/",
+      "headline": "Home Additions in Central & Delaware County, PA: A 2026 Guide",
+      "url": "https://probrothers.com/blog/home-additions-central-delaware-county-pa/",
+      "datePublished": "2026-08-05",
+      "dateModified": "2026-08-05",
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp",
+        "width": 1200, "height": 800
+      },
+      "description": "Home additions in Central/Delaware County PA: costs, township permits, timelines, and what to check before you hire a contractor. 2026 guide.",
+      "mainEntityOfPage": { "@id": "https://probrothers.com/blog/home-additions-central-delaware-county-pa/" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "about": { "@type": "Service", "name": "Home Additions", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/blog/home-additions-central-delaware-county-pa/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://probrothers.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Home Additions in Central & Delaware County, PA", "item": "https://probrothers.com/blog/home-additions-central-delaware-county-pa/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I need a permit for a small addition like a sunroom?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any addition that adds conditioned or unconditioned floor space — including a three-season sunroom — needs a building permit under the PA Uniform Construction Code, plus a zoning review to confirm it doesn't violate setback or lot coverage limits." } },
+        { "@type": "Question", "name": "How long does the permit process take in Delaware County townships?", "acceptedAnswer": { "@type": "Answer", "text": "Plan on 3–6 weeks for straightforward projects once your application and stamped plans are submitted. If your project needs a zoning variance, add another 6–10 weeks for the hearing board process." } },
+        { "@type": "Question", "name": "Can I add a second story without touching the existing foundation?", "acceptedAnswer": { "@type": "Answer", "text": "Usually not without an engineer confirming the existing foundation and framing can carry the new load. Most homes built before the 1980s need at least some reinforcement — sistered joists, added footings, or a foundation assessment — before a second story goes on top." } },
+        { "@type": "Question", "name": "What's the difference between a three-season and four-season sunroom for permitting?", "acceptedAnswer": { "@type": "Answer", "text": "A four-season sunroom needs to meet PA energy code insulation and HVAC standards because it's treated as conditioned living space. A three-season room, without permanent heating/cooling, has lighter requirements but also doesn't count as heated square footage on an appraisal." } },
+        { "@type": "Question", "name": "Are ADUs legal in Delaware and Chester County townships?", "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on the specific township's zoning ordinance — some allow accessory dwelling units by right, some require a special exception or conditional use approval, and a few restrict them significantly. Check with your specific township's zoning office before designing an ADU." } },
+        { "@type": "Question", "name": "How much of an addition's cost do I get back at resale?", "acceptedAnswer": { "@type": "Answer", "text": "In this market, well-planned additions that add bedrooms and bathrooms typically recover 60–75% of cost at resale, though it varies by neighborhood, school district, and how the addition compares to what similar homes nearby already have." } },
+        { "@type": "Question", "name": "Will construction disrupt our ability to live in the house?", "acceptedAnswer": { "@type": "Answer", "text": "For bump-outs and single-story additions, usually minimally — the work zone stays largely separate from your living space. Second-story additions and in-law suites tied into existing plumbing lines involve more disruption; we sequence work to keep at least one bathroom and the kitchen functional whenever possible." } },
+        { "@type": "Question", "name": "How do I start the home addition process?", "acceptedAnswer": { "@type": "Answer", "text": "Reach out through our contact page for a site visit. We'll walk the property, talk through what you're trying to solve, and give you a realistic scope and cost range before any design work begins." } }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Home Additions in Central & Delaware County, PA (2026 Guide)"
+  description="Home additions in Central/Delaware County PA: costs, township permits, timelines, and what to check before you hire a contractor. 2026 guide."
+  canonical="https://probrothers.com/blog/home-additions-central-delaware-county-pa/"
+  ogTitle="Home Additions in Central & Delaware County, PA (2026 Guide)"
+  ogDescription="What a home addition really costs in Delaware and Chester County PA — bump-outs, sunrooms, second stories, and in-law suites — plus township permits, timelines, and contractor vetting."
+  ogUrl="https://probrothers.com/blog/home-additions-central-delaware-county-pa/"
+  ogImage="https://probrothers.com/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp"
+  twitterTitle="Home Additions in Central & Delaware County, PA (2026 Guide)"
+  twitterDescription="Costs, township permits, timelines, and contractor vetting for home additions in Delaware and Chester County, PA."
+  twitterImage="https://probrothers.com/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp"
+          imagesizes="(max-width:1024px) 100vw, 780px" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp"
+         sizes="100vw" alt="Two-story home addition under construction — ProBrothers Construction, Delaware County PA" fetchpriority="high" width="1200" height="800" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/blog/">Blog</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Home Additions in Central &amp; Delaware County</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Home Additions in Central &amp; Delaware County, PA: A 2026 Guide</h1>
+      <p class="page-banner__sub">August 5, 2026 &mdash; Daniil Akulov, ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <section class="section post-section" aria-label="Blog post">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content="2026-08-05" />
+          <meta itemprop="dateModified" content="2026-08-05" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <div class="post-hero reveal">
+            <img src="/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp"
+                 alt="Two-story home addition under construction — ProBrothers Construction, Delaware County PA"
+                 width="1200" height="800" fetchpriority="high" loading="eager"
+                 class="post-hero__img" itemprop="image" />
+            <div class="post-hero__meta">
+              <time datetime="2026-08-05" class="post-hero__date" itemprop="datePublished">August 5, 2026</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <ul class="post-hero__cats" aria-label="Categories">
+                <li><a href="/blog/?category=additions">Additions</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=delaware-county">Delaware County</a></li>
+              </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
+            </div>
+          </div>
+
+          <aside class="aeo-answer">
+            Home additions in Delaware and Chester County, PA run roughly $45,000&ndash;$85,000 for a bump-out, $110,000&ndash;$220,000 for a single-story addition on a full foundation, and $200,000&ndash;$400,000+ for a second story. Every township permits independently under the PA Uniform Construction Code &mdash; expect 3&ndash;6 weeks for plan review, plus 6&ndash;10 weeks more if a zoning variance is required.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+              <h3 class="post-toc__title">Table of Contents</h3>
+              <nav class="post-toc__nav" aria-label="Article sections">
+                <ol class="post-toc__list" id="tocList"></ol>
+              </nav>
+            </div>
+
+            <div class="post-body__section reveal">
+              <p class="post-lead">A family in Newtown Square called us last year with a problem a lot of homeowners around here run into: three kids, one and a half bathrooms, and a kitchen that backed up every time more than two people tried to cook at once. They didn&rsquo;t want to move &mdash; the schools, the neighborhood, the mortgage rate they&rsquo;d locked in years earlier all made staying the obvious choice. What they needed was more square footage in the right places.</p>
+              <p>That&rsquo;s the story behind most of the additions we build in Delaware and Chester County, and it&rsquo;s why this guide exists: to walk through what an addition actually costs here, how the township permit process really works, and what separates a contractor who can frame a wall from one who can carry a structural addition from sketch to final inspection.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Types of Home Additions We Build in This Market</h2>
+              <p><strong>Second-story additions.</strong> Adding a full floor on top of an existing footprint is the move for lots that are landlocked by setback lines &mdash; common in older Media and West Chester boroughs where lots run narrow and deep. You keep your yard, you keep your driveway, and you roughly double your usable floor plan without touching the foundation footprint (though you&rsquo;re still loading new weight onto the existing foundation and framing, which is why this category needs a structural engineer&rsquo;s sign-off before a shovel goes in the ground).</p>
+              <p><strong>Bump-outs.</strong> A 4-to-12-foot extension off an existing room &mdash; usually a kitchen, primary bedroom, or family room. Bump-outs are the most cost-efficient addition type because they often stay inside existing roof lines or use a simple shed-roof tie-in, and they don&rsquo;t require a full new foundation system the way a two-story addition does.</p>
+              <p><strong>Sunrooms.</strong> Three- or four-season rooms, typically glass-heavy with either an insulated slab or pier foundation. Four-season sunrooms need full HVAC extension and proper insulation values to meet PA&rsquo;s energy code; three-season rooms skip conditioned air and cost meaningfully less, but they also don&rsquo;t count toward your home&rsquo;s heated square footage for appraisal purposes &mdash; worth knowing if resale value is part of your calculus.</p>
+              <p><strong>In-law suites and ADUs.</strong> Accessory dwelling units &mdash; a self-contained living space with its own entrance, kitchenette, and bathroom &mdash; have become one of our most-requested addition types since 2023, driven by aging parents moving in or homeowners wanting rental income. This is also the addition type most likely to trigger a full zoning review rather than a simple building permit, because many Delaware and Chester County townships still restrict or specially regulate accessory dwelling units. Confirm your township&rsquo;s current ADU ordinance before you fall in love with a floor plan.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Realistic Cost Ranges (2026)</h2>
+              <p>Costs vary by township, site access, and finish level, but here&rsquo;s what we&rsquo;re actually seeing on jobs in Media, Newtown Square, West Chester, Glen Mills, and King of Prussia this year:</p>
+              <ul class="post-related-links__list">
+                <li><strong>Bump-out (100&ndash;200 sq ft):</strong> $45,000&ndash;$85,000</li>
+                <li><strong>Sunroom, three-season (200&ndash;300 sq ft):</strong> $35,000&ndash;$65,000</li>
+                <li><strong>Sunroom, four-season with HVAC (200&ndash;300 sq ft):</strong> $70,000&ndash;$120,000</li>
+                <li><strong>Single-story addition, full foundation (300&ndash;500 sq ft):</strong> $110,000&ndash;$220,000</li>
+                <li><strong>Second-story addition (800&ndash;1,200 sq ft):</strong> $200,000&ndash;$400,000+</li>
+                <li><strong>In-law suite/ADU (400&ndash;700 sq ft, kitchenette + bath):</strong> $150,000&ndash;$300,000</li>
+              </ul>
+              <p>These ranges assume mid-range finishes. Kitchens and bathrooms inside an addition move the number fast &mdash; plumbing rough-in, venting, and fixtures in an ADU kitchenette alone can add $25,000&ndash;$40,000 over a comparable bedroom-only addition. Site conditions matter too: a sloped lot, an existing foundation that needs underpinning, or utility relocations can push any of these ranges up by 15&ndash;25%.</p>
+              <p>For pricing on the rest of the house &mdash; kitchens, bathrooms, basements, and trim &mdash; see our <a href="/blog/home-remodeling-cost-delaware-county-pa-2026/">Delaware County home remodeling cost guide for 2026</a>.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Township Permits and Zoning in Delaware &amp; Chester County</h2>
+              <p>This is where projects stall if you don&rsquo;t plan for it. Delaware County has no single county-wide building department &mdash; every municipality runs its own permitting, and requirements differ meaningfully between, say, Marple Township and Radnor Township even though they&rsquo;re neighbors. Chester County works the same way: West Whiteland, East Goshen, and Willistown each have their own zoning ordinances and setback tables.</p>
+              <p>For any structural addition, expect this general sequence:</p>
+              <ol class="post-related-links__list">
+                <li><strong>Zoning review</strong> &mdash; confirms setbacks, lot coverage limits, and height restrictions. Most townships cap impervious coverage (roof, driveway, patio combined) at a percentage of lot size; an addition that pushes you over the line needs a variance from the zoning hearing board, which adds 6&ndash;10 weeks to your timeline.</li>
+                <li><strong>Building permit application</strong> &mdash; plans stamped by a PA-licensed architect or engineer for anything involving new structural loads (second stories, load-bearing wall removal, new foundations). Submitted under the Pennsylvania Uniform Construction Code (UCC), which every township in the state enforces through either its own code office or a third-party agency.</li>
+                <li><strong>Plan review and permit issuance</strong> &mdash; typically 3&ndash;6 weeks in Delaware County townships, sometimes longer in Chester County municipalities that use third-party plan review agencies during busy season (spring and early summer).</li>
+                <li><strong>Inspections during construction</strong> &mdash; footing/foundation, framing, rough electrical/plumbing/mechanical, and final. Each requires a scheduled inspector visit before you can close in walls or move to the next phase.</li>
+              </ol>
+              <p>For the official permit and zoning framework, the <a href="https://www.co.delaware.pa.us/departments/planning/" target="_blank" rel="noopener">Delaware County Planning Department</a> publishes current municipal zoning contacts, and the <a href="https://www.iccsafe.org/" target="_blank" rel="noopener">International Code Council</a> maintains the model building codes that Pennsylvania&rsquo;s UCC is based on &mdash; both are worth a look before you finalize a design so you&rsquo;re not redrawing plans after a zoning rejection.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Timeline Expectations</h2>
+              <p>Realistically, from first call to move-in:</p>
+              <ul class="post-related-links__list">
+                <li><strong>Design + permitting:</strong> 6&ndash;12 weeks (longer if a variance is needed)</li>
+                <li><strong>Bump-out or sunroom construction:</strong> 4&ndash;8 weeks</li>
+                <li><strong>Single-story addition:</strong> 3&ndash;5 months</li>
+                <li><strong>Second-story addition:</strong> 4&ndash;7 months (you&rsquo;re often living through it, which changes the pace)</li>
+                <li><strong>In-law suite/ADU:</strong> 4&ndash;6 months, more if the zoning review runs long</li>
+              </ul>
+              <p>Weather adds variability to foundation and framing phases &mdash; a wet spring in Chester County can push a foundation pour back two or three weeks. Build that buffer into your expectations rather than treating the contractor&rsquo;s initial estimate as a hard deadline.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>How Additions Affect Property Value Here</h2>
+              <p>In Delaware and Chester County&rsquo;s price bands &mdash; Newtown Square, Malvern, and Glen Mills homes routinely list above $700K &mdash; buyers are comparing square footage and bedroom/bathroom count directly against what&rsquo;s on the market in the same school district. A well-executed addition that brings a three-bedroom, one-and-a-half-bath home up to four bedrooms, two and a half baths typically recovers 60&ndash;75% of its cost at resale in this market, based on the projects we&rsquo;ve tracked over the past several years, and it opens the listing to a buyer pool that would have skipped the house entirely at its original configuration.</p>
+              <p>In-law suites carry a wrinkle: they add resale appeal to multigenerational buyers but can be neutral or slightly negative to buyers who don&rsquo;t want the extra space to heat and maintain. Second-story additions tend to hold value best because they add bedrooms without shrinking the yard &mdash; a real selling point on the smaller borough lots common in Media and West Chester.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What to Look for in a Contractor for Structural Additions</h2>
+              <p>Additions aren&rsquo;t kitchen remodels &mdash; you&rsquo;re tying new structure into an existing roofline, foundation, and load path, and mistakes here are expensive to unwind. When you&rsquo;re vetting a contractor for a structural addition specifically, ask about:</p>
+              <ul class="post-related-links__list">
+                <li><strong>PA Home Improvement Contractor (HIC) registration.</strong> Every contractor doing work over $5,000 in Pennsylvania must be HIC-registered with the Attorney General&rsquo;s office. Ask for the number and verify it.</li>
+                <li><strong>Structural engineering relationships.</strong> A contractor who can name the engineer they work with (not &ldquo;we&rsquo;ll find one&rdquo;) has done this before.</li>
+                <li><strong>Local township experience.</strong> A contractor who&rsquo;s pulled permits in your specific township knows the inspector, the typical review timeline, and the local quirks &mdash; that&rsquo;s worth more than a generic &ldquo;licensed and insured&rdquo; claim.</li>
+                <li><strong>A real portfolio of comparable work.</strong> Not just photos &mdash; ask what the addition cost, how long it took, and what went wrong. Every real project has something that didn&rsquo;t go according to plan; a contractor who claims otherwise isn&rsquo;t being straight with you.</li>
+              </ul>
+              <p>We&rsquo;ve walked several Delaware and Chester County families through this exact process &mdash; including a family room addition in Newtown Square that started as &ldquo;we need more space&rdquo; and ended as a full kitchen and living area reconfiguration once we opened the walls and found what the original 1960s framing was actually doing. You can see how that project came together on our <a href="/projects/family-room-wall-panels-newtown-square/">Newtown Square family room case study</a>, and browse more completed work on our <a href="/projects/">projects page</a>. For a step-by-step walkthrough of vetting and contracting, see our <a href="/blog/guide-to-hiring-remodeling-contractors/">complete guide to hiring remodeling contractors</a>.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>Do I need a permit for a small addition like a sunroom?</h3>
+                  <p>Yes. Any addition that adds conditioned or unconditioned floor space &mdash; including a three-season sunroom &mdash; needs a building permit under the PA Uniform Construction Code, plus a zoning review to confirm it doesn&rsquo;t violate setback or lot coverage limits.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How long does the permit process take in Delaware County townships?</h3>
+                  <p>Plan on 3&ndash;6 weeks for straightforward projects once your application and stamped plans are submitted. If your project needs a zoning variance, add another 6&ndash;10 weeks for the hearing board process.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Can I add a second story without touching the existing foundation?</h3>
+                  <p>Usually not without an engineer confirming the existing foundation and framing can carry the new load. Most homes built before the 1980s need at least some reinforcement &mdash; sistered joists, added footings, or a foundation assessment &mdash; before a second story goes on top.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What&rsquo;s the difference between a three-season and four-season sunroom for permitting?</h3>
+                  <p>A four-season sunroom needs to meet PA energy code insulation and HVAC standards because it&rsquo;s treated as conditioned living space. A three-season room, without permanent heating/cooling, has lighter requirements but also doesn&rsquo;t count as heated square footage on an appraisal.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Are ADUs legal in Delaware and Chester County townships?</h3>
+                  <p>It depends entirely on the specific township&rsquo;s zoning ordinance &mdash; some allow accessory dwelling units by right, some require a special exception or conditional use approval, and a few restrict them significantly. Check with your specific township&rsquo;s zoning office before designing an ADU.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How much of an addition&rsquo;s cost do I get back at resale?</h3>
+                  <p>In this market, well-planned additions that add bedrooms and bathrooms typically recover 60&ndash;75% of cost at resale, though it varies by neighborhood, school district, and how the addition compares to what similar homes nearby already have.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Will construction disrupt our ability to live in the house?</h3>
+                  <p>For bump-outs and single-story additions, usually minimally &mdash; the work zone stays largely separate from your living space. Second-story additions and in-law suites tied into existing plumbing lines involve more disruption; we sequence work to keep at least one bathroom and the kitchen functional whenever possible.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How do I start the process?</h3>
+                  <p>Reach out through our <a href="/contact/">contact page</a> for a site visit. We&rsquo;ll walk the property, talk through what you&rsquo;re trying to solve, and give you a realistic scope and cost range before any design work begins. If you&rsquo;re in the Media area specifically, see our <a href="/locations/media/">Media, PA service page</a> for local project examples.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-body__section post-related-links reveal" aria-label="Related ProBrothers services and service areas">
+              <h2>Related Addition Services &amp; Guides</h2>
+              <ul class="post-related-links__list">
+                <li><a href="/services/additions/">Home Addition Services &mdash; Media, PA</a> &mdash; Bump-outs, second stories, sunrooms, and in-law suites across Delaware and Chester County.</li>
+                <li><a href="/blog/everything-you-need-to-know-about-custom-built-additions/">Everything You Need to Know About Custom-Built Additions</a></li>
+                <li><a href="/projects/family-room-wall-panels-newtown-square/">Newtown Square Family Room &mdash; Project Case Study</a></li>
+                <li><a href="/locations/media/">Media, PA Service Area</a> &mdash; Local project examples and township coverage.</li>
+                <li><a href="/about/">About ProBrothers</a> &mdash; Licensing, insurance, and the team you&rsquo;d be working with.</li>
+              </ul>
+            </div>
+
+            <div class="post-body__section post-cta reveal">
+              <h2>Weighing an Addition in Delaware or Chester County?</h2>
+              <p>Additions are one of the few renovations where getting the structural and permitting groundwork right the first time saves real money &mdash; reworking a rejected zoning submission or an under-engineered foundation costs far more than getting it correct up front. Free site visit and realistic scope before any design work begins. 5.0 rating &middot; 135+ projects &middot; PA HIC #195591.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Blog sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Most Viewed Posts</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              {mostViewed.map(mv => (
+                <li class="post-sidebar__viewed-item">
+                  <a href={`/blog/${mv.slug}/`}>
+                    <span class="post-sidebar__viewed-title">{mv.title}</span>
+                    <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Ready to start your remodeling project? Contact us for a free, no-obligation quote today.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+          {relatedPosts.map((post, i) => (
+            <article class="related-card reveal" style={`--d:${(i * 0.1).toFixed(2)}s`}>
+              <a href={`/blog/${post.slug}/`} class="related-card__media" tabindex="-1" aria-hidden="true">
+                <img src={post.image} alt={post.imageAlt} width={post.imgW} height={post.imgH} loading="lazy" />
+              </a>
+              <div class="related-card__body">
+                <time datetime={post.dateIso} class="related-card__date">{post.date}</time>
+                <h3 class="related-card__title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+                <a href={`/blog/${post.slug}/`} class="related-card__link">Read More <span aria-hidden="true">&#8594;</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.post-section { padding-top: 3rem; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.post-article { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.post-hero { position: relative; }
+.post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
+.post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
+.post-hero__date { font-weight: 700; }
+.post-hero__sep { color: var(--muted); }
+.post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
+.post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
+.post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
+.post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
+.post-body { padding: 2rem 2.5rem 2.5rem; }
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .75rem; }
+.post-lead { font-size: 1.05rem; font-weight: 600; color: var(--dark); border-left: 4px solid var(--brand-orange, #ff7426); padding-left: 1rem; margin-bottom: 1.5rem; }
+.post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .55rem; }
+.post-list li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); padding-left: .2rem; }
+/* Workshop box */
+.post-workshop-box { background: var(--gray-2, #f0f4ff); border-left: 5px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-workshop-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .6rem; }
+.post-workshop-box p { font-size: .95rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .65rem; }
+.post-workshop-box p:last-child { margin-bottom: 0; }
+/* Case card */
+.post-case-card { background: #fff; border: 1.5px solid var(--gray-2, #e8e8e8); border-radius: var(--radius); padding: 1.3rem 1.5rem; margin: 1.4rem 0; box-shadow: var(--shadow-sm); }
+.post-case-card__label { font-size: .75rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .4rem; }
+.post-case-card h4 { font-size: 1.05rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-case-card p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-case-card p:last-child { margin-bottom: 0; }
+/* Portfolio grid */
+.post-portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.post-portfolio-item { border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--gray-2, #e8e8e8); box-shadow: var(--shadow-sm); }
+.post-portfolio-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.post-portfolio-item__caption { padding: .6rem .8rem; font-size: .82rem; color: var(--muted); font-weight: 600; }
+/* Cost table */
+.post-cost-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.post-cost-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.post-cost-table th { background: var(--accent); color: #fff; padding: .65rem 1rem; text-align: left; font-weight: 700; }
+.post-cost-table td { padding: .55rem 1rem; border-bottom: 1px solid var(--gray-2, #eee); font-size: .9rem; color: var(--text, #444); }
+.post-cost-table tr:nth-child(even) td { background: var(--gray-2, #f8f8f8); }
+.post-cost-table__note { font-size: .8rem; color: var(--muted); margin-top: .4rem; font-style: italic; }
+/* Permit box */
+.post-permit-box { background: #fff8f0; border: 1.5px solid var(--brand-orange, #ff7426); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+.post-permit-box__label { font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-orange, #ff7426); margin-bottom: .5rem; }
+.post-permit-box p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin-bottom: .55rem; }
+.post-permit-box p:last-child { margin-bottom: 0; }
+/* FAQ */
+.post-faq { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.post-faq__item { background: var(--gray-2, #fafafa); border-radius: var(--radius); padding: 1.4rem 1.6rem; border-left: 4px solid var(--accent); }
+.post-faq__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .6rem; }
+.post-faq__item p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin: 0; }
+/* Related links */
+.post-related-links .post-related-links__list { padding-left: 1.4rem; margin: .8rem 0; display: flex; flex-direction: column; gap: .55rem; }
+.post-related-links .post-related-links__list li { font-size: .95rem; line-height: 1.7; }
+/* CTA */
+.post-cta { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
+.post-cta h2 { border-bottom: none; }
+.post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
+.post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
+.post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
+.post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2, #f5f5f5); }
+.post-sidebar__viewed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.post-sidebar__viewed-item a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; transition: color .2s; }
+.post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
+.post-sidebar__viewed-title { font-size: .9rem; font-weight: 700; color: var(--dark); line-height: 1.4; }
+.post-sidebar__viewed-count { font-size: .78rem; color: var(--muted); }
+.post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-sidebar__cta-widget p { font-size: .9rem; color: var(--text, #444); margin-bottom: 1rem; }
+/* Related posts */
+.related-posts { padding: 3rem 0; border-top: 1px solid var(--gray-2, #eee); }
+.related-posts__heading { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin: 0 0 1.5rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.related-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; }
+.related-card__media { display: block; overflow: hidden; height: 180px; }
+.related-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.related-card:hover .related-card__media img { transform: scale(1.04); }
+.related-card__body { padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.related-card__date { font-size: .8rem; color: var(--muted); }
+.related-card__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0; line-height: 1.4; }
+.related-card__title a { text-decoration: none; color: inherit; }
+.related-card__title a:hover { color: var(--accent); }
+.related-card__link { font-size: .85rem; font-weight: 700; color: var(--accent); text-decoration: none; margin-top: auto; }
+.related-card__link:hover { text-decoration: underline; }
+/* TOC */
+.post-toc { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); }
+.post-toc__title { font-size: 1rem; font-weight: 900; color: var(--dark); margin: 0 0 .8rem; }
+.post-toc__list { padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* aeo-answer */
+.aeo-answer { background: var(--gray-2, #f0f0ff); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.4rem; margin: 0 2.5rem 0; font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .post-body { padding: 1.5rem; }
+  .aeo-answer { margin: 0 1.5rem; }
+}
+</style>

@@ -233,6 +233,66 @@ const pageSchema = {
               </ul>
             </div>
 
+            <div class="post-body__section post-body__section--new reveal" id="wood-comparison">
+              <h2>Wood Type Comparison for Cabinets</h2>
+              <div class="post-cost-table-wrap">
+                <table class="post-cost-table">
+                  <thead>
+                    <tr>
+                      <th>Wood Type</th>
+                      <th>Durability</th>
+                      <th>Cost</th>
+                      <th>Appearance / Grain</th>
+                      <th>Best Use Case</th>
+                      <th>Maintenance</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Maple</strong></td>
+                      <td>High</td>
+                      <td>$$ (Moderate)</td>
+                      <td>Smooth, fine, subtle grain &mdash; takes paint beautifully</td>
+                      <td>Kitchen cabinets, contemporary painted finishes</td>
+                      <td>Low</td>
+                    </tr>
+                    <tr>
+                      <td><strong>White Oak</strong></td>
+                      <td>High</td>
+                      <td>$$ (Moderate)</td>
+                      <td>Strong, open, visible grain &mdash; natural texture</td>
+                      <td>Kitchen cabinets, modern organic designs</td>
+                      <td>Low</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Cherry</strong></td>
+                      <td>High</td>
+                      <td>$$$ (Premium)</td>
+                      <td>Deep reddish-brown, darkens with age &mdash; luxurious</td>
+                      <td>Kitchens and home offices wanting an elegant, sophisticated finish</td>
+                      <td>Moderate</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Birch</strong></td>
+                      <td>Moderate&ndash;High</td>
+                      <td>$ (Affordable)</td>
+                      <td>Pale color, fine grain &mdash; stains and paints evenly</td>
+                      <td>Mudroom cabinets, painted cabinet boxes on a budget</td>
+                      <td>Low</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Walnut</strong></td>
+                      <td>High</td>
+                      <td>$$$$ (Most expensive)</td>
+                      <td>Deep, rich dark tones, smooth finish &mdash; executive look</td>
+                      <td>Home offices, libraries, high-end statement cabinetry</td>
+                      <td>Moderate</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
             <div class="post-body__section reveal">
               <h2>2. Choosing the Right Finish: Protecting Your Cabinets with Style</h2>
               <p>Once you've chosen the right wood for your cabinets, the next step in 2026 is selecting the finish. The finish you choose will not only affect the cabinet's appearance but also protect the wood from moisture, stains, and wear.</p>
@@ -435,6 +495,17 @@ const pageSchema = {
 .related-card__title a:hover { color: var(--accent); }
 .related-card__link { display: inline-flex; align-items: center; gap: .3rem; color: var(--accent); font-weight: 800; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; text-decoration: none; transition: gap .25s var(--ease), color .2s; }
 .related-card__link:hover { gap: .55rem; color: var(--dark); }
+.post-body__section--new { background: #f4f7ff; border-radius: var(--radius); padding: 1.8rem 2rem; border: 1.5px solid rgba(var(--accent-rgb,255,87,34),.2); }
+.post-cost-table-wrap { overflow-x: auto; margin: 1.2rem 0; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.post-cost-table { width: 100%; border-collapse: collapse; font-size: .88rem; background: #fff; }
+.post-cost-table th { background: var(--dark); color: #fff; font-weight: 700; padding: .65rem 1rem; text-align: left; }
+.post-cost-table td { padding: .6rem 1rem; border-bottom: 1px solid #eee; color: var(--text, #444); vertical-align: top; }
+.post-cost-table tbody tr:nth-child(even) { background: var(--gray-2, #f8f8f8); }
+.post-cost-table tbody tr:last-child td { border-bottom: none; }
+.post-cost-table tfoot td { background: #f4f7ff; font-size: .8rem; color: var(--muted); }
+.post-cost-table__tag { display: inline-block; font-size: .68rem; font-weight: 800; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; margin-left: 4px; }
+.post-cost-table__tag--pop { background: var(--accent); color: #fff; }
+.post-cost-table__tag--prem { background: #7c3aed; color: #fff; }
 @media (max-width: 1024px) { .post-layout { grid-template-columns: 1fr 260px; } }
 @media (max-width: 820px) { .post-layout { grid-template-columns: 1fr; } .post-sidebar { position: static; } .related-posts__grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .post-body { padding: 1.4rem 1.2rem 2rem; } .post-cta { padding: 1.4rem !important; } .post-cta__actions { flex-direction: column; } .post-hero__meta { padding: .8rem 1.2rem; } }

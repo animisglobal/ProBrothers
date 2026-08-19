@@ -1,0 +1,473 @@
+---
+/**
+ * Home Remodeling in Media, PA: 2026 Neighborhood Guide
+ * Author: Daniil Akulov | datePublished: 2026-08-19
+ * Source: reports/probrothers/blog_drafts/home-remodeling-media-pa-2026-neighborhood-guide.md
+ * P2-10 competitor-keyword content fix — registry/probrothers/probrothers_competitor_keyword_fixes.md
+ * Money page: /services/construction-services/ (companion informational geo-editorial post)
+ * LINK FIX: draft referenced /services/kitchen-remodeling/ (404 — no such route). Live slug for
+ * kitchen services is /services/kitchen/ — corrected below.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const relatedPosts = [
+  {
+    slug: 'home-remodeling-cost-delaware-county-pa-2026',
+    title: 'Home Remodeling Cost in Delaware County, PA — 2026 Guide',
+    date: 'June 19, 2026',
+    dateIso: '2026-06-19',
+    image: '/assets/img/blog/home-remodeling-cost-delaware-county-hero.webp',
+    imageAlt: 'Home Remodeling Cost in Delaware County, PA — 2026 Guide',
+    imgW: 1024,
+    imgH: 1024,
+  },
+  {
+    slug: 'home-additions-central-delaware-county-pa',
+    title: 'Home Additions in Central & Delaware County, PA: A 2026 Guide',
+    date: 'August 5, 2026',
+    dateIso: '2026-08-05',
+    image: '/assets/img/blog/home-additions-central-delaware-county-pa-hero.webp',
+    imageAlt: 'Two-story home addition under construction — ProBrothers Construction, Delaware County PA',
+    imgW: 1200,
+    imgH: 800,
+  },
+];
+
+const mostViewed = [
+  { title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)', slug: 'kitchen-cabinets-cost', views: 582 },
+  { title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', slug: 'guide-to-hiring-remodeling-contractors', views: 437 },
+  { title: 'Why ProBrothers Is the Top Choice for Custom Home Remodeling', slug: 'why-choose-probrothers-for-home-remodeling', views: 435 },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/",
+      "headline": "Home Remodeling in Media, PA: 2026 Neighborhood Guide",
+      "url": "https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/",
+      "datePublished": "2026-08-19",
+      "dateModified": "2026-08-19",
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/blog/home-remodeling-media-pa-2026-neighborhood-guide-hero.webp",
+        "width": 1200, "height": 675
+      },
+      "description": "A neighborhood-by-neighborhood look at home remodeling in Media, PA. What projects local homeowners are choosing in 2026, realistic costs by zip code 19063, and how to plan a renovation that fits Media's older housing stock.",
+      "mainEntityOfPage": { "@id": "https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "about": { "@type": "Service", "name": "Home Remodeling", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://probrothers.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Home Remodeling in Media, PA: 2026 Neighborhood Guide", "item": "https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does a home remodel cost in Media, PA?", "acceptedAnswer": { "@type": "Answer", "text": "It depends heavily on scope. A cosmetic kitchen refresh might run $25,000-$35,000, while a full reconfiguration with wall removal and new plumbing can reach $70,000 or more. Bathroom remodels typically fall between $15,000 and $35,000, and basement finishing ranges from $20,000 to $50,000-plus depending on waterproofing needs. The best way to get an accurate number is a walkthrough with a contractor who's worked in Media's housing stock before." } },
+        { "@type": "Question", "name": "Do I need a permit to remodel my kitchen in Media?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes, especially if the project involves electrical, plumbing, or structural changes like removing a wall. Cosmetic-only updates (new countertops, cabinet fronts, paint) generally don't require a permit, but anything touching the home's systems or structure does. Media Borough and Delaware County both enforce this, and unpermitted work can create real problems at resale." } },
+        { "@type": "Question", "name": "Is my home in Media's historic district, and does that affect remodeling?", "acceptedAnswer": { "@type": "Answer", "text": "If your home is within the borough's historic district boundaries, exterior changes (siding, windows, front door style, some roofline work) may require an additional design review step before permits are issued. This mainly affects the borough core rather than the surrounding township. A local contractor should be able to tell you quickly whether your address falls inside the review area." } },
+        { "@type": "Question", "name": "How long does a typical remodel take in Media?", "acceptedAnswer": { "@type": "Answer", "text": "A kitchen remodel typically runs 8-14 weeks from signed contract to completion, factoring in design, permitting, and material lead times. Custom cabinetry alone can take 8-12 weeks to arrive. Additions and full home renovations run longer. Bathroom remodels are usually faster, often 3-6 weeks depending on scope." } },
+        { "@type": "Question", "name": "What should I budget extra for on an older Media home?", "acceptedAnswer": { "@type": "Answer", "text": "Plan for a contingency of roughly 10-15% above the quoted project cost. Homes built before 1960 frequently reveal outdated wiring, plaster wall complications, or foundation issues once the walls are opened, and a realistic budget accounts for that rather than assuming a perfectly clean project." } },
+        { "@type": "Question", "name": "Should I choose a general remodel or a targeted room update?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your goals and timeline. If your kitchen and bathrooms were both updated decades ago and your layout genuinely doesn't work for how you live now, a broader renovation can be more cost-efficient than tackling rooms one at a time over several years, since you avoid repeated mobilization costs. If one room is the clear pain point, a targeted remodel is the more practical starting move. A contractor can walk through both paths with you during an initial consultation." } }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Home Remodeling in Media, PA: 2026 Neighborhood Guide"
+  description="A neighborhood-by-neighborhood look at home remodeling in Media, PA. What projects local homeowners are choosing in 2026, realistic costs by zip code 19063, and how to plan a renovation that fits Media's older housing stock."
+  canonical="https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/"
+  ogTitle="Home Remodeling in Media, PA: 2026 Neighborhood Guide"
+  ogDescription="What Media, PA homeowners are actually remodeling in 2026 — neighborhood-by-neighborhood breakdown, realistic costs by zip code 19063, and how to plan a renovation that fits Media's older housing stock."
+  ogUrl="https://probrothers.com/blog/home-remodeling-media-pa-2026-neighborhood-guide/"
+  ogImage="https://probrothers.com/assets/img/blog/home-remodeling-media-pa-2026-neighborhood-guide-hero.webp"
+  twitterTitle="Home Remodeling in Media, PA: 2026 Neighborhood Guide"
+  twitterDescription="A neighborhood-by-neighborhood look at home remodeling in Media, PA — 2026 costs, housing stock quirks, and how to plan a renovation the right way."
+  twitterImage="https://probrothers.com/assets/img/blog/home-remodeling-media-pa-2026-neighborhood-guide-hero.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/blog/home-remodeling-media-pa-2026-neighborhood-guide-hero.webp"
+          imagesizes="(max-width:1024px) 100vw, 780px" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/blog/home-remodeling-media-pa-2026-neighborhood-guide-hero.webp"
+         sizes="100vw" alt="Historic borough homes in Media, PA — ProBrothers home remodeling" fetchpriority="high" width="1200" height="675" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/blog/">Blog</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Home Remodeling in Media, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Home Remodeling in Media, PA: 2026 Neighborhood Guide</h1>
+      <p class="page-banner__sub">August 19, 2026 &mdash; Daniil Akulov, ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <section class="section post-section" aria-label="Blog post">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content="2026-08-19" />
+          <meta itemprop="dateModified" content="2026-08-19" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <div class="post-hero reveal">
+            <img src="/assets/img/blog/home-remodeling-media-pa-2026-neighborhood-guide-hero.webp"
+                 alt="Historic borough homes in Media, PA — ProBrothers home remodeling"
+                 width="1200" height="675" fetchpriority="high" loading="eager"
+                 class="post-hero__img" itemprop="image" />
+            <div class="post-hero__meta">
+              <time datetime="2026-08-19" class="post-hero__date" itemprop="datePublished">August 19, 2026</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <ul class="post-hero__cats" aria-label="Categories">
+                <li><a href="/blog/?category=remodeling">Remodeling</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=delaware-county">Delaware County</a></li>
+              </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
+            </div>
+          </div>
+
+          <aside class="aeo-answer">
+            Home remodeling in Media, PA in 2026 centers on five project types — kitchens, bathrooms, basement finishing, additions, and exterior work — shaped by the borough's older housing stock (pre-1960 wiring, plaster walls, fieldstone foundations, narrow lots). Kitchen remodels run $25,000-$70,000+, bathrooms $15,000-$35,000, and basement finishing $20,000-$50,000+ depending on waterproofing needs. ProBrothers is a Media-based general contractor serving all of Delaware County and the Main Line.
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+              <h3 class="post-toc__title">Table of Contents</h3>
+              <nav class="post-toc__nav" aria-label="Article sections">
+                <ol class="post-toc__list" id="tocList"></ol>
+              </nav>
+            </div>
+
+            <div class="post-body__section reveal">
+              <p class="post-lead">Media, Pennsylvania has a housing stock most towns can't buy at any price. Walk down State Street or up Jasper, Orange, or Franklin and you'll pass Victorian twins built in the 1890s, brick colonials from the 1920s, arts-and-crafts bungalows tucked behind hedges, and the occasional mid-century ranch that snuck in during the 1960s expansion west of the borough line. That mix is a big part of why people move here and why they stay. It's also why remodeling a house in Media, PA looks different than remodeling one in a newer development twenty minutes down Route 1.</p>
+              <p>We've been doing renovation and construction work in and around Media for more than fifteen years, and one thing hasn't changed in that time: almost nobody who calls us is starting from a blank slate. They're working with a hundred-year-old floor plan, a kitchen that was "updated" sometime in the Clinton administration, or a basement that floods every spring because the original 1948 grading never accounted for how much pavement would eventually surround the lot. This guide walks through what remodeling actually looks like across Media's different pockets in 2026: what's driving the work, what it tends to cost, and what to think about before you start.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Why Media's Housing Stock Changes the Remodeling Conversation</h2>
+              <p>Zip code 19063 covers Media borough and the surrounding township, and the age spread of the housing here is unusual for suburban Philadelphia. According to the <a href="https://www.census.gov/quickfacts/fact/table/delawarecountypennsylvania/PST045223" rel="nofollow noopener" target="_blank">U.S. Census Bureau's American Community Survey</a>, a large share of homes in Delaware County were built before 1970, and Media's borough core skews even older than the county average, with a meaningful percentage of homes constructed before World War II.</p>
+              <p>Older homes come with real advantages. Solid hardwood floors under decades of carpet, plaster walls with actual mass and sound-dampening, and lot sizes that newer construction rarely matches. They also come with constraints that a remodeling contractor has to plan around from day one:</p>
+              <ul class="post-list">
+                <li><strong>Knob-and-tube or early cloth-wrapped wiring</strong> in homes built before roughly 1950, which almost always needs a partial or full rewire before a kitchen or bathroom addition can be permitted.</li>
+                <li><strong>Plaster-and-lath walls</strong> instead of drywall, which change how you run new electrical, plumbing, or HVAC lines without tearing out an entire room.</li>
+                <li><strong>Undersized or non-existent closets</strong>, a hallmark of pre-1940s construction, which is one of the top reasons Media homeowners come to us for whole-room reconfigurations rather than simple cosmetic updates.</li>
+                <li><strong>Fieldstone or rubble foundations</strong> on the oldest homes near the borough center, which require a different waterproofing and underpinning approach than the poured-concrete foundations common in homes built after 1960.</li>
+                <li><strong>Narrow lots with tight setbacks</strong>, especially on the twin and rowhouse blocks near the courthouse and train station, which limit how far you can build out and push more projects toward second-story additions or interior reconfiguration instead.</li>
+              </ul>
+              <p>None of this is a reason to avoid renovating an older Media home. It's a reason to work with a contractor who has actually opened up plaster walls in this specific housing stock and knows what's usually behind them before the sledgehammer comes out.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What Media Homeowners Are Actually Remodeling in 2026</h2>
+              <p>Based on the projects we've quoted, scoped, and built across Media and the immediate surrounding neighborhoods over the past two years, five categories account for most of the calls we get.</p>
+
+              <h3>1. Kitchen Remodels</h3>
+              <p>Kitchens remain the single most requested project in Media, and for a specific reason tied to the housing stock: most kitchens in homes built before 1960 were designed as small, closed-off work rooms, not the open, social hub that current buyers and current homeowners want. A huge share of our kitchen work in Media isn't a simple cabinet-and-countertop swap. It's a partial reconfiguration that removes a non-structural wall between the kitchen and dining room, relocates plumbing to accommodate an island, and upgrades the electrical panel to handle modern appliance loads.</p>
+              <p>Typical kitchen remodel costs in the Media area range from around $25,000 for a mid-range refresh (new cabinets, countertops, appliances, flooring, same footprint) up to $70,000-plus for a full reconfiguration with a wall removal, new plumbing runs, and custom cabinetry. Homes closer to the historic borough core tend to land toward the higher end because of the wiring and plaster considerations above.</p>
+
+              <h3>2. Bathroom Renovations</h3>
+              <p>Second only to kitchens, bathroom renovations are common across every part of Media, but the driver differs by house age. In older homes, it's frequently about function: converting an awkward, undersized 1930s bathroom layout into something that actually fits a modern vanity and a walk-in shower. In homes from the 1970s-90s expansion around the township, it's more often a style update: swapping out builder-grade fixtures, retiling, and modernizing lighting.</p>
+              <p>A full bathroom remodel in the Media area typically runs $15,000 to $35,000 depending on the scope, whether you're keeping the existing footprint and plumbing locations or moving fixtures, which adds plumbing labor cost quickly.</p>
+
+              <h3>3. Basement Finishing and Waterproofing</h3>
+              <p>Media sits in a section of Delaware County with clay-heavy soil and, in the older parts of the borough, foundations that were never built with modern waterproofing membranes. Basement finishing is almost always a two-part conversation here: first, deal with moisture (French drain, sump pump, exterior grading correction, or foundation crack sealing), and only then finish the space. Skipping the waterproofing step is the single most common regret we hear about from homeowners who tried a basement project with a different contractor years before calling us.</p>
+              <p>Basement finishing projects in Media run anywhere from $20,000 for a straightforward rec room to $50,000-plus when waterproofing, egress window additions (required by code for any basement bedroom), and a full bathroom are part of the scope.</p>
+
+              <h3>4. Additions: Second-Story and Rear</h3>
+              <p>Because many Media lots are narrow, especially in the borough itself, homeowners who need more square footage often can't simply build outward. Second-story additions over an existing footprint, or modest rear additions on township lots with more yard depth, are common ways to add a primary suite, a home office, or a larger kitchen without changing the home's relationship to the street. These are structurally involved projects. They require an engineer's review of the existing foundation and framing before any permit gets pulled, which is one of the first things we check on an older Media home before quoting an addition.</p>
+
+              <h3>5. Exterior and Curb Appeal Projects</h3>
+              <p>Front porch rebuilds, new siding, window replacement, and roofline repairs come up constantly in the historic parts of Media, partly because some blocks fall under design guidelines tied to the borough's historic character, and partly because homeowners here genuinely care about how their street looks. If your home is within Media's historic district boundaries, exterior changes (window style, siding material, front door replacement) may need to go through an additional review step with the borough before work starts. We flag this for every exterior project we scope in the historic core so nobody gets a stop-work surprise mid-project.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>A Neighborhood-Level Look</h2>
+              <p>Media isn't one uniform market, and the remodeling conversation shifts depending on which part of town you're in.</p>
+              <p><strong>The historic borough core (State Street, Jasper Street, Orange Street, Front Street area).</strong> This is where the Victorian twins and turn-of-the-century single-family homes concentrate. Projects here lean toward interior reconfiguration, kitchen and bathroom modernization, and exterior work that respects the original architectural character. Expect wiring and plaster considerations on nearly every project.</p>
+              <p><strong>The residential grid west of the borough (Baltimore Pike corridor and the streets feeding into it).</strong> A mix of early-1900s homes and mid-century construction. We see a healthy split here between kitchen/bath remodels and basement finishing, since lots tend to be a bit deeper than in the borough core.</p>
+              <p><strong>The township neighborhoods bordering Media (Middletown Township and Upper Providence sections that share the 19063 zip).</strong> Homes here skew newer, generally 1960s through 1990s construction, with larger lots. This is where we do most of our rear-addition and larger-footprint kitchen expansion work, since setback restrictions are less of a constraint.</p>
+              <p>Wherever your home sits within 19063, the underlying principle is the same: a contractor who's actually worked on your specific block, or one very much like it, is going to give you a far more accurate scope and budget than a general estimate pulled from a national average.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Planning a Remodel in Media: What to Think About First</h2>
+              <h3>1. Get a permit-aware scope from the start</h3>
+              <p>Media Borough and Delaware County both require permits for structural work, most electrical and plumbing changes, and any addition. Trying to shortcut this, or working with a contractor who quietly skips permitting, creates real problems at resale, since unpermitted work has to be disclosed and can hold up a sale. Any reputable contractor working in Media should be building the permit timeline into your project schedule from the first conversation, not treating it as an afterthought.</p>
+              <h3>2. Budget for the "surprise" that older homes almost always have</h3>
+              <p>If your home was built before 1960, budget a contingency of roughly 10-15% above your quoted project cost. This isn't a scare tactic. It's a reflection of how often opening a wall in an older Media home reveals something (outdated wiring, undersized joists, hidden water damage) that wasn't visible during the initial walkthrough. A contractor who tells you there will be zero surprises on a 90-year-old house either hasn't done many of them or isn't being straight with you.</p>
+              <h3>3. Match the renovation to the house, not to a trend</h3>
+              <p>Open-concept kitchens are popular, and they can work beautifully in a Media home, but removing a load-bearing wall in a stone-foundation Victorian is a different engineering problem than doing it in a 1985 colonial. The right approach is usually to find the version of the trend that respects the home's structure and character, rather than forcing a layout the house was never built to support.</p>
+              <h3>4. Think about the whole project timeline, not just construction</h3>
+              <p>Between design, permitting, material lead times (custom cabinetry in particular can run 8-12 weeks), and the actual build, a full kitchen remodel in Media typically runs 8-14 weeks from signed contract to completion, and additions can run considerably longer. Homeowners who plan around this realistic timeline, rather than an optimistic one, have a much smoother experience.</p>
+              <h3>5. Ask about local project experience, specifically</h3>
+              <p>"Have you worked in Media before?" is a fair and useful question to ask any contractor. The answer tells you whether they understand the borough's permitting process, know what tends to be behind the walls of a home your area's age, and have a track record with the historic district review process if your home falls inside it.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Material Choices That Make Sense for Media's Climate and Age of Home</h2>
+              <p>Delaware County sits in a humid continental climate with cold, wet winters and humid summers, and that reality should shape material decisions just as much as style preferences. A few things we consistently recommend when scoping projects in Media:</p>
+              <ul class="post-list">
+                <li><strong>Engineered hardwood or solid hardwood with proper acclimation</strong> for kitchens and living spaces, rather than laminate, given the seasonal humidity swings that cause cheaper flooring to gap or warp within a couple of years.</li>
+                <li><strong>Fiber-cement or properly maintained wood siding</strong> on exterior projects, since vinyl siding often looks visually out of place on the borough's older Victorian and colonial homes and can run afoul of historic district guidelines if your address falls inside the review boundary.</li>
+                <li><strong>Closed-cell spray foam or rigid foam insulation</strong> on basement finishing projects, which performs far better against Media's clay soil moisture than fiberglass batts against an uninsulated foundation wall.</li>
+                <li><strong>Quartz or granite countertops</strong> over cheaper laminate alternatives in kitchen remodels, both for durability and because they tend to hold resale value better in a market where buyers are comparing your home against other renovated Delaware County properties.</li>
+                <li><strong>Copper or PEX plumbing</strong> rather than patching old galvanized pipe, particularly in pre-1960 homes where galvanized supply lines are frequently at or near the end of their service life anyway. If we're already opening a wall for a kitchen or bath remodel, it's almost always worth replacing the adjacent run rather than leaving old pipe behind new drywall.</li>
+              </ul>
+              <p>None of these choices are about over-building a project. They're about not paying twice: once for the renovation, and again a few years later to fix a material that was never right for this climate or this style of home in the first place.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Financing and Timing Your Remodel</h2>
+              <p>Most Media homeowners fund a remodel through some combination of cash savings, a home equity line of credit (HELOC), a cash-out refinance, or, for larger addition projects, a construction loan. Which option makes sense depends on your project size, your current mortgage rate, and how much equity you've built, a conversation worth having with a lender or financial advisor before you finalize project scope, since the answer can shift what's realistic for phase one versus a future phase two.</p>
+              <p>Timing matters too. Late fall and winter are typically the best months to book interior projects like kitchens, bathrooms, and basements in the Media area, since demand, and contractor availability, is lower than in spring and summer. Exterior projects (siding, roofing, additions with foundation work) are more weather-dependent and are usually best started in spring or early fall. If you're hoping to have a kitchen finished before the holidays, or an addition framed before winter, working backward from that date with your contractor early is the single best way to avoid a rushed, compressed schedule later.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>A Practical Checklist for Choosing a Remodeling Contractor in Media</h2>
+              <p>Whoever you hire, a few questions tend to separate a solid, accountable contractor from one who'll leave you managing the project yourself:</p>
+              <ol class="post-list">
+                <li><strong>Are they licensed as a PA Home Improvement Contractor and insured?</strong> Pennsylvania requires HIC registration for any contractor doing home improvement work over $5,000. Ask for the registration number and verify it directly with the PA Office of Attorney General rather than taking it on faith.</li>
+                <li><strong>Can they show you completed work in Media or a comparable Delaware County town?</strong> Photos from a generic portfolio are less useful than a contractor who can point to a specific finished basement or kitchen a few blocks from your own house.</li>
+                <li><strong>Do they talk about permits upfront, unprompted?</strong> If permitting only comes up when you ask about it, that's worth noting.</li>
+                <li><strong>Is the estimate itemized?</strong> A single lump-sum number with no breakdown makes it hard to know what you're actually paying for, and even harder to compare against a second quote.</li>
+                <li><strong>Who is actually on site day to day?</strong> On a multi-week project, you want to know whether the person managing your job is the same person you met during the estimate, or a different site supervisor you haven't spoken with yet.</li>
+                <li><strong>What's the payment schedule?</strong> A legitimate contractor ties payments to project milestones, not a large upfront deposit with little accountability tied to it.</li>
+              </ol>
+              <p>A short conversation covering these six points, before any contract is signed, tends to surface exactly the kind of contractor you're dealing with.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What ProBrothers Builds in Media</h2>
+              <p>We're a Delaware County general contractor based in Media, and our project mix reflects everything above: kitchen remodels, bathroom renovations, basement finishing and waterproofing, additions, custom carpentry and trim work, and full home renovations across the borough and the surrounding townships. Because we're local, our crews have opened up plaster walls on State Street, poured footings for additions on the township side of the zip code, and dealt with more than a few fieldstone foundations that surprised a homeowner who thought they were getting a straightforward basement finish.</p>
+              <p>If you're planning construction work anywhere in Media, from a single-room update to a full addition, our <a href="/services/construction-services/">construction services page</a> covers the full scope of what we build, including new construction, structural work, and larger residential projects. It's the right starting point if you already know you're looking at something beyond a cosmetic refresh.</p>
+              <p>For homeowners specifically focused on a kitchen or bathroom update, our <a href="/services/kitchen/">kitchen remodeling</a> and general <a href="/services/remodeling/">remodeling services</a> pages break down those project types in more detail. And if your project is really about reclaiming underused space, our <a href="/services/additions/">additions page</a> walks through how we approach second-story and rear additions on Delaware County homes.</p>
+              <p>You can also see examples of completed work, including projects in and around Media, on our <a href="/projects/">projects gallery</a>, and read more about our approach and licensing on the <a href="/about/">about page</a>. We're a PA Home Improvement Contractor (PA HIC# 195591), fully insured, and based right here in Media rather than commuting in from outside the county.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>How much does a home remodel cost in Media, PA?</h3>
+                  <p>It depends heavily on scope. A cosmetic kitchen refresh might run $25,000-$35,000, while a full reconfiguration with wall removal and new plumbing can reach $70,000 or more. Bathroom remodels typically fall between $15,000 and $35,000, and basement finishing ranges from $20,000 to $50,000-plus depending on waterproofing needs. The best way to get an accurate number is a walkthrough with a contractor who's worked in Media's housing stock before.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Do I need a permit to remodel my kitchen in Media?</h3>
+                  <p>In most cases, yes, especially if the project involves electrical, plumbing, or structural changes like removing a wall. Cosmetic-only updates (new countertops, cabinet fronts, paint) generally don't require a permit, but anything touching the home's systems or structure does. Media Borough and Delaware County both enforce this, and unpermitted work can create real problems at resale.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Is my home in Media's historic district, and does that affect remodeling?</h3>
+                  <p>If your home is within the borough's historic district boundaries, exterior changes (siding, windows, front door style, some roofline work) may require an additional design review step before permits are issued. This mainly affects the borough core rather than the surrounding township. A local contractor should be able to tell you quickly whether your address falls inside the review area.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How long does a typical remodel take in Media?</h3>
+                  <p>A kitchen remodel typically runs 8-14 weeks from signed contract to completion, factoring in design, permitting, and material lead times. Custom cabinetry alone can take 8-12 weeks to arrive. Additions and full home renovations run longer. Bathroom remodels are usually faster, often 3-6 weeks depending on scope.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What should I budget extra for on an older Media home?</h3>
+                  <p>Plan for a contingency of roughly 10-15% above the quoted project cost. Homes built before 1960 frequently reveal outdated wiring, plaster wall complications, or foundation issues once the walls are opened, and a realistic budget accounts for that rather than assuming a perfectly clean project.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Should I choose a general remodel or a targeted room update?</h3>
+                  <p>It depends on your goals and timeline. If your kitchen and bathrooms were both updated decades ago and your layout genuinely doesn't work for how you live now, a broader renovation can be more cost-efficient than tackling rooms one at a time over several years, since you avoid repeated mobilization costs. If one room is the clear pain point, a targeted remodel is the more practical starting move. A contractor can walk through both paths with you during an initial consultation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>A Note From the Field</h2>
+              <p>Every Media home has its own story once you get past the drywall: an addition that was never quite finished right, a kitchen wall that turns out to be load-bearing when the original blueprints said otherwise, a basement that's been "about to be finished" for a decade because nobody wanted to deal with the water first. That's normal for a town with this much history in its housing stock, and it's exactly the kind of project we're set up to handle, because we're not learning Media's quirks on your dime. We've already learned most of them on the block down the street.</p>
+              <p>If you're weighing a remodel in Media, Delaware County, or anywhere in the surrounding Main Line area, reach out through our <a href="/contact/">contact page</a> for a walkthrough and a real, scoped estimate rather than a national-average guess. We'll tell you honestly what we find, what it's likely to cost, and what to plan around, before any wall comes down.</p>
+              <p><em>Daniil Akulov is the Founder and Master Carpenter at ProBrothers Construction, a general contractor based in Media, PA, serving Delaware County and the Main Line for more than 15 years across 135-plus completed projects.</em></p>
+            </div>
+
+            <div class="post-body__section post-cta reveal">
+              <h2>Ready to Start Your Remodel in Media?</h2>
+              <p>ProBrothers serves Media, Newtown Square, Haverford, Springfield, West Chester, and surrounding Delaware County communities. Free quote within one business day. 5.0 rating &middot; 15+ years &middot; 135+ projects.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Blog sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Most Viewed Posts</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              {mostViewed.map(mv => (
+                <li class="post-sidebar__viewed-item">
+                  <a href={`/blog/${mv.slug}/`}>
+                    <span class="post-sidebar__viewed-title">{mv.title}</span>
+                    <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Ready to start your remodeling project? Contact us for a free, no-obligation quote today.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+          {relatedPosts.map((post, i) => (
+            <article class="related-card reveal" style={`--d:${(i * 0.1).toFixed(2)}s`}>
+              <a href={`/blog/${post.slug}/`} class="related-card__media" tabindex="-1" aria-hidden="true">
+                <img src={post.image} alt={post.imageAlt} width={post.imgW} height={post.imgH} loading="lazy" />
+              </a>
+              <div class="related-card__body">
+                <time datetime={post.dateIso} class="related-card__date">{post.date}</time>
+                <h3 class="related-card__title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+                <a href={`/blog/${post.slug}/`} class="related-card__link">Read More <span aria-hidden="true">&#8594;</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.post-section { padding-top: 3rem; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.post-article { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.post-hero { position: relative; }
+.post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
+.post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
+.post-hero__date { font-weight: 700; }
+.post-hero__sep { color: var(--muted); }
+.post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
+.post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
+.post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
+.post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
+.post-body { padding: 2rem 2.5rem 2.5rem; }
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .75rem; }
+.post-lead { font-size: 1.05rem; font-weight: 600; color: var(--dark); border-left: 4px solid var(--brand-orange, #ff7426); padding-left: 1rem; margin-bottom: 1.5rem; }
+.post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .55rem; }
+.post-list li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); padding-left: .2rem; }
+/* FAQ */
+.post-faq { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.post-faq__item { background: var(--gray-2, #fafafa); border-radius: var(--radius); padding: 1.4rem 1.6rem; border-left: 4px solid var(--accent); }
+.post-faq__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .6rem; }
+.post-faq__item p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin: 0; }
+/* CTA */
+.post-cta { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
+.post-cta h2 { border-bottom: none; }
+.post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
+.post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
+.post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
+.post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2, #f5f5f5); }
+.post-sidebar__viewed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.post-sidebar__viewed-item a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; transition: color .2s; }
+.post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
+.post-sidebar__viewed-title { font-size: .9rem; font-weight: 700; color: var(--dark); line-height: 1.4; }
+.post-sidebar__viewed-count { font-size: .78rem; color: var(--muted); }
+.post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-sidebar__cta-widget p { font-size: .9rem; color: var(--text, #444); margin-bottom: 1rem; }
+/* Related posts */
+.related-posts { padding: 3rem 0; border-top: 1px solid var(--gray-2, #eee); }
+.related-posts__heading { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin: 0 0 1.5rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.related-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; }
+.related-card__media { display: block; overflow: hidden; height: 180px; }
+.related-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.related-card:hover .related-card__media img { transform: scale(1.04); }
+.related-card__body { padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.related-card__date { font-size: .8rem; color: var(--muted); }
+.related-card__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0; line-height: 1.4; }
+.related-card__title a { text-decoration: none; color: inherit; }
+.related-card__title a:hover { color: var(--accent); }
+.related-card__link { font-size: .85rem; font-weight: 700; color: var(--accent); text-decoration: none; margin-top: auto; }
+.related-card__link:hover { text-decoration: underline; }
+/* TOC */
+.post-toc { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); }
+.post-toc__title { font-size: 1rem; font-weight: 900; color: var(--dark); margin: 0 0 .8rem; }
+.post-toc__list { padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* aeo-answer */
+.aeo-answer { background: var(--gray-2, #f0f0ff); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.4rem; margin: 0 2.5rem 0; font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .post-body { padding: 1.5rem; }
+  .aeo-answer { margin: 0 1.5rem; }
+}
+</style>

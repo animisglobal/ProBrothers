@@ -339,32 +339,62 @@ const contactSchema = {
       var success = document.getElementById('formSuccess');
       if (!form) return;
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var btn = form.querySelector('.contact-form__submit');
-        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-
-        fetch(form.action, {
+      // Web3Forms intermittently drops the CORS header on a fraction of
+      // requests (observed 2026-08-28 — some submissions from a real browser
+      // fail with "No 'Access-Control-Allow-Origin' header" while an
+      // identical retry a few seconds later succeeds; root cause is on
+      // Web3Forms' edge, not this form). Retry silently before telling the
+      // visitor it failed, so a transient blip doesn't lose a lead.
+      function submitWithRetry(formData, attemptsLeft) {
+        return fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
+          body: formData,
           headers: { Accept: 'application/json' }
         })
           .then(function (r) { return r.json().catch(function () { return { success: r.ok }; }); })
           .then(function (data) {
-            if (data && data.success) {
-              if (typeof window.gtag === 'function') {
-                window.gtag('event', 'generate_lead', {
-                  event_category: 'Contact',
-                  event_label: 'Web3Forms'
-                });
-              }
-              if (success) success.hidden = false;
-              form.reset();
-              if (btn) { btn.textContent = 'Submitted'; }
-            } else {
-              if (btn) { btn.disabled = false; btn.textContent = 'Submit'; }
-              alert('Sorry, your message could not be sent. Please call (484) 745-4097.');
+            if (data && data.success) return data;
+            if (attemptsLeft > 1) {
+              return new Promise(function (resolve) { setTimeout(resolve, 900); })
+                .then(function () { return submitWithRetry(formData, attemptsLeft - 1); });
             }
+            throw new Error('web3forms-failed');
+          })
+          .catch(function (err) {
+            if (err && err.message === 'web3forms-failed') throw err;
+            if (attemptsLeft > 1) {
+              return new Promise(function (resolve) { setTimeout(resolve, 900); })
+                .then(function () { return submitWithRetry(formData, attemptsLeft - 1); });
+            }
+            throw err;
+          });
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // This form also carries the shared ".contact-form" class that
+        // public/script.js's global initContactForm() binds a SECOND submit
+        // handler to (validation + its own fetch to Web3Forms). Both
+        // listeners fired on every real submit — doubling every quote
+        // request sent to Web3Forms and racing to update the same success/
+        // error UI. stopImmediatePropagation() keeps this page on ONE
+        // submission path (this handler, which also has GA4 tracking +
+        // retry) instead of two competing ones.
+        e.stopImmediatePropagation();
+        var btn = form.querySelector('.contact-form__submit');
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+        submitWithRetry(new FormData(form), 3)
+          .then(function (data) {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'generate_lead', {
+                event_category: 'Contact',
+                event_label: 'Web3Forms'
+              });
+            }
+            if (success) success.hidden = false;
+            form.reset();
+            if (btn) { btn.textContent = 'Submitted'; }
           })
           .catch(function () {
             if (btn) { btn.disabled = false; btn.textContent = 'Submit'; }

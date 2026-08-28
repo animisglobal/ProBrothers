@@ -361,19 +361,42 @@
     }
 
     var endpoint = form.getAttribute("action") || "https://api.web3forms.com/submit";
-    fetch(endpoint, {
-      method: "POST",
-      headers: { Accept: "application/json" },
-      body: new FormData(form)
-    })
-      .then(function (res) {
-        return res.json().then(function (d) { return res.ok && d.success; })
-                         .catch(function () { return res.ok; });
+
+    // Web3Forms intermittently drops the CORS header on a fraction of
+    // requests (observed 2026-08-28 — a real-browser submission can fail
+    // with a CORS error while an identical retry seconds later succeeds;
+    // the fault is on Web3Forms' edge, not this form). Retry a couple of
+    // times before giving up, so a transient blip doesn't lose a lead —
+    // this matters more here than on the main form because the popup
+    // always shows success to the visitor either way (see below).
+    function submitWithRetry(formData, attemptsLeft) {
+      return fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData
       })
+        .then(function (res) {
+          return res.json().then(function (d) { return res.ok && d.success; })
+                           .catch(function () { return res.ok; });
+        })
+        .then(function (ok) {
+          if (ok || attemptsLeft <= 1) return ok;
+          return new Promise(function (resolve) { setTimeout(resolve, 900); })
+            .then(function () { return submitWithRetry(formData, attemptsLeft - 1); });
+        })
+        .catch(function () {
+          if (attemptsLeft <= 1) return false;
+          return new Promise(function (resolve) { setTimeout(resolve, 900); })
+            .then(function () { return submitWithRetry(formData, attemptsLeft - 1); });
+        });
+    }
+
+    submitWithRetry(new FormData(form), 3)
       .then(function (ok) {
         // Lead has been delivered to Web3Forms (same inbox as quote requests).
         // Show success regardless so the visitor always gets confirmation; a
-        // hard network failure still swaps to success to avoid a dead-end UX.
+        // hard network failure (after retries) still swaps to success to
+        // avoid a dead-end UX.
         if (typeof window.gtag === "function") {
           window.gtag("event", "generate_lead", {
             event_category: "Contact",

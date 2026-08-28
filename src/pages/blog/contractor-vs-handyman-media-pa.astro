@@ -1,0 +1,506 @@
+---
+/**
+ * Contractor vs. Handyman in Media, PA: Which One Do You Need?
+ * Author: Daniil Akulov | datePublished: 2026-08-28
+ * Source: reports/probrothers/contractor-vs-handyman-media-pa_2026-08-26.md
+ * P3-07 seasonal content fix — registry/probrothers/probrothers_competitor_keyword_fixes.md
+ * Link check: all internal links in the draft (services/kitchen, services/bathroom,
+ * services/basement, blog/home-remodeling-guide-2026, contact, about) verified
+ * against live routes — no fixes needed.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+
+const relatedPosts = [
+  {
+    slug: 'guide-to-hiring-remodeling-contractors',
+    title: 'The Complete Guide to Hiring Remodeling Contractors in 2026',
+    date: 'October 17, 2025',
+    dateIso: '2025-10-17',
+    image: '/assets/img/blog/18.webp',
+    imageAlt: 'The Complete Guide to Hiring Remodeling Contractors in 2026',
+    imgW: 1024,
+    imgH: 536,
+  },
+  {
+    slug: 'top-general-contractors-in-pennsylvania',
+    title: 'Top General Contractors in Pennsylvania & What to Look for Before You Hire in 2026',
+    date: 'August 22, 2025',
+    dateIso: '2025-08-22',
+    image: '/assets/img/blog/Untitled-design-5-1024x768.webp',
+    imageAlt: 'Top General Contractors in Pennsylvania',
+    imgW: 1024,
+    imgH: 768,
+  },
+];
+
+const mostViewed = [
+  { title: 'Kitchen Cabinets Cost in Media, PA (2026 Complete Pricing Guide)', slug: 'kitchen-cabinets-cost', views: 582 },
+  { title: 'The Complete Guide to Hiring Remodeling Contractors in 2026', slug: 'guide-to-hiring-remodeling-contractors', views: 437 },
+  { title: 'Why ProBrothers Is the Top Choice for Custom Home Remodeling', slug: 'why-choose-probrothers-for-home-remodeling', views: 435 },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://probrothers.com/blog/contractor-vs-handyman-media-pa/",
+      "headline": "Contractor vs. Handyman in Media, PA: Which One Do You Need?",
+      "url": "https://probrothers.com/blog/contractor-vs-handyman-media-pa/",
+      "datePublished": "2026-08-28",
+      "dateModified": "2026-08-28",
+      "author": { "@type": "Person", "name": "Daniil Akulov", "url": "https://probrothers.com/about/#daniil-akulov", "image": "https://probrothers.com/assets/img/team/Daniel-390x260.webp" },
+      "publisher": {
+        "@id": "https://probrothers.com/#business",
+        "@type": "Organization",
+        "name": "ProBrothers Construction",
+        "url": "https://probrothers.com/",
+        "logo": { "@type": "ImageObject", "url": "https://probrothers.com/assets/img/logo.png" }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://probrothers.com/assets/img/blog/contractor-vs-handyman-media-pa-hero.webp",
+        "width": 1200, "height": 675
+      },
+      "description": "Not sure whether to hire a handyman or a licensed general contractor in Media, PA? Learn the legal, cost, and scope differences under PA's Home Improvement Consumer Protection Act before you sign anything.",
+      "mainEntityOfPage": { "@id": "https://probrothers.com/blog/contractor-vs-handyman-media-pa/" },
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://probrothers.com/blog/" },
+      "about": { "@type": "Service", "name": "Home Remodeling", "provider": { "@id": "https://probrothers.com/#business", "@type": "Organization", "name": "ProBrothers Construction" } }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://probrothers.com/blog/contractor-vs-handyman-media-pa/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://probrothers.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://probrothers.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Contractor vs. Handyman in Media, PA: Which One Do You Need?", "item": "https://probrothers.com/blog/contractor-vs-handyman-media-pa/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I legally need a licensed contractor for a small home repair in Pennsylvania?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. If the work is a small, self-contained repair and the total amount you pay that person or business in a calendar year stays under $5,000, HICPA registration isn't legally required of them. Once that threshold is crossed, or once the work requires a building permit, you're in general contractor territory." } },
+        { "@type": "Question", "name": "How do I check if a contractor or handyman is actually registered in Pennsylvania?", "acceptedAnswer": { "@type": "Answer", "text": "Use the PA Attorney General's Home Improvement Contractor registry and search by business name or HIC number. This free public tool shows current registration status and is the fastest way to verify before signing a contract." } },
+        { "@type": "Question", "name": "Can a handyman legally do electrical or plumbing work in Delaware County?", "acceptedAnswer": { "@type": "Answer", "text": "Generally, no, not beyond very minor fixes that don't require a permit, such as replacing a fixture on existing wiring. New circuits, panel work, gas lines, and most plumbing beyond simple fixture swaps typically require a licensed electrician or plumber." } },
+        { "@type": "Question", "name": "What happens if I hire an unlicensed person for work that required a permit?", "acceptedAnswer": { "@type": "Answer", "text": "You may have difficulty getting the work inspected and approved after the fact, you could be required to open up completed work for inspection, and unpermitted work can create problems at resale. It can also affect your homeowner's insurance coverage if a claim is later tied to unpermitted work." } },
+        { "@type": "Question", "name": "Is it cheaper to hire a handyman and just skip the permit for a small project?", "acceptedAnswer": { "@type": "Answer", "text": "It might look cheaper upfront, but skipping a required permit carries real risk: the work may not meet code, it can create liability if something fails, and it becomes a disclosure issue when you eventually sell the home." } },
+        { "@type": "Question", "name": "Who do I contact if I have a complaint about a home improvement contractor in PA?", "acceptedAnswer": { "@type": "Answer", "text": "Complaints related to HICPA violations can be filed with the PA Attorney General's Bureau of Consumer Protection. The Better Business Bureau is also a useful resource for reviewing a contractor's complaint history before hiring." } },
+        { "@type": "Question", "name": "Does ProBrothers handle both small repairs and full remodels?", "acceptedAnswer": { "@type": "Answer", "text": "ProBrothers Construction focuses on licensed, permit-scope remodeling work, including kitchen, bathroom, and basement renovations, custom cabinetry, and full-scale construction projects, rather than small standalone handyman repairs." } }
+      ]
+    }
+  ]
+};
+---
+<Layout
+  title="Contractor vs. Handyman in Media, PA: Which One Do You Need?"
+  description="Not sure whether to hire a handyman or a licensed general contractor in Media, PA? Learn the legal, cost, and scope differences under PA's Home Improvement Consumer Protection Act before you sign anything."
+  canonical="https://probrothers.com/blog/contractor-vs-handyman-media-pa/"
+  ogTitle="Contractor vs. Handyman in Media, PA: Which One Do You Need?"
+  ogDescription="The legal, cost, and scope differences between a handyman and a licensed general contractor in Media, PA under PA's Home Improvement Consumer Protection Act."
+  ogUrl="https://probrothers.com/blog/contractor-vs-handyman-media-pa/"
+  ogImage="https://probrothers.com/assets/img/blog/contractor-vs-handyman-media-pa-hero.webp"
+  twitterTitle="Contractor vs. Handyman in Media, PA: Which One Do You Need?"
+  twitterDescription="The legal, cost, and scope differences between a handyman and a licensed general contractor in Media, PA."
+  twitterImage="https://probrothers.com/assets/img/blog/contractor-vs-handyman-media-pa-hero.webp"
+  preloadHero={false}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/img/blog/contractor-vs-handyman-media-pa-hero.webp"
+          imagesizes="(max-width:1024px) 100vw, 780px" fetchpriority="high" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="page-banner" aria-labelledby="banner-heading">
+    <img class="page-banner__bg"
+         src="/assets/img/blog/contractor-vs-handyman-media-pa-hero.webp"
+         sizes="100vw" alt="A licensed contractor reviewing plans on a Media, PA jobsite" fetchpriority="high" width="1200" height="675" />
+    <div class="page-banner__overlay" aria-hidden="true"></div>
+    <canvas class="page-banner__particles" id="bannerParticles" aria-hidden="true"></canvas>
+    <div class="container page-banner__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/blog/">Blog</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page">Contractor vs. Handyman in Media, PA</span></li>
+        </ol>
+      </nav>
+      <h1 class="page-banner__title" id="banner-heading">Contractor vs. Handyman in Media, PA: Which One Do You Need?</h1>
+      <p class="page-banner__sub">August 28, 2026 &mdash; Daniil Akulov, ProBrothers Construction</p>
+    </div>
+    <div class="page-banner__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" focusable="false">
+        <path d="M0,35 C360,70 1080,0 1440,45 L1440,70 L0,70 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__group">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+      <span class="marquee__group" aria-hidden="true">
+        <span>Trim</span><i>&#9670;</i><span>Cabinets</span><i>&#9670;</i><span>Remodeling</span><i>&#9670;</i>
+        <span>Additions</span><i>&#9670;</i><span>Construction</span><i>&#9670;</i><span>Windows &amp; Doors</span><i>&#9670;</i>
+      </span>
+    </div>
+  </div>
+
+  <section class="section post-section" aria-label="Blog post">
+    <div class="container">
+      <div class="post-layout">
+
+        <article class="post-article" itemscope itemtype="https://schema.org/BlogPosting">
+          <meta itemprop="datePublished" content="2026-08-28" />
+          <meta itemprop="dateModified" content="2026-08-28" />
+          <meta itemprop="author" content="Daniil Akulov" />
+
+          <div class="post-hero reveal">
+            <img src="/assets/img/blog/contractor-vs-handyman-media-pa-hero.webp"
+                 alt="A licensed contractor reviewing plans on a Media, PA jobsite"
+                 width="1200" height="675" fetchpriority="high" loading="eager"
+                 class="post-hero__img" itemprop="image" />
+            <div class="post-hero__meta">
+              <time datetime="2026-08-28" class="post-hero__date" itemprop="datePublished">August 28, 2026</time>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <ul class="post-hero__cats" aria-label="Categories">
+                <li><a href="/blog/?category=contractors">Contractors</a></li>
+                <li><span aria-hidden="true">,&nbsp;</span></li>
+                <li><a href="/blog/?category=renovation">Renovation</a></li>
+              </ul>
+              <span class="post-hero__sep" aria-hidden="true">&#124;</span>
+              <span class="post-hero__byline">By <a href="/about/#daniil-akulov" rel="author">Daniil Akulov</a> &mdash; Founder &amp; Master Carpenter</span>
+            </div>
+          </div>
+
+          <aside class="aeo-answer">
+            Hire a handyman for small, single-trade repairs under a few thousand dollars that don't require a permit. Hire a licensed general contractor when the project involves structural work, multiple trades, electrical or plumbing system changes, or anything that requires a building permit. In Pennsylvania, under the Home Improvement Consumer Protection Act (HICPA), most paid home improvement work over $5,000 in a calendar year requires registration as a Home Improvement Contractor, whether the person calls themselves a "handyman" or a "contractor."
+          </aside>
+
+          <div class="post-body" itemprop="articleBody">
+
+            <div class="post-toc reveal" id="postToc" aria-label="Table of contents">
+              <h3 class="post-toc__title">Table of Contents</h3>
+              <nav class="post-toc__nav" aria-label="Article sections">
+                <ol class="post-toc__list" id="tocList"></ol>
+              </nav>
+            </div>
+
+            <div class="post-body__section reveal">
+              <p class="post-lead">If you're standing in your kitchen wondering whether the guy who does odd jobs around the neighborhood can handle your cabinet refacing, or whether you actually need a full-blown general contractor for a bathroom remodel, you're asking the right question before you spend money instead of after. This decision affects your legal protection, your insurance coverage if something goes wrong, your ability to get a permit signed off, and ultimately how much the project costs you when you account for redone work. This guide breaks down the real differences, not the marketing versions, so you can make the call with confidence.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Handyman vs. Contractor: The Core Difference</h2>
+              <p>A handyman is a generalist who performs small, low-risk repair and maintenance tasks, typically working alone or with one helper, usually without needing to pull a permit or coordinate multiple trades. A general contractor is a licensed business (in Pennsylvania, registered under HICPA with a Home Improvement Contractor, or HIC, number) that manages larger projects, pulls permits, hires and supervises subcontractors across trades, and carries the insurance and legal accountability that come with larger-scope, higher-risk work.</p>
+              <p>The difference is not really about skill level in the abstract. Some handymen are excellent at what they do, and some unlicensed "contractors" are not. The difference is about scope, legal structure, insurance, and accountability. A handyman is built for speed and small jobs. A contractor is built for coordination, code compliance, and projects where multiple things have to go right at the same time.</p>
+              <p><strong>Extractable summary for quick reference:</strong></p>
+              <ul class="post-list">
+                <li>Handyman: single-trade, small-scope, no permit needed, lower cost, faster turnaround</li>
+                <li>General Contractor: multi-trade, structural or system-level work, permits required, licensed and insured for larger liability, project management included</li>
+              </ul>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>The Legal Line in Pennsylvania: HICPA and the $5,000 Threshold</h2>
+              <p>This is where a lot of Delaware County homeowners get surprised, because the legal requirement is not about the word "contractor" or "handyman" on someone's business card. It's about dollar volume and registration status.</p>
+              <p>Pennsylvania's Home Improvement Consumer Protection Act (73 P.S. § 517.1 et seq.), commonly called HICPA, requires anyone who performs home improvement work and receives more than $5,000 total in a calendar year from home improvement contracts to register as a Home Improvement Contractor with the PA Office of Attorney General. This applies regardless of whether the person calls themselves a handyman, a contractor, a builder, or anything else.</p>
+              <ul class="post-list">
+                <li><strong>The $5,000 threshold is cumulative per year, not per project.</strong> If a handyman does four separate $1,500 jobs for you over the year, that's $6,000 total, which crosses the threshold and technically requires HIC registration, even though no single job looked like "contractor-sized" work.</li>
+                <li><strong>New construction is generally exempt</strong> from HICPA in most circumstances, but nearly all remodeling, renovation, repair, and improvement work on an existing residential structure falls under it.</li>
+                <li><strong>Registration is not the same as a trade license.</strong> Pennsylvania does not have a statewide contractor licensing exam. HICPA registration is closer to a consumer-protection registry: it requires proof of insurance, a registration fee, and creates a public record you can search.</li>
+                <li><strong>Electrical and plumbing sub-trades have their own separate licensing requirements</strong> in many Delaware County municipalities, layered on top of HICPA.</li>
+              </ul>
+              <p>You can verify any contractor's HIC registration directly on the <a href="https://www.attorneygeneral.gov/protect-yourself/home-improvement-contractor-registration/" rel="nofollow noopener" target="_blank">PA Attorney General's Home Improvement Contractor registry</a> before signing anything. It takes about two minutes and it's the single most useful thing a homeowner can do before hiring anyone for a project over a few thousand dollars.</p>
+              <p>ProBrothers Construction is a fully licensed and insured Pennsylvania Home Improvement Contractor (PA HIC# 195591), founded by Daniil Akulov, a master carpenter with over 15 years of hands-on remodeling experience and 135+ completed projects across Media, PA and the surrounding Delaware County and Main Line communities.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What a Handyman Handles Well</h2>
+              <p>Handymen exist because not every home task needs a licensed contractor, a permit, or a multi-week project plan. For genuinely small jobs, hiring a handyman is often faster, cheaper, and perfectly appropriate. Typical handyman-appropriate work includes:</p>
+              <ul class="post-list">
+                <li>Patching and repainting drywall</li>
+                <li>Fixing a running toilet or a slow drain</li>
+                <li>Replacing a light fixture or ceiling fan (non-structural, existing wiring)</li>
+                <li>Hanging shelves, mirrors, or curtain rods</li>
+                <li>Minor deck board repair or replacement</li>
+                <li>Caulking, weatherstripping, and small exterior sealing jobs</li>
+                <li>Assembling furniture or fixtures</li>
+                <li>Replacing a door or a few interior doors</li>
+                <li>Small tile repair (a few cracked or loose tiles, not a full re-tile)</li>
+                <li>Gutter cleaning and minor gutter repair</li>
+                <li>Touch-up carpentry, trim repair, or small molding fixes</li>
+              </ul>
+              <p>The common thread across this list is that each task is self-contained, doesn't require coordination between trades, doesn't touch structural elements or whole-house systems, and generally falls under both the dollar threshold and the complexity threshold that would trigger a permit requirement. If your project fits this description, a good handyman is the right call.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>When You Need a Licensed General Contractor</h2>
+              <p>The moment a project crosses into structural changes, multiple interacting trades, or permit-required work, you're in general contractor territory, both practically and often legally. Signs that you need a licensed GC rather than a handyman include:</p>
+              <ul class="post-list">
+                <li><strong>The project requires a building permit.</strong> In Delaware County, this typically includes any structural wall removal or modification, additions, new electrical circuits or panel upgrades, new plumbing lines, roof structure changes, and most kitchen and bathroom remodels that involve moving fixtures or altering layouts.</li>
+                <li><strong>Multiple trades need to work in sequence.</strong> A kitchen remodel might need an electrician for new circuits, a plumber to relocate a sink line, a carpenter for cabinetry, and a tile setter, all coordinated so the drywall doesn't go up before the wiring is inspected.</li>
+                <li><strong>The work touches load-bearing structure.</strong> Removing or altering a wall between a kitchen and dining room is one of the most common places Delaware County homeowners get into trouble, because many homes in Media, Swarthmore, and the older sections of Springfield and Newtown Square were built between the 1920s and 1960s with balloon framing or older structural assumptions.</li>
+                <li><strong>You need warranty and legal accountability on a larger investment.</strong> A $30,000 basement remodel or a $60,000 kitchen renovation is not the kind of project where you want your only recourse, if something fails, to be a handshake and a phone number.</li>
+                <li><strong>The project involves gas lines, HVAC, or major electrical work.</strong> These sub-trades carry their own licensing requirements, and a general contractor's job includes verifying that any subcontractor performing this work is properly licensed for it.</li>
+              </ul>
+              <p>If your project involves a <a href="/services/kitchen/">kitchen remodel</a>, a <a href="/services/bathroom/">bathroom renovation</a>, or a <a href="/services/basement/">basement finishing project</a>, you're almost certainly in general contractor territory, not handyman territory.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Insurance and Liability: The Difference That Matters Most If Something Goes Wrong</h2>
+              <p>This is the part of the decision that homeowners underestimate until they actually need it. Insurance and liability coverage differ enormously between an unlicensed handyman and a properly registered general contractor, and the gap only matters the day something goes wrong.</p>
+              <p><strong>With an unlicensed or uninsured handyman:</strong></p>
+              <ul class="post-list">
+                <li>If they're injured on your property, your homeowner's insurance may be on the hook, or you personally could be liable, because there's no workers' compensation or general liability policy covering the worker.</li>
+                <li>If their work causes damage, there is often no insurance policy to file a claim against. Your only recourse may be a civil suit against an individual who may not have the assets to cover the damage.</li>
+                <li>There's no bonding or registration record to reference if a dispute arises.</li>
+              </ul>
+              <p><strong>With a licensed general contractor:</strong></p>
+              <ul class="post-list">
+                <li>General liability insurance covers property damage caused by the contractor's work.</li>
+                <li>Workers' compensation insurance (required for a business with employees) covers on-site injuries, protecting you from liability if a worker is hurt on your property.</li>
+                <li>HICPA registration creates a public record and a documented complaint process through the PA Attorney General's Office if a dispute arises.</li>
+                <li>A written contract, which HICPA requires for home improvement work over a certain value, spells out scope, price, and timeline.</li>
+              </ul>
+              <p>Before signing with anyone, it's worth asking directly for proof of both general liability insurance and, if they have employees, workers' compensation coverage. A legitimate contractor will produce this without hesitation. Reluctance or vague answers here is one of the clearest red flags there is.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Cost Comparison: Handyman vs. General Contractor in Delaware County</h2>
+              <table class="post-table">
+                <thead><tr><th>Factor</th><th>Handyman</th><th>Licensed General Contractor</th></tr></thead>
+                <tbody>
+                  <tr><td>Typical pricing model</td><td>Hourly ($40–$90/hr in the Delaware County market) or small flat-fee per job</td><td>Project-based estimate covering materials, labor, permits, and management</td></tr>
+                  <tr><td>Typical project size</td><td>$100–$3,000</td><td>$5,000 and up, often $20,000–$150,000+ for full remodels</td></tr>
+                  <tr><td>Insurance included</td><td>Often none, or minimal personal liability</td><td>General liability + workers' comp (if they have employees)</td></tr>
+                  <tr><td>Permit handling</td><td>Not equipped to pull permits for code-required work</td><td>Pulls and manages permits as part of the scope</td></tr>
+                  <tr><td>Subcontractor coordination</td><td>None, works alone or with one helper</td><td>Manages electricians, plumbers, and other licensed trades as needed</td></tr>
+                  <tr><td>Legal registration required</td><td>Only if annual paid work exceeds $5,000 (HICPA)</td><td>Registered HIC number required, verifiable publicly</td></tr>
+                  <tr><td>Best for</td><td>Single-trade repairs, small fixes, quick turnarounds</td><td>Multi-trade, structural, permit-required, or higher-budget projects</td></tr>
+                </tbody>
+              </table>
+              <p>The mistake to avoid is hiring a handyman for a project that's actually contractor-scope because the initial hourly rate looks cheaper. If a "handyman" quotes you a flat price to remodel a bathroom, including moving plumbing fixtures and retiling the whole room, you're not comparing apples to apples against a licensed contractor's quote for the same scope. When the work fails inspection, or the plumbing leaks behind a wall six months later, the cost of redoing it correctly through a licensed contractor usually exceeds what you would have paid to hire the right person from the start.</p>
+              <p>For general project cost ranges specific to this market, see our <a href="/blog/home-remodeling-guide-2026/">Delaware County home remodeling cost guide</a>, which breaks down budget, mid-range, and premium tiers by project type.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Red Flags That Signal Unlicensed or Unqualified Work</h2>
+              <p>Whether someone calls themselves a handyman or a contractor, a few warning signs consistently show up around unlicensed or under-qualified work in Delaware County. Watch for these before you sign anything or hand over a deposit:</p>
+              <ul class="post-list">
+                <li><strong>No HIC registration number offered, or reluctance to provide one.</strong> Every legitimate PA home improvement business operating above the $5,000 threshold should have one and should give it to you without hesitation.</li>
+                <li><strong>No written contract, or a contract missing basic terms.</strong> HICPA requires written contracts for covered work, including a specific starting and completion date, a description of the work, and total price.</li>
+                <li><strong>Requests for full payment upfront.</strong> Pennsylvania law limits deposits and requires payment schedules tied to project milestones for HICPA-covered contracts.</li>
+                <li><strong>No proof of insurance when asked directly.</strong> This is the single easiest thing to verify and the one people skip most often.</li>
+                <li><strong>Pulling permits "not necessary" for work that clearly requires one.</strong> Get a second opinion before proceeding.</li>
+                <li><strong>Vague or verbal-only pricing that changes significantly as the job progresses.</strong> Unlicensed operators are more likely to quote low to win the job and then add costs mid-project.</li>
+                <li><strong>No local references or verifiable past work in Delaware County townships.</strong> A contractor who's pulled permits in Media Borough, Springfield, or Newtown Square before will be able to speak specifically about that township's process.</li>
+              </ul>
+              <p>If you encounter any of these signs, it's worth pausing before moving forward. The <a href="https://www.bbb.org/" rel="nofollow noopener" target="_blank">Better Business Bureau</a> maintains complaint histories and accreditation status for contractors in the Philadelphia and Delaware County market.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>A Practical Decision Framework</h2>
+              <p>If you're still not sure which category your project falls into, run through these questions in order:</p>
+              <ol class="post-list">
+                <li><strong>Does the project require a building permit?</strong> If yes, you need a licensed general contractor.</li>
+                <li><strong>Will more than one trade need to be involved (electrical, plumbing, framing, tile, HVAC)?</strong> If yes, you need someone managing that coordination.</li>
+                <li><strong>Does the work touch a load-bearing wall, the home's structure, or a major system?</strong> If yes, general contractor, no exceptions, regardless of project size.</li>
+                <li><strong>Is the total cost likely to exceed a few thousand dollars, or will you be paying the same person more than $5,000 across the year?</strong> If yes, HICPA registration is legally required of whoever you hire.</li>
+                <li><strong>Is the task self-contained, single-trade, and something you could reasonably expect to be finished in a day or two?</strong> If yes to all of the above being "no," a qualified handyman is likely the right, more cost-effective choice.</li>
+              </ol>
+              <p>For anything that lands you in general contractor territory, it's worth talking to a licensed team early. You can <a href="/contact/">contact ProBrothers</a> to walk through your specific project.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>What This Looks Like on a Real Delaware County Project</h2>
+              <p>Consider a common scenario: a homeowner in a 1950s twin in Media wants to update a small, dated bathroom, replace the vanity, retile the shower, and add a new exhaust fan tied into the existing ductwork. On the surface, this can look like a "handyman job."</p>
+              <p>In practice, this project typically involves at least three separate trade considerations: plumbing, electrical (a new exhaust fan often needs a dedicated circuit or GFCI-protected wiring, especially in an older home), and general carpentry and tile work. If the exhaust fan needs new ductwork routed through an exterior wall, that can also touch the home's structure and may require a permit in Media Borough. A single handyman working alone, without the ability to bring in a licensed electrician and without permit authority, is not equipped to complete this correctly and legally.</p>
+              <p>A licensed general contractor approaching the same bathroom would scope the plumbing and electrical needs upfront, confirm whether Media Borough requires a permit, bring in properly licensed subcontractors, and manage the whole sequence so the tile work happens after rough plumbing and electrical are inspected and approved. The homeowner ends up with a bathroom that passes inspection and is backed by the contractor's insurance if something fails down the line.</p>
+            </div>
+
+            <div class="post-body__section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="post-faq">
+                <div class="post-faq__item reveal">
+                  <h3>Do I legally need a licensed contractor for a small home repair in Pennsylvania?</h3>
+                  <p>Not necessarily. If the work is a small, self-contained repair and the total amount you pay that person or business in a calendar year stays under $5,000, HICPA registration isn't legally required of them. Once that threshold is crossed, or once the work requires a building permit, you're in general contractor territory.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>How do I check if a contractor or handyman is actually registered in Pennsylvania?</h3>
+                  <p>Use the PA Attorney General's Home Improvement Contractor registry and search by business name or HIC number. This free public tool shows current registration status.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Can a handyman legally do electrical or plumbing work in Delaware County?</h3>
+                  <p>Generally, no, not beyond very minor fixes that don't require a permit, such as replacing a fixture on existing wiring. New circuits, panel work, gas lines, and most plumbing beyond simple fixture swaps typically require a licensed electrician or plumber.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>What happens if I hire an unlicensed person for work that required a permit?</h3>
+                  <p>You may have difficulty getting the work inspected and approved after the fact, you could be required to open up completed work for inspection, and unpermitted work can create problems at resale.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Is it cheaper to hire a handyman and just skip the permit for a small project?</h3>
+                  <p>It might look cheaper upfront, but skipping a required permit carries real risk: the work may not meet code, it can create liability if something fails, and it becomes a disclosure issue when you eventually sell the home.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Who do I contact if I have a complaint about a home improvement contractor in PA?</h3>
+                  <p>Complaints related to HICPA violations can be filed with the PA Attorney General's Bureau of Consumer Protection. The Better Business Bureau is also a useful resource.</p>
+                </div>
+                <div class="post-faq__item reveal">
+                  <h3>Does ProBrothers handle both small repairs and full remodels?</h3>
+                  <p>ProBrothers Construction focuses on licensed, permit-scope remodeling work, including kitchen, bathroom, and basement renovations, custom cabinetry, and full-scale construction projects, rather than small standalone handyman repairs.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-body__section post-body__section--from-our-work reveal" aria-label="From Our Work">
+              <h2>From the Workshop: The "Small Job" That Wasn't</h2>
+              <p>A bathroom exhaust fan replacement in a 1950s Media twin is a good example of how fast a "handyman job" turns into a permit-scope project once the ductwork and wiring get involved. We scope the electrical and structural pieces upfront on every job like this, precisely so a homeowner doesn't find out mid-project that what looked simple actually needed a permit and a licensed electrician.</p>
+            </div>
+
+            <div class="post-body__section post-cta reveal">
+              <h2>Not Sure Which One You Need?</h2>
+              <p>ProBrothers serves Media, Newtown Square, Haverford, Springfield, West Chester, and surrounding Delaware County communities. Free quote within one business day. 5.0 rating &middot; 15+ years &middot; 135+ projects.</p>
+              <div class="post-cta__actions">
+                <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+                <a href="https://probrothers.com/contact/" class="btn btn--dark btn--lg" data-magnetic>Request a Free Quote</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <aside class="post-sidebar" aria-label="Blog sidebar">
+          <div class="post-sidebar__widget reveal">
+            <h3 class="post-sidebar__title">Most Viewed Posts</h3>
+            <ul class="post-sidebar__viewed" role="list">
+              {mostViewed.map(mv => (
+                <li class="post-sidebar__viewed-item">
+                  <a href={`/blog/${mv.slug}/`}>
+                    <span class="post-sidebar__viewed-title">{mv.title}</span>
+                    <span class="post-sidebar__viewed-count" aria-label={`${mv.views} views`}>{mv.views} views</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="post-sidebar__widget post-sidebar__cta-widget reveal" style="--d:.2s">
+            <h3>Get a FREE Quote!</h3>
+            <p>Ready to start your remodeling project? Contact us for a free, no-obligation quote today.</p>
+            <a href="https://probrothers.com/contact/" class="btn btn--accent">Get a Free Quote</a>
+          </div>
+        </aside>
+      </div>
+
+      <section class="related-posts" aria-label="Related posts">
+        <h2 class="related-posts__heading">Related Posts</h2>
+        <div class="related-posts__grid">
+          {relatedPosts.map((post, i) => (
+            <article class="related-card reveal" style={`--d:${(i * 0.1).toFixed(2)}s`}>
+              <a href={`/blog/${post.slug}/`} class="related-card__media" tabindex="-1" aria-hidden="true">
+                <img src={post.image} alt={post.imageAlt} width={post.imgW} height={post.imgH} loading="lazy" />
+              </a>
+              <div class="related-card__body">
+                <time datetime={post.dateIso} class="related-card__date">{post.date}</time>
+                <h3 class="related-card__title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+                <a href={`/blog/${post.slug}/`} class="related-card__link">Read More <span aria-hidden="true">&#8594;</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-label="Contact us">
+    <div class="container cta__inner reveal">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Let's build something you'll love. Reach out for a free, no-obligation custom quote.</p>
+      <div class="cta__actions">
+        <a href="tel:4847454097" class="btn btn--accent btn--lg" data-magnetic>Call (484) 745-4097</a>
+        <a href="mailto:info@probrothers.com" class="btn btn--ghost btn--lg" data-magnetic>Email Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.post-section { padding-top: 3rem; }
+.post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.post-article { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.post-hero { position: relative; }
+.post-hero__img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 480px; }
+.post-hero__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; padding: 1rem 2rem; background: var(--gray-2, #f8f8f8); font-size: .82rem; color: var(--muted); border-bottom: 1px solid rgba(0,0,0,.06); }
+.post-hero__date { font-weight: 700; }
+.post-hero__sep { color: var(--muted); }
+.post-hero__cats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem; }
+.post-hero__cats li { display: flex; align-items: center; gap: .2rem; }
+.post-hero__cats a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .03em; transition: color .2s; }
+.post-hero__cats a:hover { color: var(--dark); }
+.post-hero__byline { font-size: .82rem; color: var(--muted); }
+.post-hero__byline a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.post-hero__byline a:hover { color: var(--dark); text-decoration: underline; }
+.post-body { padding: 2rem 2.5rem 2.5rem; }
+.post-body__section { margin-top: 2.2rem; }
+.post-body__section h2 { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 3px solid var(--accent); }
+.post-body__section h3 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin: 1.4rem 0 .5rem; }
+.post-body__section p { font-size: .97rem; line-height: 1.8; color: var(--text, #444); margin-bottom: .75rem; }
+.post-lead { font-size: 1.05rem; font-weight: 600; color: var(--dark); border-left: 4px solid var(--brand-orange, #ff7426); padding-left: 1rem; margin-bottom: 1.5rem; }
+.post-list { padding-left: 1.4rem; margin: .8rem 0 1rem; display: flex; flex-direction: column; gap: .55rem; }
+.post-list li { font-size: .95rem; line-height: 1.7; color: var(--text, #444); padding-left: .2rem; }
+.post-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .92rem; }
+.post-table th, .post-table td { border: 1px solid var(--gray-2, #e5e1d8); padding: .7rem .9rem; text-align: left; vertical-align: top; }
+.post-table th { background: var(--gray-2, #f8f8f8); font-weight: 800; color: var(--dark); }
+/* FAQ */
+.post-faq { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.post-faq__item { background: var(--gray-2, #fafafa); border-radius: var(--radius); padding: 1.4rem 1.6rem; border-left: 4px solid var(--accent); }
+.post-faq__item h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 .6rem; }
+.post-faq__item p { font-size: .93rem; line-height: 1.75; color: var(--text, #444); margin: 0; }
+/* CTA */
+.post-cta { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 2rem !important; margin-top: 2.5rem !important; border-top: 4px solid var(--accent); }
+.post-cta h2 { border-bottom: none; }
+.post-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+/* Sidebar */
+.post-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1.6rem; }
+.post-sidebar__widget { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.6rem; border-top: 4px solid var(--accent); }
+.post-sidebar__title { font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--dark); margin: 0 0 1.1rem; padding-bottom: .7rem; border-bottom: 2px solid var(--gray-2, #f5f5f5); }
+.post-sidebar__viewed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.post-sidebar__viewed-item a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; transition: color .2s; }
+.post-sidebar__viewed-item a:hover .post-sidebar__viewed-title { color: var(--accent); }
+.post-sidebar__viewed-title { font-size: .9rem; font-weight: 700; color: var(--dark); line-height: 1.4; }
+.post-sidebar__viewed-count { font-size: .78rem; color: var(--muted); }
+.post-sidebar__cta-widget h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin: 0 0 .6rem; }
+.post-sidebar__cta-widget p { font-size: .9rem; color: var(--text, #444); margin-bottom: 1rem; }
+/* Related posts */
+.related-posts { padding: 3rem 0; border-top: 1px solid var(--gray-2, #eee); }
+.related-posts__heading { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin: 0 0 1.5rem; }
+.related-posts__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.related-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; display: flex; flex-direction: column; }
+.related-card__media { display: block; overflow: hidden; height: 180px; }
+.related-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.related-card:hover .related-card__media img { transform: scale(1.04); }
+.related-card__body { padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.related-card__date { font-size: .8rem; color: var(--muted); }
+.related-card__title { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0; line-height: 1.4; }
+.related-card__title a { text-decoration: none; color: inherit; }
+.related-card__title a:hover { color: var(--accent); }
+.related-card__link { font-size: .85rem; font-weight: 700; color: var(--accent); text-decoration: none; margin-top: auto; }
+.related-card__link:hover { text-decoration: underline; }
+/* TOC */
+.post-toc { background: var(--gray-2, #f8f8f8); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); }
+.post-toc__title { font-size: 1rem; font-weight: 900; color: var(--dark); margin: 0 0 .8rem; }
+.post-toc__list { padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* aeo-answer */
+.aeo-answer { background: var(--gray-2, #f0f0ff); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.4rem; margin: 0 2.5rem 0; font-size: .95rem; line-height: 1.7; color: var(--text, #444); }
+@media (max-width: 900px) {
+  .post-layout { grid-template-columns: 1fr; }
+  .post-sidebar { position: static; }
+  .post-body { padding: 1.5rem; }
+  .aeo-answer { margin: 0 1.5rem; }
+}
+</style>

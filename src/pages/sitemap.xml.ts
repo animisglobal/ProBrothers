@@ -1,4 +1,6 @@
 import type { APIRoute } from 'astro';
+import { execSync } from 'node:child_process';
+import { statSync } from 'node:fs';
 
 // Single, flat sitemap served directly at /sitemap.xml (no sitemap index, no
 // sitemap-0.xml). Replaces @astrojs/sitemap, which always emits an index + a
@@ -39,20 +41,53 @@ function fileToUrlPath(file: string): string | null {
   return route;
 }
 
+// Per-route <lastmod> (TB item P1-6). A single build-time timestamp re-dated all
+// 65 URLs on every deploy, so Google correctly ignored the signal. We derive the
+// date from the page source file's last git commit, falling back to file mtime
+// (Cloudflare Pages does a shallow clone by default — if `git log` comes back
+// empty there, mtime still gives a stable, per-file value).
+const lastmodCache = new Map<string, string>();
+
+function lastmodFor(file: string): string {
+  const cached = lastmodCache.get(file);
+  if (cached) return cached;
+
+  const path = file.replace(/^\.\//, 'src/pages/');
+  let iso = '';
+  try {
+    iso = execSync(`git log -1 --format=%cI -- "${path}"`, {
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+  } catch {
+    /* not a git checkout, shallow clone, or newly added file */
+  }
+  if (!iso) {
+    try {
+      iso = statSync(path).mtime.toISOString();
+    } catch {
+      iso = new Date().toISOString();
+    }
+  }
+  lastmodCache.set(file, iso);
+  return iso;
+}
+
 export const GET: APIRoute = () => {
-  const lastmod = new Date().toISOString();
-
-  const routes = Object.keys(pages)
-    .map(fileToUrlPath)
-    .filter((r): r is string => r !== null && !EXCLUDE.has(r))
+  const seen = new Set<string>();
+  const entries = Object.keys(pages)
+    .map((file) => ({ file, route: fileToUrlPath(file) }))
+    .filter((e): e is { file: string; route: string } =>
+      e.route !== null && !EXCLUDE.has(e.route))
     // de-dupe + stable sort for a clean, deterministic file
-    .filter((r, i, arr) => arr.indexOf(r) === i)
-    .sort();
+    .filter((e) => (seen.has(e.route) ? false : (seen.add(e.route), true)))
+    .sort((a, b) => a.route.localeCompare(b.route));
 
-  const urls = routes
-    .map((route) => {
+  const urls = entries
+    .map(({ file, route }) => {
       const loc = `${SITE}${route}`;
-      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${route === '/' ? '1.0' : '0.7'}</priority>\n  </url>`;
+      // <changefreq> and <priority> dropped — Google ignores both.
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmodFor(file)}</lastmod>\n  </url>`;
     })
     .join('\n');
 

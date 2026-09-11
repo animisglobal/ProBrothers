@@ -1,6 +1,8 @@
 # robots.txt for probrothers.com
-# Strategy: Explicitly allow the top AI crawlers plus traditional search
-# engines (Google, Bing, DuckDuckGo); disallow everything else.
+# Strategy: default-allow. Traditional search engines, AI crawlers, social
+# preview bots and Google verification tools are all permitted; only
+# commercial SEO scrapers are blocked. The explicit Allow groups below are
+# kept for documentation of intent.
 
 Sitemap: https://probrothers.com/sitemap.xml
 
@@ -11,10 +13,37 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
+User-agent: BingPreview
+Allow: /
+
 User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
 Allow: /
 
 # --- AI crawlers (allowed) ---
@@ -76,6 +105,54 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-# --- Block everything else ---
-User-agent: *
+# Common Crawl — primary training + retrieval corpus for most LLMs
+User-agent: CCBot
+Allow: /
+
+# --- Social / messaging link-preview fetchers (read our OG + Twitter cards) ---
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# --- Commercial SEO scrapers (bandwidth cost, no upside) ---
+User-agent: AhrefsBot
 Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# --- Default: allow. Social preview + verification bots must not be blocked. ---
+User-agent: *
+Allow: /
